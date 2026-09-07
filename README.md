@@ -162,7 +162,7 @@ This project builds entirely on public data and open-source tools produced by la
 
 If referencing this project, please cite it as:
 
-> Charles, A. (2026). *ConnectomeToBehavior: Closed-Loop Whole-Brain Emulation of Drosophila melanogaster* [Software/Research project]. Available at: [repository URL]
+> Charles, A. (2026). *ConnectomeToBehavior: Closed-Loop Whole-Brain Emulation of Drosophila melanogaster* [Software/Research project]. Available at: [[github](https://github.com/visionbyangelic/ConnectomeToBehaviour)
 
 -----
 
