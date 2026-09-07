@@ -2,15 +2,13 @@
 
 **Connectome-to-Behavior: Closed-Loop Whole-Brain Emulation of *Drosophila melanogaster***
 
-**Author:** Angelic Charles
+[![Status](https://img.shields.io/badge/Status-Ongoing-yellow?style=for-the-badge)](https://github.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![Started](https://img.shields.io/badge/Started-6%20September%202026-informational?style=for-the-badge)](https://github.com/)
+[![Author](https://img.shields.io/badge/Author-Angelic%20Charles-lightgrey?style=for-the-badge)](https://orcid.org/0009-0008-7279-9663)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0008--7279--9663-a6ce39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-7279-9663)
 
-**ORCID:** 0009-0008-7279-9663
-
-**Status:** Ongoing
-
-**Project Started:** 6th September 2026
-
-**License:** MIT (see [License](#license))
+---
 
 -----
 
