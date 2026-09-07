@@ -3,9 +3,13 @@
 **Connectome-to-Behavior: Closed-Loop Whole-Brain Emulation of *Drosophila melanogaster***
 
 **Author:** Angelic Charles
+
 **ORCID:** 0009-0008-7279-9663
+
 **Status:** Ongoing
+
 **Project Started:** 6th September 2026
+
 **License:** MIT (see [License](#license))
 
 -----
