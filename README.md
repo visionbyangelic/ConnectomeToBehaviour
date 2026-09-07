@@ -10,7 +10,6 @@
 
 ---
 
------
 
 ## Simple Summary
 
