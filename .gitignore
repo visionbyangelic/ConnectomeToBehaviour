@@ -1,0 +1,52 @@
+# ==============================================================================
+# ConnectomeToBehaviour — .gitignore
+# ==============================================================================
+
+# --- Large Connectome Datasets (Exceeds GitHub 100MB limit) ---
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pickle
+*.pkl
+*.npy
+*.npz
+data/
+*.csv
+
+# --- Third-Party / Forked Reference Repositories ---
+# (Kept locally for reference and data, but not tracked in this repository)
+Drosophila_brain_model-main/
+fly-brain/
+Turagalab-flybody/
+
+# --- Simulation Run Outputs & Cache ---
+results/
+logs/
+*.log
+
+# --- Python & Brian2 Build Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+.brian/
+
+# --- Environments ---
+.env
+.venv
+env/
+venv/
+ENV/
+
+# --- IDE & OS Metadata ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
