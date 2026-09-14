@@ -314,6 +314,20 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 
 ---
 
+### 20:44 — Pushed Day 1 Code & Documentation to GitHub
+- **Commit:** `ad1d5d6` (`feat: complete Quick-Start setup, live connectome simulation, and repo architecture`)
+- **Remote:** `https://github.com/visionbyangelic/ConnectomeToBehaviour.git` (`main -> main`)
+- **Pushed files:**
+  - `.gitignore` (excludes 100MB+ parquet files, local caches, and third-party cloned repos)
+  - `TECHNICAL_PROOF_PLAN.md` (updated checklist, Verify Yourself resolution, modular lesion addition)
+  - `overview.md` & `track.md` (project home and full audit trail)
+  - `src/` packages (`brain/`, `body/`, `bridge/`)
+  - `experiments/` (`quick_test_sim.py`, `plot_spikes.py`)
+- **Status:** ✅ Successfully pushed to GitHub repository!
+
+---
+
+
 ## Pending / Unresolved
 
 | Issue | Priority | Status |
