@@ -1,6 +1,7 @@
 <div align="center">
 
 # ConnectomeToBehavior
+<img width="1170" height="639" alt="image" src="https://github.com/user-attachments/assets/26a3a5d9-72a2-4b67-8f28-717c036f7d76" />
 
 ### Connectome-to-Behavior: Closed-Loop Whole-Brain Emulation of *Drosophila melanogaster*
 
