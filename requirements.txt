@@ -12,3 +12,4 @@ mujoco>=3.2.0
 # - FlyBody (whole-body physics): git+https://github.com/TuragaLab/flybody.git
 # - FlyVis (visual system): flyvis>=0.1.0
 # - FlyGym (NeuroMechFly v2, requires numpy>=2.0): flygym>=1.2.0
+
