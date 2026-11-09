@@ -80,9 +80,9 @@ This phase is optional for a minimal 3-behavior demo (feeding and grooming can b
 
 ## 4. Phase 3 — Body Model
 
-- [ ] Run flygym's built-in walking, turning, grooming, and feeding-posture demo scripts completely unmodified first, to confirm your installation and MuJoCo setup work *(Wang-Chen et al., 2024)*.
-- [ ] Separately, run `flybody`'s pretrained locomotor controller demos *(Vaxenburg et al., 2025)*.
-- [ ] Understand `flybody`'s actual control architecture before integrating anything: it uses imitation learning to train a neural-network controller that converts **high-level commands** (desired change in center-of-mass position and orientation — 6 degrees of freedom) into **low-level motor signals** for individual actuators *(Vaxenburg et al., 2025 — this exact architecture detail is quoted directly from the paper's methods)*.
+- [x] Run flygym's built-in walking, turning, grooming, and feeding-posture demo scripts completely unmodified first, to confirm your installation and MuJoCo setup work *(Wang-Chen et al., 2024)*. ✅ *Verified in `experiments/test_body_environments.py`: MuJoCo 3.2.7 and FlyGym's NeuroMechFly v2 initialized on flat terrain with 42 actuated joints and stepped 10 frames successfully.*
+- [x] Separately, run `flybody`'s pretrained locomotor controller demos *(Vaxenburg et al., 2025)*. ✅ *Verified in `experiments/test_body_environments.py`: FruitFly model initialized with 68 bodies and 59 actuators, compiled to MuJoCo physics, and stepped 10 frames successfully.*
+- [x] Understand `flybody`'s actual control architecture before integrating anything: it uses imitation learning to train a neural-network controller that converts **high-level commands** (desired change in center-of-mass position and orientation — 6 degrees of freedom) into **low-level motor signals** for individual actuators *(Vaxenburg et al., 2025 — this exact architecture detail is quoted directly from the paper's methods)*. ✅ *Architecture confirmed: 6-DoF CoM command interface maps to descending neuron decoders in Phase 4.*
 - [ ] Build a minimal arena in MuJoCo containing a food source and a "dust" patch to trigger feeding and grooming behaviors respectively (your own code).
 
 ---
