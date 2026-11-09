@@ -1,43 +1,125 @@
 {
-  "sugar": {
-    "stimulus": "Sugar GRNs (21 neurons, 150 Hz)",
+  "metadata": {
+    "n_trials": 3,
     "duration_ms": 100.0,
-    "total_spikes": 1302,
-    "active_neurons": 310,
-    "mn9_left_hz": 90.0,
-    "mn9_right_hz": 60.0
+    "units": "Hz for rates, count for spikes/neurons"
+  },
+  "sugar": {
+    "duration_ms": 100.0,
+    "n_trials": 3,
+    "mn9_left_mean_hz": 70.0,
+    "mn9_left_std_hz": 10.0,
+    "mn9_left_trials_hz": [
+      80.0,
+      60.0,
+      70.0
+    ],
+    "mn9_right_mean_hz": 43.333333333333336,
+    "mn9_right_std_hz": 5.773502691896258,
+    "mn9_right_trials_hz": [
+      40.0,
+      40.0,
+      50.0
+    ],
+    "total_spikes_mean": 1221.0,
+    "total_spikes_std": 34.828149534535996,
+    "active_neurons_mean": 295.0,
+    "active_neurons_std": 7.0,
+    "cumulative_active_neurons": 320,
+    "stimulus": "Sugar GRNs (21 Right SEZ neurons, 150 Hz)"
   },
   "bitter": {
-    "stimulus": "Bitter GRNs (21 neurons, 150 Hz)",
     "duration_ms": 100.0,
-    "total_spikes": 439,
-    "active_neurons": 62,
-    "mn9_left_hz": 0.0,
-    "mn9_right_hz": 0.0
+    "n_trials": 3,
+    "mn9_left_mean_hz": 0.0,
+    "mn9_left_std_hz": 0.0,
+    "mn9_left_trials_hz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mn9_right_mean_hz": 0.0,
+    "mn9_right_std_hz": 0.0,
+    "mn9_right_trials_hz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "total_spikes_mean": 450.0,
+    "total_spikes_std": 33.15116890850155,
+    "active_neurons_mean": 63.0,
+    "active_neurons_std": 6.082762530298219,
+    "cumulative_active_neurons": 71,
+    "stimulus": "Bitter GRNs (21 SEZ neurons, 150 Hz)"
   },
   "sugar_plus_bitter": {
-    "stimulus": "Sugar (150 Hz) + Bitter (150 Hz)",
     "duration_ms": 100.0,
-    "total_spikes": 1186,
-    "active_neurons": 233,
-    "mn9_left_hz": 10.0,
-    "mn9_right_hz": 20.0
+    "n_trials": 3,
+    "mn9_left_mean_hz": 13.333333333333334,
+    "mn9_left_std_hz": 23.09401076758503,
+    "mn9_left_trials_hz": [
+      40.0,
+      0.0,
+      0.0
+    ],
+    "mn9_right_mean_hz": 10.0,
+    "mn9_right_std_hz": 10.0,
+    "mn9_right_trials_hz": [
+      20.0,
+      10.0,
+      0.0
+    ],
+    "total_spikes_mean": 1277.3333333333333,
+    "total_spikes_std": 72.85830998131465,
+    "active_neurons_mean": 246.33333333333334,
+    "active_neurons_std": 35.444792753426185,
+    "cumulative_active_neurons": 307,
+    "stimulus": "Sugar (150 Hz) + Bitter (150 Hz)"
   },
   "water": {
-    "stimulus": "Water GRNs (18 neurons, 150 Hz)",
     "duration_ms": 100.0,
-    "total_spikes": 518,
-    "active_neurons": 94,
-    "mn9_left_hz": 0.0,
-    "mn9_right_hz": 0.0
+    "n_trials": 3,
+    "mn9_left_mean_hz": 3.3333333333333335,
+    "mn9_left_std_hz": 5.773502691896257,
+    "mn9_left_trials_hz": [
+      10.0,
+      0.0,
+      0.0
+    ],
+    "mn9_right_mean_hz": 0.0,
+    "mn9_right_std_hz": 0.0,
+    "mn9_right_trials_hz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "total_spikes_mean": 501.0,
+    "total_spikes_std": 39.153543900903784,
+    "active_neurons_mean": 90.0,
+    "active_neurons_std": 7.211102550927978,
+    "cumulative_active_neurons": 104,
+    "stimulus": "Water GRNs (18 SEZ neurons, 150 Hz)"
   },
-  "ground_truth_comparison": {
-    "jaccard_overlap": 0.6919642857142857,
+  "ground_truth_time_matched_100ms": {
+    "jaccard_overlap": 0.7807881773399015,
+    "precision": 0.990625,
+    "recall": 0.7866004962779156,
+    "firing_rate_correlation": 0.9699272975476868,
+    "sim_active_neurons": 320,
+    "gt_active_neurons": 403,
+    "shared_active_neurons": 317,
+    "time_window_matched": true,
+    "description": "Time-matched comparison: first 100 ms of simulation vs first 100 ms of reference"
+  },
+  "ground_truth_cumulative_1s": {
+    "jaccard_overlap": 0.7142857142857143,
     "precision": 1.0,
-    "recall": 0.6919642857142857,
-    "firing_rate_correlation": 0.9487868575165638,
-    "sim_active_neurons": 310,
+    "recall": 0.7142857142857143,
+    "firing_rate_correlation": 0.974482835373286,
+    "sim_active_neurons": 320,
     "gt_active_neurons": 448,
-    "shared_active_neurons": 310
+    "shared_active_neurons": 320,
+    "time_window_matched": false,
+    "description": "Cumulative comparison: 100 ms simulation vs full 1.0 s 30-trial reference (methodological mismatch explicitly noted)"
   }
 }

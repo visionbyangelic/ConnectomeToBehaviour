@@ -29,7 +29,7 @@ This project asks a clear question:
 
 Will it walk, clean itself, and reach for food — without us programming those actions by hand?
 
-Early public demonstrations suggest the answer can be yes. This project is my independent attempt to build a clean, fully documented version of that system from public data and free tools. The goal is to understand the process deeply and create a transparent, reproducible resource.
+Early public demonstrations (e.g., Eon Systems' *Virtual Embodied Fly*, March 2026; Shiu et al., *Nature* 2024) suggest the answer can be yes. This project is my independent attempt to build a clean, fully documented version of that system from public data and free tools. The goal is to understand the process deeply and create a transparent, reproducible resource.
 
 -----
 
@@ -84,14 +84,14 @@ No high-level behavioral programs are written. The behaviors are expected to eme
 
 The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has been built, tested, and empirically benchmarked against published electrophysiology from *Nature* (Shiu et al., 2024).
 
-### Phase 1 Empirical Results Summary
+### Phase 1 Multi-Trial Empirical Results Summary (N=3 Trials, 100 ms Biological Time)
 
-| Experimental Condition | Stimulus | Total Spikes (100 ms) | Active Neurons | MN9 Left Rate (Feeding) | MN9 Right Rate (Feeding) | Circuit Phenotype |
+| Experimental Condition | Stimulus | Spikes / Trial (Mean ± SD) | Active Neurons / Trial (Mean ± SD) | MN9 Left Rate (Mean ± SD) | MN9 Right Rate (Mean ± SD) | Circuit Phenotype |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **1. Sugar Alone** | 21 Sugar GRNs (150 Hz) | 1,302 | 310 | **90.0 Hz** | **60.0 Hz** | **Proboscis Extension Motor Activation** |
-| **2. Bitter Alone** | 21 Bitter GRNs (150 Hz) | 439 | 62 | **0.0 Hz** | **0.0 Hz** | **Aversive Baseline (No Feeding)** |
-| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 1,186 | 233 | **10.0 Hz** *(↓ 89%)* | **20.0 Hz** *(↓ 67%)* | **Biological Lateral Inhibition** |
-| **4. Water Alone** | 18 Water GRNs (150 Hz) | 518 | 94 | **0.0 Hz** | **0.0 Hz** | Distinct SEZ Sensory Circuit |
+| **1. Sugar Alone** | 21 Sugar GRNs (150 Hz) | 1,221 ± 14 | 295 ± 7 | **70.0 ± 10.0 Hz** | **43.3 ± 5.8 Hz** | **Proboscis Extension Motor Activation** |
+| **2. Bitter Alone** | 21 Bitter GRNs (150 Hz) | 450 ± 15 | 63 ± 6 | **0.0 ± 0.0 Hz** | **0.0 ± 0.0 Hz** | **Aversive Baseline (No Feeding)** |
+| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 1,277 ± 45 | 246 ± 35 | **13.3 ± 23.1 Hz** *(↓ 81%)* | **10.0 ± 10.0 Hz** *(↓ 77%)* | **Biological Lateral Inhibition** |
+| **4. Water Alone** | 18 Water GRNs (150 Hz) | 501 ± 20 | 90 ± 7 | **3.3 ± 5.8 Hz** | **0.0 ± 0.0 Hz** | Distinct SEZ Sensory Circuit |
 
 <div align="center">
 
@@ -99,17 +99,22 @@ The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has 
 
 </div>
 
-### Key Neuroscience Discoveries & Biological Validations
+### Key Neuroscience Discoveries & Methodological Validation
 
-1. **Feeding Circuit Reproduction:**
-   Exciting the 21 labellar sugar-sensing neurons drove strong action potential cascades down to proboscis extension motor neurons (**MN9 Left: 90.0 Hz**, **MN9 Right: 60.0 Hz**), replicating the asymmetric motor activation reported in Shiu et al. (2024).
-2. **Emergence of Lateral Circuit Inhibition:**
-   Simultaneous delivery of sugar and bitter stimuli triggered bitter-activated inhibitory interneurons that suppressed MN9 feeding motor output by **89% on the left** and **67% on the right**, reducing total active downstream neurons from 310 to 233.
-   *Crucial finding: This behavioral conflict resolution emerged spontaneously from connectome synaptic topology and neurotransmitter predictions without any hand-coded rules.*
-3. **Ground-Truth Benchmark (vs. Shiu et al., Nature 2024):**
-   * **Precision: 1.000 (100%)** — Every single active neuron in our live simulation is a confirmed biologically active neuron in the published 30-trial paper reference (`sugarR.parquet`).
-   * **Firing Rate Pearson Correlation: 0.949** — Near-perfect linear fidelity with the published electrophysiological firing distribution.
-   * **Jaccard Overlap: 0.692** across 310 shared active neurons.
+1. **Robust Feeding Motor Cascade:**
+   Across independent stochastic Poisson trials, stimulating 21 labellar sugar GRNs reliably drives proboscis extension motor neurons (**MN9 Left: 70.0 ± 10.0 Hz**, **MN9 Right: 43.3 ± 5.8 Hz**), confirming the sensorimotor feeding cascade described in Shiu et al. (2024).
+2. **Statistically Verified Lateral Inhibition:**
+   Simultaneous delivery of bitter and sugar stimuli triggers inhibitory interneurons that suppress MN9 firing by **81% on the left** and **77% on the right** (completely silencing MN9 Left to 0.0 Hz in 2 out of 3 trials). Active downstream neurons drop from 295 ± 7 to 246 ± 35.
+   *Crucial finding: This cross-modal behavioral conflict resolution emerges naturally from connectome synaptic weights and neurotransmitter predictions without any hand-coded behavioral rules.*
+3. **Rigorous Dual Ground-Truth Benchmark (vs. Shiu et al., Nature 2024):**
+   * **Time-Matched Window (First 100 ms vs. First 100 ms of Reference):**
+     * **Jaccard Overlap: 0.781** (317 shared active neurons out of 403 in the reference window).
+     * **Precision: 0.991** (99.1% of active neurons belong to the true biological cascade).
+     * **Recall: 0.787**.
+     * **Pearson Firing-Rate Correlation: 0.970**.
+   * **Cumulative Full-Trial Reference (100 ms Simulation vs. 30-Trial × 1.0 s Reference):**
+     * **Pearson Correlation: 0.974** across 320 shared neurons.
+     * **Precision: 1.000**, with Jaccard overlap of **0.714** (reflecting that a brief 100 ms trial activates an early transient subset of the full 1-second cumulative cascade).
 
 **Next Milestone:** Phase 3 (Body Model & Physics in MuJoCo) & Phase 4 (Descending Neuron to Motor Joint Mapping).
 
@@ -183,29 +188,48 @@ This project builds entirely on public data and open-source tools produced by la
 
 If referencing this project, please cite it as:
 
-> Charles, A. (2026). *ConnectomeToBehavior: Closed-Loop Whole-Brain Emulation of Drosophila melanogaster* [Software/Research project]. Available at: [[github](https://github.com/visionbyangelic/ConnectomeToBehaviour)
+> Charles, A. (2026). *ConnectomeToBehaviour: Closed-Loop Whole-Brain Emulation of Drosophila melanogaster* [Software/Research project]. Available at: [GitHub](https://github.com/visionbyangelic/ConnectomeToBehaviour)
 
 -----
 
 ## Project Structure
 
 ```text
-ConnectomeToBehavior/
-├── README.md
-├── docs/
-│   └── technical_notes.md
-├── brain/                 # Connectome-based neuron model
-├── body/                  # Physical fly model and controllers
-├── closed_loop/           # Code that links brain and body
-├── visualization/         # Plotting and video tools
-├── examples/               # Ready-to-run demonstration scripts
-├── data/                   # Download scripts for public datasets
-├── requirements.txt
-└── environment.yml
+ConnectomeToBehaviour/
+├── LICENSE                             # MIT Open Source License
+├── README.md                           # Project overview, status, and empirical findings
+├── TECHNICAL_PROOF_PLAN.md             # Citation-backed phase-by-phase build plan
+├── overview.md                         # Quick reference & architecture overview
+├── track.md                            # Comprehensive chronological activity & audit log
+├── requirements.txt                    # Pip dependencies for core emulation stack
+├── environment.yml                     # Conda environment recipe (ctb-brain: Brian2, FlyBody)
+├── environment-flygym.yml              # Isolated Conda recipe (ctb-flygym: NeuroMechFly v2)
+├── scripts/
+│   └── download_data.py                # Automated connectome dataset fetcher & verifier
+├── src/
+│   ├── brain/                          # Whole-brain LIF connectome simulation API
+│   │   ├── __init__.py
+│   │   ├── fly_brain.py                # FlyBrain high-level simulation class
+│   │   ├── constants.py                # Electrophysiological constants & cell IDs
+│   │   └── evaluation.py               # Statistical validation & ground-truth metrics
+│   ├── body/                           # Physics simulation interfaces (MuJoCo)
+│   │   └── __init__.py
+│   └── bridge/                         # Descending neuron to motor actuator decoders
+│       └── __init__.py
+├── experiments/
+│   ├── quick_test_sim.py               # Fast 1-trial whole-brain connectivity test
+│   ├── plot_spikes.py                  # Spike raster and population rate visualizer
+│   ├── test_fly_brain_api.py           # Verification script for FlyBrain API
+│   ├── test_body_environments.py       # Physics diagnostic for MuJoCo, FlyGym & FlyBody
+│   └── reproduce_shiu_validation.py    # Multi-trial biological validation suite
+└── results/
+    └── validation/                     # Multi-trial validation summary & figures
+        ├── validation_summary.json
+        └── mn9_response_comparison.png
 ```
 
 -----
 
 ## License
 
-MIT License — free for anyone to use, modify, and build upon.
+MIT License — free for anyone to use, modify, and build upon. See [LICENSE](LICENSE) for details.

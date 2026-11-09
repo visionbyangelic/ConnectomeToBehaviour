@@ -1,0 +1,17 @@
+name: ctb-brain
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - brian2>=2.9.0
+      - numpy>=1.24.0,<2.0.0
+      - pandas>=2.0.0
+      - pyarrow>=14.0.0
+      - matplotlib>=3.7.0
+      - scipy>=1.10.0
+      - joblib>=1.3.0
+      - mujoco>=3.2.0
+      - git+https://github.com/TuragaLab/flybody.git

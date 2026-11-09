@@ -1,0 +1,14 @@
+# Core computational neuroscience & LIF brain emulation dependencies
+brian2>=2.9.0
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0
+pyarrow>=14.0.0
+matplotlib>=3.7.0
+scipy>=1.10.0
+joblib>=1.3.0
+mujoco>=3.2.0
+
+# Optional physics & visual system backends (isolated environments recommended):
+# - FlyBody (whole-body physics): git+https://github.com/TuragaLab/flybody.git
+# - FlyVis (visual system): flyvis>=0.1.0
+# - FlyGym (NeuroMechFly v2, requires numpy>=2.0): flygym>=1.2.0

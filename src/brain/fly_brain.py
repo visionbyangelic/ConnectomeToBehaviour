@@ -345,6 +345,42 @@ class FlyBrain:
             'MN9_right': self.get_neuron_rate(MN9_RIGHT),
         }
 
+    def get_per_trial_rates(self, neuron_id: int, duration_ms: float, n_trials: int) -> List[float]:
+        """
+        Calculate firing rate (Hz) for a specific neuron across each individual trial.
+        """
+        if self.last_spike_df is None or len(self.last_spike_df) == 0:
+            return [0.0] * n_trials
+        
+        trial_s = duration_ms / 1000.0
+        rates = []
+        neu_spikes = self.last_spike_df[self.last_spike_df['flywire_id'] == neuron_id]
+        
+        for tr in range(n_trials):
+            count = len(neu_spikes[neu_spikes['trial'] == tr])
+            rates.append(count / trial_s)
+        return rates
+
+    def get_motor_neuron_stats(self, duration_ms: float, n_trials: int = 1) -> Dict[str, Dict[str, float]]:
+        """
+        Return mean, standard deviation, and per-trial rates for MN9 left and right proboscis extension motor neurons.
+        """
+        left_rates = self.get_per_trial_rates(MN9_LEFT, duration_ms, n_trials)
+        right_rates = self.get_per_trial_rates(MN9_RIGHT, duration_ms, n_trials)
+        
+        return {
+            'MN9_left': {
+                'mean_hz': float(np.mean(left_rates)),
+                'std_hz': float(np.std(left_rates, ddof=1)) if len(left_rates) > 1 else 0.0,
+                'trials_hz': [float(x) for x in left_rates],
+            },
+            'MN9_right': {
+                'mean_hz': float(np.mean(right_rates)),
+                'std_hz': float(np.std(right_rates, ddof=1)) if len(right_rates) > 1 else 0.0,
+                'trials_hz': [float(x) for x in right_rates],
+            },
+        }
+
     def get_active_neurons(self, min_spikes: int = 1) -> Set[int]:
         """Return the set of unique FlyWire IDs that fired at least min_spikes."""
         if self.last_spike_df is None or len(self.last_spike_df) == 0:

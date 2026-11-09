@@ -4,7 +4,7 @@ Every action, installation, error, and decision is logged here in chronological 
 
 ---
 
-## Day 1 — Sunday 14 September 2026
+## Day 1 — Monday 14 September 2026
 
 ### 16:42 — Session started
 - Opened workspace: `c:\Users\nerdyalgorithm\Desktop\top project\ConnectomeToBehaviour`
@@ -301,7 +301,7 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 ---
 
 ### 20:36 — Day 1 Session Concluded
-- **Time:** 8:36 PM (Sunday 14 September 2026)
+- **Time:** 8:36 PM (Monday 14 September 2026)
 - **Summary:**
   - §0 Quick-Start fully completed (6/6 checklist items + "Verify Yourself" empirical proof).
   - All dependencies installed and tested in `na` (`brian2`, `flybody`, `flygym`, `flyvis`).
@@ -413,6 +413,17 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 - Publication-style Comparison Chart: `results/validation/mn9_response_comparison.png`
 
 **Status:** ✅ Phase 1 is 100% complete and empirically validated.
+
+---
+
+### 5. Phase 3: Body Physics Diagnostic Completed (`experiments/test_body_environments.py`)
+- **Objective:** Verify physics engines, MuJoCo Windows rendering/buffers, and runtime NumPy 1.26.4 compatibility before motor mapping.
+- **Results:**
+  1. **MuJoCo Core (v3.2.7):** Minimal `MjModel` and `MjData` compiled and stepped 10 frames with gravity. Status: ✅ PASSED.
+  2. **FlyGym (NeuroMechFly v2):** `FlatTerrain` and `SingleFlySimulation` instantiated with 42 actuated joints (`actuated_joints`), stepped 10 frames using action dict `{"joints": ...}`. Status: ✅ PASSED.
+  3. **FlyBody (TuragaLab / Google DeepMind / Janelia):** FruitFly model loaded (68 bodies, 59 actuators), compiled to MuJoCo physics, and stepped 10 frames. Status: ✅ PASSED.
+- **Resolution:** Confirmed 100% operational compatibility on Windows under Python 3.11 and NumPy 1.26.4 without library conflicts.
+
 
 ---
 

@@ -69,7 +69,7 @@ Environment → Sensory Input → Brain Model (LIF on connectome) → Descending
 
 ---
 
-### Day 1 — Sunday 14 September 2026
+### Day 1 — Monday 14 September 2026
 
 **What we did:**
 1. Reviewed the project README and Technical Proof Plan
