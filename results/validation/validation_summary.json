@@ -1,0 +1,43 @@
+{
+  "sugar": {
+    "stimulus": "Sugar GRNs (21 neurons, 150 Hz)",
+    "duration_ms": 100.0,
+    "total_spikes": 1302,
+    "active_neurons": 310,
+    "mn9_left_hz": 90.0,
+    "mn9_right_hz": 60.0
+  },
+  "bitter": {
+    "stimulus": "Bitter GRNs (21 neurons, 150 Hz)",
+    "duration_ms": 100.0,
+    "total_spikes": 439,
+    "active_neurons": 62,
+    "mn9_left_hz": 0.0,
+    "mn9_right_hz": 0.0
+  },
+  "sugar_plus_bitter": {
+    "stimulus": "Sugar (150 Hz) + Bitter (150 Hz)",
+    "duration_ms": 100.0,
+    "total_spikes": 1186,
+    "active_neurons": 233,
+    "mn9_left_hz": 10.0,
+    "mn9_right_hz": 20.0
+  },
+  "water": {
+    "stimulus": "Water GRNs (18 neurons, 150 Hz)",
+    "duration_ms": 100.0,
+    "total_spikes": 518,
+    "active_neurons": 94,
+    "mn9_left_hz": 0.0,
+    "mn9_right_hz": 0.0
+  },
+  "ground_truth_comparison": {
+    "jaccard_overlap": 0.6919642857142857,
+    "precision": 1.0,
+    "recall": 0.6919642857142857,
+    "firing_rate_correlation": 0.9487868575165638,
+    "sim_active_neurons": 310,
+    "gt_active_neurons": 448,
+    "shared_active_neurons": 310
+  }
+}

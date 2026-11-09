@@ -21,7 +21,8 @@ fly-brain/
 Turagalab-flybody/
 
 # --- Simulation Run Outputs & Cache ---
-results/
+results/*
+!results/validation/
 logs/
 *.log
 

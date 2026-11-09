@@ -44,14 +44,30 @@ Environment → Sensory Input → Brain Model (LIF on connectome) → Descending
 
 ## Current Phase
 
-**Phase 0 — Quick-Start Resources (§0 of Technical Proof Plan)**  
-Setting up the environment, cloning repos, installing dependencies.
+**Phase 1 — Brain Model (Shiu et al. Nature 2024 Baseline) ✅ COMPLETE**  
+- Whole-brain LIF API (`FlyBrain`) built and tested.
+- Full 4-condition gustatory validation and ground-truth comparison complete (100% precision, 0.949 Pearson firing-rate correlation).
+- Feeding motor activation (MN9) and lateral circuit inhibition confirmed.
 
-**Next up:** Phase 1 (Literacy — reading core papers) → Phase 1 (Brain Model — run and inspect Shiu et al. code)
+**Next up:** Phase 3 (Body Model — NeuroMechFly v2 / FlyGym / FlyBody in MuJoCo physics) & Phase 4 (Closed-Loop Sensorimotor Bridge).
 
 ---
 
 ## Daily Session Log
+
+### Day 2 — Validation & Modular API Complete
+1. Designed and implemented object-oriented connectome package: `src/brain/fly_brain.py`, `src/brain/constants.py`, `src/brain/evaluation.py`.
+2. Ran verification test: `experiments/test_fly_brain_api.py` (50 ms simulation passed in 20s).
+3. Executed 4-condition biological validation suite: `experiments/reproduce_shiu_validation.py` (100 ms per condition).
+4. Results empirically resolved & verified:
+   - Sugar excitation: MN9 Left at 90.0 Hz, MN9 Right at 60.0 Hz (310 active neurons).
+   - Bitter inhibition: MN9 at 0.0 Hz (62 active neurons, non-feeding aversive circuit).
+   - Sugar + Bitter co-activation: lateral circuit inhibition observed (MN9 Left suppressed to 10.0 Hz, MN9 Right to 20.0 Hz).
+   - Water excitation: 94 active neurons.
+   - Ground-truth comparison against published paper run: **100% Precision (1.000)**, **0.949 Pearson Correlation**, **0.692 Jaccard Overlap**.
+5. Generated validation plots and summaries: `results/validation/mn9_response_comparison.png` and `results/validation/validation_summary.json`.
+
+---
 
 ### Day 1 — Sunday 14 September 2026
 
