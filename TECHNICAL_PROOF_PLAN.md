@@ -6,7 +6,8 @@
 
 ## How to Use This Document
 
-Every checklist item below carries an inline citation in the form `(Author et al., Year — see §Bibliography)`. That citation is not decoration — it points to a real, verifiable source: a peer-reviewed paper, an official Nature/eLife page, or a public GitHub repository you can open yourself. Where I was not able to independently verify a specific number or detail, I've said so explicitly in the **"Verify Yourself"** notes rather than presenting it as fact. Check items off (`[x]`) as you complete them.
+Every checklist item below carries an inline citation in the form `(Author et al., Year — see §Bibliography)`. That citation is not decoration — it points to a real, verifiable source: a peer-reviewed paper, an official Nature/eLife page, or a public GitHub repository you can open yourself. Where I was not able to independently verify a specific number or detail, I've said so explicitly in the **"Verify Yourself"** notes rather than present
+ing it as fact. Check items off (`[x]`) as you complete them.
 
 ---
 
