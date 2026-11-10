@@ -72,12 +72,15 @@ class FlyBrain:
         if custom_params:
             self.params.update(custom_params)
 
-        # Active stimuli and lesions
+        # Active stimuli and perturbations
         self._primary_stimuli: List[int] = []
         self._primary_freq_hz: float = 150.0
         self._secondary_stimuli: List[int] = []
         self._secondary_freq_hz: float = 0.0
-        self._silenced_neurons: List[int] = []
+
+        # Lesion state — two distinct operations (see block_output() and silence())
+        self._block_output_neurons: List[int] = []   # outgoing weights only → 0
+        self._silenced_neurons: List[int] = []       # incoming + outgoing weights → 0
 
         # Connectome index tables
         self.df_comp: Optional[pd.DataFrame] = None
@@ -131,24 +134,58 @@ class FlyBrain:
         self._secondary_freq_hz = float(freq_hz)
         return self
 
-    def silence(self, neuron_ids: List[int]) -> "FlyBrain":
+    def block_output(self, neuron_ids: List[int]) -> "FlyBrain":
         """
-        In silico lesion/silencing of specified neurons by zeroing all their outgoing synaptic weights.
+        Output blockade: zero all *outgoing* synaptic weights from the specified neurons.
+
+        This prevents the selected neurons from influencing their downstream targets,
+        but they still receive input and can generate spikes internally. This is
+        equivalent to cutting the axonal output of a neuron — the cell fires, but
+        nothing downstream hears it.
+
+        Use this for causal perturbation experiments where you want to remove a
+        neuron's downstream influence while leaving its intrinsic dynamics intact.
 
         Parameters
         ----------
         neuron_ids : list of int
-            FlyWire IDs of neurons to silence.
+            FlyWire IDs of neurons whose output should be blocked.
+        """
+        self._block_output_neurons = list(neuron_ids)
+        return self
+
+    def silence(self, neuron_ids: List[int]) -> "FlyBrain":
+        """
+        Full disconnection silencing: zero both *incoming* and *outgoing* synaptic weights,
+        reproducing the original Shiu et al. (Nature 2024) lesion protocol, while also
+        ensuring the silenced neurons cannot receive external sensory stimulation.
+
+        A neuron processed through silence():
+        1. Has all outgoing synaptic weights zeroed (cannot drive downstream cells).
+        2. Has all incoming synaptic weights zeroed (cannot receive network inputs).
+        3. Is automatically filtered out from external Poisson stimulation, even if
+           present in the active stimulus list.
+
+        This is distinct from block_output(): use silence() when you want to model complete
+        functional ablation or genetic silencing (e.g. Kir2.1 / tetanus toxin); use
+        block_output() when you specifically want to test downstream-only effects while
+        leaving the cell's internal dynamics and receptive field intact.
+
+        Parameters
+        ----------
+        neuron_ids : list of int
+            FlyWire IDs of neurons to fully disconnect from the network and sensory inputs.
         """
         self._silenced_neurons = list(neuron_ids)
         return self
 
     def reset_stimuli(self) -> "FlyBrain":
-        """Clear all active stimuli and silencing configurations."""
+        """Clear all active stimuli and perturbation configurations."""
         self._primary_stimuli = []
         self._primary_freq_hz = 150.0
         self._secondary_stimuli = []
         self._secondary_freq_hz = 0.0
+        self._block_output_neurons = []
         self._silenced_neurons = []
         return self
 
@@ -205,17 +242,31 @@ class FlyBrain:
         # Scale weights by sign and synapse count
         syn.w = df_con['Excitatory x Connectivity'].values * brian_params['w_syn']
 
-        # Apply in silico lesion/silencing if specified
+        # Apply perturbations: block_output() — zero outgoing weights only
+        # This removes downstream influence while leaving the neuron's own dynamics intact.
+        if self._block_output_neurons:
+            for blk_id in self._block_output_neurons:
+                if blk_id in self.flyid2i:
+                    idx = self.flyid2i[blk_id]
+                    syn.w[f'{idx} == i'] = 0 * mV   # presynaptic index == idx → outgoing
+
+        # Apply perturbations: silence() — zero both incoming and outgoing weights,
+        # reproducing the full disconnection protocol from Shiu et al. (2024) model.py.
         if self._silenced_neurons:
             for slnc_id in self._silenced_neurons:
                 if slnc_id in self.flyid2i:
                     idx = self.flyid2i[slnc_id]
-                    syn.w[f'{idx} == i'] = 0 * mV
+                    syn.w[f'{idx} == i'] = 0 * mV   # outgoing: neuron idx is presynaptic
+                    syn.w[f'{idx} == j'] = 0 * mV   # incoming: neuron idx is postsynaptic
 
-        # Add external Poisson sensory inputs
+        # Add external Poisson sensory inputs (excluding any neurons in the silence set)
+        silenced_set = set(self._silenced_neurons)
         poisson_inputs = []
+
         if self._primary_stimuli and self._primary_freq_hz > 0:
             for stim_id in self._primary_stimuli:
+                if stim_id in silenced_set:
+                    continue  # Ensure silenced neurons are not externally stimulated
                 if stim_id in self.flyid2i:
                     idx = self.flyid2i[stim_id]
                     poi = PoissonInput(
@@ -230,6 +281,8 @@ class FlyBrain:
 
         if self._secondary_stimuli and self._secondary_freq_hz > 0:
             for stim_id in self._secondary_stimuli:
+                if stim_id in silenced_set:
+                    continue  # Ensure silenced neurons are not externally stimulated
                 if stim_id in self.flyid2i:
                     idx = self.flyid2i[stim_id]
                     poi = PoissonInput(

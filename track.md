@@ -162,7 +162,7 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 ### 18:55 — Created FlyWire / Codex Account
 - **Action:** User created account at [flywire.ai / codex.flywire.ai](https://codex.flywire.ai)
 - **Status:** ✅ Complete
-- **Impact:** §0 Quick-Start in [TECHNICAL_PROOF_PLAN.md](file:///c:/Users/nerdyalgorithm/Desktop/top%20project/ConnectomeToBehaviour/TECHNICAL_PROOF_PLAN.md) is now 100% complete (6/6 items checked off).
+- **Impact:** §0 Quick-Start in [TECHNICAL_PROOF_PLAN.md](TECHNICAL_PROOF_PLAN.md) is now 100% complete (6/6 items checked off).
 
 ### 19:08 — Tested numpy compatibility and imports in `na` env
 - **Command:** `conda run -n na python -c "import flybody; print('flybody ok'); import flygym; print('flygym ok')"`
@@ -281,7 +281,7 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 
 ### 20:15 — Added In Silico Modular Lesion & Perturbation Analysis to Plan
 - **Context:** Strategic review recommendation on demonstrating causal neural integration vs. passive morphological computation.
-- **Action:** Added explicit milestone to Phase 5 in [TECHNICAL_PROOF_PLAN.md](file:///c:/Users/nerdyalgorithm/Desktop/top%20project/ConnectomeToBehaviour/TECHNICAL_PROOF_PLAN.md).
+- **Action:** Added explicit milestone to Phase 5 in [TECHNICAL_PROOF_PLAN.md](TECHNICAL_PROOF_PLAN.md).
 - **Core Concept:**
   - Beyond random degree-preserved connectome shuffling (null model), perform targeted *in silico* lesions of specific functional clusters and descending tracts (e.g. `MDN` backward walking, `DNp01` grooming, `Giant Fiber` escape) using `model.py`'s `silence()` weight-zeroing mechanism.
   - Map each cluster's lesion directly to its specific motor phenotype deficits.
@@ -327,7 +327,6 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 
 ---
 
-
 ## Pending / Resolved Status
 
 | Issue | Priority | Status | Resolution / Action Taken |
@@ -370,7 +369,7 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
   - Sugar Gustatory Receptor Neurons: 21 Right SEZ neurons, 21 Left SEZ neurons.
   - Bitter Gustatory Receptor Neurons: 21 SEZ neurons.
   - Water Gustatory Receptor Neurons: 18 SEZ neurons.
-  - Proboscis extension motor neurons: MN9 Left (`720575940624074145`) and MN9 Right (`720575940615967008`).
+  - Proboscis extension motor neurons: MN9 Left (`720575940660219265`) and MN9 Right (`720575940645521262`).
   - Key descending neurons: `DN1_1`, `DN2_L`.
 - **`src/brain/evaluation.py`**: Standard validation metrics from Shiu et al. and Eon Systems:
   - Firing rate computation per neuron.
@@ -412,7 +411,7 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
 - Summary JSON: `results/validation/validation_summary.json`
 - Publication-style Comparison Chart: `results/validation/mn9_response_comparison.png`
 
-**Status:** ✅ Phase 1 is 100% complete and empirically validated.
+**Status:** ✅ Phase 1 complete and model reproduction verified.
 
 ---
 
@@ -424,13 +423,166 @@ opencv-python 4.12.0.88 requires numpy<2.3.0,>=2, but you have numpy 1.26.4 whic
   3. **FlyBody (TuragaLab / Google DeepMind / Janelia):** FruitFly model loaded (68 bodies, 59 actuators), compiled to MuJoCo physics, and stepped 10 frames. Status: ✅ PASSED.
 - **Resolution:** Confirmed 100% operational compatibility on Windows under Python 3.11 and NumPy 1.26.4 without library conflicts.
 
+---
+
+## Session 3 — Scientific Review, Course Corrections & Code Refactor
+
+**Date:** Tuesday 10 November 2026  
+**Time:** ~11:45–12:15
+
+### What prompted this session
+
+After the git corruption was fixed (laptop died mid-push), we opened a rigorous review of the project's scientific claims and code architecture. Two external reviews were examined closely against our actual codebase — evaluating whether our claims matched the real experimental design and underlying data.
+
+### What we agreed with, where we changed our minds, and why
+
+#### 1. `sugarR.parquet` is computational simulation output, NOT biological electrophysiology
+- **What happened:** The earlier README described our benchmark as "benchmarked against published electrophysiology from Nature (Shiu et al., 2024)" and reported "Ground-truth Precision: 1.000".
+- **The reality:** Inspecting Shiu et al.'s official repository shows `results/example/sugarR.parquet` is the archived raw output of **their LIF computer simulation**, not in vivo patch-clamp recordings from living flies.
+- **Where we changed our minds:** A Pearson correlation of $r = 0.970$ between our model and their parquet file proves that our Brian2 network faithfully reproduces their computational model equations and connectome loading. It does **not** prove our model replicates a real living fly's brain. Conflating model-to-model reproduction with biological ground truth damages credibility.
+- **Action taken:**
+  - Completely rewrote the Phase 1 status section in `README.md`.
+  - Added an explicit two-tier validation table:
+    1. *Model reproduction:* Does our implementation reproduce Shiu et al.'s simulation? (Evidence: Pearson $r = 0.970$, Jaccard $= 0.781$, Precision $= 0.991$ → **Yes, verified**).
+    2. *Biological validation:* Do our model predictions match independent living fly data? (Evidence: Not yet tested with in vivo recordings → **Open research question**).
+
+#### 2. The sugar + bitter "Statistically Verified Lateral Inhibition" claim was mathematically unsupported at N=3
+- **What happened:** In Session 2, we ran $N=3$ trials of 100 ms each. Under Sugar + Bitter co-activation, MN9 Left fired at $13.3 \pm 23.1\text{ Hz}$. We framed this as "statistically verified lateral inhibition."
+- **The flaw:** With a mean of 13.3 Hz and a standard deviation of 23.1 Hz ($SD > \text{mean}$), the individual trial rates were $[0.0\text{ Hz}, 0.0\text{ Hz}, 40.0\text{ Hz}]$. At 100 ms trial duration, each spike represents exactly $10\text{ Hz}$. Thus, two trials had zero spikes and one trial had 4 spikes.
+- **Where we changed our minds:** In a sample of $N=3$, this is a stochastic Poisson fluctuation near the threshold, not a statistically established biological phenomenon. Claiming "statistical verification" on 3 trials is invalid.
+- **Action taken:**
+  - Removed "Statistically Verified" from README headings.
+  - Explicitly added a statistical disclosure box in `README.md` noting that $SD > \text{mean}$ reflects a small-sample discrete spike artifact, and classified sugar+bitter suppression as a preliminary model prediction.
+  - Formulated the protocol for true statistical verification: $N=30$ trials at $1.0\text{ s}$ duration (matching Shiu et al.'s full protocol).
+
+#### 3. `silence()` only blocked axonal output — distinct from complete neuronal silencing
+- **What happened:** In `src/brain/fly_brain.py`, the `silence()` method set `syn.w[f'{idx} == i'] = 0 * mV`.
+- **The flaw:** `i` is the presynaptic index. This zeroes outgoing synaptic weights only. The neuron still receives dendritic inputs, its membrane potential integrates synaptic currents, and it can still fire action potentials. Downstream targets simply do not receive post-synaptic potentials.
+- **What we tried first:** Considered setting refractory period to infinity (`neu[idx].rfc = 1e9 * second`).
+- **Why we rejected that:** That is an ad-hoc hack that does not match the connectome lesion literature; furthermore, synaptic conductances ($g$) would still accumulate on the membrane.
+- **What we implemented instead:** Split the perturbation API into two distinct, biologically clear operations:
+  1. `block_output(neuron_ids)`: Zeroes outgoing connections (`syn.w[f'{idx} == i'] = 0 * mV`). Models an axonal transmission block (axotomy/tetrodotoxin on axonal trunk). The cell still spikes internally, but cannot drive downstream circuits.
+  2. `silence(neuron_ids)`: Zeroes **both** outgoing (`idx == i`) and incoming (`idx == j`) connections, faithfully replicating Shiu et al.'s disconnection protocol in `model.py`. In addition, `silence()` automatically filters the silenced neurons out of any active sensory stimulation lists (`_primary_stimuli` / `_secondary_stimuli`), ensuring they cannot receive direct external Poisson excitation while silenced.
+  3. Updated `reset_stimuli()` to clear both perturbation sets.
+
+### Conceptual Breakthrough: Three-System Comparative Ablation Framework
+Rather than merely demonstrating that a virtual fly moves, Phase 5 will be structured as a rigorous comparative study across three distinct configurations:
+1. **System A — Intact Connectome-Driven Neural Controller:** Biological connectome LIF network receiving sensory input, propagating through intrinsic circuits, and activating descending neurons to drive body kinematics.
+2. **System B — Targeted Lesion / Disrupted Neural Controller:** Specific pathways perturbed using `block_output()` (axonal transmission blockade) or `silence()` (full network disconnection and sensory decoupling) on specific descending pathways (e.g., `MDN` for backward walking, `DNp01` for grooming, feeding premotor interneurons).
+3. **System C — Connectome-Agnostic Baseline Controller:** Standard body controller operating without connectome-derived commands (FlyGym default CPG / FlyBody pretrained RL or degree-preserved shuffled connectome null model).
+
+This three-arm comparison allows us to investigate whether behavioral differences can be directly explained by the underlying neural organization, transforming the project into a true hypothesis-testing diagnostic framework.
+
+### What we pushed back on
+- **Dismissal of the neural decoder bridge:** External reviews cautioned that a decoder mapping descending neuron rates to joint kinematics is a "separate hand-coded controller." We disagree that this makes the approach invalid: descending-to-motor decoders are standard in computational motor control (e.g., Lobato-Rios et al. 2022). What matters is scientific honesty: we must explicitly demarcate which dynamics emerge from the connectome (sensory integration, DN activation, cross-modal suppression) and which are kinematic transformations in the bridge. Furthermore, Phase 5 will test this causally via ablation: lesioning DNs in the brain model must abolish the corresponding motor behavior in the body.
+
+### Files modified in Session 3
+
+| File | Exact Changes | Scientific Rationale |
+|------|---------------|----------------------|
+| `README.md` | Rewrote Phase 1 section: replaced "electrophysiology" with "simulation output", added 2-tier validation table, added statistical caveat on sugar+bitter | Scientific honesty and credibility |
+| `src/brain/fly_brain.py` | Implemented `block_output()`, upgraded `silence()` to zero bidirectional synapses (`idx == i` and `idx == j`), updated `reset_stimuli()` | Experimental accuracy for future in silico lesion studies |
+| `track.md` | Clean chronological record of decisions, failures, shifts in thinking, and code updates | Full audit trail and reproducibility log |
+
+### Next Steps (Prioritized)
+1. **Environment Compatibility Test for Phase 4:** ✅ COMPLETED in Session 4. Brian2 and FlyGym co-exist and step synchronously in a single Python process. IPC/sockets discarded.
+2. **Execute Paper-Matched 30-Trial × 1.0 s Experiment:** Run full $N=30$, $1000\text{ ms}$ validation to resolve the sugar+bitter variance with true confidence intervals.
+3. **Build `src/body/fly_body.py`:** Create object-oriented body wrapper around `SingleFlySimulation` with verified action dict interface.
+4. **Build `src/bridge/dn_decoder.py`:** Map descending neurons (`MDN`, `DNp01`, feeding pathways) to body actions.
 
 ---
 
-### 5. Phase 3: Body Physics Diagnostic Completed (`experiments/test_body_environments.py`)
-- **Objective:** Verify physics engines, MuJoCo Windows rendering/buffers, and runtime NumPy 1.26.4 compatibility before motor mapping.
-- **Results:**
-  1. **MuJoCo Core (v3.2.7):** Minimal `MjModel` and `MjData` compiled and stepped 10 frames with gravity. Status: ✅ PASSED.
-  2. **FlyGym (NeuroMechFly v2):** `FlatTerrain` and `SingleFlySimulation` instantiated with 42 actuated joints (`actuated_joints`), stepped 10 frames using action dict `{"joints": ...}`. Status: ✅ PASSED.
-  3. **FlyBody (TuragaLab / Google DeepMind / Janelia):** FruitFly model loaded (68 bodies, 59 actuators), compiled to MuJoCo physics, and stepped 10 frames. Status: ✅ PASSED.
-- **Resolution:** Confirmed 100% operational compatibility on Windows under Python 3.11 and NumPy 1.26.4 without library conflicts.
+## Session 4 — Unified In-Process Closed-Loop Compatibility Test
+
+**Date:** Tuesday 10 November 2026  
+**Time:** ~12:10–12:15  
+**Script:** `experiments/test_unified_closed_loop_env.py`
+
+### Objective
+Empirically resolve the architecture question: Can Brian2 (neural LIF simulation) and FlyGym (NeuroMechFly v2 MuJoCo physics) execute co-operatively inside the **exact same Python process** on Windows with NumPy 1.26.4, or do we need IPC, background daemons, and socket bridges?
+
+### Rigorous Diagnostic Design
+1. **True Co-Execution:** Not just importing libraries, but initializing both engines, simulating biological time in Brian2, extracting motor output, translating to an actuator command, and stepping MuJoCo physics.
+2. **Temporary Diagnostic Mapping:** Used an explicitly labelled, non-biological test mapping (`joint_LFCoxa`, target scaled by MN9 Left rate) to test data transmission and actuator response without premature claims of anatomical decoding.
+3. **Explicit Timing Match:** Simulated 50 ms of biological time in Brian2 (12.0s compute), matched to exactly 500 physics steps at $\Delta t = 10^{-4}\text{ s}$ (50.0 ms physical simulation time, 6.25s compute).
+4. **Recorded Both Spikes and Rates:** Monitored total spike counts, active neurons, and discrete spike counts per motor neuron.
+
+### Diagnostic Results
+```text
+======================================================================
+ ConnectomeToBehaviour — Unified Process Compatibility Diagnostic
+======================================================================
+[Diagnostic] Python version: 3.11.13 | NumPy version: 1.26.4
+- MuJoCo 3.2.7 & Brian2 2.9.0 imported cleanly in same namespace.
+- FlyBrain 50 ms simulation: 521 spikes across 234 active neurons (12.0s compute).
+- Motor Output extracted: MN9 Left = 4 spikes (80.0 Hz), MN9 Right = 2 spikes (40.0 Hz).
+- FlyGym SingleFlySimulation instantiated: 42 actuated joints on FlatTerrain.
+- Actuator handoff: 'joint_LFCoxa' commanded from 0.3316 rad -> 0.4916 rad target.
+- Physics advanced: 500 steps (50.0 ms physical clock advance).
+- Joint response: Evolved to 0.3710 rad without instability or penetration.
+- Result: ALL 7 EVALUATION CHECKS PASSED. ZERO C-extension or ABI faults.
+======================================================================
+```
+
+### Architectural Conclusion & Decision
+- **Unified in-process execution is 100% viable.**
+- **IPC / sockets / pipes are officially discarded.** They introduce unnecessary serialization latency and multi-process fragility without any technical necessity.
+- **Immediate Next Step:** Build `src/body/fly_body.py` as a clean object-oriented wrapper around `SingleFlySimulation`, followed by the anatomical descending neuron bridge in `src/bridge/`.
+
+---
+
+## Session 5 — Phase 3 Minimal FlyBody Wrapper Implemented & Verified
+
+**Date:** Tuesday 10 November 2026  
+**Time:** ~12:15–12:20  
+**Implementation:** `src/body/fly_body.py`  
+**Test Suite:** `experiments/test_fly_body_api.py`
+
+### User-Directed Review Corrections Incorporated
+1. **Precise Spatial Units Verified:** Inspected NeuroMechFly v2 model definition. Confirmed spatial coordinates are in **millimetres (mm)**, velocities in $\text{mm/s}$, and gravity is defined as $-9810.0\text{ mm/s}^2$. Default spawn position is $(0.0, 0.0, 0.5)\text{ mm}$ above the ground surface.
+2. **Explicit Separation of Stepping Semantics:**
+   - `step(action)`: Advances exactly **1 native environment/physics timestep** ($\Delta t = 10^{-4}\text{ s} = 0.1\text{ ms}$).
+   - `step_duration(duration_ms, action)`: Advances physics by the verified number of discrete steps ($N = \text{round}(\Delta t_{\text{dur}} / \Delta t_{\text{step}})$).
+3. **Action Space & Control Semantics:** Verified `SingleFlySimulation.action_space` is `Dict('joints': Box(-pi, pi, (42,), float32))` with position control. Wrapper supports both raw 42-element numpy arrays and human-readable joint-name dictionaries (`{'joint_LFCoxa': 0.4}`), preserving unmentioned joint angles.
+4. **Preserved Raw Sensory Feedback:** Did NOT invent unmodeled sensors (no fake labellum contact). Exposes raw, unmodified 3D ground reaction forces $(F_x, F_y, F_z)$ across all 30 tarsal segments (`LFTarsus1-5`, etc.).
+5. **Context Management:** Full `__enter__` and `__exit__` support ensuring clean MuJoCo C-allocated buffer cleanup.
+
+### Empirical Test Output (`experiments/test_fly_body_api.py`)
+```text
+=================================================================
+ ConnectomeToBehaviour — FlyBody API Verification Test
+=================================================================
+[OK] FlyBody initialized inside context manager.
+     - Spatial units:    mm
+     - Physics timestep: 0.10 ms
+     - Actuated joints:  42
+     - Contact sensors:  30 tarsal segments
+
+[Pose Inspection]
+     - Thorax position: [0.0163, 0.0073, 1.7814] mm
+     - Linear velocity: [0.0, 0.0, 0.0] mm/s
+
+[Single step() Timing]
+     - Delta: 0.000100s (expected: 0.000100s) -> PASSED
+
+[step_duration(50 ms) Test]
+     - Commanding 'joint_LFCoxa' -> 0.4347 rad
+     - Delta: 50.00 ms (expected: 50.00 ms) -> PASSED
+
+[Kinematic State]
+     - 'joint_LFCoxa' angle:    0.4361 rad
+     - 'joint_LFCoxa' velocity: 0.0334 rad/s
+
+[Contact Forces]
+     - Segments monitored: 30 tarsal segments (raw vectors preserved)
+
+=================================================================
+🎉 ALL FlyBody API CHECKS PASSED!
+=================================================================
+```
+
+### Next Steps (Prioritized)
+1. **Phase 4 Descending Neuron Decoder (`src/bridge/dn_decoder.py`):** Map descending neuron populations to kinematic joint targets with clear distinction between biological connectome activity and interface decoders.
+2. **Phase 4 Closed-Loop Orchestration (`experiments/run_closed_loop.py`):** Synchronously step `FlyBrain` and `FlyBody` in unified loop.
+3. **Phase 5 Three-System Comparative Ablation:** Test System A (intact connectome), System B (lesioned connectome), and System C (baseline).
+

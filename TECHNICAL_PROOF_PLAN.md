@@ -106,12 +106,21 @@ This is the step where you decide how brain output becomes body movement. Presen
 
 ---
 
-## 6. Phase 5 — Evaluation & Ablation
+## 6. Phase 5 — Evaluation & Three-System Comparative Ablation Framework
 
+To demonstrate that behavioral control genuinely arises from connectome-constrained neural computation (and avoid the "separate hand-coded controller" pitfall), evaluation is structured around a rigorous three-arm comparative framework:
+
+1. **System A — Intact Connectome-Driven Neural Controller:** Biological connectome LIF network receiving sensory input, propagating through intrinsic circuits, and activating descending neurons to drive body kinematics.
+2. **System B — Targeted Lesion / Disrupted Neural Controller:** Selected neural pathways perturbed using `block_output()` (axonal transmission blockade) or `silence()` (full network disconnection and sensory decoupling) on specific descending pathways (e.g., `MDN` for backward walking, `DNp01` for grooming, feeding premotor interneurons).
+3. **System C — Connectome-Agnostic Baseline Controller:** Standard body controller operating without connectome-derived commands (FlyGym default CPG / FlyBody pretrained RL or degree-preserved shuffled connectome null model).
+
+By investigating whether behavioral differences between Systems A, B, and C can be mechanistically attributed to specific circuit topology, the project transitions from a basic demonstration ("a virtual fly moving") into a rigorous hypothesis-testing tool.
+
+### Specific Evaluation Milestones:
 - [ ] Confirm at least three distinct, recognizable behaviors: feeding (proboscis extension), grooming, and walking/foraging.
 - [ ] For the feeding circuit specifically, replicate the top-N most responsive neuron list from Shiu et al.'s validation and confirm silencing each one produces the same drop in MN9 firing they report *(Shiu et al., 2024)*.
-- [ ] **In Silico Modular Lesion & Perturbation Analysis (Diagnostic Tool):** Beyond random connectome shuffling (null controls), perform selective module-level lesions by silencing functional clusters (e.g., specific neuropils, descending neuron tracts like `MDN` backward walking, `DNp01` grooming, or `Giant Fiber` escape) using `model.py`'s `silence()` weight-zeroing mechanism. Map each functional cluster lesion directly to its specific motor phenotype deficits to prove causal circuit attribution, elevating the emulation from a demonstration into a hypothesis-testing diagnostic tool.
-- [ ] Run the pairwise ground-truth comparison approach used in `eonsystemspbc/fly-brain` (active-neuron Jaccard overlap, firing-rate correlation, spike-count ratio) between your implementation and the reference Brian2 run.
+- [ ] **In Silico Modular Lesion & Perturbation Analysis:** Apply `block_output()` and `silence()` to functional clusters (`MDN`, `DNp01`, `Giant Fiber`). Verify that behavioral deficits map precisely to the lesioned circuit.
+- [ ] Run pairwise reference-model benchmarks (active-neuron Jaccard overlap, firing-rate Pearson correlation, spike-count ratio) between our implementation and published reference datasets.
 - [ ] Explicitly document any behavior or validation that does *not* replicate, and your best hypothesis why — a documented negative result is more credible than silence, and is standard practice in this literature.
 
 ---

@@ -81,18 +81,22 @@ No high-level behavioral programs are written. The behaviors are expected to eme
 
 -----
 
-## Current Status: Phase 1 Validated ✅
+## Current Status: Phase 1 Complete — Reference Model Reproduced ✅
 
-The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has been built, tested, and empirically benchmarked against published electrophysiology from *Nature* (Shiu et al., 2024).
+The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has been built, tested, and benchmarked against the published simulation output from Shiu et al. (*Nature*, 2024).
 
-### Phase 1 Multi-Trial Empirical Results Summary (N=3 Trials, 100 ms Biological Time)
+> **What this means precisely:** `sugarR.parquet` is Shiu et al.'s archived *computational model output*, not biological electrophysiology recordings. The benchmarks below measure **model reproduction fidelity** — how faithfully our implementation reproduces their published simulation. This is a meaningful and necessary first step. Matching the real fly's neural activity is a separate, harder question that requires independent biological ground truth (e.g., calcium imaging or electrophysiology from living animals). We make no claim to have established the latter yet.
+
+### Phase 1 Multi-Trial Results Summary (N=3 Trials, 100 ms Biological Time)
 
 | Experimental Condition | Stimulus | Spikes / Trial (Mean ± SD) | Active Neurons / Trial (Mean ± SD) | MN9 Left Rate (Mean ± SD) | MN9 Right Rate (Mean ± SD) | Circuit Phenotype |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | **1. Sugar Alone** | 21 Sugar GRNs (150 Hz) | 1,221 ± 14 | 295 ± 7 | **70.0 ± 10.0 Hz** | **43.3 ± 5.8 Hz** | **Proboscis Extension Motor Activation** |
 | **2. Bitter Alone** | 21 Bitter GRNs (150 Hz) | 450 ± 15 | 63 ± 6 | **0.0 ± 0.0 Hz** | **0.0 ± 0.0 Hz** | **Aversive Baseline (No Feeding)** |
-| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 1,277 ± 45 | 246 ± 35 | **13.3 ± 23.1 Hz** *(↓ 81%)* | **10.0 ± 10.0 Hz** *(↓ 77%)* | **Biological Lateral Inhibition** |
+| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 1,277 ± 45 | 246 ± 35 | **13.3 ± 23.1 Hz** *(↓ 81%)* | **10.0 ± 10.0 Hz** *(↓ 77%)* | *Model predicts inhibition — not yet independently confirmed* |
 | **4. Water Alone** | 18 Water GRNs (150 Hz) | 501 ± 20 | 90 ± 7 | **3.3 ± 5.8 Hz** | **0.0 ± 0.0 Hz** | Distinct SEZ Sensory Circuit |
+
+> **Statistical note — Sugar + Bitter (Condition 3):** The SD (23.1 Hz) exceeds the mean (13.3 Hz), reflecting that 2 of 3 trials gave 0 Hz and 1 gave ~40 Hz. At 100 ms resolution, each spike equals 10 Hz, so a single extra spike crossing MN9's threshold changes the result by 10 Hz. This is a stochastic floor effect, not a stable measurement. N=3 is too small to make claims about this condition. 30-trial × 1-second experiments (matching Shiu et al.'s protocol) are planned; this result should be treated as a preliminary model prediction until then.
 
 <div align="center">
 
@@ -100,24 +104,23 @@ The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has 
 
 </div>
 
-### Key Neuroscience Discoveries & Methodological Validation
+### Reference Model Benchmarks (vs. Shiu et al. Simulation Output)
 
-1. **Robust Feeding Motor Cascade:**
-   Across independent stochastic Poisson trials, stimulating 21 labellar sugar GRNs reliably drives proboscis extension motor neurons (**MN9 Left: 70.0 ± 10.0 Hz**, **MN9 Right: 43.3 ± 5.8 Hz**), confirming the sensorimotor feeding cascade described in Shiu et al. (2024).
-2. **Statistically Verified Lateral Inhibition:**
-   Simultaneous delivery of bitter and sugar stimuli triggers inhibitory interneurons that suppress MN9 firing by **81% on the left** and **77% on the right** (completely silencing MN9 Left to 0.0 Hz in 2 out of 3 trials). Active downstream neurons drop from 295 ± 7 to 246 ± 35.
-   *Crucial finding: This cross-modal behavioral conflict resolution emerges naturally from connectome synaptic weights and neurotransmitter predictions without any hand-coded behavioral rules.*
-3. **Rigorous Dual Ground-Truth Benchmark (vs. Shiu et al., Nature 2024):**
-   * **Time-Matched Window (First 100 ms vs. First 100 ms of Reference):**
-     * **Jaccard Overlap: 0.781** (317 shared active neurons out of 403 in the reference window).
-     * **Precision: 0.991** (99.1% of active neurons belong to the true biological cascade).
-     * **Recall: 0.787**.
-     * **Pearson Firing-Rate Correlation: 0.970**.
-   * **Cumulative Full-Trial Reference (100 ms Simulation vs. 30-Trial × 1.0 s Reference):**
-     * **Pearson Correlation: 0.974** across 320 shared neurons.
-     * **Precision: 1.000**, with Jaccard overlap of **0.714** (reflecting that a brief 100 ms trial activates an early transient subset of the full 1-second cumulative cascade).
+There are two distinct questions being asked here, and they should not be conflated:
 
-**Next Milestone:** Phase 3 (Body Model & Physics in MuJoCo) & Phase 4 (Descending Neuron to Motor Joint Mapping).
+| Question | Evidence | Status |
+| :--- | :--- | :--- |
+| Does our implementation reproduce Shiu et al.'s simulation? | Pearson r = 0.970 (time-matched), Jaccard = 0.781, Precision = 0.991 | ✅ Yes — strong model reproduction |
+| Does our model match real fly neural activity? | No independent biological ground truth used yet | ⬜ Not yet tested |
+
+**Time-Matched Benchmark (First 100 ms of our simulation vs. First 100 ms of reference):**
+- Jaccard Overlap: **0.781** · Precision: **0.991** · Recall: **0.787** · Pearson r: **0.970**
+- Shared active neurons: 317 out of 403 in the reference window
+
+**Cumulative Benchmark (100 ms simulation vs. full 30-trial × 1.0 s reference — duration mismatch explicitly noted):**
+- Pearson r: **0.974** across 320 shared neurons · Precision: **1.000** · Jaccard: **0.714**
+
+**Next Milestone:** 30-trial × 1-second validation (matching Shiu et al.'s protocol), then Phase 3 body integration & Phase 4 descending neuron bridge.
 
 -----
 

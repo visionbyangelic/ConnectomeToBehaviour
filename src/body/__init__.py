@@ -1,1 +1,3 @@
-"""Body and biomechanics simulation module (FlyBody / FlyGym interfaces)."""
+from .fly_body import FlyBody
+
+__all__ = ["FlyBody"]
