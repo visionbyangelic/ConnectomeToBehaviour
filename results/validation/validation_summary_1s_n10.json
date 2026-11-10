@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "duration_s": 1.0,
+    "n_trials": 10,
+    "n_jobs": 3,
+    "connectome": "FlyWire v630 (2023_03_23)",
+    "timestamp": "2026-11-10T12:01:38Z",
+    "total_suite_elapsed_s": 2316.670198917389
+  },
+  "sugar": {
+    "exp_name": "sugar_150hz",
+    "duration_s": 1.0,
+    "n_trials": 10,
+    "mn9_left": {
+      "mean": 83.5,
+      "std": 6.519202405202649,
+      "ci95": 4.663556462097511,
+      "trials": [
+        86.0,
+        84.0,
+        88.0,
+        88.0,
+        72.0,
+        76.0,
+        90.0,
+        92.0,
+        80.0,
+        79.0
+      ]
+    },
+    "mn9_right": {
+      "mean": 58.7,
+      "std": 5.186520991955976,
+      "ci95": 3.710213609649203,
+      "trials": [
+        60.0,
+        58.0,
+        65.0,
+        60.0,
+        53.0,
+        62.0,
+        62.0,
+        64.0,
+        54.0,
+        49.0
+      ]
+    },
+    "total_spikes": {
+      "mean": 13582.2,
+      "std": 456.9256686449851,
+      "ci95": 326.86493258853
+    },
+    "active_neurons": {
+      "mean": 380.9,
+      "std": 7.795297727904089,
+      "ci95": 5.576420063891406
+    },
+    "cumulative_active_neurons": 414,
+    "elapsed_s": 662.2578618526459
+  },
+  "bitter": {
+    "exp_name": "bitter_150hz",
+    "duration_s": 1.0,
+    "n_trials": 10,
+    "mn9_left": {
+      "mean": 0.0,
+      "std": 0.0,
+      "ci95": 0.0,
+      "trials": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "mn9_right": {
+      "mean": 0.0,
+      "std": 0.0,
+      "ci95": 0.0,
+      "trials": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "total_spikes": {
+      "mean": 4620.6,
+      "std": 133.02397444738213,
+      "ci95": 95.15961878295127
+    },
+    "active_neurons": {
+      "mean": 76.2,
+      "std": 2.573367875415838,
+      "ci95": 1.8408764813272618
+    },
+    "cumulative_active_neurons": 81,
+    "elapsed_s": 542.7086882591248
+  },
+  "sugar_plus_bitter": {
+    "exp_name": "sugar_plus_bitter_150hz",
+    "duration_s": 1.0,
+    "n_trials": 10,
+    "mn9_left": {
+      "mean": 9.1,
+      "std": 3.573047252229764,
+      "ci95": 2.556004027305224,
+      "trials": [
+        12.0,
+        6.0,
+        10.0,
+        11.0,
+        11.0,
+        8.0,
+        15.0,
+        4.0,
+        4.0,
+        10.0
+      ]
+    },
+    "mn9_right": {
+      "mean": 14.2,
+      "std": 1.6193277068654823,
+      "ci95": 1.1583972581644852,
+      "trials": [
+        13.0,
+        13.0,
+        15.0,
+        15.0,
+        13.0,
+        15.0,
+        18.0,
+        13.0,
+        14.0,
+        13.0
+      ]
+    },
+    "total_spikes": {
+      "mean": 13403.8,
+      "std": 143.8879193446529,
+      "ci95": 102.93121679149071
+    },
+    "active_neurons": {
+      "mean": 344.0,
+      "std": 11.935009193312105,
+      "ci95": 8.537791249470141
+    },
+    "cumulative_active_neurons": 417,
+    "elapsed_s": 587.0002455711365
+  },
+  "water": {
+    "exp_name": "water_150hz",
+    "duration_s": 1.0,
+    "n_trials": 10,
+    "mn9_left": {
+      "mean": 6.0,
+      "std": 3.4318767136623336,
+      "ci95": 2.4550167076189195,
+      "trials": [
+        9.0,
+        2.0,
+        5.0,
+        5.0,
+        7.0,
+        4.0,
+        6.0,
+        14.0,
+        3.0,
+        5.0
+      ]
+    },
+    "mn9_right": {
+      "mean": 1.6,
+      "std": 2.118699810942761,
+      "ci95": 1.5156265414740944,
+      "trials": [
+        5.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        6.0,
+        0.0,
+        1.0
+      ]
+    },
+    "total_spikes": {
+      "mean": 5231.7,
+      "std": 183.40425900786008,
+      "ci95": 131.19950326894693
+    },
+    "active_neurons": {
+      "mean": 148.7,
+      "std": 37.89180503603502,
+      "ci95": 27.10616441289141
+    },
+    "cumulative_active_neurons": 237,
+    "elapsed_s": 523.1545593738556
+  },
+  "statistical_tests": {
+    "mn9_left": {
+      "welch_t_statistic": 31.647637818538136,
+      "p_value": 2.1343765921969663e-14,
+      "percent_inhibition": 89.10179640718563,
+      "significant_at_0_05": true,
+      "significant_at_0_01": true
+    },
+    "mn9_right": {
+      "welch_t_statistic": 25.899148661539975,
+      "p_value": 5.027244885938309e-11,
+      "percent_inhibition": 75.809199318569,
+      "significant_at_0_05": true,
+      "significant_at_0_01": true
+    }
+  },
+  "reference_model_benchmark_1s": {
+    "jaccard_overlap": 0.9113082039911308,
+    "precision": 0.9927536231884058,
+    "recall": 0.9174107142857143,
+    "firing_rate_correlation": 0.9936046168489662,
+    "sim_active_neurons": 414,
+    "gt_active_neurons": 448,
+    "shared_active_neurons": 411,
+    "time_window_matched": false
+  }
+}
