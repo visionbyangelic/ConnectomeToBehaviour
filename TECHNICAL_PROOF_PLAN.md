@@ -106,22 +106,33 @@ This is the step where you decide how brain output becomes body movement. Presen
 
 ---
 
-## 6. Phase 5 — Evaluation & Three-System Comparative Ablation Framework
+## 6. Phase 5 — Evaluation & Four-System Comparative Ablation Framework
 
-To demonstrate that behavioral control genuinely arises from connectome-constrained neural computation (and avoid the "separate hand-coded controller" pitfall), evaluation is structured around a rigorous three-arm comparative framework:
+To demonstrate that behavioral control genuinely arises from connectome-constrained neural computation (and avoid the "separate hand-coded controller" pitfall), evaluation is structured around a rigorous four-arm comparative framework:
 
 1. **System A — Intact Connectome-Driven Neural Controller:** Biological connectome LIF network receiving sensory input, propagating through intrinsic circuits, and activating descending neurons to drive body kinematics.
-2. **System B — Targeted Lesion / Disrupted Neural Controller:** Selected neural pathways perturbed using `block_output()` (axonal transmission blockade) or `silence()` (full network disconnection and sensory decoupling) on specific descending pathways (e.g., `MDN` for backward walking, `DNp01` for grooming, feeding premotor interneurons).
-3. **System C — Connectome-Agnostic Baseline Controller:** Standard body controller operating without connectome-derived commands (FlyGym default CPG / FlyBody pretrained RL or degree-preserved shuffled connectome null model).
+2. **System B — Targeted Lesion / Disrupted Neural Controller:** Specific pathways perturbed using `block_output()` (axonal transmission blockade) or `silence()` (full network disconnection and sensory decoupling) on specific descending pathways:
+   - `MDN` (Moonwalker Descending Neurons) for backward walking.
+   - `aDN1` / `aDN2` for antennal grooming.
+   - `DNp01` (Giant Fiber) for looming visual escape jump.
+   - Feeding premotor interneurons driving MN9.
+3. **System C — Connectome-Agnostic Baseline Controller:** Standard body controller operating without connectome-derived commands (FlyGym default CPG / FlyBody pretrained RL controller).
+4. **System D — Degree-Preserving Shuffled Connectome Null Distribution:** An ensemble of randomized connectomes that preserve exact in-degree, out-degree, and neurotransmitter sign distributions while scrambling synaptic partners. Run through the identical motor decoder to generate a formal null distribution, testing whether observed behaviors require biological circuit topology rather than arbitrary recurrent feedback.
 
-By investigating whether behavioral differences between Systems A, B, and C can be mechanistically attributed to specific circuit topology, the project transitions from a basic demonstration ("a virtual fly moving") into a rigorous hypothesis-testing tool.
+By investigating whether behavioral differences between Systems A, B, C, and D can be mechanistically attributed to specific circuit topology, the project transitions from a basic demonstration into a rigorous hypothesis-testing tool.
+
+### Quantitative Behavioral Success Metrics:
+- **Feeding:** Proboscis extension joint angle (rad), latency to extension (ms), and duration of labellar engagement.
+- **Antennal Grooming:** Front-leg (T1) tarsus-to-head contact events, bilateral sweep frequency (Hz).
+- **Locomotion:** Forward velocity (mm/s), turning yaw rate (rad/s), and tripodal coordination index (stance/swing phase locking across alternating leg triplets).
 
 ### Specific Evaluation Milestones:
-- [ ] Confirm at least three distinct, recognizable behaviors: feeding (proboscis extension), grooming, and walking/foraging.
+- [ ] Confirm at least three distinct, recognizable behaviors meeting the quantitative criteria above: feeding (proboscis extension), grooming, and walking/foraging.
 - [ ] For the feeding circuit specifically, replicate the top-N most responsive neuron list from Shiu et al.'s validation and confirm silencing each one produces the same drop in MN9 firing they report *(Shiu et al., 2024)*.
-- [ ] **In Silico Modular Lesion & Perturbation Analysis:** Apply `block_output()` and `silence()` to functional clusters (`MDN`, `DNp01`, `Giant Fiber`). Verify that behavioral deficits map precisely to the lesioned circuit.
+- [ ] **In Silico Modular Lesion & Perturbation Analysis:** Apply `block_output()` and `silence()` to functional clusters (`MDN`, `aDN1`/`aDN2`, `DNp01`). Verify that behavioral deficits map precisely to the lesioned circuit.
 - [ ] Run pairwise reference-model benchmarks (active-neuron Jaccard overlap, firing-rate Pearson correlation, spike-count ratio) between our implementation and published reference datasets.
-- [ ] Explicitly document any behavior or validation that does *not* replicate, and your best hypothesis why — a documented negative result is more credible than silence, and is standard practice in this literature.
+- [ ] Compare System A against the System D shuffled null distribution ($N \ge 20$ shuffles) to statistically isolate the contribution of biological connectome topology.
+- [ ] Explicitly document any behavior or validation that does *not* replicate, and the best hypothesis why — a documented negative result is more credible than silence, and is standard practice in this literature.
 
 ---
 

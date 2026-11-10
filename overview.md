@@ -1,109 +1,69 @@
-# ConnectomeToBehavior — Project Overview
+# ConnectomeToBehaviour — Architecture & Project Overview
+
+This document provides a concise architectural reference for the system. For current empirical status, benchmarks, and reproducibility instructions, see [README.md](README.md). For the complete chronological audit trail, see [track.md](track.md). For the phased roadmap and citations, see [TECHNICAL_PROOF_PLAN.md](TECHNICAL_PROOF_PLAN.md).
+
+---
 
 ## What This Project Is
 
-A closed-loop whole-brain emulation of *Drosophila melanogaster* (fruit fly). We take the real, publicly available wiring diagram of the fly's entire nervous system (the connectome), give each neuron standard biophysical rules (leaky integrate-and-fire), connect the network to a physically realistic virtual fly body (MuJoCo), and ask: **does recognizable behavior emerge from structure alone?**
+A closed-loop whole-brain emulation of adult *Drosophila melanogaster*. I take the real biological wiring diagram of the fruit fly central nervous system (FlyWire connectome v630), simulate its spiking dynamics with leaky integrate-and-fire equations in Brian2, connect the descending neural outputs to a 42-degree-of-freedom virtual fly body in MuJoCo (NeuroMechFly v2 via FlyGym), and test whether functional behavior emerges from connectome architecture.
 
-Target behaviors: walking/foraging, antennal grooming, proboscis extension (feeding).
-
-**Author:** Angelic Charles  
-**Started:** 6 September 2026  
-**License:** MIT
+Target behaviors:
+1. **Proboscis extension (feeding)** upon labellar sugar contact.
+2. **Antennal grooming** upon mechanosensory stimulation.
+3. **Coordinated walking and exploration**.
 
 ---
 
-## Core Pipeline
+## System Architecture
 
+```text
+       +-------------------------------------------------------------+
+       |                        Environment                          |
+       |  (MuJoCo Physics Arena: Flat Terrain / Food & Odor Patches) |
+       +-------------------------------------------------------------+
+                   │                                     ▲
+   Sensory contact │                                     │ Joint angles &
+   forces & odors  │                                     │ torques (42 DoF)
+                   ▼                                     │
+       +-----------------------+             +-----------------------+
+       |     Sensory GRNs/     |             |        FlyBody        |
+       |     Mechanoreceptors  |             |  (NeuroMechFly v2)    |
+       +-----------------------+             +-----------------------+
+                   │                                     ▲
+     Poisson drive │                                     │ Joint position
+     (e.g. 150 Hz) │                                     │ targets (rad)
+                   ▼                                     │
+       +-------------------------------------------------------------+
+       |                          FlyBrain                           |
+       |  Whole-Brain LIF Spiking Connectome Model (Brian2, v630)   |
+       |  127,400 Neurons · ~52.8M Raw Synapses · α-Synapse Dynamics |
+       +-------------------------------------------------------------+
+                   │
+                   │ Descending Neuron population spike rates
+                   ▼
+       +-------------------------------------------------------------+
+       |                      Motor Decoder Bridge                   |
+       |  Evidence-Based Anatomical Mapping (DNs → Premotor → Joints)|
+       +-------------------------------------------------------------+
 ```
-Environment → Sensory Input → Brain Model (LIF on connectome) → Descending Neurons → Body Model → Environment
-                                                                                         ↑                    |
-                                                                                         └────────────────────┘
-```
-
-| Component | Tool | Source |
-|-----------|------|--------|
-| Brain model | Brian2 (LIF + α-synapse) | Shiu et al., 2024 |
-| Connectome data | FlyWire v783 | Dorkenwald et al., 2024 |
-| Visual system | flyvis (PyTorch) | Lappalainen et al., 2024 |
-| Body simulation | MuJoCo + flygym (NeuroMechFly v2) | Wang-Chen et al., 2024 |
-| Locomotion controller | flybody (RL-trained) | Vaxenburg et al., 2025 |
 
 ---
 
-## Key Repos & Packages
+## Core Components & Repository Structure
 
-| Repo / Package | Location in workspace | Status |
-|---|---|---|
-| `philshiu/Drosophila_brain_model` | To be added (downloaded from GitHub) | ✅ Code ready, data deferred to Wi-Fi |
-| `eonsystemspbc/fly-brain` | `fly-brain/` | ✅ Code downloaded (216 KB) |
-| `flygym` | pip installed in `na` env | ✅ Installed (numpy conflict ⚠️) |
-| `flybody` (TuragaLab) | pip installed in `na` env | ✅ Installed |
-| `flyvis` | pip installed in `na` env | ✅ Installed |
-
----
-
-## Current Phase
-
-**Phase 1 — Brain Model (Shiu et al. Nature 2024 Baseline) ✅ COMPLETE**  
-- Whole-brain LIF API (`FlyBrain`) built and tested.
-- Full 4-condition gustatory validation and ground-truth comparison complete (100% precision, 0.949 Pearson firing-rate correlation).
-- Feeding motor activation (MN9) and lateral circuit inhibition confirmed.
-
-**Next up:** Phase 3 (Body Model — NeuroMechFly v2 / FlyGym / FlyBody in MuJoCo physics) & Phase 4 (Closed-Loop Sensorimotor Bridge).
+| Subsystem | Primary Module | Core Technology | Role |
+|---|---|---|---|
+| **Brain** | [`src/brain/fly_brain.py`](src/brain/fly_brain.py) | Brian2, NumPy, Parquet | 127k-neuron LIF spiking model with `.activate()`, `.block_output()`, `.silence()`, and rate extraction |
+| **Constants** | [`src/brain/constants.py`](src/brain/constants.py) | Python | Biophysical parameters and verified FlyWire IDs (GRNs, MN9, JON targets) |
+| **Evaluation** | [`src/brain/evaluation.py`](src/brain/evaluation.py) | Pandas, SciPy | Correlation, Jaccard overlap, precision, recall, and hypothesis tests |
+| **Body** | [`src/body/fly_body.py`](src/body/fly_body.py) | FlyGym, MuJoCo 3.2.7 | 42-actuator body simulation with verified millimetre units and tarsal force sensors |
+| **Bridge** | `src/bridge/` | Python | Evidence-based mapping from descending pathways to motor targets |
 
 ---
 
-## Daily Session Log
+## Canonical Data & Environment Specifications
 
-### Day 2 — Validation & Modular API Complete
-1. Designed and implemented object-oriented connectome package: `src/brain/fly_brain.py`, `src/brain/constants.py`, `src/brain/evaluation.py`.
-2. Ran verification test: `experiments/test_fly_brain_api.py` (50 ms simulation passed in 20s).
-3. Executed 4-condition biological validation suite: `experiments/reproduce_shiu_validation.py` (100 ms per condition).
-4. Results empirically resolved & verified:
-   - Sugar excitation: MN9 Left at 90.0 Hz, MN9 Right at 60.0 Hz (310 active neurons).
-   - Bitter inhibition: MN9 at 0.0 Hz (62 active neurons, non-feeding aversive circuit).
-   - Sugar + Bitter co-activation: lateral circuit inhibition observed (MN9 Left suppressed to 10.0 Hz, MN9 Right to 20.0 Hz).
-   - Water excitation: 94 active neurons.
-   - Ground-truth comparison against published paper run: **100% Precision (1.000)**, **0.949 Pearson Correlation**, **0.692 Jaccard Overlap**.
-5. Generated validation plots and summaries: `results/validation/mn9_response_comparison.png` and `results/validation/validation_summary.json`.
-
----
-
-### Day 1 — Monday 14 September 2026
-
-**What we did:**
-1. Reviewed the project README and Technical Proof Plan
-2. Analyzed `philshiu/Drosophila_brain_model` repo — confirmed connectome parquet files and code are locally available.
-3. Analyzed `eonsystemspbc/fly-brain` repo and downloaded code files & SEZ neuron mapping.
-4. Identified `TuragaLab/flybody` and pip-installed it into `na`.
-5. Installed `flygym`, `flyvis`, and `brian2` via pip into the `na` conda environment.
-6. Created FlyWire / Codex account — completed all 6/6 Quick-Start (§0) items in Technical Proof Plan.
-7. Created `overview.md` and `track.md` for project tracking.
-8. Resolved v630 vs v783 ID mapping differences.
-9. Ran first live whole-brain connectome simulation on local machine (100 ms, 1,306 spikes, 323 active neurons).
-10. Generated visual spike raster and population firing rate plots.
-11. Established clean repository architecture (`src/brain/`, `src/body/`, `src/bridge/`, `experiments/`) and `.gitignore` to keep third-party repos and 100MB+ data files off GitHub.
-12. Incorporated technical review feedback into Phase 5 of [TECHNICAL_PROOF_PLAN.md](file:///c:/Users/nerdyalgorithm/Desktop/top%20project/ConnectomeToBehaviour/TECHNICAL_PROOF_PLAN.md): added **In Silico Modular Lesion & Perturbation Analysis** to turn the simulation into a causal diagnostic tool.
-13. Empirically resolved the "Verify Yourself" section in §0: proved why Shiu et al. reports 125k+ neurons and 50M synapses (v630 unthresholded), while Eon reports 138k neurons and ~5M synapses (v783 thresholded at $\ge 3$ synapses/connection: exactly 4,916,231 edges).
-
-**Known issues & status:**
-- ✅ **Connectome data files found locally!** All needed files exist on disk.
-- ✅ **NumPy test:** Tested `import flybody` and `import flygym` on NumPy 1.26.4 — both loaded without error.
-- ✅ **Brian2 installed:** Version `2.9.0` installed into `na` environment and verified.
-- ✅ **LIVE SIMULATION VERIFIED:** Ran a live 100 ms simulation on local CPU in 35s. Output verified in `results/test/test_sugar_100ms.parquet`.
-- ✅ **Clean Git Repo:** Only your project code and docs will be pushed to GitHub.
-- 🎯 **Diagnostic Milestone Added:** Selective neuropil / descending neuron lesions to map functional modules to specific motor deficits.
-- 🔍 **"Verify Yourself" Resolved:** Fully reconciled the neuron and synapse count discrepancy empirically.
-
-**Where we stopped (Day 1 End — 8:36 PM):**
-- **§0 (Quick-Start Setup) is 100% complete:** All 6 checklist items done, plus the "Verify Yourself" neuron/synapse mystery empirically resolved.
-- Full scientific stack (`brian2`, `flybody`, `flygym`, `flyvis`, `pandas`, `pyarrow`, `joblib`) installed, verified, and running in `na` conda environment.
-- Live whole-brain connectome simulation ran on local CPU (35s for 100ms, 1,306 spikes, 323 active neurons).
-- Visual spike raster and population histogram generated and confirmed.
-- Clean project structure (`src/brain/`, `src/body/`, `src/bridge/`, `experiments/`) and `.gitignore` active.
-- Added In Silico Modular Lesion & Perturbation Analysis to Phase 5.
-- **Next session starts at:** **§1: Phase 0 — Literacy (Core Papers Executive Digest)** followed by building our clean `src/brain/` connectome API class.
-
----
-
-
+* **Connectome Baseline:** FlyWire materialization **v630** (`2023_03_23_completeness_630_final.csv` and `2023_03_23_connectivity_630_final.parquet`). Stored locally on disk in `Drosophila_brain_model-main/` (omitted from Git tracking due to file size). Downloadable via `scripts/download_data.py`.
+* **Execution Environment:** Single unified in-process runtime under Conda environment `na` (Python 3.11, NumPy 1.26.4, Brian2 2.9.0, FlyGym 1.2.1, MuJoCo 3.2.7). Verified running synchronously in the same process without IPC overhead.
+* **Licensing & Attribution:** Core LIF connectome simulation adapted from the reference implementation in Shiu et al. (*Nature* 2024). Open-source under MIT License.

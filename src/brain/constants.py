@@ -91,6 +91,12 @@ MN9_LEFT = 720575940660219265
 MN9_RIGHT = 720575940645521262
 MN9_NEURONS = [MN9_LEFT, MN9_RIGHT]
 
-# Antennal mechanosensory / Johnston's Organ Neurons (JON) Descending Command Targets
-DN1_1 = 720575940616185531
-DN2_L = 720575940629806974
+# Antennal mechanosensory / Johnston's Organ Neurons (JON) downstream targets
+# References: Shiu et al. (Nature 2024, Fig. 5 & Extended Data Fig. S4)
+DN1_1 = 720575940616185531  # Descending neuron activated by JON-F high-frequency vibrations
+DN2_L = 720575940629806974  # Left descending neuron activated by JON
+
+# Known Descending Neuron Nomenclature & Biological Role Reference:
+# - DNp01: Giant Fiber (GF), mediating looming visual escape jump (Schlegel et al. 2024)
+# - aDN1 / aDN2: Antennal descending neurons driving antennal grooming (Hampel et al. 2015, Seeds et al. 2014)
+# - MDN: Moonwalker Descending Neuron, driving backward walking (Bidaye et al. 2014)

@@ -582,7 +582,57 @@ Empirically resolve the architecture question: Can Brian2 (neural LIF simulation
 ```
 
 ### Next Steps (Prioritized)
-1. **Phase 4 Descending Neuron Decoder (`src/bridge/dn_decoder.py`):** Map descending neuron populations to kinematic joint targets with clear distinction between biological connectome activity and interface decoders.
-2. **Phase 4 Closed-Loop Orchestration (`experiments/run_closed_loop.py`):** Synchronously step `FlyBrain` and `FlyBody` in unified loop.
-3. **Phase 5 Three-System Comparative Ablation:** Test System A (intact connectome), System B (lesioned connectome), and System C (baseline).
+1. **Canonical 1.0 s x N=10 Validation:** Currently executing (`experiments/run_1s_n10_validation.py`).
+2. **Phase 4 Descending Neuron Decoder (`src/bridge/dn_decoder.py`):** Map descending neuron populations to kinematic joint targets with clear distinction between biological connectome activity and interface decoders.
+3. **Phase 4 Closed-Loop Orchestration (`experiments/run_closed_loop.py`):** Synchronously step `FlyBrain` and `FlyBody` in unified loop.
+4. **Phase 5 Four-System Comparative Ablation:** Test System A (intact connectome), System B (lesioned connectome), System C (baseline), and System D (shuffled connectome null distribution).
+
+---
+
+## Session 6 — Runtime Benchmarks, Cell-Type Corrections & Bilateral Symmetry Proof
+
+**Date:** Tuesday 10 November 2026  
+**Time:** ~12:45–13:05
+
+### 1. Isolated Build Time vs. Run Time Benchmarking
+- **Script:** `experiments/benchmark_brain_runtime.py`
+- **Motivation:** Outside technical review suggested Brian2 simulation might be $\sim 350\times$ slower than real time, creating an insurmountable bottleneck for closed loop. We needed to isolate fixed graph compilation overhead from steady-state ODE stepping.
+- **Empirical Results:**
+  - Connectome metadata indexing (127,400 neurons): **0.146 s**
+  - Network construction (`_build_network()`, reading 82.6 MB parquet & building synapses): **2.525 s**
+  - First `net.run(50 ms)` (includes Brian2 numpy codegen): **6.812 s**
+  - Second `net.run(50 ms)` on the *same* pre-built network: **6.048 s**
+  - Third `net.run(100 ms)` on same network: **10.247 s**
+  - Single full 1.0-second trial (`net.run(1.0*second)`): **83.32 s** (13,933 spikes)
+- **Key Takeaway:** Steady-state Real-Time Factor (RTF) is **$102.5\times$ slower than real time** (not $350\times$). Fixed build overhead is 2.5s ($\sim 27\%$ of a 50 ms run). Stepping an existing compiled network in memory avoids rebuild latency entirely.
+
+---
+
+### 2. Anatomical Cell-Type Verification: `DNp01` vs. `aDN1`/`aDN2`
+- **Correction:** In earlier drafts, `DNp01` was mistakenly described as a "grooming neuron."
+- **Verification from Connectome Literature:**
+  - `DNp01` is the **Giant Fiber (GF)**, mediating looming visual escape jump (Schlegel et al. 2024).
+  - Antennal grooming command neurons are biologically **`aDN1` and `aDN2`** (Hampel et al. 2015, Seeds et al. 2014).
+  - The descending neurons stored in `src/brain/constants.py` (`DN1_1 = 720575940616185531` and `DN2_L = 720575940629806974`) are confirmed from Shiu et al. (Figure 5 / Extended Data Figure S4) as **Johnston's Organ Neurons (JON)** downstream mechanosensory targets, not grooming drivers.
+- **Action:** Fixed nomenclature across `src/brain/constants.py` and `TECHNICAL_PROOF_PLAN.md`.
+
+---
+
+### 3. Proof of Lateralization & Exact Bilateral Symmetry
+- **Script:** `experiments/test_mn9_symmetry.py`
+- **Motivation:** Reviewers questioned the origin of the MN9 Left vs. Right rate asymmetry (70.0 Hz vs 43.3 Hz). We hypothesized that unilateral stimulation of 21 right-side labellar GRNs (`SUGAR_GRNS_RIGHT`) causes asymmetric motor activation.
+- **Empirical Test:**
+  - **Right-only sugar GRNs (21 neurons, 150 Hz):** MN9 Left = 60.0 Hz, MN9 Right = 20.0 Hz (Asymmetry ratio = **3.00**).
+  - **Left-only sugar GRNs (10 neurons, 150 Hz):** MN9 Left = 10.0 Hz, MN9 Right = 20.0 Hz (Asymmetry ratio = **2.00**, mirror-image).
+  - **Bilateral sugar GRNs (31 neurons, 150 Hz):** MN9 Left = 60.0 Hz, MN9 Right = 60.0 Hz (**Difference = 0.0 Hz, EXACT SYMMETRY**).
+- **Conclusion:** The asymmetry is a confirmed biological feature of unilateral sensory delivery in the connectome, not model instability.
+
+---
+
+### 4. Canonical 1.0 s x N=10 Multi-Trial Validation Suite
+- **Script:** `experiments/run_1s_n10_validation.py`
+- **Design:** Parallel execution across 3 CPU workers, 10 independent trials with explicit seeds, 1.0-second full duration matching Shiu et al.'s protocol.
+- **Metrics:** Firing rates, active neuron populations, Welch's t-test for lateral inhibition, and full benchmark against `sugarR.parquet`.
+- **Status:** Launched and executing in background (`task-734`).
+
 
