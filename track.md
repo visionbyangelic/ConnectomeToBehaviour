@@ -633,6 +633,48 @@ Empirically resolve the architecture question: Can Brian2 (neural LIF simulation
 - **Script:** `experiments/run_1s_n10_validation.py`
 - **Design:** Parallel execution across 3 CPU workers, 10 independent trials with explicit seeds, 1.0-second full duration matching Shiu et al.'s protocol.
 - **Metrics:** Firing rates, active neuron populations, Welch's t-test for lateral inhibition, and full benchmark against `sugarR.parquet`.
-- **Status:** Launched and executing in background (`task-734`).
+- **Status:** ✅ Executed and completed in Session 7.
+
+---
+
+## Session 7 — Canonical 1.0 s x N=10 Multi-Trial Validation Completed
+
+**Date:** Tuesday 10 November 2026  
+**Script:** `experiments/run_1s_n10_validation.py`  
+**Runtime:** 38.6 minutes (parallelized across 3 CPU workers using `joblib` LokyBackend)  
+**Artifacts Generated:**
+- `results/validation/validation_summary_1s_n10.json` (machine-readable data with 95% CIs and t-test statistics)
+- `results/validation/mn9_response_1s_n10.png` (publication figure with error bars representing 95% confidence intervals)
+
+### Canonical Multi-Trial Empirical Results (N=10 Trials, 1.0 s Biological Time)
+
+| Experimental Condition | Stimulus | Total Spikes / Trial (Mean ± SD) | Active Neurons / Trial (Mean ± SD) | MN9 Left Rate (Mean ± SD, [95% CI]) | MN9 Right Rate (Mean ± SD, [95% CI]) | Circuit Phenotype |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **1. Sugar Alone** | 21 Right Sugar GRNs (150 Hz) | 13,858 ± 204 | 380.9 ± 7.8 | **83.5 ± 6.5 Hz** *[78.8, 88.2]* | **58.7 ± 5.2 Hz** *[55.0, 62.4]* | **Proboscis Extension Motor Activation** |
+| **2. Bitter Alone** | 21 Bitter GRNs (150 Hz) | 4,213 ± 89 | 76.2 ± 2.6 | **0.0 ± 0.0 Hz** *[0.0, 0.0]* | **0.0 ± 0.0 Hz** *[0.0, 0.0]* | **Aversive Baseline (Zero Feeding)** |
+| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 12,987 ± 341 | 344.0 ± 11.9 | **9.1 ± 3.6 Hz** *(↓ 89.1%)* *[6.5, 11.7]* | **14.2 ± 1.6 Hz** *(↓ 75.8%)* *[13.0, 15.4]* | **Lateral Circuit Inhibition (p < 10⁻¹⁰)** |
+| **4. Water Alone** | 18 Water GRNs (150 Hz) | 5,142 ± 112 | 148.7 ± 37.9 | **6.0 ± 3.4 Hz** *[3.5, 8.5]* | **1.6 ± 2.1 Hz** *[0.1, 3.1]* | Distinct SEZ Sensory Circuit |
+
+### Formal Hypothesis Test: Cross-Modal Lateral Inhibition
+In our earlier N=3 run at 100 ms, the sugar+bitter result had $SD > \text{mean}$ due to discrete spike quantization near threshold. At $N=10$ and 1.0 s biological time, the variance is tightly bounded and reveals robust suppression:
+- **MN9 Left Suppression:** Drops from $83.5\text{ Hz} \to 9.1\text{ Hz}$ ($89.1\%$ inhibition).
+  - Two-sample unequal variance Welch's $t$-test: **$t = 31.648$, $p = 2.13 \times 10^{-14}$** ($p < 10^{-13}$, statistically significant).
+- **MN9 Right Suppression:** Drops from $58.7\text{ Hz} \to 14.2\text{ Hz}$ ($75.8\%$ inhibition).
+  - Welch's $t$-test: **$t = 25.899$, $p = 5.03 \times 10^{-11}$** ($p < 10^{-10}$, statistically significant).
+- **Active Downstream Cascade:** Drops from $380.9 \pm 7.8 \to 344.0 \pm 11.9$ neurons per trial.
+
+### Reference Model Reproduction Benchmark (vs. Shiu et al. Nature 2024 `sugarR.parquet`)
+Protocol-matched comparison: 10 trials of 1.0 s simulation vs. 30 trials of 1.0 s published simulation:
+- **Pearson Firing-Rate Correlation:** **0.9936** across 411 shared active neurons.
+- **Jaccard Overlap:** **0.9113** (up from 0.781 in the 100 ms time-matched slice).
+- **Precision:** **0.9928** (99.3% of active neurons in our simulation are confirmed in the reference).
+- **Recall:** **0.9174** (captures 411 of the 448 reference active neurons).
+- **Active Neurons:** 414 simulated active vs. 448 reference active.
+
+### Next Steps (Prioritized)
+1. **Stage, commit, and push canonical validation artifacts and updated docs to GitHub.**
+2. **Phase 4 Descending Neuron Decoder (`src/bridge/dn_decoder.py`):** Map descending neuron populations to kinematic joint targets with clear distinction between biological connectome activity and interface decoders.
+3. **Phase 4 Closed-Loop Orchestration (`experiments/run_closed_loop.py`):** Synchronously step `FlyBrain` and `FlyBody` in unified loop.
+4. **Phase 5 Four-System Comparative Ablation:** Test System A (intact connectome), System B (lesioned connectome), System C (baseline), and System D (shuffled connectome null distribution).
 
 
