@@ -1,0 +1,16 @@
+w-reset test, run 23 Nov 2026 with the pinned brain env (Brian2 2.9.0).
+Script: w_reset_test.py (this folder). Raw outcome:
+
+- Variant A (upstream's exact shape: reset 'v = v_rst; w = 0; g = 0 * mV',
+  synapses with a 'w' variable present): NO error, no warning about `w`
+  (only unrelated pyparsing deprecation notices from Brian2 internals).
+  The neuron group does NOT have a variable named 'w' afterwards.
+  Spikes: 44 total (driven neuron 30, downstream 14).
+- Variant B (reset without the clause): identical spike train to A under the
+  same seed -- 44 spikes, same neurons, same times.
+- Variant C (clause present, no synapses at all): also no error; driven
+  neuron fired its 30 spikes; still no 'w' variable on the group.
+
+Verdict: in Brian2 2.9.0 the `w = 0` clause in the reset string is silently
+ignored -- it neither errors, nor creates a variable, nor changes any spike.
+Our reset therefore omits it, with dynamics identical to upstream's.
