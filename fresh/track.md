@@ -337,3 +337,276 @@ whole-vector checks are the point of the strengthening. The full suite stands at
 freeze: it claimed the fresh tree is untracked, which stops being true the
 moment the freeze commit exists — the manifest now simply records whatever git
 reports, unedited.
+
+## 23 Nov 2026 — Part 3 preparation: freeze committed, preregistration drafted
+
+The freeze is done. The implementation Part 3 will validate now exists as one
+local commit — 0cb9b81, 31 files: my model package, the test suite, and the
+Part 2 artefacts including the ID sets — and the frozen paths are clean in git
+afterwards. Nothing was pushed; Part 6 still governs GitHub. The freeze record
+(PART3-FREEZE.md) names the commit, the environment versions read live from the
+pinned env, the data hashes, and the rule that outputs are never mixed across
+revisions. Two staging catches are recorded in it because either could have
+silently broken the freeze: the repo's `data/` ignore rule also matches my
+loader's own directory, so the loader was nearly left out of the commit, and
+the ID-set CSVs needed a deliberate force-add against the `*.csv` rule. Both
+were caught by reading the staged list before committing, not after.
+
+The preregistration for the sugarR benchmark rung is drafted (PART3-PREREG.md)
+and is a draft in the strict sense: Part 3 is a hard gate, so it goes to the
+full panel and then to me for approval, and no validation trial runs before
+both. What it fixes in advance: the stimulus is the 21 right sugar neurons only,
+driven at 150 Hz — the notebook's prose says 200 Hz, but the call that produced
+the reference passed no parameters, so the code default is what ran, and the
+ambiguity is named in the document rather than buried. Thirty trials, seeds
+3000–3029, published in the document itself; about an hour of compute,
+projected from the smoke run's measured timing. The comparison is Spearman
+rank correlation on the union of the two active sets as the primary metric,
+with the noise ceiling computed from the reference's own trial-to-trial
+variability — because the upstream code is unseeded, even it would not agree
+with itself perfectly, and the honest standard is to be indistinguishable from
+"the same model, run again", within the ±0.02 tolerance Part 0 set. Pass,
+inconclusive and fail are all defined numerically, including the MN9 rules; a
+fail follows a written diagnosis order (analysis code first, protocol
+reconstruction last) and implicates K1 — if I cannot reproduce the published
+pattern after diagnosis, the project pivots to a reproduction-failure report
+and does not build a body on an untrusted brain. The MN9 asymmetry stays an
+open question: this rung's numbers are RQ-C5's first real evidence, reported
+with intervals, and they may say whether the asymmetry appears — never why.
+
+## 23 Nov 2026 — Part 3 preregistration reviews (Reviewers 2 and 3) and Amendment Pass 1
+
+Reviewer 2 and Reviewer 3 have both reviewed my Part 3 preregistration draft for the sugarR benchmark rung. Both verdicts are the same shape: approve it once their required amendments are made. Reviewer 1's review of the original draft is still to come tonight, and a second amendment pass may follow from it — I am keeping this pass cleanly logged so that is easy to extend. The full record of both verdicts is in panel/PART3-PREREG-REVIEW.md, with a placeholder section waiting for Reviewer 1.
+
+I have applied Amendment Pass 1 to PART3-PREREG.md. These are protocol-text amendments only: the frozen implementation (commit 0cb9b81) is not affected, no code has changed, and no validation trial has run or may run yet.
+
+What Reviewer 3 required, and what I changed:
+
+- The noise ceiling is now cross-replicate. My draft estimated the ceiling from the reference's own split halves only; that quietly assumed my output was noiseless. Now split-half reliability is estimated for both datasets — 200 balanced 15/15 splits under a fixed split seed (20261123), Spearman–Brown corrected to 30 trials, giving R_ref,30 and R_new,30 — and the ceiling is C_cross = sqrt(R_ref,30 x R_new,30), computed separately for Spearman and for Pearson. All three numbers get reported alongside the observed correlations, and the "ceiling below 0.90" inconclusive rule now refers to C_cross. He is right: my own trial noise bounds the correlation just as much as the reference's does.
+- The MN9 agreement decision is no longer CI-overlap. I judge agreement on the difference itself: delta = my mean rate minus the reference mean, with a 95% CI for the difference, and agreement requires that CI to sit entirely inside the equivalence margin Part 0 already set — plus/minus 25% of the reference rate (plus/minus 5 Hz if that were wider; it is not binding here), which is plus/minus 23.3 Hz for MN9 left and plus/minus 15.5 Hz for MN9 right. CI-overlap is still computed and reported, but it no longer decides anything. The 15% CI half-width rule stays as a precision gate, the left-greater-than-right ordering stays as its own requirement, and the old FAIL clause about MN9 deviation has been reworded to use this same difference test.
+- "Within 0.02 of the ceiling" now has a definition: observed >= C_cross - 0.02, a maximum permitted shortfall. Going above the ceiling is allowed and unpenalised. And the ceiling is an estimate, not a constant — bootstrap-over-trials uncertainty is reported for the observed correlations and for the ceiling itself.
+- Documentation tightened: the reconstruction record now preserves the exact producing notebook cell (cell 7), the upstream commit, the default-parameter definition, and the conflicting 200 Hz prose, and 150 Hz is labelled "reconstructed protocol, not independently verified from the reference parquet". A 200 Hz sensitivity run may be informative later, but it must never be used to rescue a failed 150 Hz reproduction — I have written that down now so nobody can reach for it after a failure. Seed semantics are also stated plainly: each seed initialises all stochastic components of its trial (the Poisson drive), the streams are independent across trials, and a trial reproduces from its seed alone, with no reliance on execution order or hidden global state.
+
+What Reviewer 2 required, and what I changed:
+
+- The left>right MN9 ordering now has its source stated: it is a property of the sugarR reference output itself (left 93.3 Hz, right 61.8 Hz in the reference data) — a model-vs-model benchmark check, not a biological assumption and not something inherited from my old build. RQ-C5 stays exactly as open as it was: whether the asymmetry is real, an artefact, or a bug — never, on this rung's evidence, why.
+- The Pearson classification is now written out in full, mirroring Spearman: PASS at or above C_cross,Pearson - 0.02; FAIL more than 0.05 below C_cross,Pearson or below 0.80; otherwise INCONCLUSIVE. The overall verdict follows the worst band any metric falls into, including the mixed case where Spearman passes and Pearson does not.
+- "Active" is now a number, not prose: a neuron is active if and only if it emits at least one spike across the full 30-trial window — mean rate above 0 Hz, with the equivalent stated (1 spike in 30 s is about 0.033 Hz). The same union active set is used identically for Spearman, Pearson and Jaccard, never varied per metric. Reviewer 3 required this too.
+
+After amending, I re-read the whole document for internal consistency — the bands, the clause cross-references (PASS clause 4, FAIL clause 5), the FAIL diagnosis path and K1 all line up, and nothing outside the amended sections changed. Next: Reviewer 1's review tonight, then any Pass 2, then my own approval. No validation trial runs before all of that.
+
+
+## 23 Nov 2026 — Part 1b gate: Reviewer 1's verdict — panel complete, decision is mine
+
+Reviewer 1 has answered the Part 1b body decision. His recommendation is
+(ii) NeuroMechFly, with the proxy labelled everywhere — the decision he had
+already argued for, unchanged by the other two verdicts. His deciding
+consideration: FlyBody is a different body, not a more faithful one, and on a
+task about how a specific brain drives a specific body, that is
+disqualifying, not a fidelity detail. FlyBody cannot produce what the feeding
+experiment needs — its legs are too short to reach the food, and it has no
+proboscis mechanism at all — and fixing either would be major engineering on a
+body whose proportions are not the fly's. NeuroMechFly already works end to
+end, built from the actual morphology with an IK solver written for it. He is
+clear that neither option is a proven path, and that the brain-to-muscle
+interface is genuinely unproven on both — but (ii) fails on the thing I am
+actually trying to do, while (i) fails on a premise, and that asymmetry
+decides it.
+
+His five conditions, which he calls the terms of the approval, not optional
+extras: (1) the proxy is labelled everywhere — every figure, table, README and
+paper draft reporting a behaviour from the proxy says, in the caption or
+immediately next to it, that the leg model is NeuroMechFly's five-segment
+approximation, not the fly's leg; (2) a feeding-body gate — no behavioural
+claim for the feeding experiment may be made from the proxy until a body whose
+legs reach the food and whose proboscis mechanism is represented exists; the
+proxy is a stepping-stone for walking and for the brain-to-muscle pipeline,
+not a substitute; (3) the brain-to-muscle interface gets validated in a
+targeted way before the embodiment run — a controlled, repeatable mapping from
+MN activity to muscle activation on a test case, a single joint or muscle
+group, and if it does not hold I stop and report the negative result rather
+than running the full pipeline on an unvalidated interface; (4) the audit
+requirements apply to the NeuroMechFly integration as actually built, not to
+the published model in the abstract — the audit does not get lighter because
+the model is published; (5) if the interface fails, there is no silent switch
+to FlyBody — the next step is a panel decision about redesigning the
+interface, building the feeding body first, or reporting the failure.
+
+On the other two verdicts: he does not object to Reviewer 2's — he agrees with
+it, including the proxy-labelling condition. He partly objects to Reviewer 3's:
+he adopts Reviewer 3's feeding-body qualification gate and would strengthen it
+to an outright prohibition on feeding claims from the proxy, but a gate does
+not fix FlyBody itself — it still cannot reach the food, still has no
+proboscis, and still moves in a body whose proportions are not the fly's.
+Choosing it would mean choosing a body that cannot do the experiment, then
+gating myself from claiming I did it. He agrees with the audit verdicts:
+walking CONDITIONAL PASS, with the condition being exactly the proxy-labelling
+requirement; feeding NOT YET DECIDED, with the gate as the decision; sensors
+PARTIAL, with per-segment contact forces and vision enough for the constructed
+approach and vision staying out of Core.
+
+The panel tally is 2–1 for (ii) NeuroMechFly: Reviewer 1 and Reviewer 2 for
+(ii), Reviewer 3 for (i). The full record is in
+`panel/PART1B-GATE-REVIEW.md`. The panel is complete; the body decision is now
+mine.
+
+## 23 Nov 2026 — Part 3 preregistration: Reviewer 1 did not approve as written — six required amendments
+
+Reviewer 1 has reviewed the Part 3 preregistration, and his answer to "do you
+approve this as written" is no, not yet. One scope fact first: the document
+itself was not attached to his review — his chat's uploads hold only the plan
+files — so he reviewed my summary, not the text, and he asks that the file be
+sent to him after amendment so he can re-read only the changed passages, as in
+the plan round.
+
+His six required amendments (R1–R6), full record in
+`panel/PART3-PREREG-REVIEW.md`:
+
+- R1 — the pass rule uses point estimates, so a result can land on the
+  tolerance by chance. I must pre-register a bootstrap over trials, resampling
+  both my trials and the reference's, for each primary statistic and for the
+  gap to the ceiling, and PASS must require the point criterion and the upper
+  95% bound of the gap at or below 0.02; an interval straddling the tolerance
+  is INCONCLUSIVE, not PASS. The combination rule must be stated explicitly:
+  PASS only if all criteria are met, FAIL if any FAIL trigger fires, otherwise
+  INCONCLUSIVE.
+- R2 — the noise ceiling needs the same pipeline as the comparison. A
+  split-half ceiling uses 15-trial halves, and which neurons count as active
+  — and how many tie at zero — depends on how many trials were averaged;
+  Spearman–Brown corrects reliability, not a changed support. The ceiling
+  must be computed through the identical union-active-set and tie-handling
+  code, with the tie handling written down; my own split-half must be
+  reported too, with any mismatch against the reference's flagged; and every
+  reference-only quantity (ceiling, reference MN9 means and ordering,
+  reference active-set size) must be recorded in the preregistration with the
+  reference file's hash before any trial runs.
+- R3 — the 150 vs 200 Hz ambiguity becomes a pre-declared sensitivity arm. He
+  accepts my code-reading argument for 150 Hz as the primary, confirmatory
+  protocol, but an ambiguity this important, with K1 on the line, must not sit
+  at the last step of a diagnosis path. I must pre-declare a 200 Hz arm
+  (about an hour), labelled non-confirmatory, with the rule that if the
+  primary is FAIL or INCONCLUSIVE and the 200 Hz arm would have passed, the
+  verdict stays FAIL or INCONCLUSIVE, annotated "protocol-ambiguous", and a
+  corrected protocol needs its own new preregistration. Before the freeze I
+  also have to read the Shiu et al. methods text for the stated rate and check
+  whether the reference file's reference-only statistics discriminate the two
+  rates.
+- R4 — define "active", and do not anchor the floors to the old build. The
+  activity threshold must be exact, with a sensitivity table at two other
+  thresholds (for example 0.1 Hz and 1 Hz), because Jaccard is highly
+  sensitive to this boundary. The precision, recall and Jaccard floors must be
+  justified from a reference-only split-half analogue, not set below the old
+  build's achieved values, and I must state openly that the old values were
+  seen when the floors were chosen.
+- R5 — INCONCLUSIVE needs a pre-registered path; only FAIL has one now, and
+  the gate does not pass on INCONCLUSIVE. For a result inconclusive only
+  because the MN9 CI half-widths exceed 15%, one extension to N=60 is allowed;
+  anything else requires a panel decision or a logged waiver signed by me.
+- R6 — state the scope of what Part 3 certifies. The feeding experiment
+  depends on bitter and on sugar+bitter suppression, and a sugarR pass says
+  nothing about those. I must state whether Part 3 requires every rung and
+  where each later rung is pre-registered, and a sugarR-only pass must not be
+  reported as "brain validated".
+
+His non-blocking points: the 68.75 mV kick is arithmetically consistent with
+w_syn = 0.275 mV and a 250 input scale; the MN9 CI-overlap rule is conservative
+and I should also report the difference with its CI; seeds need Brian2 state
+reset between trials, independent per-trial seeds and a deterministic CPU
+backend stated, with a short determinism check pre-declared as an engineering
+test; the "w omission" wording should cite the before/after weight-vector tests
+and claim "no effect under these tests", not "ineffective" in general; and the
+freeze must commit and tag the preregistration, the reference-file hash and the
+harness hash before any trial runs, keeping the timestamps.
+
+What he calls already sound: the diagnosis order with protocol reconstruction
+last, the K1 link and the ban on refitting w_syn, the "reproduction of a
+reference output, not biological validation" language, and naming the 150/200
+Hz ambiguity openly.
+
+Some of R1–R4 overlap what Amendment Pass 1 already did — the cross-replicate
+ceiling, the exact active definition, the bootstrap uncertainty reporting — and
+I have logged where the overlap ends and what is genuinely new in
+`panel/PART3-PREREG-REVIEW.md`, so Amendment Pass 2 builds on Pass 1 rather
+than redoing it. Next: Pass 2, then the file to Reviewer 1 for his
+changed-passages re-read, then my own approval. No validation trial runs
+before all of that.
+
+## 23 Nov 2026 — Part 3 preregistration, Amendment Pass 2 (Reviewer 1's six amendments)
+
+Reviewer 1 reviewed a summary of my preregistration, not the document, and
+sent back six required amendments. I have applied all six, plus his
+non-blocking points, and listed every changed passage for his re-read in
+`panel/PART3-PREREG-CHANGED-PASSAGES.md`. The frozen implementation is
+untouched — protocol text only — and no validation trial has run.
+
+The pass rule is now honest about sampling noise: passing requires the point
+criterion AND the upper bound of a bootstrap over both sides' trials to sit
+inside the 0.02 tolerance, for both correlations, and the combination rule is
+written down — pass only if everything passes, fail if anything fails,
+otherwise inconclusive. The ceiling is now computed through the identical
+code as the comparison, with the tie handling written down, and my own
+split-half will be reported alongside the reference's. I pre-recorded the
+reference-only quantities before any trial runs: the ceiling component is
+0.9995 (Spearman) and 0.9998 (Pearson), so the "ceiling below 0.90" branch
+would need my side to score under 0.81 — a guard, not a live branch; the
+reference MN9 means are 93.27 and 61.80 Hz with their intervals; the active
+set re-counts to 448.
+
+The big finding from the check Reviewer 1 asked for: I read the paper's
+Methods text (it states a 10–200 Hz sweep and no single canonical rate), and
+then I read the rate straight out of the reference file itself — the 21
+driven sugar neurons fire at 196.8 Hz on average, while every undriven
+control population is completely silent. Under this model's drive, a driven
+neuron fires at close to the drive rate by construction, so the file was
+almost certainly generated at 200 Hz, not the 150 Hz my reconstruction
+chose from the code default. I have kept 150 Hz as the primary (that was
+Reviewer 1's amendment as written, before this check existed) and
+pre-declared a 200 Hz arm that can never rescue the primary — but I recorded
+the finding in full, in the document, so the panel and I can decide before
+the freeze whether the primary should switch to 200 Hz by formal amendment.
+I will not let a protocol I now believe is mis-specified run without that
+decision being made in the open.
+
+The other amendments: a sensitivity table at 0.1 and 1 Hz for the overlap
+metrics, with the floors re-justified from the reference's own split-half
+values and an open statement that the old build's values were seen when the
+floors were chosen; a pre-registered path out of an inconclusive result — one
+extension to 60 trials if precision alone is the problem (seeds 3060–3089),
+otherwise a panel decision or a signed waiver; and a scope section stating
+plainly that Part 3 certifies the sugar rung only, never "the brain
+validated". I also pre-declared a determinism engineering check, fixed the
+seed blocks, corrected the wording on the stray variable to "no effect under
+these tests", and wrote a freeze checklist (commit and tag the preregistration
+before any trial runs). Reviewer 1's changed-passages re-read is still to
+come, and then my own approval.
+
+## 23 Nov 2026, ~22:37 — I handed two decisions to the panel
+
+I could not make these two calls tonight, so I asked the panel to decide them for me, with the full evidence in front of them:
+
+1. **The feeding body** — NeuroMechFly with a labelled stand-in measure, or FlyBody with the real mouthpart measurement. The panel had already split 2–1 for NeuroMechFly, but one of Reviewer 1's stated reasons (that FlyBody has no proboscis mechanism at all) is contradicted by my own audit, which verified five calibrated proboscis degrees of freedom in the installed package. The panel is re-deciding with that correction on the table.
+2. **The sugarR drive rate** — my reference-only check showed the driven sugar neurons firing at ~197 Hz in the reference file, which under the drive mechanism reads out the generating rate: most likely 200 Hz, not the 150 Hz code default my preregistration was built on. The panel is deciding whether the primary switches to 200 Hz, stays at 150 Hz with the 200 Hz arm, or waits for a two-trial calibration.
+
+Whatever they decide is what I will run with, and their reasoning goes into the record.
+
+## 23 Nov 2026, ~22:40–22:44 — The panel decided both questions, unanimously, and I accepted
+
+The panel came back on both decisions I handed them, and both ended unanimous — which is not where either of them started.
+
+**The body: FlyBody, 3–0.** The first round had gone 2–1 for NeuroMechFly with a labelled stand-in measure, but that majority rested partly on a claim that turned out to be wrong: that FlyBody has no proboscis mechanism at all. My own audit had already verified the opposite — five calibrated proboscis degrees of freedom in the installed package, compiled and run in my pinned body environment. With that correction on the table, Reviewer 1 and Reviewer 2 both reversed their votes, and Reviewer 3 held his. Reviewer 1's deciding argument, once the false premise was gone, was loop closure: on NeuroMechFly there are no proboscis parameters to drive, so feeding there means invented parameters or a stand-in that never changes the body's state, and my closed-loop-versus-open-loop question would be untestable for feeding no matter how honestly I labelled it. FlyBody closes the loop physically — extension command, labrum contact event, constructed taste feedback back into the brain. Part 1b is now CLOSED on FlyBody. Ahead of the Core-A freeze there is a mandatory qualification gate: the five mouthpart joints driven through their published ranges and gains using unmodified upstream demos, extension, holding and retraction all demonstrated, repeatability checked, the measurement definitions written down, a demo of the mouthpart actually reaching food and gripping it with contact events logged, and the exact versions pinned and hashed with the makers' own "experimental" warning recorded. The body and its parameters will be frozen identically across every experimental arm. If the gate fails, there is no quiet fallback in either direction — the panel decides again, in the open, by formal amendment. I also wrote into the plan that an extension angle is a function of the translator mapping I build, not independent evidence about the wiring; that the brain-to-muscle link must be proven on a small test case first; that Core-B's body is not committed by this (walk/halt was only ever demonstrated on NeuroMechFly, so FlyBody walking gets its own audit at the Core-B gate); that NeuroMechFly survives only as a later, labelled cross-check on non-mouthpart aspects; that grooming stays out; and that taste feedback is labelled constructed everywhere. Reviewer 1 also asked me to confirm the audit really ran in the pinned environment despite the old numpy conflict — it did: the audit, including the FlyBody compile-and-run demo, ran wholly inside the pinned body environment (FlyGym 2.1.1, numpy 2.5.5); the numpy conflict lives between my two separate environments, not inside the audit.
+
+**The drive rate: switch to 200 Hz, 3–0.** The evidence from my own reference file did the deciding: the driven sugar neurons fire at 196.8 Hz on average while every undriven control population is exactly silent, and under this model's drive a driven neuron fires at close to the drive rate by construction — so the file was generated at about 200 Hz, not at the 150 Hz code default my reconstruction had chosen. The paper's own numbers agree (455 neurons responding at 200 Hz; my file has 448 active). All three reviewers voted to switch rather than spend the confirmatory run on a protocol my own document already called a likely mis-specification. Nobody wanted the two-trial calibration — it would only test my runner, not the rate the reference was generated at.
+
+At 22:44 I accepted both decisions: "Alright let's go with that." To be precise about what that acceptance is: I accepted the panel's decisions, which I had delegated to them. My formal approval of the amended preregistration document itself is a separate step that still happens at the freeze, after the panel re-checks the amendment — that distinction stays in the record.
+
+## 23 Nov 2026 (late) — Amendment Pass 3 applied: the sugarR primary is now 200 Hz
+
+I have applied the rate decision to the preregistration as a formal Amendment Pass 3 — rewritten passages, not renumbered ones, with the full history kept. Section 3/A1 now states the choice as 200 Hz and gives the discrimination evidence as the reason, while preserving exactly how 150 Hz was originally chosen (the code default, the producing call passing no override) and how the check superseded it. The primary run keeps seeds 3000–3029 and is now named `part3-sugarR-200Hz`; 150 Hz becomes the non-confirmatory sensitivity arm (seeds 3030–3059, `part3-sugarR-150Hz-arm`) under the same rules as before — it runs only after the primary verdict and can never rescue it; the annotation rule is inverted to match, so if the 200 Hz primary fails or is inconclusive and the 150 Hz arm would have passed, the verdict stands, marked "protocol-ambiguous", and a corrected protocol needs its own new preregistration. The one allowed extension to 60 trials follows the primary rate (200 Hz, seeds 3060–3089, `part3-sugarR-200Hz-n60`). No seed is used by more than one arm.
+
+Reviewer 3 added two specifications of his own, both folded in. The gap is now written as an explicit signed quantity — G = C_cross minus the observed correlation, and the same for Pearson — with the pass condition applied to the signed gap, never an absolute difference, so beating the ceiling can never count against me. And the freeze tag is corrected honestly: no preregistration tag has ever actually been created, because approval never happened for the earlier versions, so the first freeze tag will be created on the approved Pass 3 document and named `part3-prereg-v2`, rather than pretending a v1 was ever frozen. The changed passages are listed in `panel/PART3-PREREG-PASS3-CHANGES.md` for the panel's re-check. The frozen implementation is untouched, and no validation trial has run. Next: the panel re-checks Pass 3, then my formal approval of the document, then the freeze checklist, then — only then — the runs.
+
+## 23 Nov 2026, ~22:48 — the panel re-checked Pass 3; one typo caught and fixed
+
+The panel re-checked the sixteen Pass 3 changes. Reviewer 3 confirmed outright. Reviewer 2 confirmed outright. Reviewer 1 verified all sixteen against the document text itself and confirmed subject to one correction: in my own amendment-history entry, the bullet about the N = 60 extension ended with the words "run_id unchanged" — which was wrong, and contradicted the section text and an earlier bullet in the same entry, because the extension's run name did change when the primary did. A two-word slip in the history, not in the protocol — but the history is part of what gets frozen, so it was corrected in place, exactly as he prescribed, and the correction itself is recorded in the entry. That is the re-check working as intended: the record I freeze will not contradict itself.
+
+With that, the panel's work on the preregistration is done. What remains before the first validation trial is mine: my formal approval of the amended document, then the freeze (commit, tag, hashes, the determinism check), then the thirty trials at 200 Hz.

@@ -1,0 +1,90 @@
+{
+  "reference_sha256": "83921d50089d966785e402d6c0e3be5ab3eba5beb680410a09c557b0f22dcc28",
+  "n_spike_rows": 511566,
+  "active_set_size": 448,
+  "mn9_left": {
+    "mean_hz": 93.26666666666667,
+    "ci95": [
+      92.1,
+      94.36666666666666
+    ],
+    "n_spikes": 2798
+  },
+  "mn9_right": {
+    "mean_hz": 61.8,
+    "ci95": [
+      60.333333333333336,
+      63.3
+    ],
+    "n_spikes": 1854
+  },
+  "mn9_ordering": "left > right",
+  "rates_sugar_grn_right": {
+    "mean_hz": 196.75396825396825,
+    "median_hz": 197.26666666666668,
+    "min_hz": 191.26666666666668,
+    "max_hz": 202.06666666666666
+  },
+  "rates_sugar_grn_left": {
+    "mean_hz": 0.0,
+    "median_hz": 0.0,
+    "min_hz": 0.0,
+    "max_hz": 0.0
+  },
+  "rates_bitter_grn": {
+    "mean_hz": 0.0,
+    "median_hz": 0.0,
+    "min_hz": 0.0,
+    "max_hz": 0.0
+  },
+  "rates_water_grn": {
+    "mean_hz": 0.0,
+    "median_hz": 0.0,
+    "min_hz": 0.0,
+    "max_hz": 0.0
+  },
+  "R_ref_30": {
+    "R_spearman": 0.9994628670292041,
+    "R_pearson": 0.9998055340079697,
+    "R_spearman_sd": 0.00011971001807962884,
+    "R_pearson_sd": 5.225626200396523e-05,
+    "R_spearman_95pct": [
+      0.9991511358896007,
+      0.9996399340192142
+    ],
+    "R_pearson_95pct": [
+      0.9997025951388855,
+      0.9998871301139713
+    ],
+    "n_splits": 200,
+    "split_seed": 20261123
+  },
+  "R_new_threshold_for_branch_R_spearman": 0.8104353115265183,
+  "R_new_threshold_for_branch_R_pearson": 0.8101575480912905,
+  "split_half_overlap": {
+    "None": {
+      "jaccard_mean": 0.9741964285714286,
+      "jaccard_sd": 0.0042200320217491505,
+      "precision_mean": 0.9868722603586997,
+      "precision_sd": 0.0043593332920712925,
+      "recall_mean": 0.987006138325348,
+      "recall_sd": 0.00430861483181708
+    },
+    "0.1": {
+      "jaccard_mean": 0.975340383125692,
+      "jaccard_sd": 0.0036024474890696567,
+      "precision_mean": 0.9875790057134733,
+      "precision_sd": 0.0046792087363754144,
+      "recall_mean": 0.9874892808285645,
+      "recall_sd": 0.005197963128400118
+    },
+    "1.0": {
+      "jaccard_mean": 0.9782254818149099,
+      "jaccard_sd": 0.014445077074216878,
+      "precision_mean": 0.9887504003298967,
+      "precision_sd": 0.011402832562791421,
+      "recall_mean": 0.9892852915810955,
+      "recall_sd": 0.011507977274576442
+    }
+  }
+}

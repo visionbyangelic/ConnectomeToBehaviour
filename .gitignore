@@ -51,3 +51,10 @@ ENV/
 Thumbs.db
 Desktop.ini
 *.tmp
+
+# --- Fresh rebuild run outputs (Part 3 freeze, 23 Nov 2026) ---
+# Run directories under fresh/runs/ are uncommitted run output by design
+# (PART3-FREEZE.md): a run's provenance lives in its manifest, not in git.
+# Ignoring the directory keeps `git status` honest for the preregistration's
+# clean-tree requirement (PART3-PREREG.md section 5).
+fresh/runs/
