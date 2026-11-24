@@ -239,8 +239,12 @@ Answering that question badly is easy: switch the map on, watch it move, and cre
 ```
 ├── PLAN.md                 # The full project plan: the questions, the stages, and the rules
 ├── track.md                # The full build log, in my own words
+├── run_recording_demo.py   # The laptop recording run: one closed loop episode,
+│                           # live in the terminal, with pictures and video
 ├── docs/                   # Every project document, each named for what it is
 │   ├── final_plan.pdf      # The plan as a printable document
+│   ├── laptop_recording_guide.md # How to run and record the closed loop on
+│   │                       # your own laptop, Windows (WSL2) included
 │   ├── name_changes.md     # The record of the 24 Nov 2026 rearrangement: every old name
 │   │                       # in this list and the new name it was given
 │   └── reviews/            # The review and gate records for each stage
