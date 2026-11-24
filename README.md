@@ -3,7 +3,7 @@
 # ConnectomeToBehaviour
 <img width="1170" height="639" alt="Whole-brain render of the Drosophila connectome, neurons coloured by type" src="assets/whole-brain-fly-render.jpg" />
 
-### Connectome-to-Behaviour: Closed-Loop Whole-Brain Emulation of *Drosophila melanogaster*
+### Does the wiring matter? A closed-loop simulation of the fruit fly's whole central brain — the FlyWire connectome driving a simulated body — testing with pre-registered controls how much of its behaviour is written in the wiring itself.
 
 <br>
 
@@ -16,8 +16,6 @@
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--7279--9663-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-7279-9663)
 
 </div>
-
-### Does the wiring matter? A controlled test of how much of a fruit fly's behaviour is written in its connectome
 
 ---
 
