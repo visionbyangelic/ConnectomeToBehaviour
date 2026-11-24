@@ -237,16 +237,22 @@ Answering that question badly is easy: switch the map on, watch it move, and cre
 ## Repository File Map
 
 ```
-├── fresh/                  # The current build
-│   ├── ctb/                # The brain model: data loader, builder, runner
-│   ├── part2b/ , part5/    # The closed loop: brain to body, and back
-│   ├── part2/ , part3/     # Neuron set extraction and brain validation
-│   ├── qualgate/           # The feeding body qualification tests
-│   ├── tests/              # The build's test suites
+├── fresh/                  # The current version of the project: the rebuild this page describes
+│   ├── ctb/                # The brain model code. ctb is short for ConnectomeToBehaviour:
+│   │                       # it loads the wiring data, builds the spiking brain, and runs it
+│   ├── part2/              # Stage 2: the neuron lists the experiments drive and read out
+│   ├── part2b/             # Stage 2b: the first small loop from the brain to the body and back
+│   ├── part3/              # Stage 3: the code that scored the brain validation
+│   ├── part5/              # Stage 5: the full closed loop, brain and body talking both ways
+│   ├── qualgate/           # The tests that qualified the body for the feeding experiments
+│   ├── runs/               # One folder per run, each with its own record of what ran
+│   ├── tests/              # The test suites for the brain model code
 │   └── track.md            # The full build log, in my own words
-├── v0-prototype/           # The first build, preserved in full (tag: v0-prototype-final)
-├── assets/                 # The front page image
-├── data/                   # Working data (the datasets are public; their hashes are recorded in fresh/)
+├── v0-prototype/           # The first version of the project, preserved in full for the record
+│                           # (marked with the git tag v0-prototype-final)
+├── assets/                 # The picture at the top of this page
+├── data/                   # The working data files (the datasets are public; their hashes
+│                           # are recorded in the project documents under fresh/)
 ├── README.md               # This file
 └── LICENSE                 # MIT
 ```
