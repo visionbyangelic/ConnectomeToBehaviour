@@ -1,0 +1,50 @@
+{
+  "step": "Q1",
+  "part_a_flybody_steps_replay": {
+    "asset": {
+      "n_phase_bins": 200,
+      "step_cycle_frequency_hz": 12.0,
+      "swing_fractions": {
+        "lf": [
+          0.0,
+          2.5270971305476295
+        ],
+        "lm": [
+          0.0,
+          1.925796296650543
+        ],
+        "lh": [
+          0.0,
+          2.887751967179738
+        ],
+        "rf": [
+          0.0,
+          2.5270971305476295
+        ],
+        "rm": [
+          0.0,
+          1.925796296650543
+        ],
+        "rh": [
+          0.0,
+          2.887751967179738
+        ]
+      }
+    },
+    "n_actuated_dofs": 102,
+    "n_leg_dofs_driven": 42,
+    "replay_seconds": 2.0,
+    "n_physics_steps": 20000,
+    "all_states_finite": true,
+    "thorax_travel_mm": 28.85622778839985,
+    "verdict": "PASS"
+  },
+  "part_a_wall_clock_s": 21.575438022613525,
+  "part_b_muscle_imitation": {
+    "executed": false,
+    "gymnasium_installed": false,
+    "verdict": "NOT EXECUTED"
+  },
+  "verdict": "FAIL",
+  "wall_clock_s": 21.575594902038574
+}

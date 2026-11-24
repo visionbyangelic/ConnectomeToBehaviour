@@ -1,0 +1,353 @@
+{
+  "part": "2b",
+  "run": "decoder-only sanity (synthetic rates)",
+  "phases": {
+    "A_zero": {
+      "travel_total_mm": 0.030991099116067015,
+      "amplitude_last_chunk": 0.0,
+      "travel_last_0.3s_mm": 0.0013230234893378688
+    },
+    "B_mid": {
+      "travel_total_mm": 4.903445658018336,
+      "amplitude_last_chunk": 0.47013792263206033,
+      "travel_last_0.3s_mm": 1.9672111381358415
+    },
+    "C_full": {
+      "travel_total_mm": 13.821952418769598,
+      "amplitude_last_chunk": 1.0,
+      "travel_last_0.3s_mm": 4.239133502513242
+    },
+    "D_halt": {
+      "travel_total_mm": 3.340799675798424,
+      "amplitude_last_chunk": 0.025625273430726223,
+      "travel_last_0.3s_mm": 0.47314204798842213
+    }
+  },
+  "chunks": [
+    {
+      "chunk": 0,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.02429768721565822
+    },
+    {
+      "chunk": 1,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.0035035079325835324
+    },
+    {
+      "chunk": 2,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.00032083499416589835
+    },
+    {
+      "chunk": 3,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.0002970758472512433
+    },
+    {
+      "chunk": 4,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.0007144993686494914
+    },
+    {
+      "chunk": 5,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.0003118132183658444
+    },
+    {
+      "chunk": 6,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.00022265705005491658
+    },
+    {
+      "chunk": 7,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.00032986475761601563
+    },
+    {
+      "chunk": 8,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.00024846092352536804
+    },
+    {
+      "chunk": 9,
+      "phase": "A_zero",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.0,
+      "rate_ema_hz": 0.0,
+      "travel_mm": 0.0007446978081964851
+    },
+    {
+      "chunk": 10,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.15445754751966662,
+      "rate_ema_hz": 7.8693868057473315,
+      "travel_mm": 0.06717784592908718
+    },
+    {
+      "chunk": 11,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.28006345201503036,
+      "rate_ema_hz": 12.642411176571153,
+      "travel_mm": 0.15458028690211725
+    },
+    {
+      "chunk": 12,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.35624728413240536,
+      "rate_ema_hz": 15.537396797031404,
+      "travel_mm": 0.3670328154742133
+    },
+    {
+      "chunk": 13,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.4024551140859933,
+      "rate_ema_hz": 17.293294335267746,
+      "travel_mm": 0.5190049292624299
+    },
+    {
+      "chunk": 14,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.4304815796716322,
+      "rate_ema_hz": 18.358300027522024,
+      "travel_mm": 0.5660385966368803
+    },
+    {
+      "chunk": 15,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.44748049033270315,
+      "rate_ema_hz": 19.00425863264272,
+      "travel_mm": 0.5744137275903353
+    },
+    {
+      "chunk": 16,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.4577908508303587,
+      "rate_ema_hz": 19.39605233155363,
+      "travel_mm": 0.687986318087432
+    },
+    {
+      "chunk": 17,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.4640444005848767,
+      "rate_ema_hz": 19.633687222225316,
+      "travel_mm": 0.6203547863137264
+    },
+    {
+      "chunk": 18,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.4678373702430304,
+      "rate_ema_hz": 19.777820069235155,
+      "travel_mm": 0.673262741691955
+    },
+    {
+      "chunk": 19,
+      "phase": "B_mid",
+      "synthetic_rate_hz": 20.0,
+      "synthetic_count": 2,
+      "amplitude": 0.47013792263206033,
+      "rate_ema_hz": 19.865241060018292,
+      "travel_mm": 0.6735936101301601
+    },
+    {
+      "chunk": 20,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 0.8857115311243523,
+      "rate_ema_hz": 35.65703818272539,
+      "travel_mm": 0.9789048728008964
+    },
+    {
+      "chunk": 21,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 45.23524730960898,
+      "travel_mm": 1.4812634922181063
+    },
+    {
+      "chunk": 22,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 51.044724810203256,
+      "travel_mm": 1.321271354927634
+    },
+    {
+      "chunk": 23,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 54.5683510312244,
+      "travel_mm": 1.4619131172587545
+    },
+    {
+      "chunk": 24,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 56.70553836764109,
+      "travel_mm": 1.4396429926638443
+    },
+    {
+      "chunk": 25,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 58.00180801272739,
+      "travel_mm": 1.315614309118321
+    },
+    {
+      "chunk": 26,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 58.78803529572704,
+      "travel_mm": 1.5842087772687994
+    },
+    {
+      "chunk": 27,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 59.264906248368895,
+      "travel_mm": 1.3329061754800804
+    },
+    {
+      "chunk": 28,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 59.554143101872555,
+      "travel_mm": 1.4643667902165378
+    },
+    {
+      "chunk": 29,
+      "phase": "C_full",
+      "synthetic_rate_hz": 60.0,
+      "synthetic_count": 6,
+      "amplitude": 1.0,
+      "rate_ema_hz": 59.72957412144133,
+      "travel_mm": 1.4418605368166244
+    },
+    {
+      "chunk": 30,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.9007320525324328,
+      "rate_ema_hz": 36.227817996232446,
+      "travel_mm": 1.2458870954041577
+    },
+    {
+      "chunk": 31,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.5256126934001073,
+      "rate_ema_hz": 21.973282349204077,
+      "travel_mm": 1.085140418588089
+    },
+    {
+      "chunk": 32,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.2980913010345977,
+      "rate_ema_hz": 13.327469439314712,
+      "travel_mm": 0.5366301138177553
+    },
+    {
+      "chunk": 33,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.16009260082440824,
+      "rate_ema_hz": 8.083518831327513,
+      "travel_mm": 0.2955755003497126
+    },
+    {
+      "chunk": 34,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.07639215814643611,
+      "rate_ema_hz": 4.902902009564572,
+      "travel_mm": 0.13938448888054059
+    },
+    {
+      "chunk": 35,
+      "phase": "D_halt",
+      "synthetic_rate_hz": 0.0,
+      "synthetic_count": 0,
+      "amplitude": 0.025625273430726223,
+      "rate_ema_hz": 2.9737603903675964,
+      "travel_mm": 0.038182058758168984
+    }
+  ],
+  "wall_clock_s": 82.0
+}

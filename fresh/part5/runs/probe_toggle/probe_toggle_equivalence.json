@@ -1,0 +1,166 @@
+{
+  "probe": "Part 5 toggle-configuration equivalence (SS6.1(3))",
+  "configuration": {
+    "population": "sugar_grn_right",
+    "rate_hz": 200.0,
+    "seed": 5103,
+    "n_chunks": 20,
+    "chunk_ms": 100,
+    "toggle_schedule_on_chunks": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "process_structure": "each run a fresh process, build #1 in its process; SS2.2 zero-duration warmup in every run"
+  },
+  "runs": {
+    "chunked_const": {
+      "mode": "chunked_const",
+      "ran": true,
+      "spikes": 34013,
+      "sha256": "7675ebe18c3775ad48542b62f7557a0331ad3023d2291da2f1284469fa0fe5d1",
+      "per_chunk_sugar_spikes": [
+        437,
+        405,
+        419,
+        438,
+        425,
+        432,
+        383,
+        423,
+        433,
+        383,
+        422,
+        406,
+        403,
+        393,
+        420,
+        413,
+        409,
+        427,
+        423,
+        421
+      ],
+      "wall_clock_s": 20.9
+    },
+    "single_const": {
+      "mode": "single_const",
+      "ran": true,
+      "spikes": 34013,
+      "sha256": "7675ebe18c3775ad48542b62f7557a0331ad3023d2291da2f1284469fa0fe5d1",
+      "per_chunk_sugar_spikes": [
+        437,
+        405,
+        419,
+        438,
+        425,
+        432,
+        383,
+        423,
+        433,
+        383,
+        422,
+        406,
+        403,
+        393,
+        420,
+        413,
+        409,
+        427,
+        423,
+        421
+      ],
+      "wall_clock_s": 16.0
+    },
+    "chunked_toggle": {
+      "mode": "chunked_toggle",
+      "ran": true,
+      "spikes": 17379,
+      "sha256": "0ead53e3d83b163a610de1701f5a390503822d271db5ff9526355437e9778387",
+      "per_chunk_sugar_spikes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        437,
+        405,
+        418,
+        439,
+        425,
+        430,
+        385,
+        423,
+        433,
+        383,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wall_clock_s": 19.1
+    },
+    "single_toggle": {
+      "mode": "single_toggle",
+      "ran": false,
+      "rate_modulation": "impossible: property 'rate' of 'PoissonInput' object has no setter",
+      "active_flag_modulation": "impossible: attempt 1 (network_operation toggling `active` inside one run) produced 0 spikes -- Brian2 fixes the active set at run start; preserved in probe_toggle_equivalence_attempt1.json",
+      "conclusion": "no single-run toggled reference exists for a PoissonInput drive in Brian2 2.9 with the frozen Brain API",
+      "wall_clock_s": 5.5
+    }
+  },
+  "const_pair": {
+    "chunked_sha256": "7675ebe18c3775ad48542b62f7557a0331ad3023d2291da2f1284469fa0fe5d1",
+    "single_sha256": "7675ebe18c3775ad48542b62f7557a0331ad3023d2291da2f1284469fa0fe5d1",
+    "bit_identical": true
+  },
+  "toggle_exactness_chunked": {
+    "off_chunks_exactly_zero_sugar_spikes": true,
+    "on_chunks_positive_sugar_spikes": true,
+    "per_chunk_sugar_spikes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      437,
+      405,
+      418,
+      439,
+      425,
+      430,
+      385,
+      423,
+      433,
+      383,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "single_run_toggled_reference": {
+    "mode": "single_toggle",
+    "ran": false,
+    "rate_modulation": "impossible: property 'rate' of 'PoissonInput' object has no setter",
+    "active_flag_modulation": "impossible: attempt 1 (network_operation toggling `active` inside one run) produced 0 spikes -- Brian2 fixes the active set at run start; preserved in probe_toggle_equivalence_attempt1.json",
+    "conclusion": "no single-run toggled reference exists for a PoissonInput drive in Brian2 2.9 with the frozen Brain API",
+    "wall_clock_s": 5.5
+  },
+  "wall_clock_s": 64.2,
+  "verdict": {
+    "chunking_neutral_constant_drive": true,
+    "toggle_exact_between_runs": true,
+    "single_run_toggled_reference_exists": false,
+    "basis": "SS6.1(3) discharged by the Part 2b method: bit-identical chunking under constant drive + exact toggling between runs; no single-run toggled reference is constructible in this stack (see single_run_toggled_reference)"
+  }
+}

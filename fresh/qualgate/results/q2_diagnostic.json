@@ -1,0 +1,166 @@
+{
+  "diagnostic_for": "Q2 FAIL, criterion (i), pitch joints",
+  "is_gate_step": false,
+  "compiled_spring_reference": {
+    "c_head-c_rostrum-pitch": {
+      "qpos0_spring_reference": 0.0,
+      "jnt_stiffness": 3.0
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "qpos0_spring_reference": 0.0,
+      "jnt_stiffness": 3.0
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "qpos0_spring_reference": 0.0,
+      "jnt_stiffness": 3.0
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "qpos0_spring_reference": 0.0,
+      "jnt_stiffness": 3.0
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "qpos0_spring_reference": 0.0,
+      "jnt_stiffness": 3.0
+    }
+  },
+  "ref0_map_fit_from_recorded_q2": {
+    "c_head-c_rostrum-pitch": {
+      "max_error_ref0_map_rad": 0.003454526197746749,
+      "errors_ref0_map_rad": [
+        0.0007160382257596076,
+        0.0011862383466459958,
+        0.001634799958954325,
+        0.0020534965375463843,
+        0.0024346161935828725,
+        0.002771098975272057,
+        0.0030566654002815996,
+        0.003285934072660489,
+        0.003454526197746749
+      ]
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "max_error_ref0_map_rad": 0.0011315625250656325,
+      "errors_ref0_map_rad": [
+        0.00040494897970932975,
+        0.0001609670489790549,
+        9.072466264403722e-05,
+        0.000338068247474288,
+        0.000569208196633253,
+        0.0007730431133028265,
+        0.0009397466174387997,
+        0.0010612352471716102,
+        0.0011315625250656325
+      ]
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "max_error_ref0_map_rad": 4.08874056373465e-05,
+      "errors_ref0_map_rad": [
+        3.827985710141979e-05,
+        2.8365665195324852e-05,
+        1.845134635414941e-05,
+        8.539834102552768e-06,
+        1.3661255568404124e-06,
+        1.1263793666886623e-05,
+        2.115038495627275e-05,
+        3.102756477339069e-05,
+        4.08874056373465e-05
+      ]
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "max_error_ref0_map_rad": 0.00015071000118327404,
+      "errors_ref0_map_rad": [
+        4.023657077784071e-05,
+        5.4371001526741514e-05,
+        6.844239711432942e-05,
+        8.243596041197787e-05,
+        9.633653588636548e-05,
+        0.00011012907744920031,
+        0.00012379866489575786,
+        0.00013733051660322348,
+        0.00015071000118327404
+      ]
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "max_error_ref0_map_rad": 0.00011811016309354327,
+      "errors_ref0_map_rad": [
+        9.229689424531274e-06,
+        2.3040538299004543e-05,
+        3.6823069934979746e-05,
+        5.0563404332126805e-05,
+        6.424673779284462e-05,
+        7.785868492340975e-05,
+        9.138279311649011e-05,
+        0.0001048044715610541,
+        0.00011811016309354327
+      ]
+    }
+  },
+  "settle_chunks": 4,
+  "extension_signs_corrected_sampling": {
+    "c_head-c_rostrum-pitch": {
+      "ends": {
+        "range_min": {
+          "tip_pos_mm": [
+            0.6824370727653435,
+            0.00323199813846029,
+            0.6737345995844315
+          ],
+          "head_pos_mm": [
+            0.28509542368797275,
+            0.0022739137485462482,
+            1.2684400585641737
+          ]
+        },
+        "range_max": {
+          "tip_pos_mm": [
+            0.3844851823550469,
+            0.00044350713283689697,
+            0.7419906857434031
+          ],
+          "head_pos_mm": [
+            0.2847872736912783,
+            8.916356874930044e-05,
+            1.269389380280821
+          ]
+        }
+      },
+      "tip_head_distance_min_end_mm": 0.7152313520515782,
+      "tip_head_distance_max_end_mm": 0.5367393981729524,
+      "extension_sign_s": -1,
+      "theta_ext_rad": -1.19
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "ends": {
+        "range_min": {
+          "tip_pos_mm": [
+            0.11527860184051791,
+            -0.001858683031733201,
+            0.6466281982894704
+          ],
+          "head_pos_mm": [
+            0.2844780252399367,
+            -0.0020582012907137204,
+            1.2702740953638814
+          ]
+        },
+        "range_max": {
+          "tip_pos_mm": [
+            0.48071494073032933,
+            -0.00394259504887143,
+            0.845643389036087
+          ],
+          "head_pos_mm": [
+            0.2841691523444743,
+            -0.004199022772435928,
+            1.2710756501621125
+          ]
+        }
+      },
+      "tip_head_distance_min_end_mm": 0.6461909080325862,
+      "tip_head_distance_max_end_mm": 0.46863943655458346,
+      "extension_sign_s": -1,
+      "theta_ext_rad": -1.54
+    }
+  },
+  "wall_clock_s": 12.913777112960815
+}

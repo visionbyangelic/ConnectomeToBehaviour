@@ -1,0 +1,986 @@
+{
+  "step": "Q5 (rerun3)",
+  "pilot": {
+    "tip_settled_xyz_mm": [
+      0.41641040870416923,
+      0.00374372682362337,
+      0.7141042368705487
+    ],
+    "tip_ground_projection_xy_mm": [
+      0.41641040870416923,
+      0.00374372682362337
+    ],
+    "forward_xy_unit": [
+      0.9999935878845976,
+      0.0035810877802387752
+    ]
+  },
+  "attempts": [
+    {
+      "label": "offset 0.6 mm (SS4.6 start)",
+      "food_centre_xy_mm": [
+        1.0164065614349278,
+        0.005892379491766636
+      ],
+      "food_geom_id": 1,
+      "settle_chunks": 4,
+      "settled": true,
+      "food_contact_during_warmup": false,
+      "theta_rest_rad": {
+        "c_head-c_rostrum-pitch": -0.0032835518800405287,
+        "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+        "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+        "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+        "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+      },
+      "hold_chunks_run": 30,
+      "event_on_step": null,
+      "event_on_time_s": null,
+      "event_off_step": null,
+      "event_off_time_s": null,
+      "adhesion_engage_chunk": null,
+      "adhesion_release_chunk": null,
+      "max_labrum_food_force_N": 0.0,
+      "max_front_tarsus_food_force_N": 0.0,
+      "best_contact_persistence_with_adhesion_s": 0.0,
+      "tip_at_full_extension_xy_mm": [
+        0.5626608795922596,
+        -0.003248682676820238
+      ],
+      "chunk_log": [
+        {
+          "phase": "ramp",
+          "chunk": 0,
+          "e": 0.2,
+          "E_rad": 0.5490304276101318,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 1,
+          "e": 0.4,
+          "E_rad": 1.0936978980715206,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 2,
+          "e": 0.6,
+          "E_rad": 1.6381796679772642,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 3,
+          "e": 0.8,
+          "E_rad": 2.1734179447626567,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 4,
+          "e": 1.0,
+          "E_rad": 2.1746028549909218,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 5,
+          "e": 1.0,
+          "E_rad": 2.1746026754700822,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 6,
+          "e": 1.0,
+          "E_rad": 2.1746024956976755,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 7,
+          "e": 1.0,
+          "E_rad": 2.1746023159416747,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 8,
+          "e": 1.0,
+          "E_rad": 2.1746021362063166,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 9,
+          "e": 1.0,
+          "E_rad": 2.1746019564939774,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 10,
+          "e": 1.0,
+          "E_rad": 2.1746017768068033,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 11,
+          "e": 1.0,
+          "E_rad": 2.174601597146904,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 12,
+          "e": 1.0,
+          "E_rad": 2.1746014175163806,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 13,
+          "e": 1.0,
+          "E_rad": 2.1746012379173267,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 14,
+          "e": 1.0,
+          "E_rad": 2.1746010583518305,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 15,
+          "e": 1.0,
+          "E_rad": 2.1746008788219746,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 16,
+          "e": 1.0,
+          "E_rad": 2.1746006993298375,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 17,
+          "e": 1.0,
+          "E_rad": 2.1746005198774916,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 18,
+          "e": 1.0,
+          "E_rad": 2.1746003404670065,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 19,
+          "e": 1.0,
+          "E_rad": 2.174600161100447,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 20,
+          "e": 1.0,
+          "E_rad": 2.174599981779873,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 21,
+          "e": 1.0,
+          "E_rad": 2.1745998025073425,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 22,
+          "e": 1.0,
+          "E_rad": 2.1745996232849087,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 23,
+          "e": 1.0,
+          "E_rad": 2.174599444114623,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 24,
+          "e": 1.0,
+          "E_rad": 2.174599264998534,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 25,
+          "e": 1.0,
+          "E_rad": 2.1745990859386866,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 26,
+          "e": 1.0,
+          "E_rad": 2.174598906937123,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 27,
+          "e": 1.0,
+          "E_rad": 2.174598727995888,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 28,
+          "e": 1.0,
+          "E_rad": 2.174598549117017,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 29,
+          "e": 1.0,
+          "E_rad": 2.1745983703025527,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 30,
+          "e": 1.0,
+          "E_rad": 2.1745981915545283,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 31,
+          "e": 1.0,
+          "E_rad": 2.1745980128749816,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 32,
+          "e": 1.0,
+          "E_rad": 2.1745978342659473,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 33,
+          "e": 1.0,
+          "E_rad": 2.17459765572946,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 34,
+          "e": 1.0,
+          "E_rad": 2.174597477267555,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 35,
+          "e": 0.8,
+          "E_rad": 2.173412326765627,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 36,
+          "e": 0.6,
+          "E_rad": 1.6381746499157175,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 37,
+          "e": 0.4,
+          "E_rad": 1.093693759063783,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 38,
+          "e": 0.19999999999999996,
+          "E_rad": 0.5490275384911447,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 39,
+          "e": 0.0,
+          "E_rad": -1.2809901088178376e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 40,
+          "e": 0.0,
+          "E_rad": -1.4296030886661948e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 41,
+          "e": 0.0,
+          "E_rad": -1.4680995999830125e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 42,
+          "e": 0.0,
+          "E_rad": -1.5067172045098338e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 43,
+          "e": 0.0,
+          "E_rad": -1.5453250974550728e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 44,
+          "e": 0.0,
+          "E_rad": -1.583920913205382e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 45,
+          "e": 0.0,
+          "E_rad": -1.6225040971166484e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 46,
+          "e": 0.0,
+          "E_rad": -1.6610741022876976e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 47,
+          "e": 0.0,
+          "E_rad": -1.6996303779654017e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 48,
+          "e": 0.0,
+          "E_rad": -1.7381723715632468e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 49,
+          "e": 0.0,
+          "E_rad": -1.7766995287234579e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 50,
+          "e": 0.0,
+          "E_rad": -1.8152112932802444e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 51,
+          "e": 0.0,
+          "E_rad": -1.8537071074049751e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 52,
+          "e": 0.0,
+          "E_rad": -1.892186411382832e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 53,
+          "e": 0.0,
+          "E_rad": -1.930648643451156e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 54,
+          "e": 0.0,
+          "E_rad": -1.9690932398827143e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        }
+      ],
+      "checks": {
+        "i_labrum_contact_and_event_on": false,
+        "ii_contact_persists_ge_1s_with_adhesion": false,
+        "iii_event_off_and_adhesion_released_after_retract": false
+      },
+      "verdict": "FAIL",
+      "offset_in_front_of_tip_projection_mm": 0.6
+    },
+    {
+      "label": "offset adjusted once (SS7.5(iv))",
+      "food_centre_xy_mm": [
+        0.5626608795922596,
+        -0.003248682676820238
+      ],
+      "food_geom_id": 1,
+      "settle_chunks": 4,
+      "settled": true,
+      "food_contact_during_warmup": false,
+      "theta_rest_rad": {
+        "c_head-c_rostrum-pitch": -0.0032835518800405287,
+        "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+        "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+        "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+        "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+      },
+      "hold_chunks_run": 30,
+      "event_on_step": null,
+      "event_on_time_s": null,
+      "event_off_step": null,
+      "event_off_time_s": null,
+      "adhesion_engage_chunk": null,
+      "adhesion_release_chunk": null,
+      "max_labrum_food_force_N": 0.0,
+      "max_front_tarsus_food_force_N": 0.0,
+      "best_contact_persistence_with_adhesion_s": 0.0,
+      "tip_at_full_extension_xy_mm": [
+        0.5626608795922596,
+        -0.003248682676820238
+      ],
+      "chunk_log": [
+        {
+          "phase": "ramp",
+          "chunk": 0,
+          "e": 0.2,
+          "E_rad": 0.5490304276101318,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 1,
+          "e": 0.4,
+          "E_rad": 1.0936978980715206,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 2,
+          "e": 0.6,
+          "E_rad": 1.6381796679772642,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 3,
+          "e": 0.8,
+          "E_rad": 2.1734179447626567,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 4,
+          "e": 1.0,
+          "E_rad": 2.1746028549909218,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 5,
+          "e": 1.0,
+          "E_rad": 2.1746026754700822,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 6,
+          "e": 1.0,
+          "E_rad": 2.1746024956976755,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 7,
+          "e": 1.0,
+          "E_rad": 2.1746023159416747,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 8,
+          "e": 1.0,
+          "E_rad": 2.1746021362063166,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 9,
+          "e": 1.0,
+          "E_rad": 2.1746019564939774,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 10,
+          "e": 1.0,
+          "E_rad": 2.1746017768068033,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 11,
+          "e": 1.0,
+          "E_rad": 2.174601597146904,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 12,
+          "e": 1.0,
+          "E_rad": 2.1746014175163806,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 13,
+          "e": 1.0,
+          "E_rad": 2.1746012379173267,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 14,
+          "e": 1.0,
+          "E_rad": 2.1746010583518305,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 15,
+          "e": 1.0,
+          "E_rad": 2.1746008788219746,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 16,
+          "e": 1.0,
+          "E_rad": 2.1746006993298375,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 17,
+          "e": 1.0,
+          "E_rad": 2.1746005198774916,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 18,
+          "e": 1.0,
+          "E_rad": 2.1746003404670065,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 19,
+          "e": 1.0,
+          "E_rad": 2.174600161100447,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 20,
+          "e": 1.0,
+          "E_rad": 2.174599981779873,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 21,
+          "e": 1.0,
+          "E_rad": 2.1745998025073425,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 22,
+          "e": 1.0,
+          "E_rad": 2.1745996232849087,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 23,
+          "e": 1.0,
+          "E_rad": 2.174599444114623,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 24,
+          "e": 1.0,
+          "E_rad": 2.174599264998534,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 25,
+          "e": 1.0,
+          "E_rad": 2.1745990859386866,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 26,
+          "e": 1.0,
+          "E_rad": 2.174598906937123,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 27,
+          "e": 1.0,
+          "E_rad": 2.174598727995888,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 28,
+          "e": 1.0,
+          "E_rad": 2.174598549117017,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 29,
+          "e": 1.0,
+          "E_rad": 2.1745983703025527,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 30,
+          "e": 1.0,
+          "E_rad": 2.1745981915545283,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 31,
+          "e": 1.0,
+          "E_rad": 2.1745980128749816,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 32,
+          "e": 1.0,
+          "E_rad": 2.1745978342659473,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 33,
+          "e": 1.0,
+          "E_rad": 2.17459765572946,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 34,
+          "e": 1.0,
+          "E_rad": 2.174597477267555,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 35,
+          "e": 0.8,
+          "E_rad": 2.173412326765627,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 36,
+          "e": 0.6,
+          "E_rad": 1.6381746499157175,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 37,
+          "e": 0.4,
+          "E_rad": 1.093693759063783,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 38,
+          "e": 0.19999999999999996,
+          "E_rad": 0.5490275384911447,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 39,
+          "e": 0.0,
+          "E_rad": -1.2809901088178376e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 40,
+          "e": 0.0,
+          "E_rad": -1.4296030886661948e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 41,
+          "e": 0.0,
+          "E_rad": -1.4680995999830125e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 42,
+          "e": 0.0,
+          "E_rad": -1.5067172045098338e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 43,
+          "e": 0.0,
+          "E_rad": -1.5453250974550728e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 44,
+          "e": 0.0,
+          "E_rad": -1.583920913205382e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 45,
+          "e": 0.0,
+          "E_rad": -1.6225040971166484e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 46,
+          "e": 0.0,
+          "E_rad": -1.6610741022876976e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 47,
+          "e": 0.0,
+          "E_rad": -1.6996303779654017e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 48,
+          "e": 0.0,
+          "E_rad": -1.7381723715632468e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 49,
+          "e": 0.0,
+          "E_rad": -1.7766995287234579e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 50,
+          "e": 0.0,
+          "E_rad": -1.8152112932802444e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 51,
+          "e": 0.0,
+          "E_rad": -1.8537071074049751e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 52,
+          "e": 0.0,
+          "E_rad": -1.892186411382832e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 53,
+          "e": 0.0,
+          "E_rad": -1.930648643451156e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 54,
+          "e": 0.0,
+          "E_rad": -1.9690932398827143e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        }
+      ],
+      "checks": {
+        "i_labrum_contact_and_event_on": false,
+        "ii_contact_persists_ge_1s_with_adhesion": false,
+        "iii_event_off_and_adhesion_released_after_retract": false
+      },
+      "verdict": "FAIL",
+      "offset_in_front_of_tip_projection_mm": 0.14622449268097695
+    }
+  ],
+  "offset_adjusted_once": true,
+  "final_offset_in_front_of_tip_projection_mm": 0.14622449268097695,
+  "verdict": "FAIL",
+  "wall_clock_s": 36.187634229660034
+}

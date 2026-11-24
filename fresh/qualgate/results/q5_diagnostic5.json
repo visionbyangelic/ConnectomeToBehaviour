@@ -1,0 +1,77 @@
+{
+  "arena_centre_xy_mm": [
+    0.5626969531216139,
+    -0.003705927316757552
+  ],
+  "compiled_pairs_involving": {
+    "food": 69,
+    "pedestal": 69
+  },
+  "food_geom_pos": [
+    0.5626969531216139,
+    -0.003705927316757552,
+    0.305
+  ],
+  "food_top_z_mm": 0.33,
+  "at_rest": {
+    "tag": "settled, e = 0",
+    "labrum_to_food_mm": [
+      0.2817372079757713,
+      0.28110110535929667
+    ],
+    "labrum_to_ground_mm": [
+      0.08488509146492501,
+      0.08044013513989427
+    ],
+    "tip_xyz_mm": [
+      0.4164104089256667,
+      0.003743502138271529,
+      0.7141043298958282
+    ],
+    "thorax_z_mm": 1.28126663778484,
+    "ncon": 6,
+    "ncon_food_or_pedestal": 0
+  },
+  "dynamic_e1_hold": {
+    "tag": "after dynamic ramp + 10-chunk hold",
+    "labrum_to_food_mm": [
+      -0.032111984924997894,
+      -0.03404153218264433
+    ],
+    "labrum_to_ground_mm": [
+      0.09636028807387698,
+      0.08670477021710858
+    ],
+    "tip_xyz_mm": [
+      0.562448374333445,
+      0.0007574323061502394,
+      0.3934120866551914
+    ],
+    "thorax_z_mm": 1.2820581898491927,
+    "ncon": 6,
+    "ncon_food_or_pedestal": 0
+  },
+  "dynamic_e1_hold_min_labrum_to_food_mm": [
+    -0.03306424255454881,
+    -0.034979391164531026
+  ],
+  "kinematic_e1_same_body": {
+    "tag": "proboscis qpos forced to chain e = 1 angles, same body state",
+    "labrum_to_food_mm": [
+      -0.03198534518977065,
+      -0.033913353457516775
+    ],
+    "labrum_to_ground_mm": [
+      0.09627955248629792,
+      0.08661842216720533
+    ],
+    "tip_xyz_mm": [
+      0.5619177780572728,
+      0.0007572096172775329,
+      0.3935377057749243
+    ],
+    "thorax_z_mm": 1.2820581898491927,
+    "ncon": 6,
+    "ncon_food_or_pedestal": 0
+  }
+}

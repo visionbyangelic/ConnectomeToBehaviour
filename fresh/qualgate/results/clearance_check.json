@@ -1,0 +1,1329 @@
+{
+  "artefact": "clearance check + E definitions (pre-gate calibrations, NOT gate steps)",
+  "date": "24 Nov 2026",
+  "spec": "PART4-SENSORY-SPECS.md SS4.3-SS4.6, SS7.5 as amended through Pass 6 revised; Reviewer 1 Pass 6 confirmation conditions 2 and 3",
+  "calibration_1_clearance": {
+    "arena": "FlatGroundWorld + pedestal cylinder (r 0.5 mm, h 0.28 mm, centre z 0.14) + food cylinder (r 0.5 mm, h 0.05 mm, centre z 0.305, top at ground + 0.33 mm); pedestal centre 0.6 mm in front of the labrum tip's settled ground projection (pilot settle, as Q5)",
+    "pilot": {
+      "tip_settled_xyz_mm": [
+        0.41641040870416923,
+        0.00374372682362337,
+        0.7141042368705487
+      ],
+      "tip_ground_projection_xy_mm": [
+        0.41641040870416923,
+        0.00374372682362337
+      ],
+      "forward_xy_unit": [
+        0.9999935878845976,
+        0.0035810877802387752
+      ],
+      "pedestal_centre_xy_mm": [
+        1.0164065614349278,
+        0.005892379491766636
+      ]
+    },
+    "arena_settled_tip_offset_in_front_mm": 0.0,
+    "theta_rest_rad": {
+      "c_head-c_rostrum-pitch": -0.0032835518800405287,
+      "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+      "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+      "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+      "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+    },
+    "n_fly_geoms_checked": 83,
+    "geom_classification": "every compiled geom except the two labrum geoms (l_labrum_lower / r_labrum_lower), the ground plane(s) and the two arena geoms",
+    "compiled_pairs_involving_arena_geoms": [],
+    "contacts_involving_arena_geoms_during_sweep": 0,
+    "sweep": {
+      "n_points": 21,
+      "hold_per_point_s": 0.4,
+      "E_at_each_e_rad": [
+        -1.5333755345352858e-07,
+        0.11275105584515044,
+        0.2213445289602538,
+        0.32992880530708074,
+        0.43850402811722367,
+        0.5470703606036262,
+        0.6556279854983293,
+        0.7641771045550942,
+        0.8727179380148024,
+        0.9812507240395001,
+        1.0897757181125325,
+        1.1982931924100908,
+        1.3068034351452704,
+        1.4153067498852472,
+        1.5238034548429662,
+        1.6322938821453246,
+        1.7407783770815186,
+        1.8492572973315964,
+        1.957731012176276,
+        2.066199901690415,
+        2.174511088927793
+      ]
+    },
+    "pre_registered_expectation": "all non-labrum clearances > 0.02 mm",
+    "global_min_clearance_mm": 0.09703290240320944,
+    "all_clearances_above_margin": true,
+    "geoms_at_or_below_margin": [],
+    "per_geom": {
+      "pedestal": [
+        {
+          "geom": "flybody/c_haustellum_body",
+          "geom_id": 11,
+          "min_clearance_mm": 0.14703290240320943,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4771686640271709
+        },
+        {
+          "geom": "flybody/c_haustellum_black",
+          "geom_id": 12,
+          "min_clearance_mm": 0.17364394924249094,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.506818999995093
+        },
+        {
+          "geom": "flybody/c_rostrum_bristle-brown",
+          "geom_id": 10,
+          "min_clearance_mm": 0.2845165731326783,
+          "e_at_min": 0.6,
+          "clearance_at_rest_mm": 0.340663683926573
+        },
+        {
+          "geom": "flybody/c_rostrum_body",
+          "geom_id": 9,
+          "min_clearance_mm": 0.308839368378752,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.3924762864287619
+        },
+        {
+          "geom": "flybody/lf_tarsus2_body",
+          "geom_id": 44,
+          "min_clearance_mm": 0.3835386475889017,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.40584062478896843
+        },
+        {
+          "geom": "flybody/lf_tarsus3_body",
+          "geom_id": 45,
+          "min_clearance_mm": 0.38970690224905025,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.41288613610645686
+        },
+        {
+          "geom": "flybody/lf_tarsus1_body",
+          "geom_id": 43,
+          "min_clearance_mm": 0.3918364335929571,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.41063646697808603
+        },
+        {
+          "geom": "flybody/rf_tarsus2_body",
+          "geom_id": 68,
+          "min_clearance_mm": 0.39854519995869037,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.39854519995869037
+        },
+        {
+          "geom": "flybody/lf_tarsus4_body",
+          "geom_id": 46,
+          "min_clearance_mm": 0.3992492451786506,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4241686390856796
+        },
+        {
+          "geom": "flybody/lf_tarsus5_brown",
+          "geom_id": 47,
+          "min_clearance_mm": 0.3998591715545351,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4276935574442873
+        },
+        {
+          "geom": "flybody/rf_tarsus1_body",
+          "geom_id": 67,
+          "min_clearance_mm": 0.40012298052774453,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.40012298052774453
+        },
+        {
+          "geom": "flybody/rf_tarsus3_body",
+          "geom_id": 69,
+          "min_clearance_mm": 0.4070592371125559,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4070592371125559
+        },
+        {
+          "geom": "flybody/rf_tarsus4_body",
+          "geom_id": 70,
+          "min_clearance_mm": 0.4271339134900471,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4271339134900471
+        },
+        {
+          "geom": "flybody/rf_tarsus5_brown",
+          "geom_id": 71,
+          "min_clearance_mm": 0.4413077174920135,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4413077174920135
+        },
+        {
+          "geom": "flybody/rf_tibia_body",
+          "geom_id": 66,
+          "min_clearance_mm": 0.4764355123805581,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4764355123805581
+        },
+        {
+          "geom": "flybody/lf_tibia_body",
+          "geom_id": 42,
+          "min_clearance_mm": 0.4769021696820249,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.48788302538296485
+        },
+        {
+          "geom": "flybody/c_head_black",
+          "geom_id": 8,
+          "min_clearance_mm": 0.6024625343440387,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6024625343440387
+        },
+        {
+          "geom": "flybody/c_head_body",
+          "geom_id": 5,
+          "min_clearance_mm": 0.6445723807698891,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6445723807698891
+        },
+        {
+          "geom": "flybody/rf_trochanterfemur_body",
+          "geom_id": 65,
+          "min_clearance_mm": 0.7058297847715782,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7058297847715782
+        },
+        {
+          "geom": "flybody/lf_trochanterfemur_body",
+          "geom_id": 41,
+          "min_clearance_mm": 0.7191342885293477,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.7196696229116
+        },
+        {
+          "geom": "flybody/c_head_red",
+          "geom_id": 6,
+          "min_clearance_mm": 0.722429556876375,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.722429556876375
+        },
+        {
+          "geom": "flybody/lf_coxa_body",
+          "geom_id": 40,
+          "min_clearance_mm": 0.7237242992267893,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7237242992267893
+        },
+        {
+          "geom": "flybody/rf_coxa_body",
+          "geom_id": 64,
+          "min_clearance_mm": 0.725344432794518,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.725344432794518
+        },
+        {
+          "geom": "flybody/r_antenna_body",
+          "geom_id": 17,
+          "min_clearance_mm": 0.7547551291051987,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7547551291051987
+        },
+        {
+          "geom": "flybody/l_antenna_body",
+          "geom_id": 15,
+          "min_clearance_mm": 0.756536781726349,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.756536781726349
+        },
+        {
+          "geom": "flybody/c_thorax_body",
+          "geom_id": 3,
+          "min_clearance_mm": 0.7977241550859603,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7977241550859603
+        },
+        {
+          "geom": "flybody/r_antenna_black",
+          "geom_id": 18,
+          "min_clearance_mm": 0.9429464546465741,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9429464546465741
+        },
+        {
+          "geom": "flybody/l_antenna_black",
+          "geom_id": 16,
+          "min_clearance_mm": 0.9448027035426346,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9448027035426346
+        },
+        {
+          "geom": "flybody/lm_coxa_body",
+          "geom_id": 48,
+          "min_clearance_mm": 1.0017939456106475,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0017939456106475
+        },
+        {
+          "geom": "flybody/rm_coxa_body",
+          "geom_id": 72,
+          "min_clearance_mm": 1.0018592866797027,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0018592866797027
+        },
+        {
+          "geom": "flybody/lm_trochanterfemur_body",
+          "geom_id": 49,
+          "min_clearance_mm": 1.0141079234038564,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.0150559942904849
+        },
+        {
+          "geom": "flybody/rm_trochanterfemur_body",
+          "geom_id": 73,
+          "min_clearance_mm": 1.0149973546477027,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0149973546477027
+        },
+        {
+          "geom": "flybody/c_thorax_black",
+          "geom_id": 4,
+          "min_clearance_mm": 1.0297731263236047,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0297731263236047
+        },
+        {
+          "geom": "flybody/lm_tibia_body",
+          "geom_id": 50,
+          "min_clearance_mm": 1.0639313440192388,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.077145261992381
+        },
+        {
+          "geom": "flybody/rm_tibia_body",
+          "geom_id": 74,
+          "min_clearance_mm": 1.0759367378757394,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0759367378757394
+        },
+        {
+          "geom": "flybody/lm_tarsus1_body",
+          "geom_id": 51,
+          "min_clearance_mm": 1.0844529355614367,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.098885834852859
+        },
+        {
+          "geom": "flybody/rm_tarsus1_body",
+          "geom_id": 75,
+          "min_clearance_mm": 1.0982672259882695,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0982672259882695
+        },
+        {
+          "geom": "flybody/lh_coxa_body",
+          "geom_id": 56,
+          "min_clearance_mm": 1.2112238788274021,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2112238788274021
+        },
+        {
+          "geom": "flybody/rh_coxa_body",
+          "geom_id": 80,
+          "min_clearance_mm": 1.2118566249888294,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2118566249888294
+        },
+        {
+          "geom": "flybody/lm_tarsus2_body",
+          "geom_id": 52,
+          "min_clearance_mm": 1.2123082644317937,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.2304978849469204
+        },
+        {
+          "geom": "flybody/c_head_ocelli",
+          "geom_id": 7,
+          "min_clearance_mm": 1.2278794925002163,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2278794925002163
+        },
+        {
+          "geom": "flybody/rm_tarsus2_body",
+          "geom_id": 76,
+          "min_clearance_mm": 1.2298090646080395,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2298090646080395
+        },
+        {
+          "geom": "flybody/rh_trochanterfemur_body",
+          "geom_id": 81,
+          "min_clearance_mm": 1.2839780965815806,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2839780965815806
+        },
+        {
+          "geom": "flybody/lh_trochanterfemur_body",
+          "geom_id": 57,
+          "min_clearance_mm": 1.2846293355011145,
+          "e_at_min": 0.5,
+          "clearance_at_rest_mm": 1.2847593214966857
+        },
+        {
+          "geom": "flybody/lm_tarsus3_body",
+          "geom_id": 53,
+          "min_clearance_mm": 1.2975124084329046,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.3172230501300741
+        },
+        {
+          "geom": "flybody/rm_tarsus3_body",
+          "geom_id": 77,
+          "min_clearance_mm": 1.3252515675740273,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3252515675740273
+        },
+        {
+          "geom": "flybody/c_abdomen2_lower",
+          "geom_id": 22,
+          "min_clearance_mm": 1.351481199545531,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.351481199545531
+        },
+        {
+          "geom": "flybody/lm_tarsus4_body",
+          "geom_id": 54,
+          "min_clearance_mm": 1.3541635327943728,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.3746635999818577
+        },
+        {
+          "geom": "flybody/c_abdomen3_lower",
+          "geom_id": 24,
+          "min_clearance_mm": 1.3556323556072474,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3556323556072474
+        },
+        {
+          "geom": "flybody/c_abdomen3_body",
+          "geom_id": 23,
+          "min_clearance_mm": 1.3556323677039934,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3556323677039934
+        },
+        {
+          "geom": "flybody/c_abdomen2_body",
+          "geom_id": 21,
+          "min_clearance_mm": 1.3620195290812094,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3620195290812094
+        },
+        {
+          "geom": "flybody/c_abdomen1_lower",
+          "geom_id": 20,
+          "min_clearance_mm": 1.3664024219570041,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3664024219570041
+        },
+        {
+          "geom": "flybody/rm_tarsus4_body",
+          "geom_id": 78,
+          "min_clearance_mm": 1.3777950204777878,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3777950204777878
+        },
+        {
+          "geom": "flybody/c_abdomen1_body",
+          "geom_id": 19,
+          "min_clearance_mm": 1.3867327071789626,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3867327071789626
+        },
+        {
+          "geom": "flybody/lm_tarsus5_brown",
+          "geom_id": 55,
+          "min_clearance_mm": 1.3977631072000736,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.4189563783182464
+        },
+        {
+          "geom": "flybody/l_wing_brown",
+          "geom_id": 34,
+          "min_clearance_mm": 1.4058302197356967,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4058302197356967
+        },
+        {
+          "geom": "flybody/r_wing_brown",
+          "geom_id": 36,
+          "min_clearance_mm": 1.406500671676986,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.406500671676986
+        },
+        {
+          "geom": "flybody/rm_tarsus5_brown",
+          "geom_id": 79,
+          "min_clearance_mm": 1.427354042168695,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.427354042168695
+        },
+        {
+          "geom": "flybody/l_wing_membrane",
+          "geom_id": 35,
+          "min_clearance_mm": 1.4489866192592924,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4489866192592924
+        },
+        {
+          "geom": "flybody/r_wing_membrane",
+          "geom_id": 37,
+          "min_clearance_mm": 1.4495777051024612,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4495777051024612
+        },
+        {
+          "geom": "flybody/c_abdomen4_body",
+          "geom_id": 25,
+          "min_clearance_mm": 1.459143788077737,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.459143788077737
+        },
+        {
+          "geom": "flybody/c_abdomen4_lower",
+          "geom_id": 26,
+          "min_clearance_mm": 1.4591437942848686,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4591437942848686
+        },
+        {
+          "geom": "flybody/l_haltere_body",
+          "geom_id": 38,
+          "min_clearance_mm": 1.4894978383346198,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4894978383346198
+        },
+        {
+          "geom": "flybody/r_haltere_body",
+          "geom_id": 39,
+          "min_clearance_mm": 1.4926844147226455,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4926844147226455
+        },
+        {
+          "geom": "flybody/c_abdomen5_body",
+          "geom_id": 27,
+          "min_clearance_mm": 1.6024768493896686,
+          "e_at_min": 0.15,
+          "clearance_at_rest_mm": 1.6024881867274523
+        },
+        {
+          "geom": "flybody/c_abdomen5_lower",
+          "geom_id": 28,
+          "min_clearance_mm": 1.6024768537547915,
+          "e_at_min": 0.15,
+          "clearance_at_rest_mm": 1.6024881910938873
+        },
+        {
+          "geom": "flybody/c_abdomen6_lower",
+          "geom_id": 30,
+          "min_clearance_mm": 1.762518595267937,
+          "e_at_min": 0.4,
+          "clearance_at_rest_mm": 1.762611220615753
+        },
+        {
+          "geom": "flybody/c_abdomen6_body",
+          "geom_id": 29,
+          "min_clearance_mm": 1.7625185954395195,
+          "e_at_min": 0.4,
+          "clearance_at_rest_mm": 1.7626112207812492
+        },
+        {
+          "geom": "flybody/c_abdomen7_body",
+          "geom_id": 32,
+          "min_clearance_mm": 1.8619835520077772,
+          "e_at_min": 0.55,
+          "clearance_at_rest_mm": 1.8621185123331894
+        },
+        {
+          "geom": "flybody/c_abdomen7_lower",
+          "geom_id": 33,
+          "min_clearance_mm": 1.8619835538102836,
+          "e_at_min": 0.55,
+          "clearance_at_rest_mm": 1.8621185125730646
+        },
+        {
+          "geom": "flybody/lh_tibia_body",
+          "geom_id": 58,
+          "min_clearance_mm": 1.9393528968999265,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.9421080426285637
+        },
+        {
+          "geom": "flybody/rh_tibia_body",
+          "geom_id": 82,
+          "min_clearance_mm": 1.9466251937762264,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.9466251937762264
+        },
+        {
+          "geom": "flybody/c_abdomen8_body",
+          "geom_id": 31,
+          "min_clearance_mm": 2.009771973587696,
+          "e_at_min": 0.6,
+          "clearance_at_rest_mm": 2.0099766794822913
+        },
+        {
+          "geom": "flybody/lh_tarsus1_body",
+          "geom_id": 59,
+          "min_clearance_mm": 2.1350298238347167,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.1400063405609204
+        },
+        {
+          "geom": "flybody/rh_tarsus1_body",
+          "geom_id": 83,
+          "min_clearance_mm": 2.1393077687839273,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.1393077687839273
+        },
+        {
+          "geom": "flybody/lh_tarsus2_body",
+          "geom_id": 60,
+          "min_clearance_mm": 2.41261622257168,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.4182418736490887
+        },
+        {
+          "geom": "flybody/rh_tarsus2_body",
+          "geom_id": 84,
+          "min_clearance_mm": 2.4141034193875646,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.4141034193875646
+        },
+        {
+          "geom": "flybody/lh_tarsus3_body",
+          "geom_id": 61,
+          "min_clearance_mm": 2.584225040080133,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.5901548569630926
+        },
+        {
+          "geom": "flybody/rh_tarsus3_body",
+          "geom_id": 85,
+          "min_clearance_mm": 2.590871983729965,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.590871983729965
+        },
+        {
+          "geom": "flybody/lh_tarsus4_body",
+          "geom_id": 62,
+          "min_clearance_mm": 2.6818741897169307,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.687965280935609
+        },
+        {
+          "geom": "flybody/rh_tarsus4_body",
+          "geom_id": 86,
+          "min_clearance_mm": 2.687784228105893,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.687784228105893
+        },
+        {
+          "geom": "flybody/lh_tarsus5_brown",
+          "geom_id": 63,
+          "min_clearance_mm": 2.754428021719937,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.7606358708293044
+        },
+        {
+          "geom": "flybody/rh_tarsus5_brown",
+          "geom_id": 87,
+          "min_clearance_mm": 2.758685991947799,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.758685991947799
+        }
+      ],
+      "food": [
+        {
+          "geom": "flybody/c_haustellum_body",
+          "geom_id": 11,
+          "min_clearance_mm": 0.09703290240320944,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4293421568039867
+        },
+        {
+          "geom": "flybody/c_haustellum_black",
+          "geom_id": 12,
+          "min_clearance_mm": 0.12374038131602572,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4595538334835736
+        },
+        {
+          "geom": "flybody/c_rostrum_bristle-brown",
+          "geom_id": 10,
+          "min_clearance_mm": 0.2345165731326783,
+          "e_at_min": 0.6,
+          "clearance_at_rest_mm": 0.29176641109080875
+        },
+        {
+          "geom": "flybody/c_rostrum_body",
+          "geom_id": 9,
+          "min_clearance_mm": 0.2591627413471015,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.3439876727848929
+        },
+        {
+          "geom": "flybody/lf_tarsus1_body",
+          "geom_id": 43,
+          "min_clearance_mm": 0.3795677385253051,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.39927593165378344
+        },
+        {
+          "geom": "flybody/lf_tarsus2_body",
+          "geom_id": 44,
+          "min_clearance_mm": 0.3822045931340226,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.40373056704873794
+        },
+        {
+          "geom": "flybody/rf_tarsus1_body",
+          "geom_id": 67,
+          "min_clearance_mm": 0.3883424025438347,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.3883424025438347
+        },
+        {
+          "geom": "flybody/lf_tarsus3_body",
+          "geom_id": 45,
+          "min_clearance_mm": 0.39028871787208474,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4133454648027876
+        },
+        {
+          "geom": "flybody/rf_tarsus2_body",
+          "geom_id": 68,
+          "min_clearance_mm": 0.3940206087455121,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.3940206087455121
+        },
+        {
+          "geom": "flybody/rf_tarsus3_body",
+          "geom_id": 69,
+          "min_clearance_mm": 0.40722115917843854,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.40722115917843854
+        },
+        {
+          "geom": "flybody/lf_tarsus4_body",
+          "geom_id": 46,
+          "min_clearance_mm": 0.4107175172238366,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4348026444222903
+        },
+        {
+          "geom": "flybody/rf_tarsus4_body",
+          "geom_id": 70,
+          "min_clearance_mm": 0.43621751643350015,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.43621751643350015
+        },
+        {
+          "geom": "flybody/lf_tarsus5_brown",
+          "geom_id": 47,
+          "min_clearance_mm": 0.43982242173369707,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4640020467381802
+        },
+        {
+          "geom": "flybody/rf_tibia_body",
+          "geom_id": 66,
+          "min_clearance_mm": 0.4458898188407824,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4458898188407824
+        },
+        {
+          "geom": "flybody/lf_tibia_body",
+          "geom_id": 42,
+          "min_clearance_mm": 0.4466035835269896,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.4586789126133112
+        },
+        {
+          "geom": "flybody/rf_tarsus5_brown",
+          "geom_id": 71,
+          "min_clearance_mm": 0.4687871004791959,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.4687871004791959
+        },
+        {
+          "geom": "flybody/c_head_black",
+          "geom_id": 8,
+          "min_clearance_mm": 0.5531819540338496,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.5531819540338496
+        },
+        {
+          "geom": "flybody/c_head_body",
+          "geom_id": 5,
+          "min_clearance_mm": 0.5946540563865373,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.5946540563865373
+        },
+        {
+          "geom": "flybody/c_head_red",
+          "geom_id": 6,
+          "min_clearance_mm": 0.6724756275791267,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6724756275791267
+        },
+        {
+          "geom": "flybody/rf_trochanterfemur_body",
+          "geom_id": 65,
+          "min_clearance_mm": 0.6758383852971631,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6758383852971631
+        },
+        {
+          "geom": "flybody/lf_trochanterfemur_body",
+          "geom_id": 41,
+          "min_clearance_mm": 0.6883908135222532,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.689380198706068
+        },
+        {
+          "geom": "flybody/lf_coxa_body",
+          "geom_id": 40,
+          "min_clearance_mm": 0.6950346346930069,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6950346346930069
+        },
+        {
+          "geom": "flybody/rf_coxa_body",
+          "geom_id": 64,
+          "min_clearance_mm": 0.6968260247422257,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.6968260247422257
+        },
+        {
+          "geom": "flybody/r_antenna_body",
+          "geom_id": 17,
+          "min_clearance_mm": 0.7051330452444774,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7051330452444774
+        },
+        {
+          "geom": "flybody/l_antenna_body",
+          "geom_id": 15,
+          "min_clearance_mm": 0.7068995724649023,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7068995724649023
+        },
+        {
+          "geom": "flybody/c_thorax_body",
+          "geom_id": 3,
+          "min_clearance_mm": 0.7579486931306266,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.7579486931306266
+        },
+        {
+          "geom": "flybody/r_antenna_black",
+          "geom_id": 18,
+          "min_clearance_mm": 0.8929464546465741,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.8929464546465741
+        },
+        {
+          "geom": "flybody/l_antenna_black",
+          "geom_id": 16,
+          "min_clearance_mm": 0.8948027035426345,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.8948027035426345
+        },
+        {
+          "geom": "flybody/lm_coxa_body",
+          "geom_id": 48,
+          "min_clearance_mm": 0.9810203822341262,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9810203822341262
+        },
+        {
+          "geom": "flybody/rm_coxa_body",
+          "geom_id": 72,
+          "min_clearance_mm": 0.9812380101088535,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9812380101088535
+        },
+        {
+          "geom": "flybody/c_thorax_black",
+          "geom_id": 4,
+          "min_clearance_mm": 0.9923983872165877,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9923983872165877
+        },
+        {
+          "geom": "flybody/lm_trochanterfemur_body",
+          "geom_id": 49,
+          "min_clearance_mm": 0.9930430477386553,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 0.9944196470997073
+        },
+        {
+          "geom": "flybody/rm_trochanterfemur_body",
+          "geom_id": 73,
+          "min_clearance_mm": 0.9944628512571391,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 0.9944628512571391
+        },
+        {
+          "geom": "flybody/lm_tibia_body",
+          "geom_id": 50,
+          "min_clearance_mm": 1.0516834735359868,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.065027264091483
+        },
+        {
+          "geom": "flybody/rm_tibia_body",
+          "geom_id": 74,
+          "min_clearance_mm": 1.06398213295351,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.06398213295351
+        },
+        {
+          "geom": "flybody/lm_tarsus1_body",
+          "geom_id": 51,
+          "min_clearance_mm": 1.0756517745680514,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.0902934815759098
+        },
+        {
+          "geom": "flybody/rm_tarsus1_body",
+          "geom_id": 75,
+          "min_clearance_mm": 1.0899510352049855,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.0899510352049855
+        },
+        {
+          "geom": "flybody/c_head_ocelli",
+          "geom_id": 7,
+          "min_clearance_mm": 1.1778794925002167,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.1778794925002167
+        },
+        {
+          "geom": "flybody/lh_coxa_body",
+          "geom_id": 56,
+          "min_clearance_mm": 1.1912549355102098,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.1912549355102098
+        },
+        {
+          "geom": "flybody/rh_coxa_body",
+          "geom_id": 80,
+          "min_clearance_mm": 1.1918769696851974,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.1918769696851974
+        },
+        {
+          "geom": "flybody/lm_tarsus2_body",
+          "geom_id": 52,
+          "min_clearance_mm": 1.2120698502389913,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.2302865317473601
+        },
+        {
+          "geom": "flybody/rm_tarsus2_body",
+          "geom_id": 76,
+          "min_clearance_mm": 1.229730493520114,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.229730493520114
+        },
+        {
+          "geom": "flybody/rh_trochanterfemur_body",
+          "geom_id": 81,
+          "min_clearance_mm": 1.2705955300933618,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.2705955300933618
+        },
+        {
+          "geom": "flybody/lh_trochanterfemur_body",
+          "geom_id": 57,
+          "min_clearance_mm": 1.2712915724851945,
+          "e_at_min": 0.55,
+          "clearance_at_rest_mm": 1.2714743705860345
+        },
+        {
+          "geom": "flybody/lm_tarsus3_body",
+          "geom_id": 53,
+          "min_clearance_mm": 1.300344895783761,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.3200650811559196
+        },
+        {
+          "geom": "flybody/rm_tarsus3_body",
+          "geom_id": 77,
+          "min_clearance_mm": 1.328096604596626,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.328096604596626
+        },
+        {
+          "geom": "flybody/c_abdomen2_lower",
+          "geom_id": 22,
+          "min_clearance_mm": 1.3319120961561215,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3319120961561215
+        },
+        {
+          "geom": "flybody/c_abdomen2_body",
+          "geom_id": 21,
+          "min_clearance_mm": 1.3381981346201264,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3381981346201264
+        },
+        {
+          "geom": "flybody/c_abdomen3_lower",
+          "geom_id": 24,
+          "min_clearance_mm": 1.3384975051810981,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3384975051810981
+        },
+        {
+          "geom": "flybody/c_abdomen3_body",
+          "geom_id": 23,
+          "min_clearance_mm": 1.3384975172065687,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3384975172065687
+        },
+        {
+          "geom": "flybody/c_abdomen1_lower",
+          "geom_id": 20,
+          "min_clearance_mm": 1.3445473495547204,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3445473495547204
+        },
+        {
+          "geom": "flybody/lm_tarsus4_body",
+          "geom_id": 54,
+          "min_clearance_mm": 1.3616034658385787,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.3820356798924376
+        },
+        {
+          "geom": "flybody/c_abdomen1_body",
+          "geom_id": 19,
+          "min_clearance_mm": 1.365809730287656,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.365809730287656
+        },
+        {
+          "geom": "flybody/l_wing_brown",
+          "geom_id": 34,
+          "min_clearance_mm": 1.367562574335565,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.367562574335565
+        },
+        {
+          "geom": "flybody/r_wing_brown",
+          "geom_id": 36,
+          "min_clearance_mm": 1.3682579328509428,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.3682579328509428
+        },
+        {
+          "geom": "flybody/rm_tarsus4_body",
+          "geom_id": 78,
+          "min_clearance_mm": 1.385995001238882,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.385995001238882
+        },
+        {
+          "geom": "flybody/l_wing_membrane",
+          "geom_id": 35,
+          "min_clearance_mm": 1.4115816710967464,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4115816710967464
+        },
+        {
+          "geom": "flybody/r_wing_membrane",
+          "geom_id": 37,
+          "min_clearance_mm": 1.4121937446924746,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4121937446924746
+        },
+        {
+          "geom": "flybody/lm_tarsus5_brown",
+          "geom_id": 55,
+          "min_clearance_mm": 1.4122345687997917,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.4332300296549998
+        },
+        {
+          "geom": "flybody/rm_tarsus5_brown",
+          "geom_id": 79,
+          "min_clearance_mm": 1.441546093818624,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.441546093818624
+        },
+        {
+          "geom": "flybody/c_abdomen4_body",
+          "geom_id": 25,
+          "min_clearance_mm": 1.450485161749176,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.450485161749176
+        },
+        {
+          "geom": "flybody/c_abdomen4_lower",
+          "geom_id": 26,
+          "min_clearance_mm": 1.4504851676366504,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4504851676366504
+        },
+        {
+          "geom": "flybody/l_haltere_body",
+          "geom_id": 38,
+          "min_clearance_mm": 1.4603046458170497,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4603046458170497
+        },
+        {
+          "geom": "flybody/r_haltere_body",
+          "geom_id": 39,
+          "min_clearance_mm": 1.4634360264981698,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.4634360264981698
+        },
+        {
+          "geom": "flybody/c_abdomen5_body",
+          "geom_id": 27,
+          "min_clearance_mm": 1.598946301726459,
+          "e_at_min": 0.2,
+          "clearance_at_rest_mm": 1.5989632938805056
+        },
+        {
+          "geom": "flybody/c_abdomen5_lower",
+          "geom_id": 28,
+          "min_clearance_mm": 1.5989463061769824,
+          "e_at_min": 0.2,
+          "clearance_at_rest_mm": 1.5989632983328812
+        },
+        {
+          "geom": "flybody/c_abdomen6_lower",
+          "geom_id": 30,
+          "min_clearance_mm": 1.761531533054894,
+          "e_at_min": 0.4,
+          "clearance_at_rest_mm": 1.7616315652042456
+        },
+        {
+          "geom": "flybody/c_abdomen6_body",
+          "geom_id": 29,
+          "min_clearance_mm": 1.761531533093796,
+          "e_at_min": 0.4,
+          "clearance_at_rest_mm": 1.7616315652370644
+        },
+        {
+          "geom": "flybody/c_abdomen7_body",
+          "geom_id": 32,
+          "min_clearance_mm": 1.8613143970025245,
+          "e_at_min": 0.55,
+          "clearance_at_rest_mm": 1.8614537887613745
+        },
+        {
+          "geom": "flybody/c_abdomen7_lower",
+          "geom_id": 33,
+          "min_clearance_mm": 1.8613143987821934,
+          "e_at_min": 0.55,
+          "clearance_at_rest_mm": 1.8614537889901122
+        },
+        {
+          "geom": "flybody/lh_tibia_body",
+          "geom_id": 58,
+          "min_clearance_mm": 1.9198550976574746,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 1.922663411177998
+        },
+        {
+          "geom": "flybody/rh_tibia_body",
+          "geom_id": 82,
+          "min_clearance_mm": 1.9271549961973908,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 1.9271549961973908
+        },
+        {
+          "geom": "flybody/c_abdomen8_body",
+          "geom_id": 31,
+          "min_clearance_mm": 2.009810657316483,
+          "e_at_min": 0.6,
+          "clearance_at_rest_mm": 2.010015064915149
+        },
+        {
+          "geom": "flybody/lh_tarsus1_body",
+          "geom_id": 59,
+          "min_clearance_mm": 2.131397093491011,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.1363920145987048
+        },
+        {
+          "geom": "flybody/rh_tarsus1_body",
+          "geom_id": 83,
+          "min_clearance_mm": 2.1356886848672936,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.1356886848672936
+        },
+        {
+          "geom": "flybody/lh_tarsus2_body",
+          "geom_id": 60,
+          "min_clearance_mm": 2.4125550009846375,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.4181818403437276
+        },
+        {
+          "geom": "flybody/rh_tarsus2_body",
+          "geom_id": 84,
+          "min_clearance_mm": 2.414084601577111,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.414084601577111
+        },
+        {
+          "geom": "flybody/lh_tarsus3_body",
+          "geom_id": 61,
+          "min_clearance_mm": 2.585378082314838,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.5913059996633656
+        },
+        {
+          "geom": "flybody/rh_tarsus3_body",
+          "geom_id": 85,
+          "min_clearance_mm": 2.592000951435553,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.592000951435553
+        },
+        {
+          "geom": "flybody/lh_tarsus4_body",
+          "geom_id": 62,
+          "min_clearance_mm": 2.685298595936509,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.691384134980671
+        },
+        {
+          "geom": "flybody/rh_tarsus4_body",
+          "geom_id": 86,
+          "min_clearance_mm": 2.6911439113425075,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.6911439113425075
+        },
+        {
+          "geom": "flybody/lh_tarsus5_brown",
+          "geom_id": 63,
+          "min_clearance_mm": 2.761150050131654,
+          "e_at_min": 1.0,
+          "clearance_at_rest_mm": 2.767343563681969
+        },
+        {
+          "geom": "flybody/rh_tarsus5_brown",
+          "geom_id": 87,
+          "min_clearance_mm": 2.7653865356362224,
+          "e_at_min": 0.0,
+          "clearance_at_rest_mm": 2.7653865356362224
+        }
+      ]
+    },
+    "labrum_distances_for_information": {
+      "pedestal": {
+        "flybody/l_labrum_lower": {
+          "min_distance_mm": 0.024285625877083827,
+          "e_at_min": 1.0,
+          "distance_at_rest_mm": 0.3506292417618622
+        },
+        "flybody/r_labrum_lower": {
+          "min_distance_mm": 0.022276026307004593,
+          "e_at_min": 1.0,
+          "distance_at_rest_mm": 0.3495716207820069
+        }
+      },
+      "food": {
+        "flybody/l_labrum_lower": {
+          "min_distance_mm": -0.025714374122916158,
+          "e_at_min": 1.0,
+          "distance_at_rest_mm": 0.3020560423597786
+        },
+        "flybody/r_labrum_lower": {
+          "min_distance_mm": -0.027723973692995396,
+          "e_at_min": 1.0,
+          "distance_at_rest_mm": 0.3009354609693828
+        }
+      }
+    }
+  },
+  "calibration_2_E_definitions": {
+    "construction": "Demo C FlyBody via gate_common.build_sim (with_adhesion=True), plain flat ground",
+    "chain": "SS4.3 as revised by Pass 6 (theta_ext = achievable extremes); feedforward from compiled parameters",
+    "theta_rest_rad": {
+      "c_head-c_rostrum-pitch": -0.0032835518800405287,
+      "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+      "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+      "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+      "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+    },
+    "E_definition": "extension_E (gate_common3), SS4.4: E = s_ros*(theta_ros - theta_rest_ros) + s_haus*(theta_haus - theta_rest_haus), s = -1 for both pitch joints; theta from get_joint_angles (the actuated joints' qpos coordinates), theta_rest the same run's settled angles under zero command. E sums JOINT-ANGLE EXCURSIONS FROM THE SETTLED REST POSE -- not segment orientations, and not angles from qpos zero.",
+    "E_at_rest_sanity_rad": 0.0,
+    "angles_at_e1_rad": {
+      "c_head-c_rostrum-pitch": -0.9550454143520749,
+      "c_rostrum-c_haustellum-pitch": -1.2236314590502488,
+      "c_rostrum-c_haustellum-yaw": -5.137688358485053e-07,
+      "c_haustellum-l_labrum-pitch": 0.2623471290538639,
+      "c_haustellum-r_labrum-pitch": 0.26236047802780105
+    },
+    "ctrls_at_e1": {
+      "c_head-c_rostrum-pitch": -1.24,
+      "c_rostrum-c_haustellum-pitch": -1.5899,
+      "c_rostrum-c_haustellum-yaw": -4.00052619114863e-07,
+      "c_haustellum-l_labrum-pitch": 1.05,
+      "c_haustellum-r_labrum-pitch": 1.05
+    },
+    "ctrl_range_limits": {
+      "c_head-c_rostrum-pitch": [
+        -1.24,
+        0.183
+      ],
+      "c_rostrum-c_haustellum-pitch": [
+        -1.59,
+        0.7
+      ],
+      "c_rostrum-c_haustellum-yaw": [
+        -0.0873,
+        0.0873
+      ],
+      "c_haustellum-l_labrum-pitch": [
+        -0.00524,
+        1.05
+      ],
+      "c_haustellum-r_labrum-pitch": [
+        -0.00524,
+        1.05
+      ]
+    },
+    "E_at_e1_rad": 2.1745260781010405,
+    "E_predicted_map_at_e1_rad": 2.1726953585448707,
+    "naive_joint_angle_sum_at_e1_rad": 2.1786768734023236,
+    "gap_naive_minus_E_rad": 0.00415079530128315,
+    "rest_angle_sum_rad": -0.004150795301283431,
+    "gap_check": "naive_sum - E == -(rest_ros + rest_haus): the naive sum omits the -theta_rest terms of SS4.4's definition; both rest angles are slightly negative (the settled proboscis sits a hair into the extension direction from qpos zero), so E is smaller than the naive sum by exactly the rest sum's magnitude.",
+    "raw_extremes": {
+      "q3_code_formula": "sum over pitch joints of s_j * (range_end_in_extension_direction_j - theta_rest_j), range ends and rest from the same run (q3_rerun3.py)",
+      "E_raw_from_rest_rad": 2.8258492046987165,
+      "E_raw_from_qpos_zero_rad": 2.83,
+      "gap_zero_minus_rest_rad": 0.004150795301283594,
+      "q3_artefact_recorded_rad": 2.8258492046987165,
+      "gate_summary_recorded_rad": 2.8264,
+      "reconciliation": "Q3's raw-extremes E measures the published range ends FROM THE SETTLED REST POSE, not from qpos zero: with s = -1 it is (1.24 + theta_rest_ros) + (1.59 + theta_rest_haus) in magnitude terms, i.e. 2.83 + (rest sum) = 2.83 - 0.0041508 = 2.8258. The 1.24 + 1.59 = 2.83 figure measures the same ends from zero and overstates by the identical rest offset that separates E from the naive joint-angle sum."
+    }
+  },
+  "wall_clock_s": 32.84004044532776
+}

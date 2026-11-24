@@ -1,0 +1,25 @@
+{
+  "completed_chunks": 30,
+  "all_finite": true,
+  "peak_E_rad": -3.7417376321587266e-08,
+  "final_E_rad": -1.1610951123817949e-06,
+  "onset_chunk_SS4.4": null,
+  "offset_chunk_SS4.4": null,
+  "first_contact_event_chunk": null,
+  "event_on_chunks": 0,
+  "max_labrum_food_force_N": 0.0,
+  "max_front_tarsus_food_force_N": 0.0,
+  "total_mn9_spikes": 0,
+  "drive_applied_chunks": {
+    "sugar": 0
+  },
+  "smoke_verdict": "PASS",
+  "smoke_checks": {
+    "no_taste_event_ever": true,
+    "no_food_contact_force": true,
+    "E_stayed_below_onset": true,
+    "mn9_silent": true,
+    "drive_never_applied": true
+  },
+  "wall_clock_s": 40.597893714904785
+}

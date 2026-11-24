@@ -1,0 +1,14 @@
+{
+  "seed": 4105,
+  "configuration": "sugar_grn_right at 200 Hz, 300 ms total; single = one 300 ms run, chunked = 3 x 100 ms runs on one persistent Network (probe 2's setup)",
+  "spikes_single": 5539,
+  "spikes_chunked": 5243,
+  "sha256_single": "46bf581500a386f1b7b417ddd36afbafac1ddaf980cf43c0d4f7c3ad2096397b",
+  "sha256_chunked": "71c8f5cd98d8c59b0ff11825367eee9b352697311105919fcbfa2aa3c1747d66",
+  "hashes_equal": false,
+  "elementwise_ids_equal": false,
+  "elementwise_times_exactly_equal": false,
+  "max_abs_time_difference_s": null,
+  "bit_for_bit_identical": false,
+  "wall_clock_s": 68.0
+}

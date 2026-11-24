@@ -1,0 +1,31 @@
+{
+  "artefact": "q5_diagnostic (not a gate step)",
+  "food_centre_xy_mm": [
+    0.5626608795922596,
+    -0.003248682676820238
+  ],
+  "food_geom_id": 1,
+  "food_pairs_in_compiled_model": 69,
+  "food_compiled_geom_pos_mm": [
+    0.5626608795922596,
+    -0.003248682676820238,
+    0.025
+  ],
+  "tip_at_rest_mm": [
+    0.41641040870416923,
+    0.00374372682362337,
+    0.7141042368705487
+  ],
+  "tip_at_e1_mm": [
+    0.5623818457177441,
+    0.0017911025160179603,
+    0.3929504494940981
+  ],
+  "tip_centre_height_above_food_top_mm": 0.3429504494940981,
+  "geom_distance_labrum_to_food_mm": {
+    "l_labrum_lower": 0.24742362981735747,
+    "r_labrum_lower": 0.24549992106853158
+  },
+  "active_contacts_involving_food_at_e1": 0,
+  "note": "geom_xpos printed as [0,0,0] before the first step in an earlier console run was a stale pre-forward array; the compiled geom_pos above is the placed position and the attempts stepped thousands of steps before judging."
+}

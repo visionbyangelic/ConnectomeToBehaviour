@@ -1,0 +1,74 @@
+{
+  "probe1_toggle": {
+    "seed": 4102,
+    "chunks": [
+      {
+        "total": 1552,
+        "adn1": 0,
+        "adn2_left": 0,
+        "abn1": 0,
+        "jon_all": 0,
+        "sugar_grn_right": 443,
+        "mn9_left": 6,
+        "mn9_right": 4,
+        "jon_commanded_on": false
+      },
+      {
+        "total": 4308,
+        "adn1": 1,
+        "adn2_left": 1,
+        "abn1": 4,
+        "jon_all": 2138,
+        "sugar_grn_right": 359,
+        "mn9_left": 10,
+        "mn9_right": 6,
+        "jon_commanded_on": true
+      },
+      {
+        "total": 1758,
+        "adn1": 0,
+        "adn2_left": 0,
+        "abn1": 0,
+        "jon_all": 0,
+        "sugar_grn_right": 428,
+        "mn9_left": 7,
+        "mn9_right": 7,
+        "jon_commanded_on": false
+      }
+    ],
+    "toggle_works": true
+  },
+  "probe2_chunk_equivalence": {
+    "seed": 4105,
+    "spikes_single": 5243,
+    "spikes_chunked": 5243,
+    "bit_identical": true
+  },
+  "probe3_recruitment_150hz": {
+    "seed": 4103,
+    "counts_1s": {
+      "total": 28633,
+      "adn1": 22,
+      "adn2_left": 24,
+      "abn1": 52,
+      "jon_all": 21656,
+      "sugar_grn_right": 0,
+      "mn9_left": 0,
+      "mn9_right": 0
+    }
+  },
+  "probe3_recruitment_200hz": {
+    "seed": 4104,
+    "counts_1s": {
+      "total": 39096,
+      "adn1": 34,
+      "adn2_left": 34,
+      "abn1": 71,
+      "jon_all": 28570,
+      "sugar_grn_right": 0,
+      "mn9_left": 0,
+      "mn9_right": 0
+    }
+  },
+  "wall_clock_s": 1514.0
+}

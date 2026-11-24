@@ -1,0 +1,48 @@
+{
+  "step": "Q0",
+  "model_dir": "/home/hatch/workspace/connectome-work/envs/body/lib/python3.12/site-packages/flygym/assets/model/flybody",
+  "files": {
+    "fruitfly.xml": {
+      "pinned": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "measured": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "match": true
+    },
+    "joints.yaml": {
+      "pinned": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "measured": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "match": true
+    },
+    "actuators.yaml": {
+      "pinned": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "measured": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "match": true
+    },
+    "mujoco_globals.yaml": {
+      "pinned": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "measured": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "match": true
+    },
+    "rigging.yaml": {
+      "pinned": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "measured": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "match": true
+    }
+  },
+  "all_match": true,
+  "mesh_cache": {
+    "cache_root": "/home/hatch/.cache/flygym_assets",
+    "flybody_mesh_dir": "/home/hatch/.cache/flygym_assets/flybody_fullsize_meshes_20260623a",
+    "flybody_mesh_dir_present": true,
+    "cached_dirs": [
+      "flybody_fullsize_meshes_20260623a"
+    ]
+  },
+  "experimental_label": "Support for the FlyBody body model is experimental.",
+  "versions": {
+    "flygym": "2.1.1",
+    "mujoco": "3.16.0",
+    "numpy": "2.5.5"
+  },
+  "verdict": "PASS",
+  "wall_clock_s": 0.010504722595214844
+}

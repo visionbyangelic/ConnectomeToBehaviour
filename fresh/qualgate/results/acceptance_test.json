@@ -1,0 +1,5349 @@
+{
+  "test": "SS2.4 resting acceptance test",
+  "spec": "PART4-SENSORY-SPECS.md SS2.4 (Amendment Pass 1 operational definition); SS2.3 settle; SS4.5 taste event; SS5.3 JON channel",
+  "pass_rule": "zero false ignitions across N=10 resting episodes per configuration",
+  "n_episodes_per_configuration": 10,
+  "rest_chunks_per_episode": 30,
+  "config_A_feeding": {
+    "episodes_attempted": 10,
+    "episodes_valid": 10,
+    "episodes_invalid": 0,
+    "false_ignitions": [],
+    "verdict": "PASS",
+    "episodes": [
+      {
+        "episode": 0,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 1,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 2,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 3,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 4,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 5,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 6,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 7,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 8,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 9,
+        "config": "A_feeding",
+        "arena_centre_xy_mm": [
+          1.0164065614349278,
+          0.005892379491766636
+        ],
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 490,
+            "thorax_dh_mm": 1.0584419876568207,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0004183165158804236,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 6.273273267698443e-05,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 5.793400348186317e-05,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "food_contact_during_warmup": false,
+        "warmup_max_qualifying_run_steps": 0,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 1,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 2,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 3,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 4,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 5,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 6,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 7,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 8,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 9,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 10,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 11,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 12,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 13,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 14,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 15,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 16,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 17,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 18,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 19,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 20,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 21,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 22,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 23,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 24,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 25,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 26,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 27,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 28,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          },
+          {
+            "chunk": 29,
+            "max_qualifying_run_steps": 0,
+            "event_on_at_chunk_end": false,
+            "event_on_any_step": false,
+            "max_labrum_food_force_N": 0.0,
+            "max_front_tarsus_food_force_N": 0.0
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      }
+    ],
+    "wall_clock_s": 239.75616598129272
+  },
+  "config_B_walkhalt": {
+    "episodes_attempted": 10,
+    "episodes_valid": 10,
+    "episodes_invalid": 0,
+    "false_ignitions": [],
+    "verdict": "PASS",
+    "episodes": [
+      {
+        "episode": 0,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 1,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 2,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 3,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 4,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 5,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 6,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 7,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 8,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      },
+      {
+        "episode": 9,
+        "config": "B_walkhalt",
+        "timestep_s": 0.0001,
+        "steps_per_chunk": 1000,
+        "settle_chunks": 4,
+        "settle_chunk_details": [
+          {
+            "chunk": 0,
+            "transitions": 290,
+            "thorax_dh_mm": 1.0852408093005952,
+            "ok": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.004740103239046611,
+            "ok": true
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029058846628657875,
+            "ok": true
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002731935553583753,
+            "ok": true
+          }
+        ],
+        "settled": true,
+        "status": "VALID",
+        "chunks": [
+          {
+            "chunk": 0,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002485962616639359,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 1,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002887679411741617,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 2,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028955548416322863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 3,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029028036646467914,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 4,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002651828386537991,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 5,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027659611328725298,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 6,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029002914139442115,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 7,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002921685530224094,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 8,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0029066686881158432,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 9,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002788653354766746,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 10,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027962564367240983,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 11,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030081103704819867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 12,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030821652467065697,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 13,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0030796817053098113,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 14,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028454761985405863,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 15,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0027773955168610698,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 16,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002825972755541306,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 17,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002841396516748196,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 18,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00286697831717464,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 19,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002708249992459999,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 20,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026536251757389717,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 21,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028441498068825233,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 22,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0028575552149245897,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 23,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002815870242820928,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 24,
+            "transitions": 0,
+            "thorax_dh_mm": 0.00255171902315654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 25,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0024686687149468867,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 26,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002772894707843143,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 27,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026385650391582693,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 28,
+            "transitions": 0,
+            "thorax_dh_mm": 0.0026212496105688654,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          },
+          {
+            "chunk": 29,
+            "transitions": 0,
+            "thorax_dh_mm": 0.002507244162060829,
+            "jon_on_at_chunk_start": false,
+            "jon_on_at_chunk_end": false
+          }
+        ],
+        "false_ignition": false,
+        "false_ignition_detail": null
+      }
+    ],
+    "wall_clock_s": 749.9776434898376
+  },
+  "overall_verdict": "PASS",
+  "wall_clock_total_s": 989.7338268756866
+}

@@ -1,0 +1,101 @@
+{
+  "artefact": "dynamic-onset quantification check (calibration, NOT a gate step)",
+  "date": "24 Nov 2026",
+  "purpose": "Reviewer 3's condition on execution #5: quantify the dynamic-vs-quasi-static pose explanation for the Q5 onset residual (predicted f_c 0.884, measured 0.8371, residual -0.047).",
+  "configuration": "Run A: q5_rerun5.build_arena (pedestal T = 0.33 mm, offset 0.6 mm, proboscis pairs in), settle SS2.3, revised Pass 6 chain, Q5 chunk profile (2 resting + 5 ramp + 15 hold chunks), adhesion off (engages only after first contact in Q5). Runs B/C: plain Demo C construction, same chain; B same chunk profile, C 0.4 s holds at e = 0.78...1.0.",
+  "E_max_reference_rad": 2.1745857359418848,
+  "arena_centre_xy_mm": [
+    1.0164065614349278,
+    0.005892379491766636
+  ],
+  "run_A_onset": {
+    "first_labrum_force_step": 6024,
+    "E_fraction_at_first_force": 0.8370970470740771,
+    "z_disc_crossing_fraction": null,
+    "z_plane_at_first_force_mm": 0.33086633764381623,
+    "landing_fraction_z_within_0.001_of_T": 0.836642140491985,
+    "min_z_plane_mm": 0.33086633764381623,
+    "z_plane_hold_mean_last_chunk_mm": 0.330990437158083,
+    "q5_reference": {
+      "step": 6024,
+      "E_fraction": 0.8370970470740771
+    }
+  },
+  "surface_at_q5_onset_fraction": {
+    "fraction": 0.8370970470740771,
+    "dynamic_z_true_mm_runA": 0.33086633764381623,
+    "quasi_static_z_true_mm_reach_curve": 0.34092009632655945,
+    "difference_dynamic_minus_quasistatic_mm": -0.010053758682743219,
+    "robustness_same_chain": {
+      "dynamic_free_z_true_mm_runB": 0.33094400286815207,
+      "quasi_static_z_true_mm_runC": 0.33102506533651976,
+      "difference_dynamic_minus_quasistatic_mm": -8.106246836769859e-05
+    }
+  },
+  "dynamic_R_values_for_the_bracket": {
+    "free_dynamic_R_runB_mm": 0.29656320366577177,
+    "quasi_static_R_same_chain_runC_mm": 0.2967655959701223,
+    "quasi_static_R_reach_curve_mm": 0.3083340867563698,
+    "execution3_fast_ramp_R_mm": 0.296,
+    "runA_e1_height_is_disc_supported_mm": 0.330990437158083
+  },
+  "run_C_sweep": [
+    {
+      "e": 0.78,
+      "E_rad": 1.6973361758527798,
+      "E_fraction": 0.7805331138703564,
+      "z_plane_mm": 0.34476021754701003
+    },
+    {
+      "e": 0.82,
+      "E_rad": 1.7841186038631907,
+      "E_fraction": 0.8204406818158541,
+      "z_plane_mm": 0.33492428176207073
+    },
+    {
+      "e": 0.86,
+      "E_rad": 1.8708975341137681,
+      "E_fraction": 0.8603466412895515,
+      "z_plane_mm": 0.32558238932365935
+    },
+    {
+      "e": 0.9,
+      "E_rad": 1.9576731575910555,
+      "E_fraction": 0.9002510801180817,
+      "z_plane_mm": 0.31674661804342585
+    },
+    {
+      "e": 0.94,
+      "E_rad": 2.044445669676321,
+      "E_fraction": 0.9401540881490259,
+      "z_plane_mm": 0.30842837940647994
+    },
+    {
+      "e": 1.0,
+      "E_rad": 2.1745994007657323,
+      "E_fraction": 1.000006283874497,
+      "z_plane_mm": 0.2967655959701223
+    }
+  ],
+  "explanation_holds": true,
+  "wall_clock_s": 82.92718434333801,
+  "diagnostic_addendum": {
+    "script": "onset_diag.py",
+    "question": "Is the reach curve's higher surface a chain effect (old vs revised), a ramp-speed effect, or a sweep-trajectory effect? All cases at e = 1, plain construction; joint angles identical in every case (rostrum -0.9550, haustellum pitch -1.2237, labrum 0.2623/0.2624, E = 2.1746).",
+    "z_true_at_e1_mm": {
+      "old_chain_single_0.4s_hold": 0.29493,
+      "old_chain_single_hold_plus_2s": 0.29674,
+      "old_chain_41_step_sweep": 0.30833,
+      "revised_chain_single_0.4s_hold": 0.29493,
+      "revised_chain_single_hold_plus_2s": 0.29674,
+      "revised_chain_41_step_sweep": 0.30844,
+      "old_chain_chunked_ramp_Q5_style": 0.29504,
+      "old_chain_chunked_ramp_plus_0.4s": 0.29541
+    },
+    "thorax_z_at_e1_mm": {
+      "direct_protocols (single hold / chunked ramp)": 1.2815,
+      "41_step_sweeps (either chain)": 1.2886
+    },
+    "conclusion": "Not the chain (old and revised agree to <0.0002 mm in every paired case) and not ramp speed (chunked ramp = single hold). The 41-step graded sweep's trajectory lifts the whole body: thorax +0.0071 mm, labrum surface +0.0134 mm at e = 1, relative to any direct application of the extension. The reach curve's f_c = 0.884 inherits that lift; Q5's chunked-ramp onset (0.8371) sits on the direct-protocol curve. Every non-sweep protocol brackets the free reach at R = 0.2949-0.2968 mm (execution #3's ~0.296 among them); the sweep's 0.3083 is the outlier, and the earlier [0.296, 0.308] bracket is a protocol split, not a measurement uncertainty."
+  }
+}

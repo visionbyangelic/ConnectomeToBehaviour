@@ -1,0 +1,1336 @@
+{
+  "artefact": "reach_curve calibration (pre-gate, NOT a gate step)",
+  "date": "24 Nov 2026",
+  "spec": "PART4-SENSORY-SPECS.md SS4.3-SS4.4; Reviewer 1 Pass 6 cond. 1",
+  "construction": "Demo C FlyBody via gate_common.build_sim (with_adhesion=True, adhesion never commanded)",
+  "settle": {
+    "n_chunks": 4,
+    "theta_rest_rad": {
+      "c_head-c_rostrum-pitch": -0.0032835518800405287,
+      "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+      "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+      "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+      "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+    }
+  },
+  "signs": {
+    "c_head-c_rostrum-pitch": -1,
+    "c_rostrum-c_haustellum-pitch": -1
+  },
+  "theta_ext_rad": {
+    "c_head-c_rostrum-pitch": -1.19,
+    "c_rostrum-c_haustellum-pitch": -1.54
+  },
+  "hold_per_point_s": 0.4,
+  "n_points": 41,
+  "z_surf_method": "per labrum geom (l_labrum_lower, r_labrum_lower): geom_xpos.z - geom_rbound (centre height minus bounding-sphere radius); z_surf = min over the two geoms.",
+  "method_warning": "geom_rbound (0.1822 mm) is the bounding-SPHERE radius of an elongated geom; the labrum geoms extend only ~0.097 mm below their centres here, so the centre-minus-rbound series UNDERSTATES the true surface height by ~0.086 mm. The z_true series (mj_geomDistance to the ground plane, execution #3's diagnostic method) is the physical surface height. Both analyses are recorded; they give different f_c values and must not be mixed.",
+  "z_surf_at_rest_mm": 0.5315618240632335,
+  "E_max_rad": 2.174574707377123,
+  "R_labrum_surface_reach_at_e1_mm": 0.22264785941205945,
+  "analysis_centre_minus_rbound": {
+    "series": "z_surf (centre - rbound)",
+    "reach_at_e1_mm": 0.22264785941205945,
+    "surface_at_rest_mm": 0.5319378099726085,
+    "f_c_of_T": {
+      "0.296": 0.681815261755886,
+      "0.306": 0.6470811758383618,
+      "0.316": 0.6133361420995219,
+      "0.326": 0.5804774098684585,
+      "0.336": 0.5484153432075576,
+      "0.346": 0.517071284001527
+    },
+    "f_c_at_0.330": 0.5674928260724512,
+    "f_c_at_0.346": 0.517071284001527,
+    "T_at_onset_fraction": {
+      "0.60": 0.32000932182971087,
+      "0.80": 0.26436725572689473,
+      "0.95": 0.22990002828314923
+    }
+  },
+  "analysis_true_surface": {
+    "series": "z_true (geomDistance to ground)",
+    "reach_at_e1_mm": 0.3083340867563698,
+    "surface_at_rest_mm": 0.6114677357903965,
+    "f_c_of_T": {
+      "0.296": null,
+      "0.306": null,
+      "0.316": 0.9479710677539324,
+      "0.326": 0.9014327525346368,
+      "0.336": 0.8577335508436467,
+      "0.346": 0.816207910934429
+    },
+    "f_c_at_0.330": 0.8836000363061287,
+    "f_c_at_0.346": 0.816207910934429,
+    "T_at_onset_fraction": {
+      "0.60": 0.4053824187129459,
+      "0.80": 0.35008695970129355,
+      "0.95": 0.31558461339598554
+    }
+  },
+  "achieved_angles_at_e1_rad": {
+    "c_head-c_rostrum-pitch": -0.9550101843881055,
+    "c_rostrum-c_haustellum-pitch": -1.2237153182903007,
+    "c_rostrum-c_haustellum-yaw": -7.773090002847802e-07,
+    "c_haustellum-l_labrum-pitch": 0.2623464996626217,
+    "c_haustellum-r_labrum-pitch": 0.26236146196819626
+  },
+  "saturation": {
+    "c_head-c_rostrum-pitch": {
+      "saturation_e": 0.825,
+      "achieved_angle_at_e1_rad": -0.9550101843881055
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "saturation_e": 0.8,
+      "achieved_angle_at_e1_rad": -1.2237153182903007
+    }
+  },
+  "f_c_of_T": {
+    "0.296": 0.681815261755886,
+    "0.306": 0.6470811758383618,
+    "0.316": 0.6133361420995219,
+    "0.326": 0.5804774098684585,
+    "0.336": 0.5484153432075576,
+    "0.346": 0.517071284001527
+  },
+  "f_c_at_0.330": 0.5674928260724512,
+  "f_c_at_0.346": 0.517071284001527,
+  "T_at_onset_fraction": {
+    "0.60": 0.32000932182971087,
+    "0.80": 0.26436725572689473,
+    "0.95": 0.22990002828314923
+  },
+  "curve": [
+    {
+      "e": 0.0,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.0032832377409372014,
+        "c_rostrum-c_haustellum-pitch": -0.000867404222792776,
+        "c_rostrum-c_haustellum-yaw": -3.393221226820808e-07,
+        "c_haustellum-l_labrum-pitch": -3.9988351078596916e-05,
+        "c_haustellum-r_labrum-pitch": -1.0709965640708359e-05
+      },
+      "E_rad": -1.5333755345352858e-07,
+      "z_surf_mm": 0.5319378099726085,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.7148111673638076,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.5325984536861285
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.7141505133371119,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.5319378099726085
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.6121042937172296,
+        "flybody/r_labrum_lower": 0.6114677357903965
+      },
+      "z_true_mm": 0.6114677357903965,
+      "E_fraction": -7.051381262429822e-08
+    },
+    {
+      "e": 0.025,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.036213241855094065,
+        "c_rostrum-c_haustellum-pitch": -0.04020831914574377,
+        "c_rostrum-c_haustellum-yaw": -6.328756677968417e-07,
+        "c_haustellum-l_labrum-pitch": 0.024910463708519306,
+        "c_haustellum-r_labrum-pitch": 0.024968123655397478
+      },
+      "E_rad": 0.0722707656995544,
+      "z_surf_mm": 0.5188703460955653,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.7019000097255244,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.5196872960478452
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.7010830494600686,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.5188703460955653
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5990759119093518,
+        "flybody/r_labrum_lower": 0.5984270486791121
+      },
+      "z_true_mm": 0.5984270486791121,
+      "E_fraction": 0.03323443680935857
+    },
+    {
+      "e": 0.05,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.06586037214260394,
+        "c_rostrum-c_haustellum-pitch": -0.07868002531765415,
+        "c_rostrum-c_haustellum-yaw": -6.247957772681756e-07,
+        "c_haustellum-l_labrum-pitch": 0.049900880692919494,
+        "c_haustellum-r_labrum-pitch": 0.049957534129112906
+      },
+      "E_rad": 0.14038960215897467,
+      "z_surf_mm": 0.5066667390773041,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6898544949017488,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.5076417812240697
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6888794424418074,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.5066667390773041
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5870605476595773,
+        "flybody/r_labrum_lower": 0.5863979513774765
+      },
+      "z_true_mm": 0.5863979513774765,
+      "E_fraction": 0.06455956729502592
+    },
+    {
+      "e": 0.075,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.09550401599002005,
+        "c_rostrum-c_haustellum-pitch": -0.11715157921342116,
+        "c_rostrum-c_haustellum-yaw": -6.19507241571345e-07,
+        "c_haustellum-l_labrum-pitch": 0.07489123960693521,
+        "c_haustellum-r_labrum-pitch": 0.07494685522061
+      },
+      "E_rad": 0.20850479990215778,
+      "z_surf_mm": 0.4946013002698879,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.677943459328847,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.4957307456511679
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6768140036343913,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.4946013002698879
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5752200434439436,
+        "flybody/r_labrum_lower": 0.574547093116805
+      },
+      "z_true_mm": 0.574547093116805,
+      "E_fraction": 0.09588302448051884
+    },
+    {
+      "e": 0.1,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.12514419925423792,
+        "c_rostrum-c_haustellum-pitch": -0.15562298555806384,
+        "c_rostrum-c_haustellum-yaw": -6.169433940782358e-07,
+        "c_haustellum-l_labrum-pitch": 0.0998815491737579,
+        "c_haustellum-r_labrum-pitch": 0.0999360964002378
+      },
+      "E_rad": 0.27661638951101836,
+      "z_surf_mm": 0.4826844906067199,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6661771618724169,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.48396444819473783
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6648971939712233,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.4826844906067199
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5635654175037146,
+        "flybody/r_labrum_lower": 0.5628856178503351
+      },
+      "z_true_mm": 0.5628856178503351,
+      "E_fraction": 0.12720482242923767
+    },
+    {
+      "e": 0.125,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.15478095084552593,
+        "c_rostrum-c_haustellum-pitch": -0.19409424917694323,
+        "c_rostrum-c_haustellum-yaw": -6.170294128389956e-07,
+        "c_haustellum-l_labrum-pitch": 0.12487181821808069,
+        "c_haustellum-r_labrum-pitch": 0.12492526727372952
+      },
+      "E_rad": 0.3447244047211857,
+      "z_surf_mm": 0.47092662458354173,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.65456572036408,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.4723530066864009
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6531393279480451,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.47092662458354173
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5521075136458293,
+        "flybody/r_labrum_lower": 0.5514244883556915
+      },
+      "z_true_mm": 0.5514244883556915,
+      "E_fraction": 0.15852497665485002
+    },
+    {
+      "e": 0.15,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.18441430269236286,
+        "c_rostrum-c_haustellum-pitch": -0.23256537499028182,
+        "c_rostrum-c_haustellum-yaw": -6.196826371500594e-07,
+        "c_haustellum-l_labrum-pitch": 0.1498620556550912,
+        "c_haustellum-r_labrum-pitch": 0.14991437757189555
+      },
+      "E_rad": 0.4128288823813613,
+      "z_surf_mm": 0.4593378609931654,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6431191025815622,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.46090638890388314
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6415505643576688,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.4593378609931654
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5408569912518836,
+        "flybody/r_labrum_lower": 0.5401744760559013
+      },
+      "z_true_mm": 0.5401744760559013,
+      "E_fraction": 0.18984350410260104
+    },
+    {
+      "e": 0.175,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.21404428970410647,
+        "c_rostrum-c_haustellum-pitch": -0.2710363680075194,
+        "c_rostrum-c_haustellum-yaw": -6.248128811954289e-07,
+        "c_haustellum-l_labrum-pitch": 0.17485227048155855,
+        "c_haustellum-r_labrum-pitch": 0.174903437140696
+      },
+      "E_rad": 0.4809298624103424,
+      "z_surf_mm": 0.4479281938069968,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6318471173676065,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.44963440368992735
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6301408971715001,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.4479281938069968
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.5298243154594627,
+        "flybody/r_labrum_lower": 0.5291461510235436
+      },
+      "z_true_mm": 0.5291461510235436,
+      "E_fraction": 0.22116042312955025
+    },
+    {
+      "e": 0.2,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.24367094973136874,
+        "c_rostrum-c_haustellum-pitch": -0.3095072333215824,
+        "c_rostrum-c_haustellum-yaw": -6.323227933302773e-07,
+        "c_haustellum-l_labrum-pitch": 0.19984247176675526,
+        "c_haustellum-r_labrum-pitch": 0.19989245593113714
+      },
+      "E_rad": 0.5490273877516677,
+      "z_surf_mm": 0.4367074433274971,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6207594060153669,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.43854669233768784
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6189201466920005,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.4367074433274971
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.519019747640643,
+        "flybody/r_labrum_lower": 0.518349872289651
+      },
+      "z_true_mm": 0.518349872289651,
+      "E_fraction": 0.2524757534837148
+    },
+    {
+      "e": 0.225,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.2732943235242828,
+        "c_rostrum-c_haustellum-pitch": -0.34797797610302145,
+        "c_rostrum-c_haustellum-yaw": -6.421082609095533e-07,
+        "c_haustellum-l_labrum-pitch": 0.22483266864322787,
+        "c_haustellum-r_labrum-pitch": 0.22488144398899362
+      },
+      "E_rad": 0.6171215043260208,
+      "z_surf_mm": 0.42568524758907156,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.6098654338989714,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.4276527202212923
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.6078979509535749,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.42568524758907156
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.508453336161131,
+        "flybody/r_labrum_lower": 0.5077500583010034
+      },
+      "z_true_mm": 0.5077500583010034,
+      "E_fraction": 0.2837895162821818
+    },
+    {
+      "e": 0.25,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.3029144546884415,
+        "c_rostrum-c_haustellum-pitch": -0.3864486015941117,
+        "c_rostrum-c_haustellum-yaw": -6.540588161564357e-07,
+        "c_haustellum-l_labrum-pitch": 0.24982287029743974,
+        "c_haustellum-r_labrum-pitch": 0.24987041144436922
+      },
+      "E_rad": 0.6852122609812699,
+      "z_surf_mm": 0.41487105391786316,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5991744822562931,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.416961768578614
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5970837572823665,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.41487105391786316
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.49813490732342175,
+        "flybody/r_labrum_lower": 0.4972908256489006
+      },
+      "z_true_mm": 0.4972908256489006,
+      "E_fraction": 0.3151017339881337
+    },
+    {
+      "e": 0.275,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.33253102360313797,
+        "c_rostrum-c_haustellum-pitch": -0.42491948267755925,
+        "c_rostrum-c_haustellum-yaw": -6.760542706752121e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234736297822386,
+        "c_haustellum-r_labrum-pitch": 0.2623724683519609
+      },
+      "E_rad": 0.7532997109794137,
+      "z_surf_mm": 0.40395626317565936,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5883171087409552,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.4061043950632761
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5861689665401627,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.40395626317565936
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.4877039096836268,
+        "flybody/r_labrum_lower": 0.4867170027357525
+      },
+      "z_true_mm": 0.4867170027357525,
+      "E_fraction": 0.34641243109463504
+    },
+    {
+      "e": 0.3,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.3621440496044572,
+        "c_rostrum-c_haustellum-pitch": -0.46339065495809295,
+        "c_rostrum-c_haustellum-yaw": -7.03662799738713e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234721806910205,
+        "c_haustellum-r_labrum-pitch": 0.2623718124577708
+      },
+      "E_rad": 0.8213839092612667,
+      "z_surf_mm": 0.3929055457514129,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5772603404207319,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.3950476267430528
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5751182491159162,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3929055457514129
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.47709941583757615,
+        "flybody/r_labrum_lower": 0.4759614432972206
+      },
+      "z_true_mm": 0.4759614432972206,
+      "E_fraction": 0.3777216328667706
+    },
+    {
+      "e": 0.325,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.3917539457294777,
+        "c_rostrum-c_haustellum-pitch": -0.5018617613094448,
+        "c_rostrum-c_haustellum-yaw": -7.292529723165154e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234708388307815,
+        "c_haustellum-r_labrum-pitch": 0.26237116508253894
+      },
+      "E_rad": 0.8894649117376391,
+      "z_surf_mm": 0.3820312232740344,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5663798127636185,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.3841670990859394
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5642439266385377,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3820312232740344
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.4665785408300669,
+        "flybody/r_labrum_lower": 0.4653900798555374
+      },
+      "z_true_mm": 0.4653900798555374,
+      "E_fraction": 0.40902936501568754
+    },
+    {
+      "e": 0.35,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.4213607715276834,
+        "c_rostrum-c_haustellum-pitch": -0.5403328021981706,
+        "c_rostrum-c_haustellum-yaw": -7.527102058089451e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234696116154166,
+        "c_haustellum-r_labrum-pitch": 0.26237052701175934
+      },
+      "E_rad": 0.9575427784245706,
+      "z_surf_mm": 0.37134186060656305,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5556840914254221,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.37347137774774297
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5535545639710664,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.37134186060656305
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.4561674636523925,
+        "flybody/r_labrum_lower": 0.4550114709915594
+      },
+      "z_true_mm": 0.4550114709915594,
+      "E_fraction": 0.44033565514036394
+    },
+    {
+      "e": 0.375,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.4509645891754389,
+        "c_rostrum-c_haustellum-pitch": -0.5788037781061365,
+        "c_rostrum-c_haustellum-yaw": -7.739245725139056e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623468499425011,
+        "c_haustellum-r_labrum-pitch": 0.26236989832991764
+      },
+      "E_rad": 1.025617571980292,
+      "z_surf_mm": 0.36084585898832056,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5451815784989356,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.36296886482125645
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5430585623528239,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.36084585898832056
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.44595743527629295,
+        "flybody/r_labrum_lower": 0.4448340104230497
+      },
+      "z_true_mm": 0.4448340104230497,
+      "E_fraction": 0.471640532054816
+    },
+    {
+      "e": 0.4,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.48056546341596124,
+        "c_rostrum-c_haustellum-pitch": -0.6172746895301363,
+        "c_rostrum-c_haustellum-yaw": -7.927908505318104e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623467502626268,
+        "c_haustellum-r_labrum-pitch": 0.2623692791210708
+      },
+      "E_rad": 1.0936893576448141,
+      "z_surf_mm": 0.35055144876489586,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5348805052256359,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.3526677915479568
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5327641521293992,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.35055144876489586
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.43595668073752897,
+        "flybody/r_labrum_lower": 0.4348659197323587
+      },
+      "z_true_mm": 0.4348659197323587,
+      "E_fraction": 0.5029440257603173
+    },
+    {
+      "e": 0.425,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.5101634614973309,
+        "c_rostrum-c_haustellum-pitch": -0.6557455369816234,
+        "c_rostrum-c_haustellum-yaw": -8.09208600007485e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623466621572837,
+        "c_haustellum-r_labrum-pitch": 0.2623686694686732
+      },
+      "E_rad": 1.161758203177671,
+      "z_surf_mm": 0.3404666827368166,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5247889253226883,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.3425762116450092
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5226793861013199,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3404666827368166
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.42617324631456655,
+        "flybody/r_labrum_lower": 0.42511524170721415
+      },
+      "z_true_mm": 0.42511524170721415,
+      "E_fraction": 0.5342461674167696
+    },
+    {
+      "e": 0.45,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.5397586531076128,
+        "c_rostrum-c_haustellum-pitch": -0.6942163209867718,
+        "c_rostrum-c_haustellum-yaw": -8.230825483181988e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465856603997,
+        "c_haustellum-r_labrum-pitch": 0.26236806945560537
+      },
+      "E_rad": 1.2298241787931012,
+      "z_surf_mm": 0.33059942984392143,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5149147086871061,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.332701995009427
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5128121332084248,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.33059942984392143
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.4166149932113199,
+        "flybody/r_labrum_lower": 0.41558983400275185
+      },
+      "z_true_mm": 0.41558983400275185,
+      "E_fraction": 0.5655469893128949
+    },
+    {
+      "e": 0.475,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.5693511103075922,
+        "c_rostrum-c_haustellum-pitch": -0.7326870420866907,
+        "c_rostrum-c_haustellum-yaw": -8.343229822688728e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465208043198,
+        "c_haustellum-r_labrum-pitch": 0.2623674791642507
+      },
+      "E_rad": 1.2978873570929994,
+      "z_surf_mm": 0.3209573693776837,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.5052655356353368,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.3230528219576577
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.5031700727421871,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3209573693776837
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.407289591769063,
+        "flybody/r_labrum_lower": 0.4062973633239837
+      },
+      "z_true_mm": 0.4062973633239837,
+      "E_fraction": 0.5968465248354031
+    },
+    {
+      "e": 0.5,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.5989409074643575,
+        "c_rostrum-c_haustellum-pitch": -0.7711577008370585,
+        "c_rostrum-c_haustellum-yaw": -8.42845802311238e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234646761981945,
+        "c_haustellum-r_labrum-pitch": 0.26236689867632956
+      },
+      "E_rad": 1.3659478130001326,
+      "z_surf_mm": 0.3115479846586955,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.49584889056220405,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.31363617688452494
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.49376068802319883,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3115479846586955
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.39820451512050964,
+        "flybody/r_labrum_lower": 0.3972165257011998
+      },
+      "z_true_mm": 0.3972165257011998,
+      "E_fraction": 0.6281448084382805
+    },
+    {
+      "e": 0.525,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.6285281211828476,
+        "c_rostrum-c_haustellum-pitch": -0.8096282978079042,
+        "c_rostrum-c_haustellum-yaw": -8.485726923947699e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234642613608417,
+        "c_haustellum-r_labrum-pitch": 0.26236632807282034
+      },
+      "E_rad": 1.4340056236894685,
+      "z_surf_mm": 0.3023785571296948,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4866720560313486,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.30445934235366956
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.48459126049419815,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.3023785571296948
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3893670332714134,
+        "flybody/r_labrum_lower": 0.388200798431472
+      },
+      "z_true_mm": 0.388200798431472,
+      "E_fraction": 0.6594418756112101
+    },
+    {
+      "e": 0.55,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.6581128296398557,
+        "c_rostrum-c_haustellum-pitch": -0.8480988333365124,
+        "c_rostrum-c_haustellum-yaw": -8.514125404379958e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234639639872076,
+        "c_haustellum-r_labrum-pitch": 0.2623657674311049
+      },
+      "E_rad": 1.5020608676750848,
+      "z_surf_mm": 0.29345623303907314,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4777421867890822,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2955294731114031
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4756689364035765,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.29345623303907314
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3807842858114302,
+        "flybody/r_labrum_lower": 0.37930869022722075
+      },
+      "z_true_mm": 0.37930869022722075,
+      "E_fraction": 0.6907377624596789
+    },
+    {
+      "e": 0.575,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.6876951158791806,
+        "c_rostrum-c_haustellum-pitch": -0.8865693085495888,
+        "c_rostrum-c_haustellum-yaw": -8.516011483874467e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234637818243445,
+        "c_haustellum-r_labrum-pitch": 0.2623652170438825
+      },
+      "E_rad": 1.5701136291274862,
+      "z_surf_mm": 0.28478748058744013,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.46906577804581284,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.28685306436813374
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4670001839519435,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.28478748058744013
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.37246276566977393,
+        "flybody/r_labrum_lower": 0.37059238641290604
+      },
+      "z_true_mm": 0.37059238641290604,
+      "E_fraction": 0.7220325076903377
+    },
+    {
+      "e": 0.6,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.7172750621192544,
+        "c_rostrum-c_haustellum-pitch": -0.9250397228716675,
+        "c_rostrum-c_haustellum-yaw": -8.486749392597342e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623463718225437,
+        "c_haustellum-r_labrum-pitch": 0.262364676710885
+      },
+      "E_rad": 1.6381639896896385,
+      "z_surf_mm": 0.27637854017443003,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4606490335913805,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.27843631991370144
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4585912435389334,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.27637854017443003
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.36425899123729466,
+        "flybody/r_labrum_lower": 0.3621433189235479
+      },
+      "z_true_mm": 0.3621433189235479,
+      "E_fraction": 0.7533261488475236
+    },
+    {
+      "e": 0.625,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.7468527567484228,
+        "c_rostrum-c_haustellum-pitch": -0.9635100778817148,
+        "c_rostrum-c_haustellum-yaw": -8.427469054370168e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234637720296683,
+        "c_haustellum-r_labrum-pitch": 0.2623641465421416
+      },
+      "E_rad": 1.7062120393288542,
+      "z_surf_mm": 0.2682359596536886,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.452498495589989,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2702857819123099
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.450448663018192,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2682359596536886
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3562318419974538,
+        "flybody/r_labrum_lower": 0.35396805790002306
+      },
+      "z_true_mm": 0.35396805790002306,
+      "E_fraction": 0.7846187273036082
+    },
+    {
+      "e": 0.65,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.7764282840177239,
+        "c_rostrum-c_haustellum-pitch": -1.0019803732600505,
+        "c_rostrum-c_haustellum-yaw": -8.33558342073294e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623463945397325,
+        "c_haustellum-r_labrum-pitch": 0.262363626512283
+      },
+      "E_rad": 1.774257861976491,
+      "z_surf_mm": 0.2603654952529014,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4446199220660112,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2624072083883321
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.44257819861740477,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2603654952529014
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3483019209469993,
+        "flybody/r_labrum_lower": 0.3460723786784874
+      },
+      "z_true_mm": 0.3460723786784874,
+      "E_fraction": 0.8159102816552684
+    },
+    {
+      "e": 0.675,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.806001731591722,
+        "c_rostrum-c_haustellum-pitch": -1.0404506103717732,
+        "c_rostrum-c_haustellum-yaw": -8.21224443363118e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234642372023165,
+        "c_haustellum-r_labrum-pitch": 0.26236311682967306
+      },
+      "E_rad": 1.842301546662212,
+      "z_surf_mm": 0.2527738585803092,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4370200377900726,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2548073241123935
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.43498656194481256,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2527738585803092
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3406581459674708,
+        "flybody/r_labrum_lower": 0.33846301242889854
+      },
+      "z_true_mm": 0.33846301242889854,
+      "E_fraction": 0.8472008528436881
+    },
+    {
+      "e": 0.7,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.8355731885493535,
+        "c_rostrum-c_haustellum-pitch": -1.07892079015315,
+        "c_rostrum-c_haustellum-yaw": -8.056435171643245e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623464648350345,
+        "c_haustellum-r_labrum-pitch": 0.26236261749980344
+      },
+      "E_rad": 1.9103431834012201,
+      "z_surf_mm": 0.2454671799008305,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.42970496222719146,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.24749224854951238
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.42767988326533385,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2454671799008305
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3333066562188823,
+        "flybody/r_labrum_lower": 0.3311461078564574
+      },
+      "z_true_mm": 0.3311461078564574,
+      "E_fraction": 0.8784904822632618
+    },
+    {
+      "e": 0.725,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.8651427447953335,
+        "c_rostrum-c_haustellum-pitch": -1.1173909136549973,
+        "c_rostrum-c_haustellum-yaw": -7.867642689988871e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465179681462,
+        "c_haustellum-r_labrum-pitch": 0.2623621285518027
+      },
+      "E_rad": 1.9783828631490474,
+      "z_surf_mm": 0.23845160936863202,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.42268082687233954,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.24046811319466047
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.42066431273313537,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.23845160936863202
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.32625360067094983,
+        "flybody/r_labrum_lower": 0.32412783221597535
+      },
+      "z_true_mm": 0.32412783221597535,
+      "E_fraction": 0.9097792117408036
+    },
+    {
+      "e": 0.75,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.8947104935726149,
+        "c_rostrum-c_haustellum-pitch": -1.1558609815874459,
+        "c_rostrum-c_haustellum-yaw": -7.646070918271608e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465831299288,
+        "c_haustellum-r_labrum-pitch": 0.26236165005955275
+      },
+      "E_rad": 2.0464206798587776,
+      "z_surf_mm": 0.2317324119212794,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.41595289721301243,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.23374018353533335
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.41394511528578276,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2317324119212794
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.31950426065787124,
+        "flybody/r_labrum_lower": 0.31741346374243534
+      },
+      "z_true_mm": 0.31741346374243534,
+      "E_fraction": 0.9410670844815817
+    },
+    {
+      "e": 0.775,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9242765296690258,
+        "c_rostrum-c_haustellum-pitch": -1.1943309946673815,
+        "c_rostrum-c_haustellum-yaw": -7.391975321709396e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623466603331385,
+        "c_haustellum-r_labrum-pitch": 0.2623611820884101
+      },
+      "E_rad": 2.114456729035124,
+      "z_surf_mm": 0.2253145860088368,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.40952617247942424,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22731345880174517
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.40752728937334015,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2253145860088368
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3130636500855908,
+        "flybody/r_labrum_lower": 0.3110080129955589
+      },
+      "z_true_mm": 0.3110080129955589,
+      "E_fraction": 0.9723541444043968
+    },
+    {
+      "e": 0.8,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9538324438211815,
+        "c_rostrum-c_haustellum-pitch": -1.2237129998681107,
+        "c_rostrum-c_haustellum-yaw": -7.220268319994522e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234664339077834,
+        "c_haustellum-r_labrum-pitch": 0.26236120898125254
+      },
+      "E_rad": 2.1733946483880087,
+      "z_surf_mm": 0.2204991874628216,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4047144738723685,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2225017601946894
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.40271189082732495,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2204991874628216
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.308252521450854,
+        "flybody/r_labrum_lower": 0.30619191755279895
+      },
+      "z_true_mm": 0.30619191755279895,
+      "E_fraction": 0.9994573380325307
+    },
+    {
+      "e": 0.825,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550155084690142,
+        "c_rostrum-c_haustellum-pitch": -1.223714264559498,
+        "c_rostrum-c_haustellum-yaw": -7.292394225985932e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234661435316775,
+        "c_haustellum-r_labrum-pitch": 0.2623612963329652
+      },
+      "E_rad": 2.174578977727229,
+      "z_surf_mm": 0.220762061937808,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.40498259353452226,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22276987985684318
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.40297476530231136,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.220762061937808
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.30852264107248045,
+        "flybody/r_labrum_lower": 0.3064521325422942
+      },
+      "z_true_mm": 0.3064521325422942,
+      "E_fraction": 1.000001963763347
+    },
+    {
+      "e": 0.85,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550147237849389,
+        "c_rostrum-c_haustellum-pitch": -1.2237144199481804,
+        "c_rostrum-c_haustellum-yaw": -7.359462314903498e-07,
+        "c_haustellum-l_labrum-pitch": 0.26234659825544393,
+        "c_haustellum-r_labrum-pitch": 0.262361319893385
+      },
+      "E_rad": 2.1745783484318357,
+      "z_surf_mm": 0.22105215385638094,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.40527626855844207,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.223063554880763
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4032648572208843,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.22105215385638094
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3088168367579964,
+        "flybody/r_labrum_lower": 0.30674166537648007
+      },
+      "z_true_mm": 0.30674166537648007,
+      "E_fraction": 1.000001674375546
+    },
+    {
+      "e": 0.875,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550139440088632,
+        "c_rostrum-c_haustellum-pitch": -1.2237145743398838,
+        "c_rostrum-c_haustellum-yaw": -7.426199533283328e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465822437471,
+        "c_haustellum-r_labrum-pitch": 0.26236134332980293
+      },
+      "E_rad": 2.174577723047464,
+      "z_surf_mm": 0.22133990550485066,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.40556758538963633,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22335487171195725
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.403552608869354,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.22133990550485066
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.30910867408511983,
+        "flybody/r_labrum_lower": 0.30702886376973126
+      },
+      "z_true_mm": 0.30702886376973126,
+      "E_fraction": 1.0000013867862672
+    },
+    {
+      "e": 0.9,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550131692999325,
+        "c_rostrum-c_haustellum-pitch": -1.2237147277035694,
+        "c_rostrum-c_haustellum-yaw": -7.492611070836834e-07,
+        "c_haustellum-l_labrum-pitch": 0.262346566317288,
+        "c_haustellum-r_labrum-pitch": 0.2623613666413817
+      },
+      "E_rad": 2.1745771017022184,
+      "z_surf_mm": 0.2216252917831928,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4058565192196695,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.2236438055419904
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.40383799514769614,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2216252917831928
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.30939812817896645,
+        "flybody/r_labrum_lower": 0.30731370259849433
+      },
+      "z_true_mm": 0.30731370259849433,
+      "E_fraction": 1.000001101054421
+    },
+    {
+      "e": 0.925,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550123947339827,
+        "c_rostrum-c_haustellum-pitch": -1.22371488056058,
+        "c_rostrum-c_haustellum-yaw": -7.56474705594984e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465494002013,
+        "c_haustellum-r_labrum-pitch": 0.2623613912238433
+      },
+      "E_rad": 2.1745764799932794,
+      "z_surf_mm": 0.22189164742593387,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4061266833702083,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22391396969252922
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4041043507904372,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.22189164742593387
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3096688379912504,
+        "flybody/r_labrum_lower": 0.3075794925301734
+      },
+      "z_true_mm": 0.3075794925301734,
+      "E_fraction": 1.000000815155327
+    },
+    {
+      "e": 0.95,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550116543395089,
+        "c_rostrum-c_haustellum-pitch": -1.223715026803667,
+        "c_rostrum-c_haustellum-yaw": -7.635624028939324e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465325869722,
+        "c_haustellum-r_labrum-pitch": 0.26236141524874873
+      },
+      "E_rad": 2.174575885841892,
+      "z_surf_mm": 0.22213823145374773,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4063769869593816,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22416427328170255
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4043509348182511,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.22213823145374773
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3099196732690618,
+        "flybody/r_labrum_lower": 0.3078255310843221
+      },
+      "z_true_mm": 0.3078255310843221,
+      "E_fraction": 1.0000005419288496
+    },
+    {
+      "e": 0.975,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.955010918667673,
+        "c_rostrum-c_haustellum-pitch": -1.2237151726368942,
+        "c_rostrum-c_haustellum-yaw": -7.704861052569201e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623465161326218,
+        "c_haustellum-r_labrum-pitch": 0.2623614386554019
+      },
+      "E_rad": 2.174575296003284,
+      "z_surf_mm": 0.2223847697885114,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.4066273077362219,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22441459405854283
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.40459747315301475,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.2223847697885114
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.3101705326211794,
+        "flybody/r_labrum_lower": 0.30807152253765263
+      },
+      "z_true_mm": 0.30807152253765263,
+      "E_fraction": 1.0000002706856468
+    },
+    {
+      "e": 1.0,
+      "angles_rad": {
+        "c_head-c_rostrum-pitch": -0.9550101843881055,
+        "c_rostrum-c_haustellum-pitch": -1.2237153182903007,
+        "c_rostrum-c_haustellum-yaw": -7.773090002847802e-07,
+        "c_haustellum-l_labrum-pitch": 0.2623464996626217,
+        "c_haustellum-r_labrum-pitch": 0.26236146196819626
+      },
+      "E_rad": 2.174574707377123,
+      "z_surf_mm": 0.22264785941205945,
+      "z_surf_per_geom": {
+        "flybody/l_labrum_lower": {
+          "centre_z_mm": 0.40689395283404345,
+          "rbound_mm": 0.18221271367767908,
+          "surface_z_mm": 0.22468123915636437
+        },
+        "flybody/r_labrum_lower": {
+          "centre_z_mm": 0.4048605627765628,
+          "rbound_mm": 0.18221270336450335,
+          "surface_z_mm": 0.22264785941205945
+        }
+      },
+      "ground_distance_check_mm": {
+        "flybody/l_labrum_lower": 0.31043769815730166,
+        "flybody/r_labrum_lower": 0.3083340867563698
+      },
+      "z_true_mm": 0.3083340867563698,
+      "E_fraction": 1.0
+    }
+  ],
+  "wall_clock_s": 37.17434096336365
+}

@@ -1,0 +1,1106 @@
+{
+  "step": "Q2",
+  "settle_chunks": 4,
+  "joints": {
+    "c_head-c_rostrum-pitch": {
+      "range": [
+        -1.24,
+        0.183
+      ],
+      "rest_angle_rad": -0.00328315859770161,
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl": -1.24,
+          "steady_state_rad": -0.9545621920719135,
+          "qhat_eff_rad": -0.7692307692307693,
+          "qhat_unclamped_rad": -0.7692307692307693,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18533142284114423,
+          "coupling_max_rad": 0.0025480783953426914,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00029204215458273415,
+            "c_rostrum-c_haustellum-yaw": 2.570272951259454e-07,
+            "c_haustellum-l_labrum-pitch": 1.067556007464688e-05,
+            "c_haustellum-r_labrum-pitch": 2.1297544506919713e-05,
+            "c_thorax-c_head-pitch": 0.0025480783953426914,
+            "c_thorax-c_head-roll": 5.236681384245081e-07,
+            "c_thorax-c_head-yaw": 1.3450539779097162e-06
+          },
+          "max_limit_excursion_rad": -0.005189330881787909,
+          "all_finite": true
+        },
+        {
+          "k": 1,
+          "target_ctrl": -1.062125,
+          "steady_state_rad": -0.8182054691158768,
+          "qhat_eff_rad": -0.6324038461538461,
+          "qhat_unclamped_rad": -0.6324038461538461,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18580162296203062,
+          "coupling_max_rad": 0.00254475509219685,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00027560110334692053,
+            "c_rostrum-c_haustellum-yaw": 2.0525642148947343e-07,
+            "c_haustellum-l_labrum-pitch": 1.1723547373937811e-05,
+            "c_haustellum-r_labrum-pitch": 2.1293285378279805e-05,
+            "c_thorax-c_head-pitch": 0.00254475509219685,
+            "c_thorax-c_head-roll": 7.526629608299127e-07,
+            "c_thorax-c_head-yaw": 2.040829151611648e-06
+          },
+          "max_limit_excursion_rad": -0.0051882828944886175,
+          "all_finite": true
+        },
+        {
+          "k": 2,
+          "target_ctrl": -0.88425,
+          "steady_state_rad": -0.681827107651262,
+          "qhat_eff_rad": -0.495576923076923,
+          "qhat_unclamped_rad": -0.495576923076923,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18625018457433895,
+          "coupling_max_rad": 0.0020806708260061556,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.0002804411056170487,
+            "c_rostrum-c_haustellum-yaw": 1.3030799130378188e-07,
+            "c_haustellum-l_labrum-pitch": 1.2093256357568651e-05,
+            "c_haustellum-r_labrum-pitch": 1.840054009556816e-05,
+            "c_thorax-c_head-pitch": 0.0020806708260061556,
+            "c_thorax-c_head-roll": 9.591557069846113e-07,
+            "c_thorax-c_head-yaw": 2.7017853267670735e-06
+          },
+          "max_limit_excursion_rad": -0.005187913185504987,
+          "all_finite": true
+        },
+        {
+          "k": 3,
+          "target_ctrl": -0.706375,
+          "steady_state_rad": -0.545418881152931,
+          "qhat_eff_rad": -0.35874999999999996,
+          "qhat_unclamped_rad": -0.35874999999999996,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18666888115293107,
+          "coupling_max_rad": 0.0016380745219841605,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.0002802761056135523,
+            "c_rostrum-c_haustellum-yaw": 5.418907676816462e-08,
+            "c_haustellum-l_labrum-pitch": 1.2091227899755135e-05,
+            "c_haustellum-r_labrum-pitch": 1.536849606631323e-05,
+            "c_thorax-c_head-pitch": 0.0016380745219841605,
+            "c_thorax-c_head-roll": 1.136562395165862e-06,
+            "c_thorax-c_head-yaw": 3.33113282495832e-06
+          },
+          "max_limit_excursion_rad": -0.005187915213962801,
+          "all_finite": true
+        },
+        {
+          "k": 4,
+          "target_ctrl": -0.5285,
+          "steady_state_rad": -0.40897307773204444,
+          "qhat_eff_rad": -0.22192307692307692,
+          "qhat_unclamped_rad": -0.22192307692307692,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18705000080896753,
+          "coupling_max_rad": 0.001225123368058377,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00026390358550923486,
+            "c_rostrum-c_haustellum-yaw": 9.88062649352307e-08,
+            "c_haustellum-l_labrum-pitch": 1.150621181549034e-05,
+            "c_haustellum-r_labrum-pitch": 1.2252747134133795e-05,
+            "c_thorax-c_head-pitch": 0.001225123368058377,
+            "c_thorax-c_head-roll": 1.2790648469633229e-06,
+            "c_thorax-c_head-yaw": 3.933393871021562e-06
+          },
+          "max_limit_excursion_rad": -0.005188500230047065,
+          "all_finite": true
+        },
+        {
+          "k": 5,
+          "target_ctrl": -0.35062499999999996,
+          "steady_state_rad": -0.2724826374368105,
+          "qhat_eff_rad": -0.0850961538461538,
+          "qhat_unclamped_rad": -0.0850961538461538,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.1873864835906567,
+          "coupling_max_rad": 0.0008494635190640851,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00022671159908307578,
+            "c_rostrum-c_haustellum-yaw": 1.7476467029552732e-07,
+            "c_haustellum-l_labrum-pitch": 9.976689620344615e-06,
+            "c_haustellum-r_labrum-pitch": 9.110457495337537e-06,
+            "c_thorax-c_head-pitch": 0.0008494635190640851,
+            "c_thorax-c_head-roll": 1.3818081937407153e-06,
+            "c_thorax-c_head-yaw": 4.514271556883568e-06
+          },
+          "max_limit_excursion_rad": -0.005190029752242211,
+          "all_finite": true
+        },
+        {
+          "k": 6,
+          "target_ctrl": -0.17274999999999996,
+          "steady_state_rad": -0.13594128078489695,
+          "qhat_eff_rad": 0.05173076923076929,
+          "qhat_unclamped_rad": 0.05173076923076929,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18767205001566623,
+          "coupling_max_rad": 0.000518092817828851,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00016935283601713052,
+            "c_rostrum-c_haustellum-yaw": 2.4941427604584154e-07,
+            "c_haustellum-l_labrum-pitch": 7.529820901779565e-06,
+            "c_haustellum-r_labrum-pitch": 5.999378010720385e-06,
+            "c_thorax-c_head-pitch": 0.000518092817828851,
+            "c_thorax-c_head-roll": 1.4410707783028729e-06,
+            "c_thorax-c_head-yaw": 5.080481194408253e-06
+          },
+          "max_limit_excursion_rad": -0.005192476620960776,
+          "all_finite": true
+        },
+        {
+          "k": 7,
+          "target_ctrl": 0.005125000000000046,
+          "steady_state_rad": 0.0006563736196472385,
+          "qhat_eff_rad": 0.183,
+          "qhat_unclamped_rad": 0.18855769230769237,
+          "clamp_bound": true,
+          "steady_state_error_rad": 0.18234362638035276,
+          "coupling_max_rad": 0.000237232631494097,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 9.28452354440315e-05,
+            "c_rostrum-c_haustellum-yaw": 3.2213352908953374e-07,
+            "c_haustellum-l_labrum-pitch": 4.209326723899515e-06,
+            "c_haustellum-r_labrum-pitch": 2.9768458883696456e-06,
+            "c_thorax-c_head-pitch": 0.000237232631494097,
+            "c_thorax-c_head-roll": 1.4664280611190942e-06,
+            "c_thorax-c_head-yaw": 5.6395452416831076e-06
+          },
+          "max_limit_excursion_rad": -0.005195797115138656,
+          "all_finite": true
+        },
+        {
+          "k": 8,
+          "target_ctrl": 0.18300000000000005,
+          "steady_state_rad": 0.13731470457148406,
+          "qhat_eff_rad": 0.183,
+          "qhat_unclamped_rad": 0.32538461538461544,
+          "clamp_bound": true,
+          "steady_state_error_rad": 0.04568529542851593,
+          "coupling_max_rad": 0.00015370479193811334,
+          "coupling_by_joint": {
+            "c_rostrum-c_haustellum-pitch": 0.00011196228011537378,
+            "c_rostrum-c_haustellum-yaw": 3.923159768022057e-07,
+            "c_haustellum-l_labrum-pitch": 4.811472231336248e-06,
+            "c_haustellum-r_labrum-pitch": 2.589374392723629e-06,
+            "c_thorax-c_head-pitch": 0.00015370479193811334,
+            "c_thorax-c_head-roll": 1.468761960627374e-06,
+            "c_thorax-c_head-yaw": 6.1995686099087595e-06
+          },
+          "max_limit_excursion_rad": -0.005199931570645981,
+          "all_finite": true
+        }
+      ],
+      "checks": {
+        "map_error_le_0.05_all_points": false,
+        "limits_within_eps": true,
+        "coupling_le_0.05_all_points": true,
+        "all_finite": true,
+        "monotone_except_clamp_plateaus": true
+      },
+      "max_steady_state_error_rad": 0.18767205001566623,
+      "monotone_notes": [],
+      "verdict": "FAIL",
+      "sign_failure": "tip displacement criteria disagree or are ambiguous",
+      "tip_at_range_min": {
+        "tip_pos_mm": [
+          -2.1278479016185092,
+          -1.101251312199956,
+          0.05109052056930845
+        ],
+        "head_pos_mm": [
+          0.28499908263417045,
+          0.0011667174387509048,
+          1.2688909245168989
+        ]
+      },
+      "tip_at_range_max": {
+        "tip_pos_mm": [
+          -2.130226630871466,
+          -1.1032388708727932,
+          0.05107949499977993
+        ],
+        "head_pos_mm": [
+          0.2837408806292748,
+          -0.0070672841916645576,
+          1.272246659127363
+        ]
+      },
+      "tip_head_distance_min_end_mm": 2.9189371191145344,
+      "tip_head_distance_max_end_mm": 2.918917699554324,
+      "extension_sign_s": null,
+      "theta_ext_rad": null
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "range": [
+        -1.59,
+        0.7
+      ],
+      "rest_angle_rad": -0.0008693949871364344,
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl": -1.59,
+          "steady_state_rad": -1.2226719740972138,
+          "qhat_eff_rad": -1.0384615384615385,
+          "qhat_unclamped_rad": -1.0384615384615385,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.1842104356356753,
+          "coupling_max_rad": 0.0014210528263093151,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.0012725689126992915,
+            "c_rostrum-c_haustellum-yaw": 4.863416072791289e-07,
+            "c_haustellum-l_labrum-pitch": 5.731917891400595e-05,
+            "c_haustellum-r_labrum-pitch": 1.2355117310323364e-05,
+            "c_thorax-c_head-pitch": 0.0014210528263093151,
+            "c_thorax-c_head-roll": 5.187867167528323e-07,
+            "c_thorax-c_head-yaw": 5.738061495541117e-07
+          },
+          "max_limit_excursion_rad": -0.005199834060244473,
+          "all_finite": true
+        },
+        {
+          "k": 1,
+          "target_ctrl": -1.30375,
+          "steady_state_rad": -1.0027236483356363,
+          "qhat_eff_rad": -0.8182692307692307,
+          "qhat_unclamped_rad": -0.8182692307692307,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18445441756640557,
+          "coupling_max_rad": 0.0012706633565443058,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.0012706633565443058,
+            "c_rostrum-c_haustellum-yaw": 4.800233417846541e-07,
+            "c_haustellum-l_labrum-pitch": 5.7290534857455074e-05,
+            "c_haustellum-r_labrum-pitch": 1.2429141019253474e-05,
+            "c_thorax-c_head-pitch": 0.0012577894550922994,
+            "c_thorax-c_head-roll": 7.286361200222716e-07,
+            "c_thorax-c_head-yaw": 8.513559528194412e-07
+          },
+          "max_limit_excursion_rad": -0.0052170959529081185,
+          "all_finite": true
+        },
+        {
+          "k": 2,
+          "target_ctrl": -1.0175,
+          "steady_state_rad": -0.7827830323549518,
+          "qhat_eff_rad": -0.5980769230769231,
+          "qhat_unclamped_rad": -0.5980769230769231,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18470610927802877,
+          "coupling_max_rad": 0.001027114850588704,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.001027114850588704,
+            "c_rostrum-c_haustellum-yaw": 3.310198539692003e-07,
+            "c_haustellum-l_labrum-pitch": 4.618367889376653e-05,
+            "c_haustellum-r_labrum-pitch": 1.2414502973297987e-05,
+            "c_thorax-c_head-pitch": 0.0010139529167506392,
+            "c_thorax-c_head-roll": 9.047054329525547e-07,
+            "c_thorax-c_head-yaw": 1.6901082352101358e-06
+          },
+          "max_limit_excursion_rad": -0.0052171105909540735,
+          "all_finite": true
+        },
+        {
+          "k": 3,
+          "target_ctrl": -0.7312500000000001,
+          "steady_state_rad": -0.5628380682474744,
+          "qhat_eff_rad": -0.37788461538461543,
+          "qhat_unclamped_rad": -0.37788461538461543,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18495345286285897,
+          "coupling_max_rad": 0.0007758894013422083,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.0007758894013422083,
+            "c_rostrum-c_haustellum-yaw": 1.8122332141488612e-07,
+            "c_haustellum-l_labrum-pitch": 3.477920768459699e-05,
+            "c_haustellum-r_labrum-pitch": 1.1370488293935238e-05,
+            "c_thorax-c_head-pitch": 0.0007625555548252116,
+            "c_thorax-c_head-roll": 1.0424804355147936e-06,
+            "c_thorax-c_head-yaw": 2.537781992060913e-06
+          },
+          "max_limit_excursion_rad": -0.005218154605633437,
+          "all_finite": true
+        },
+        {
+          "k": 4,
+          "target_ctrl": -0.44500000000000006,
+          "steady_state_rad": -0.3428769005043256,
+          "qhat_eff_rad": -0.15769230769230774,
+          "qhat_unclamped_rad": -0.15769230769230774,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18518459281201788,
+          "coupling_max_rad": 0.0005290133506523236,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.0005290133506523236,
+            "c_rostrum-c_haustellum-yaw": 1.1322996196641248e-07,
+            "c_haustellum-l_labrum-pitch": 2.362190942910214e-05,
+            "c_haustellum-r_labrum-pitch": 9.261322783072665e-06,
+            "c_thorax-c_head-pitch": 0.0005155334358791092,
+            "c_thorax-c_head-roll": 1.1394941798151676e-06,
+            "c_thorax-c_head-yaw": 3.3843099602193193e-06
+          },
+          "max_limit_excursion_rad": -0.0052130071985912445,
+          "all_finite": true
+        },
+        {
+          "k": 5,
+          "target_ctrl": -0.15875000000000017,
+          "steady_state_rad": -0.12288842772868758,
+          "qhat_eff_rad": 0.062499999999999896,
+          "qhat_unclamped_rad": 0.062499999999999896,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18538842772868747,
+          "coupling_max_rad": 0.0002983106109873588,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.0002983106109873588,
+            "c_rostrum-c_haustellum-yaw": 2.2100533063653355e-07,
+            "c_haustellum-l_labrum-pitch": 1.3244965563932802e-05,
+            "c_haustellum-r_labrum-pitch": 6.186695056020343e-06,
+            "c_thorax-c_head-pitch": 0.0002846195968879764,
+            "c_thorax-c_head-roll": 1.1956432494228584e-06,
+            "c_thorax-c_head-yaw": 4.219034576326868e-06
+          },
+          "max_limit_excursion_rad": -0.005203907565681083,
+          "all_finite": true
+        },
+        {
+          "k": 6,
+          "target_ctrl": 0.12749999999999995,
+          "steady_state_rad": 0.09713717645948423,
+          "qhat_eff_rad": 0.2826923076923077,
+          "qhat_unclamped_rad": 0.2826923076923077,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18555513123282347,
+          "coupling_max_rad": 9.48523781310255e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 9.48523781310255e-05,
+            "c_rostrum-c_haustellum-yaw": 2.941329822909413e-07,
+            "c_haustellum-l_labrum-pitch": 4.145276552972886e-06,
+            "c_haustellum-r_labrum-pitch": 2.2921306334976574e-06,
+            "c_thorax-c_head-pitch": 9.455025702145847e-05,
+            "c_thorax-c_head-roll": 1.2133685343208198e-06,
+            "c_thorax-c_head-yaw": 5.031364667348579e-06
+          },
+          "max_limit_excursion_rad": -0.005196522617524522,
+          "all_finite": true
+        },
+        {
+          "k": 7,
+          "target_ctrl": 0.41375000000000006,
+          "steady_state_rad": 0.31720799552205925,
+          "qhat_eff_rad": 0.5028846153846155,
+          "qhat_unclamped_rad": 0.5028846153846155,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.18567661986255624,
+          "coupling_max_rad": 0.00023389658646320519,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.00019307920606188118,
+            "c_rostrum-c_haustellum-yaw": 3.258172683578628e-07,
+            "c_haustellum-l_labrum-pitch": 8.537333348865834e-06,
+            "c_haustellum-r_labrum-pitch": 7.184809172628159e-06,
+            "c_thorax-c_head-pitch": 0.00023389658646320519,
+            "c_thorax-c_head-roll": 1.2074076508706013e-06,
+            "c_thorax-c_head-yaw": 5.823176529533294e-06
+          },
+          "max_limit_excursion_rad": -0.005191209306551388,
+          "all_finite": true
+        },
+        {
+          "k": 8,
+          "target_ctrl": 0.7,
+          "steady_state_rad": 0.5373299759364728,
+          "qhat_eff_rad": 0.7,
+          "qhat_unclamped_rad": 0.7230769230769231,
+          "clamp_bound": true,
+          "steady_state_error_rad": 0.16267002406352715,
+          "coupling_max_rad": 0.0003258307991930824,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 0.00026348161175513123,
+            "c_rostrum-c_haustellum-yaw": 3.2522402986389494e-07,
+            "c_haustellum-l_labrum-pitch": 1.151919992237274e-05,
+            "c_haustellum-r_labrum-pitch": 1.2317218797804508e-05,
+            "c_thorax-c_head-pitch": 0.0003258307991930824,
+            "c_thorax-c_head-roll": 1.192120344395622e-06,
+            "c_thorax-c_head-yaw": 6.575981754681344e-06
+          },
+          "max_limit_excursion_rad": -0.0051882274399778815,
+          "all_finite": true
+        }
+      ],
+      "checks": {
+        "map_error_le_0.05_all_points": false,
+        "limits_within_eps": true,
+        "coupling_le_0.05_all_points": true,
+        "all_finite": true,
+        "monotone_except_clamp_plateaus": true
+      },
+      "max_steady_state_error_rad": 0.18567661986255624,
+      "monotone_notes": [],
+      "verdict": "FAIL",
+      "sign_failure": "tip displacement criteria disagree or are ambiguous",
+      "tip_at_range_min": {
+        "tip_pos_mm": [
+          -2.1308314771554366,
+          -1.103742685278581,
+          0.0510742149342933
+        ],
+        "head_pos_mm": [
+          0.2833978135637867,
+          -0.009107164235896184,
+          1.273086340043252
+        ]
+      },
+      "tip_at_range_max": {
+        "tip_pos_mm": [
+          -2.133281564049724,
+          -1.105776451541118,
+          0.05106774142563911
+        ],
+        "head_pos_mm": [
+          0.281965450071408,
+          -0.01690608405955495,
+          1.2761117258196415
+        ]
+      },
+      "tip_head_distance_min_end_mm": 2.9189113768678125,
+      "tip_head_distance_max_end_mm": 2.9188678593078534,
+      "extension_sign_s": null,
+      "theta_ext_rad": null
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "range": [
+        -0.0873,
+        0.0873
+      ],
+      "rest_angle_rad": -1.1580540311763626e-06,
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl": -0.0873,
+          "steady_state_rad": -0.06711556629674473,
+          "qhat_eff_rad": -0.06715384615384615,
+          "qhat_unclamped_rad": -0.06715384615384615,
+          "clamp_bound": false,
+          "steady_state_error_rad": 3.827985710141979e-05,
+          "coupling_max_rad": 7.388762418053798e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.107644506809357e-06,
+            "c_rostrum-c_haustellum-pitch": 3.889289717789882e-07,
+            "c_haustellum-l_labrum-pitch": 1.705175615821917e-05,
+            "c_haustellum-r_labrum-pitch": 1.735040719427646e-05,
+            "c_thorax-c_head-pitch": 1.9031932250376804e-06,
+            "c_thorax-c_head-roll": 7.388762418053798e-05,
+            "c_thorax-c_head-yaw": 2.624872190754847e-05
+          },
+          "max_limit_excursion_rad": -0.005199524985098533,
+          "all_finite": true
+        },
+        {
+          "k": 1,
+          "target_ctrl": -0.065475,
+          "steady_state_rad": -0.05033701895018929,
+          "qhat_eff_rad": -0.05036538461538462,
+          "qhat_unclamped_rad": -0.05036538461538462,
+          "clamp_bound": false,
+          "steady_state_error_rad": 2.8365665195324852e-05,
+          "coupling_max_rad": 7.361800819334215e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.7897757421023695e-06,
+            "c_rostrum-c_haustellum-pitch": 4.7512704478571387e-07,
+            "c_haustellum-l_labrum-pitch": 1.7024944161802616e-05,
+            "c_haustellum-r_labrum-pitch": 1.732465149882637e-05,
+            "c_thorax-c_head-pitch": 3.2364012191241076e-06,
+            "c_thorax-c_head-roll": 7.361800819334215e-05,
+            "c_thorax-c_head-yaw": 1.4837686508679096e-05
+          },
+          "max_limit_excursion_rad": -0.005212228351430516,
+          "all_finite": true
+        },
+        {
+          "k": 2,
+          "target_ctrl": -0.04365,
+          "steady_state_rad": -0.033558471730568924,
+          "qhat_eff_rad": -0.033576923076923074,
+          "qhat_unclamped_rad": -0.033576923076923074,
+          "clamp_bound": false,
+          "steady_state_error_rad": 1.845134635414941e-05,
+          "coupling_max_rad": 5.496315817308522e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 5.405787588848299e-07,
+            "c_rostrum-c_haustellum-pitch": 5.874034666732923e-07,
+            "c_haustellum-l_labrum-pitch": 1.273375314979107e-05,
+            "c_haustellum-r_labrum-pitch": 1.2965187707533853e-05,
+            "c_thorax-c_head-pitch": 6.0948486982626005e-06,
+            "c_thorax-c_head-roll": 5.496315817308522e-05,
+            "c_thorax-c_head-yaw": 1.017221763338352e-05
+          },
+          "max_limit_excursion_rad": -0.005207936074370303,
+          "all_finite": true
+        },
+        {
+          "k": 3,
+          "target_ctrl": -0.021824999999999997,
+          "steady_state_rad": -0.016779921704358984,
+          "qhat_eff_rad": -0.016788461538461537,
+          "qhat_unclamped_rad": -0.016788461538461537,
+          "clamp_bound": false,
+          "steady_state_error_rad": 8.539834102552768e-06,
+          "coupling_max_rad": 3.6291329997843195e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.2974698208917564e-06,
+            "c_rostrum-c_haustellum-pitch": 7.260052907507404e-07,
+            "c_haustellum-l_labrum-pitch": 8.441476767867538e-06,
+            "c_haustellum-r_labrum-pitch": 8.602283398482173e-06,
+            "c_thorax-c_head-pitch": 8.667393427225223e-06,
+            "c_thorax-c_head-roll": 3.6291329997843195e-05,
+            "c_thorax-c_head-yaw": 5.513416640234787e-06
+          },
+          "max_limit_excursion_rad": -0.005203643948131977,
+          "all_finite": true
+        },
+        {
+          "k": 4,
+          "target_ctrl": 0.0,
+          "steady_state_rad": -1.3661255568404124e-06,
+          "qhat_eff_rad": 0.0,
+          "qhat_unclamped_rad": 0.0,
+          "clamp_bound": false,
+          "steady_state_error_rad": 1.3661255568404124e-06,
+          "coupling_max_rad": 1.760869742276435e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.780196611416221e-06,
+            "c_rostrum-c_haustellum-pitch": 8.908202699741503e-07,
+            "c_haustellum-l_labrum-pitch": 4.1493511866705276e-06,
+            "c_haustellum-r_labrum-pitch": 4.2372020171993e-06,
+            "c_thorax-c_head-pitch": 1.095271983691734e-05,
+            "c_thorax-c_head-roll": 1.760869742276435e-05,
+            "c_thorax-c_head-yaw": 5.502622181287616e-06
+          },
+          "max_limit_excursion_rad": -0.005199353165503328,
+          "all_finite": true
+        },
+        {
+          "k": 5,
+          "target_ctrl": 0.021824999999999997,
+          "steady_state_rad": 0.01677719774479465,
+          "qhat_eff_rad": 0.016788461538461537,
+          "qhat_unclamped_rad": 0.016788461538461537,
+          "clamp_bound": false,
+          "steady_state_error_rad": 1.1263793666886623e-05,
+          "coupling_max_rad": 1.9652519082098425e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.988408931090889e-06,
+            "c_rostrum-c_haustellum-pitch": 1.0817221549859826e-06,
+            "c_haustellum-l_labrum-pitch": 4.419568324502977e-06,
+            "c_haustellum-r_labrum-pitch": 4.4841491496642545e-06,
+            "c_thorax-c_head-pitch": 1.294950806314879e-05,
+            "c_thorax-c_head-roll": 1.9652519082098425e-05,
+            "c_thorax-c_head-yaw": 1.0135598524002916e-05
+          },
+          "max_limit_excursion_rad": -0.005195064915835398,
+          "all_finite": true
+        },
+        {
+          "k": 6,
+          "target_ctrl": 0.04365000000000001,
+          "steady_state_rad": 0.033555772691966815,
+          "qhat_eff_rad": 0.03357692307692309,
+          "qhat_unclamped_rad": 0.03357692307692309,
+          "clamp_bound": false,
+          "steady_state_error_rad": 2.115038495627275e-05,
+          "coupling_max_rad": 3.833439931422197e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.987301816800454e-06,
+            "c_rostrum-c_haustellum-pitch": 1.2987261456522342e-06,
+            "c_haustellum-l_labrum-pitch": 8.704000419629883e-06,
+            "c_haustellum-r_labrum-pitch": 8.848386548117392e-06,
+            "c_thorax-c_head-pitch": 1.4657314376533004e-05,
+            "c_thorax-c_head-roll": 3.833439931422197e-05,
+            "c_thorax-c_head-yaw": 1.4754131774715917e-05
+          },
+          "max_limit_excursion_rad": -0.005190780483740271,
+          "all_finite": true
+        },
+        {
+          "k": 7,
+          "target_ctrl": 0.06547499999999999,
+          "steady_state_rad": 0.05033435705061122,
+          "qhat_eff_rad": 0.05036538461538461,
+          "qhat_unclamped_rad": 0.05036538461538461,
+          "clamp_bound": false,
+          "steady_state_error_rad": 3.102756477339069e-05,
+          "coupling_max_rad": 5.7028998587881354e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.9208529768851776e-06,
+            "c_rostrum-c_haustellum-pitch": 1.539444036738639e-06,
+            "c_haustellum-l_labrum-pitch": 1.2985642876001008e-05,
+            "c_haustellum-r_labrum-pitch": 1.3212178121194367e-05,
+            "c_thorax-c_head-pitch": 1.605547712349442e-05,
+            "c_thorax-c_head-roll": 5.7028998587881354e-05,
+            "c_thorax-c_head-yaw": 1.9355150131563214e-05
+          },
+          "max_limit_excursion_rad": -0.0051864988412839,
+          "all_finite": true
+        },
+        {
+          "k": 8,
+          "target_ctrl": 0.0873,
+          "steady_state_rad": 0.0671129587482088,
+          "qhat_eff_rad": 0.06715384615384615,
+          "qhat_unclamped_rad": 0.06715384615384615,
+          "clamp_bound": false,
+          "steady_state_error_rad": 4.08874056373465e-05,
+          "coupling_max_rad": 7.570089718938071e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.5766989730158464e-06,
+            "c_rostrum-c_haustellum-pitch": 1.8023269981908615e-06,
+            "c_haustellum-l_labrum-pitch": 1.726036460287325e-05,
+            "c_haustellum-r_labrum-pitch": 1.7571259952809842e-05,
+            "c_thorax-c_head-pitch": 1.7110668247007077e-05,
+            "c_thorax-c_head-roll": 7.570089718938071e-05,
+            "c_thorax-c_head-yaw": 2.4018022520747426e-05
+          },
+          "max_limit_excursion_rad": -0.0051822241195570275,
+          "all_finite": true
+        }
+      ],
+      "checks": {
+        "map_error_le_0.05_all_points": true,
+        "limits_within_eps": true,
+        "coupling_le_0.05_all_points": true,
+        "all_finite": true,
+        "monotone_except_clamp_plateaus": true
+      },
+      "max_steady_state_error_rad": 4.08874056373465e-05,
+      "monotone_notes": [],
+      "verdict": "PASS"
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "range": [
+        -0.00524,
+        1.05
+      ],
+      "rest_angle_rad": -4.077696963398542e-05,
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl": -0.00524,
+          "steady_state_rad": -0.0013502365707778407,
+          "qhat_eff_rad": -0.00131,
+          "qhat_unclamped_rad": -0.00131,
+          "clamp_bound": false,
+          "steady_state_error_rad": 4.023657077784071e-05,
+          "coupling_max_rad": 1.9448320968257216e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 3.0748086001734093e-07,
+            "c_rostrum-c_haustellum-pitch": 1.462044104033394e-07,
+            "c_rostrum-c_haustellum-yaw": 9.277921671768422e-08,
+            "c_haustellum-r_labrum-pitch": 2.1336556740517024e-08,
+            "c_thorax-c_head-pitch": 1.9448320968257216e-06,
+            "c_thorax-c_head-roll": 1.56419636671634e-07,
+            "c_thorax-c_head-yaw": 6.269085556251506e-07
+          },
+          "max_limit_excursion_rad": -0.003889761064092432,
+          "all_finite": true
+        },
+        {
+          "k": 1,
+          "target_ctrl": 0.126665,
+          "steady_state_rad": 0.03161187899847326,
+          "qhat_eff_rad": 0.03166625,
+          "qhat_unclamped_rad": 0.03166625,
+          "clamp_bound": false,
+          "steady_state_error_rad": 5.4371001526741514e-05,
+          "coupling_max_rad": 4.984610094295989e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 9.201372758705327e-07,
+            "c_rostrum-c_haustellum-pitch": 5.999046045777673e-07,
+            "c_rostrum-c_haustellum-yaw": 2.542107342957737e-06,
+            "c_haustellum-r_labrum-pitch": 3.911535834350086e-08,
+            "c_thorax-c_head-pitch": 4.170934033105589e-06,
+            "c_thorax-c_head-roll": 4.984610094295989e-06,
+            "c_thorax-c_head-yaw": 2.300541697643808e-06
+          },
+          "max_limit_excursion_rad": -0.0039017497512739046,
+          "all_finite": true
+        },
+        {
+          "k": 2,
+          "target_ctrl": 0.25856999999999997,
+          "steady_state_rad": 0.06457405760288566,
+          "qhat_eff_rad": 0.06464249999999999,
+          "qhat_unclamped_rad": 0.06464249999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 6.844239711432942e-05,
+          "coupling_max_rad": 9.977089698348913e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.4473936350021047e-06,
+            "c_rostrum-c_haustellum-pitch": 9.700194501260657e-07,
+            "c_rostrum-c_haustellum-yaw": 5.140338688189814e-06,
+            "c_haustellum-r_labrum-pitch": 5.6790939874929434e-08,
+            "c_thorax-c_head-pitch": 6.289550917620151e-06,
+            "c_thorax-c_head-roll": 9.977089698348913e-06,
+            "c_thorax-c_head-yaw": 3.967509944617848e-06
+          },
+          "max_limit_excursion_rad": -0.0052300335896304055,
+          "all_finite": true
+        },
+        {
+          "k": 3,
+          "target_ctrl": 0.39047499999999996,
+          "steady_state_rad": 0.09753631403958801,
+          "qhat_eff_rad": 0.09761874999999999,
+          "qhat_unclamped_rad": 0.09761874999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 8.243596041197787e-05,
+          "coupling_max_rad": 1.4952901231022539e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.8887235302598136e-06,
+            "c_rostrum-c_haustellum-pitch": 1.2561327857843647e-06,
+            "c_rostrum-c_haustellum-yaw": 7.727818474376404e-06,
+            "c_haustellum-r_labrum-pitch": 7.437217742661816e-08,
+            "c_thorax-c_head-pitch": 8.299167880820163e-06,
+            "c_thorax-c_head-roll": 1.4952901231022539e-05,
+            "c_thorax-c_head-yaw": 5.627092849303596e-06
+          },
+          "max_limit_excursion_rad": -0.005230051264675982,
+          "all_finite": true
+        },
+        {
+          "k": 4,
+          "target_ctrl": 0.52238,
+          "steady_state_rad": 0.13049866346411362,
+          "qhat_eff_rad": 0.130595,
+          "qhat_unclamped_rad": 0.130595,
+          "clamp_bound": false,
+          "steady_state_error_rad": 9.633653588636548e-05,
+          "coupling_max_rad": 1.9906888828780483e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.2436745755289797e-06,
+            "c_rostrum-c_haustellum-pitch": 1.4579119920529043e-06,
+            "c_rostrum-c_haustellum-yaw": 1.030183032759377e-05,
+            "c_haustellum-r_labrum-pitch": 9.186766340788113e-08,
+            "c_thorax-c_head-pitch": 1.0198260171057766e-05,
+            "c_thorax-c_head-roll": 1.9906888828780483e-05,
+            "c_thorax-c_head-yaw": 7.278570830397308e-06
+          },
+          "max_limit_excursion_rad": -0.005230068846244796,
+          "all_finite": true
+        },
+        {
+          "k": 5,
+          "target_ctrl": 0.6542849999999999,
+          "steady_state_rad": 0.16346112092255077,
+          "qhat_eff_rad": 0.16357124999999997,
+          "qhat_unclamped_rad": 0.16357124999999997,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.00011012907744920031,
+          "coupling_max_rad": 2.483391899777981e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.511869092215041e-06,
+            "c_rostrum-c_haustellum-pitch": 1.5751085760018924e-06,
+            "c_rostrum-c_haustellum-yaw": 1.285967705823538e-05,
+            "c_haustellum-r_labrum-pitch": 1.0928593296809191e-07,
+            "c_thorax-c_head-pitch": 1.1985294372567068e-05,
+            "c_thorax-c_head-roll": 2.483391899777981e-05,
+            "c_thorax-c_head-yaw": 8.92122981159844e-06
+          },
+          "max_limit_excursion_rad": -0.00523008634295891,
+          "all_finite": true
+        },
+        {
+          "k": 6,
+          "target_ctrl": 0.7861899999999999,
+          "steady_state_rad": 0.19642370133510423,
+          "qhat_eff_rad": 0.19654749999999999,
+          "qhat_unclamped_rad": 0.19654749999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.00012379866489575786,
+          "coupling_max_rad": 2.972888284359355e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.6930046272506322e-06,
+            "c_rostrum-c_haustellum-pitch": 1.6960897564645546e-06,
+            "c_rostrum-c_haustellum-yaw": 1.539868312310049e-05,
+            "c_haustellum-r_labrum-pitch": 1.2663528178942725e-07,
+            "c_thorax-c_head-pitch": 1.3658727376360258e-05,
+            "c_thorax-c_head-roll": 2.972888284359355e-05,
+            "c_thorax-c_head-yaw": 1.0554346364909655e-05
+          },
+          "max_limit_excursion_rad": -0.00523010376339128,
+          "all_finite": true
+        },
+        {
+          "k": 7,
+          "target_ctrl": 0.918095,
+          "steady_state_rad": 0.22938641948339678,
+          "qhat_eff_rad": 0.22952375,
+          "qhat_unclamped_rad": 0.22952375,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.00013733051660322348,
+          "coupling_max_rad": 3.45866541146069e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.786856045499525e-06,
+            "c_rostrum-c_haustellum-pitch": 1.7332927424632645e-06,
+            "c_rostrum-c_haustellum-yaw": 1.791618707297771e-05,
+            "c_haustellum-r_labrum-pitch": 1.4391934914584997e-07,
+            "c_thorax-c_head-pitch": 1.5217016604208988e-05,
+            "c_thorax-c_head-roll": 3.45866541146069e-05,
+            "c_thorax-c_head-yaw": 1.2177007056854472e-05
+          },
+          "max_limit_excursion_rad": -0.005230121115874254,
+          "all_finite": true
+        },
+        {
+          "k": 8,
+          "target_ctrl": 1.05,
+          "steady_state_rad": 0.26234928999881674,
+          "qhat_eff_rad": 0.2625,
+          "qhat_unclamped_rad": 0.2625,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.00015071000118327404,
+          "coupling_max_rad": 3.940206293162206e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.7933012277880052e-06,
+            "c_rostrum-c_haustellum-pitch": 1.6857405056284634e-06,
+            "c_rostrum-c_haustellum-yaw": 2.0409536395528947e-05,
+            "c_haustellum-r_labrum-pitch": 1.6113376145457886e-07,
+            "c_thorax-c_head-pitch": 1.665878415603797e-05,
+            "c_thorax-c_head-roll": 3.940206293162206e-05,
+            "c_thorax-c_head-yaw": 1.3787993802636344e-05
+          },
+          "max_limit_excursion_rad": -0.005230138404046729,
+          "all_finite": true
+        }
+      ],
+      "checks": {
+        "map_error_le_0.05_all_points": true,
+        "limits_within_eps": true,
+        "coupling_le_0.05_all_points": true,
+        "all_finite": true,
+        "monotone_except_clamp_plateaus": true
+      },
+      "max_steady_state_error_rad": 0.00015071000118327404,
+      "monotone_notes": [],
+      "verdict": "PASS"
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "range": [
+        -0.00524,
+        1.05
+      ],
+      "rest_angle_rad": -9.79760894417181e-06,
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl": -0.00524,
+          "steady_state_rad": -0.0013192296894245312,
+          "qhat_eff_rad": -0.00131,
+          "qhat_unclamped_rad": -0.00131,
+          "clamp_bound": false,
+          "steady_state_error_rad": 9.229689424531274e-06,
+          "coupling_max_rad": 1.65028964513661e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.7956174764292435e-07,
+            "c_rostrum-c_haustellum-pitch": 1.423162653569612e-07,
+            "c_rostrum-c_haustellum-yaw": 1.4087753888979354e-07,
+            "c_haustellum-l_labrum-pitch": 2.211585880838781e-08,
+            "c_thorax-c_head-pitch": 1.65028964513661e-06,
+            "c_thorax-c_head-roll": 3.64776068011841e-07,
+            "c_thorax-c_head-yaw": 6.933704128545925e-07
+          },
+          "max_limit_excursion_rad": -0.003920766786482683,
+          "all_finite": true
+        },
+        {
+          "k": 1,
+          "target_ctrl": 0.126665,
+          "steady_state_rad": 0.031643209461700995,
+          "qhat_eff_rad": 0.03166625,
+          "qhat_unclamped_rad": 0.03166625,
+          "clamp_bound": false,
+          "steady_state_error_rad": 2.3040538299004543e-05,
+          "coupling_max_rad": 4.497824126418042e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.9378554837131143e-07,
+            "c_rostrum-c_haustellum-pitch": 1.4224185833941298e-07,
+            "c_rostrum-c_haustellum-yaw": 2.4524881078365424e-06,
+            "c_haustellum-l_labrum-pitch": 4.725440143421919e-08,
+            "c_thorax-c_head-pitch": 3.005732034842834e-06,
+            "c_thorax-c_head-roll": 4.497824126418042e-06,
+            "c_thorax-c_head-yaw": 6.89215560787034e-07
+          },
+          "max_limit_excursion_rad": -0.003932760930175992,
+          "all_finite": true
+        },
+        {
+          "k": 2,
+          "target_ctrl": 0.25856999999999997,
+          "steady_state_rad": 0.06460567693006501,
+          "qhat_eff_rad": 0.06464249999999999,
+          "qhat_unclamped_rad": 0.06464249999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 3.6823069934979746e-05,
+          "coupling_max_rad": 9.24228391294919e-06,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.933158564262517e-07,
+            "c_rostrum-c_haustellum-pitch": 2.855028707659038e-07,
+            "c_rostrum-c_haustellum-yaw": 5.016394275227209e-06,
+            "c_haustellum-l_labrum-pitch": 7.219254795756068e-08,
+            "c_thorax-c_head-pitch": 4.235888035202667e-06,
+            "c_thorax-c_head-roll": 9.24228391294919e-06,
+            "c_thorax-c_head-yaw": 5.645431607335773e-07
+          },
+          "max_limit_excursion_rad": -0.0051989226384680206,
+          "all_finite": true
+        },
+        {
+          "k": 3,
+          "target_ctrl": 0.39047499999999996,
+          "steady_state_rad": 0.09756818659566786,
+          "qhat_eff_rad": 0.09761874999999999,
+          "qhat_unclamped_rad": 0.09761874999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 5.0563404332126805e-05,
+          "coupling_max_rad": 1.3971215211649946e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.116544281049841e-07,
+            "c_rostrum-c_haustellum-pitch": 5.879282883791345e-07,
+            "c_rostrum-c_haustellum-yaw": 7.570313188171755e-06,
+            "c_haustellum-l_labrum-pitch": 9.636436487743587e-08,
+            "c_thorax-c_head-pitch": 5.322764807351443e-06,
+            "c_thorax-c_head-roll": 1.3971215211649946e-05,
+            "c_thorax-c_head-yaw": 9.282777387772235e-07
+          },
+          "max_limit_excursion_rad": -0.0051988984666511,
+          "all_finite": true
+        },
+        {
+          "k": 4,
+          "target_ctrl": 0.52238,
+          "steady_state_rad": 0.13053075326220714,
+          "qhat_eff_rad": 0.130595,
+          "qhat_unclamped_rad": 0.130595,
+          "clamp_bound": false,
+          "steady_state_error_rad": 6.424673779284462e-05,
+          "coupling_max_rad": 1.8688081001884e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 4.273047807404687e-07,
+            "c_rostrum-c_haustellum-pitch": 9.85493410954135e-07,
+            "c_rostrum-c_haustellum-yaw": 1.0113276503799596e-05,
+            "c_haustellum-l_labrum-pitch": 1.1996326492271815e-07,
+            "c_thorax-c_head-pitch": 6.245182220008388e-06,
+            "c_thorax-c_head-roll": 1.8688081001884e-05,
+            "c_thorax-c_head-yaw": 1.3250359407327559e-06
+          },
+          "max_limit_excursion_rad": -0.005198874867751055,
+          "all_finite": true
+        },
+        {
+          "k": 5,
+          "target_ctrl": 0.6542849999999999,
+          "steady_state_rad": 0.16349339131507656,
+          "qhat_eff_rad": 0.16357124999999997,
+          "qhat_unclamped_rad": 0.16357124999999997,
+          "clamp_bound": false,
+          "steady_state_error_rad": 7.785868492340975e-05,
+          "coupling_max_rad": 2.3379164780106146e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 7.976952983387332e-07,
+            "c_rostrum-c_haustellum-pitch": 1.4778878684328003e-06,
+            "c_rostrum-c_haustellum-yaw": 1.2641218774950309e-05,
+            "c_haustellum-l_labrum-pitch": 1.429775488942758e-07,
+            "c_thorax-c_head-pitch": 7.045278105709263e-06,
+            "c_thorax-c_head-roll": 2.3379164780106146e-05,
+            "c_thorax-c_head-yaw": 1.7181730707672813e-06
+          },
+          "max_limit_excursion_rad": -0.0051988518534670835,
+          "all_finite": true
+        },
+        {
+          "k": 6,
+          "target_ctrl": 0.7861899999999999,
+          "steady_state_rad": 0.1964561172068835,
+          "qhat_eff_rad": 0.19654749999999999,
+          "qhat_unclamped_rad": 0.19654749999999999,
+          "clamp_bound": false,
+          "steady_state_error_rad": 9.138279311649011e-05,
+          "coupling_max_rad": 2.8038538088515055e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.2606394022523885e-06,
+            "c_rostrum-c_haustellum-pitch": 2.0603484849131444e-06,
+            "c_rostrum-c_haustellum-yaw": 1.5151032438066308e-05,
+            "c_haustellum-l_labrum-pitch": 1.668934878801094e-07,
+            "c_thorax-c_head-pitch": 7.754211924046461e-06,
+            "c_thorax-c_head-roll": 2.8038538088515055e-05,
+            "c_thorax-c_head-yaw": 2.1056798976026117e-06
+          },
+          "max_limit_excursion_rad": -0.005198827937528097,
+          "all_finite": true
+        },
+        {
+          "k": 7,
+          "target_ctrl": 0.918095,
+          "steady_state_rad": 0.22941894552843894,
+          "qhat_eff_rad": 0.22952375,
+          "qhat_unclamped_rad": 0.22952375,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.0001048044715610541,
+          "coupling_max_rad": 3.264681253159241e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 1.811350699455587e-06,
+            "c_rostrum-c_haustellum-pitch": 2.730824425633497e-06,
+            "c_rostrum-c_haustellum-yaw": 1.7636616521228656e-05,
+            "c_haustellum-l_labrum-pitch": 1.9143720226782296e-07,
+            "c_thorax-c_head-pitch": 8.368420605007337e-06,
+            "c_thorax-c_head-roll": 3.264681253159241e-05,
+            "c_thorax-c_head-yaw": 2.439353596750375e-06
+          },
+          "max_limit_excursion_rad": -0.00519880339381371,
+          "all_finite": true
+        },
+        {
+          "k": 8,
+          "target_ctrl": 1.05,
+          "steady_state_rad": 0.26238188983690647,
+          "qhat_eff_rad": 0.2625,
+          "qhat_unclamped_rad": 0.2625,
+          "clamp_bound": false,
+          "steady_state_error_rad": 0.00011811016309354327,
+          "coupling_max_rad": 3.72109622171819e-05,
+          "coupling_by_joint": {
+            "c_head-c_rostrum-pitch": 2.450081793245549e-06,
+            "c_rostrum-c_haustellum-pitch": 3.488894358690247e-06,
+            "c_rostrum-c_haustellum-yaw": 2.0098148651549718e-05,
+            "c_haustellum-l_labrum-pitch": 2.1589209035671503e-07,
+            "c_thorax-c_head-pitch": 8.88573894351763e-06,
+            "c_thorax-c_head-roll": 3.72109622171819e-05,
+            "c_thorax-c_head-yaw": 2.750399181467699e-06
+          },
+          "max_limit_excursion_rad": -0.005198778938925621,
+          "all_finite": true
+        }
+      ],
+      "checks": {
+        "map_error_le_0.05_all_points": true,
+        "limits_within_eps": true,
+        "coupling_le_0.05_all_points": true,
+        "all_finite": true,
+        "monotone_except_clamp_plateaus": true
+      },
+      "max_steady_state_error_rad": 0.00011811016309354327,
+      "monotone_notes": [],
+      "verdict": "PASS"
+    }
+  },
+  "verdict": "FAIL",
+  "wall_clock_s": 56.51915192604065
+}

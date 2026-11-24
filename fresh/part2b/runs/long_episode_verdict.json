@@ -1,0 +1,49 @@
+{
+  "part": "2b",
+  "run": "long_episode_gate_condition_c",
+  "seed": 4203,
+  "mode": "closed",
+  "n_chunks": 150,
+  "simulated_duration_s": 15.0,
+  "criteria_fixed_before_run": {
+    "drift_band_mm": 0.15,
+    "min_late_travel_mm_per_chunk": 0.5,
+    "max_total_travel_mm": 400.0,
+    "thorax_bounds_mm": [
+      0.0,
+      3.0
+    ],
+    "memory_growth_budget_mb": 250.0,
+    "memory_baseline_window_s": [
+      180.0,
+      240.0
+    ]
+  },
+  "measurements": {
+    "chunks_completed": 150,
+    "all_finite": true,
+    "thorax_z_min_mm": 0.8942354296150787,
+    "thorax_z_max_mm": 1.1734599283722662,
+    "thorax_z_mean_chunks_20_39_mm": 1.1237014894699389,
+    "thorax_z_mean_final_20_mm": 1.1262838955269416,
+    "posture_drift_mm": 0.002582406057002773,
+    "total_travel_mm": 180.95681967326675,
+    "late_travel_mm_per_chunk": 1.155073702219211,
+    "memory_baseline_mb": 1800.1,
+    "memory_peak_after_baseline_mb": 1803.5,
+    "memory_growth_mb": 3.400000000000091,
+    "memory_samples": 352,
+    "wall_clock_s": 708.6,
+    "wall_clock_s_per_simulated_s": 47.2
+  },
+  "criteria": {
+    "L1_completion": true,
+    "L2_finiteness": true,
+    "L3_thorax_bounds": true,
+    "L4i_posture_drift": true,
+    "L4ii_still_walking": true,
+    "L4iii_no_explosion": true,
+    "L5_memory_growth": true
+  },
+  "all_criteria_passed": true
+}

@@ -1,0 +1,411 @@
+{
+  "step": "Q5 (rerun5)",
+  "pilot": {
+    "tip_settled_xyz_mm": [
+      0.41641040870416923,
+      0.00374372682362337,
+      0.7141042368705487
+    ],
+    "tip_ground_projection_xy_mm": [
+      0.41641040870416923,
+      0.00374372682362337
+    ],
+    "forward_xy_unit": [
+      0.9999935878845976,
+      0.0035810877802387752
+    ]
+  },
+  "arena": "pedestal cylinder r 0.5 mm, h 0.28 mm + food cylinder r 0.5 mm, h 0.05 mm on top, disc top at ground + 0.33 mm (SS4.6 as revised by Pass 6); pedestal fixed, never adjusted",
+  "attempts": [
+    {
+      "label": "offset 0.6 mm (SS4.6 start)",
+      "arena_centre_xy_mm": [
+        1.0164065614349278,
+        0.005892379491766636
+      ],
+      "theta_ext_rad": {
+        "c_head-c_rostrum-pitch": -0.9538461538461539,
+        "c_rostrum-c_haustellum-pitch": -1.2230769230769232,
+        "c_haustellum-l_labrum-pitch": 0.2625,
+        "c_haustellum-r_labrum-pitch": 0.2625
+      },
+      "food_geom_id": 2,
+      "pedestal_geom_id": 1,
+      "settle_chunks": 4,
+      "settled": true,
+      "food_contact_during_warmup": false,
+      "pedestal_nonlabrum_during_warmup": false,
+      "theta_rest_rad": {
+        "c_head-c_rostrum-pitch": -0.0032835518800405287,
+        "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+        "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+        "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+        "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+      },
+      "tip_at_full_extension_xyz_mm": [
+        0.5325562618015682,
+        0.017166111488588813,
+        0.42889520282849286
+      ],
+      "hold_chunks_run": 13,
+      "event_on_step": 20338,
+      "event_on_time_s": 2.0338000000000003,
+      "event_off_step": 21051,
+      "event_off_time_s": 2.1051,
+      "adhesion_engage_chunk": 7,
+      "adhesion_release_chunk": 23,
+      "max_labrum_food_force_N": 25.30170926871989,
+      "max_front_tarsus_food_force_N": 0.0,
+      "best_contact_persistence_with_adhesion_s": 1.3985,
+      "resting_max_labrum_food_force_N": 0.0,
+      "pedestal": {
+        "nonlabrum_contact_steps": 0,
+        "first_nonlabrum_contact": null,
+        "labrum_pedestal_max_force_N": 0.0,
+        "pairs_seen": []
+      },
+      "onset_fraction_measured": 0.8370970470740771,
+      "onset_fraction_predicted": 0.884,
+      "onset_fraction_deviation": -0.04690295292592295,
+      "onset_fraction_material_deviation_flag": false,
+      "first_labrum_contact_step": 6024,
+      "E_at_first_labrum_contact_rad": 1.8203392981663604,
+      "E_max_reference_rad": 2.1745857359418848,
+      "chunk_log": [
+        {
+          "phase": "resting_check",
+          "chunk": 0,
+          "e": 0.0,
+          "E_rad": -3.7417376321587266e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "resting_check",
+          "chunk": 1,
+          "e": 0.0,
+          "E_rad": -7.594137885322174e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 2,
+          "e": 0.2,
+          "E_rad": 0.4384899525107941,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 3,
+          "e": 0.4,
+          "E_rad": 0.872690915557059,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 4,
+          "e": 0.6,
+          "E_rad": 1.306764323011632,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 5,
+          "e": 0.8,
+          "E_rad": 1.7407277221175996,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 6,
+          "e": 1.0,
+          "E_rad": 2.06000124880094,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 7,
+          "e": 1.0,
+          "E_rad": 2.0600378921351066,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 8,
+          "e": 1.0,
+          "E_rad": 2.0600340572965843,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 9,
+          "e": 1.0,
+          "E_rad": 2.0600283760706617,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 10,
+          "e": 1.0,
+          "E_rad": 2.060022538541737,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 11,
+          "e": 1.0,
+          "E_rad": 2.0600166825713,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 12,
+          "e": 1.0,
+          "E_rad": 2.060010824137329,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 13,
+          "e": 1.0,
+          "E_rad": 2.0600049653815824,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 14,
+          "e": 1.0,
+          "E_rad": 2.059999106635675,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 15,
+          "e": 1.0,
+          "E_rad": 2.059993247979621,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 16,
+          "e": 1.0,
+          "E_rad": 2.059987389456356,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 17,
+          "e": 1.0,
+          "E_rad": 2.0599815311026193,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 18,
+          "e": 1.0,
+          "E_rad": 2.0599756729536702,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "hold",
+          "chunk": 19,
+          "e": 1.0,
+          "E_rad": 2.0599698150440444,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "retract",
+          "chunk": 20,
+          "e": 0.8,
+          "E_rad": 1.7350652718185793,
+          "event_on_at_chunk_end": true,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "retract",
+          "chunk": 21,
+          "e": 0.6,
+          "E_rad": 1.3067444115535132,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "retract",
+          "chunk": 22,
+          "e": 0.4,
+          "E_rad": 0.8726752205993318,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": true
+        },
+        {
+          "phase": "retract",
+          "chunk": 23,
+          "e": 0.19999999999999996,
+          "E_rad": 0.43847917527204355,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 24,
+          "e": 0.0,
+          "E_rad": -5.370286055548265e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 25,
+          "e": 0.0,
+          "E_rad": -5.498842778500898e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 26,
+          "e": 0.0,
+          "E_rad": -5.534399600094623e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 27,
+          "e": 0.0,
+          "E_rad": -5.569969072847982e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 28,
+          "e": 0.0,
+          "E_rad": -5.605517236180642e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 29,
+          "e": 0.0,
+          "E_rad": -5.641043595930057e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 30,
+          "e": 0.0,
+          "E_rad": -5.676548093709339e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 31,
+          "e": 0.0,
+          "E_rad": -5.712030669775695e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 32,
+          "e": 0.0,
+          "E_rad": -5.7474915607026895e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 33,
+          "e": 0.0,
+          "E_rad": -5.782930378963507e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 34,
+          "e": 0.0,
+          "E_rad": -5.8183469757012e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 35,
+          "e": 0.0,
+          "E_rad": -5.853741294319765e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 36,
+          "e": 0.0,
+          "E_rad": -5.8891132800354415e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 37,
+          "e": 0.0,
+          "E_rad": -5.924462878974983e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 38,
+          "e": 0.0,
+          "E_rad": -5.959790038315301e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 39,
+          "e": 0.0,
+          "E_rad": -5.995094923452412e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        }
+      ],
+      "checks": {
+        "i_labrum_contact_and_event_on": true,
+        "ii_contact_persists_ge_1s_with_adhesion": true,
+        "iii_event_off_and_adhesion_released_after_retract": true,
+        "v_resting_labrum_food_force_zero": true,
+        "vii_no_nonlabrum_pedestal_contact": true
+      },
+      "verdict": "PASS",
+      "offset_in_front_of_tip_projection_mm": 0.6
+    }
+  ],
+  "offset_adjusted_once": false,
+  "final_offset_in_front_of_tip_projection_mm": 0.6,
+  "verdict": "PASS",
+  "wall_clock_s": 20.508913040161133
+}

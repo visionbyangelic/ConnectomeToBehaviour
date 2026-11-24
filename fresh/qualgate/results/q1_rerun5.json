@@ -1,0 +1,45 @@
+{
+  "step": "Q1 (rerun5)",
+  "part_a_replay": {
+    "verdict": "PASS",
+    "n_steps": 20000,
+    "all_states_finite": true,
+    "thorax_travel_mm": 28.85622778839985,
+    "wall_clock_s": 13.806260108947754
+  },
+  "part_b_load_and_step": {
+    "executed": true,
+    "h0_sanity": {
+      "h0_mm": 2.34,
+      "band_mm": [
+        1.17,
+        3.51
+      ],
+      "neutral_standing_thorax_height_mm": 2.34,
+      "min_geom_z_at_qpos0_mm": 0.0,
+      "sanity_check_pass": true
+    },
+    "n_steps": 20000,
+    "dt_s": 0.0001,
+    "all_states_finite": true,
+    "thorax_min_mm": 1.2811373942257602,
+    "thorax_max_mm": 2.34,
+    "thorax_final_mm": 1.2821591963796894,
+    "thorax_within_band_every_step": true,
+    "max_velocity_ratio_to_bound": 0.2426189450483015,
+    "velocity_bound_holds_every_step": true,
+    "max_limit_excursion_rad": -0.005199949169963947,
+    "joint_limits_hold_within_eps": true,
+    "proboscis_final_angles_rad": {
+      "c_head-c_rostrum-pitch": -0.0032822883128288786,
+      "c_rostrum-c_haustellum-pitch": -0.0008678886055622422,
+      "c_rostrum-c_haustellum-yaw": -4.341369492662119e-07,
+      "c_haustellum-l_labrum-pitch": -4.0050830036052685e-05,
+      "c_haustellum-r_labrum-pitch": -1.0654835211495891e-05
+    },
+    "verdict": "PASS",
+    "wall_clock_s": 11.216354370117188
+  },
+  "verdict": "PASS",
+  "wall_clock_s": 25.022623538970947
+}

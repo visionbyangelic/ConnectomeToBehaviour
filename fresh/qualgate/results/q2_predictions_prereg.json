@@ -1,0 +1,381 @@
+{
+  "artefact": "q2_predictions_prereg",
+  "spec": "PART4-SENSORY-SPECS SS7.3 (Amendment Pass 5)",
+  "computed_at_utc": "2026-11-24T02:43:44.969424+00:00",
+  "computed_at_wat": "2026-11-24T02:43:44.969424+00:00",
+  "source": "compiled values recorded in results/q0_rerun3.json (premise_checks); map qhat_eff(ctrl) = clamp((kp*ctrl + ks*ref)/(kp + ks), range) with ref = qpos_spring",
+  "tolerance_rad": 0.05,
+  "table": {
+    "c_head-c_rostrum-pitch": {
+      "kp": 10.0,
+      "ks": 3.0,
+      "ref_qpos_spring": 0.0,
+      "range": [
+        -1.24,
+        0.183
+      ],
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl_rad": -1.24,
+          "qhat_unclamped_rad": -0.9538461538461539,
+          "predicted_steady_state_rad": -0.9538461538461539,
+          "clamp_bound": false
+        },
+        {
+          "k": 1,
+          "target_ctrl_rad": -1.062125,
+          "qhat_unclamped_rad": -0.8170192307692308,
+          "predicted_steady_state_rad": -0.8170192307692308,
+          "clamp_bound": false
+        },
+        {
+          "k": 2,
+          "target_ctrl_rad": -0.88425,
+          "qhat_unclamped_rad": -0.6801923076923077,
+          "predicted_steady_state_rad": -0.6801923076923077,
+          "clamp_bound": false
+        },
+        {
+          "k": 3,
+          "target_ctrl_rad": -0.706375,
+          "qhat_unclamped_rad": -0.5433653846153846,
+          "predicted_steady_state_rad": -0.5433653846153846,
+          "clamp_bound": false
+        },
+        {
+          "k": 4,
+          "target_ctrl_rad": -0.5285,
+          "qhat_unclamped_rad": -0.40653846153846157,
+          "predicted_steady_state_rad": -0.40653846153846157,
+          "clamp_bound": false
+        },
+        {
+          "k": 5,
+          "target_ctrl_rad": -0.35062499999999996,
+          "qhat_unclamped_rad": -0.26971153846153845,
+          "predicted_steady_state_rad": -0.26971153846153845,
+          "clamp_bound": false
+        },
+        {
+          "k": 6,
+          "target_ctrl_rad": -0.17274999999999996,
+          "qhat_unclamped_rad": -0.13288461538461535,
+          "predicted_steady_state_rad": -0.13288461538461535,
+          "clamp_bound": false
+        },
+        {
+          "k": 7,
+          "target_ctrl_rad": 0.005125000000000046,
+          "qhat_unclamped_rad": 0.003942307692307728,
+          "predicted_steady_state_rad": 0.003942307692307728,
+          "clamp_bound": false
+        },
+        {
+          "k": 8,
+          "target_ctrl_rad": 0.18300000000000005,
+          "qhat_unclamped_rad": 0.1407692307692308,
+          "predicted_steady_state_rad": 0.1407692307692308,
+          "clamp_bound": false
+        }
+      ]
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "kp": 10.0,
+      "ks": 3.0,
+      "ref_qpos_spring": 0.0,
+      "range": [
+        -1.59,
+        0.7
+      ],
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl_rad": -1.59,
+          "qhat_unclamped_rad": -1.2230769230769232,
+          "predicted_steady_state_rad": -1.2230769230769232,
+          "clamp_bound": false
+        },
+        {
+          "k": 1,
+          "target_ctrl_rad": -1.30375,
+          "qhat_unclamped_rad": -1.0028846153846154,
+          "predicted_steady_state_rad": -1.0028846153846154,
+          "clamp_bound": false
+        },
+        {
+          "k": 2,
+          "target_ctrl_rad": -1.0175,
+          "qhat_unclamped_rad": -0.7826923076923078,
+          "predicted_steady_state_rad": -0.7826923076923078,
+          "clamp_bound": false
+        },
+        {
+          "k": 3,
+          "target_ctrl_rad": -0.7312500000000001,
+          "qhat_unclamped_rad": -0.5625000000000001,
+          "predicted_steady_state_rad": -0.5625000000000001,
+          "clamp_bound": false
+        },
+        {
+          "k": 4,
+          "target_ctrl_rad": -0.44500000000000006,
+          "qhat_unclamped_rad": -0.34230769230769237,
+          "predicted_steady_state_rad": -0.34230769230769237,
+          "clamp_bound": false
+        },
+        {
+          "k": 5,
+          "target_ctrl_rad": -0.15875000000000017,
+          "qhat_unclamped_rad": -0.12211538461538475,
+          "predicted_steady_state_rad": -0.12211538461538475,
+          "clamp_bound": false
+        },
+        {
+          "k": 6,
+          "target_ctrl_rad": 0.12749999999999995,
+          "qhat_unclamped_rad": 0.09807692307692303,
+          "predicted_steady_state_rad": 0.09807692307692303,
+          "clamp_bound": false
+        },
+        {
+          "k": 7,
+          "target_ctrl_rad": 0.41375000000000006,
+          "qhat_unclamped_rad": 0.31826923076923086,
+          "predicted_steady_state_rad": 0.31826923076923086,
+          "clamp_bound": false
+        },
+        {
+          "k": 8,
+          "target_ctrl_rad": 0.7,
+          "qhat_unclamped_rad": 0.5384615384615384,
+          "predicted_steady_state_rad": 0.5384615384615384,
+          "clamp_bound": false
+        }
+      ]
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "kp": 10.0,
+      "ks": 3.0,
+      "ref_qpos_spring": 0.0,
+      "range": [
+        -0.0873,
+        0.0873
+      ],
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl_rad": -0.0873,
+          "qhat_unclamped_rad": -0.06715384615384615,
+          "predicted_steady_state_rad": -0.06715384615384615,
+          "clamp_bound": false
+        },
+        {
+          "k": 1,
+          "target_ctrl_rad": -0.065475,
+          "qhat_unclamped_rad": -0.05036538461538462,
+          "predicted_steady_state_rad": -0.05036538461538462,
+          "clamp_bound": false
+        },
+        {
+          "k": 2,
+          "target_ctrl_rad": -0.04365,
+          "qhat_unclamped_rad": -0.033576923076923074,
+          "predicted_steady_state_rad": -0.033576923076923074,
+          "clamp_bound": false
+        },
+        {
+          "k": 3,
+          "target_ctrl_rad": -0.021824999999999997,
+          "qhat_unclamped_rad": -0.016788461538461537,
+          "predicted_steady_state_rad": -0.016788461538461537,
+          "clamp_bound": false
+        },
+        {
+          "k": 4,
+          "target_ctrl_rad": 0.0,
+          "qhat_unclamped_rad": 0.0,
+          "predicted_steady_state_rad": 0.0,
+          "clamp_bound": false
+        },
+        {
+          "k": 5,
+          "target_ctrl_rad": 0.021824999999999997,
+          "qhat_unclamped_rad": 0.016788461538461537,
+          "predicted_steady_state_rad": 0.016788461538461537,
+          "clamp_bound": false
+        },
+        {
+          "k": 6,
+          "target_ctrl_rad": 0.04365000000000001,
+          "qhat_unclamped_rad": 0.03357692307692309,
+          "predicted_steady_state_rad": 0.03357692307692309,
+          "clamp_bound": false
+        },
+        {
+          "k": 7,
+          "target_ctrl_rad": 0.06547499999999999,
+          "qhat_unclamped_rad": 0.05036538461538461,
+          "predicted_steady_state_rad": 0.05036538461538461,
+          "clamp_bound": false
+        },
+        {
+          "k": 8,
+          "target_ctrl_rad": 0.0873,
+          "qhat_unclamped_rad": 0.06715384615384615,
+          "predicted_steady_state_rad": 0.06715384615384615,
+          "clamp_bound": false
+        }
+      ]
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "kp": 1.0,
+      "ks": 3.0,
+      "ref_qpos_spring": 0.0,
+      "range": [
+        -0.00524,
+        1.05
+      ],
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl_rad": -0.00524,
+          "qhat_unclamped_rad": -0.00131,
+          "predicted_steady_state_rad": -0.00131,
+          "clamp_bound": false
+        },
+        {
+          "k": 1,
+          "target_ctrl_rad": 0.126665,
+          "qhat_unclamped_rad": 0.03166625,
+          "predicted_steady_state_rad": 0.03166625,
+          "clamp_bound": false
+        },
+        {
+          "k": 2,
+          "target_ctrl_rad": 0.25856999999999997,
+          "qhat_unclamped_rad": 0.06464249999999999,
+          "predicted_steady_state_rad": 0.06464249999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 3,
+          "target_ctrl_rad": 0.39047499999999996,
+          "qhat_unclamped_rad": 0.09761874999999999,
+          "predicted_steady_state_rad": 0.09761874999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 4,
+          "target_ctrl_rad": 0.52238,
+          "qhat_unclamped_rad": 0.130595,
+          "predicted_steady_state_rad": 0.130595,
+          "clamp_bound": false
+        },
+        {
+          "k": 5,
+          "target_ctrl_rad": 0.6542849999999999,
+          "qhat_unclamped_rad": 0.16357124999999997,
+          "predicted_steady_state_rad": 0.16357124999999997,
+          "clamp_bound": false
+        },
+        {
+          "k": 6,
+          "target_ctrl_rad": 0.7861899999999999,
+          "qhat_unclamped_rad": 0.19654749999999999,
+          "predicted_steady_state_rad": 0.19654749999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 7,
+          "target_ctrl_rad": 0.918095,
+          "qhat_unclamped_rad": 0.22952375,
+          "predicted_steady_state_rad": 0.22952375,
+          "clamp_bound": false
+        },
+        {
+          "k": 8,
+          "target_ctrl_rad": 1.05,
+          "qhat_unclamped_rad": 0.2625,
+          "predicted_steady_state_rad": 0.2625,
+          "clamp_bound": false
+        }
+      ]
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "kp": 1.0,
+      "ks": 3.0,
+      "ref_qpos_spring": 0.0,
+      "range": [
+        -0.00524,
+        1.05
+      ],
+      "points": [
+        {
+          "k": 0,
+          "target_ctrl_rad": -0.00524,
+          "qhat_unclamped_rad": -0.00131,
+          "predicted_steady_state_rad": -0.00131,
+          "clamp_bound": false
+        },
+        {
+          "k": 1,
+          "target_ctrl_rad": 0.126665,
+          "qhat_unclamped_rad": 0.03166625,
+          "predicted_steady_state_rad": 0.03166625,
+          "clamp_bound": false
+        },
+        {
+          "k": 2,
+          "target_ctrl_rad": 0.25856999999999997,
+          "qhat_unclamped_rad": 0.06464249999999999,
+          "predicted_steady_state_rad": 0.06464249999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 3,
+          "target_ctrl_rad": 0.39047499999999996,
+          "qhat_unclamped_rad": 0.09761874999999999,
+          "predicted_steady_state_rad": 0.09761874999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 4,
+          "target_ctrl_rad": 0.52238,
+          "qhat_unclamped_rad": 0.130595,
+          "predicted_steady_state_rad": 0.130595,
+          "clamp_bound": false
+        },
+        {
+          "k": 5,
+          "target_ctrl_rad": 0.6542849999999999,
+          "qhat_unclamped_rad": 0.16357124999999997,
+          "predicted_steady_state_rad": 0.16357124999999997,
+          "clamp_bound": false
+        },
+        {
+          "k": 6,
+          "target_ctrl_rad": 0.7861899999999999,
+          "qhat_unclamped_rad": 0.19654749999999999,
+          "predicted_steady_state_rad": 0.19654749999999999,
+          "clamp_bound": false
+        },
+        {
+          "k": 7,
+          "target_ctrl_rad": 0.918095,
+          "qhat_unclamped_rad": 0.22952375,
+          "predicted_steady_state_rad": 0.22952375,
+          "clamp_bound": false
+        },
+        {
+          "k": 8,
+          "target_ctrl_rad": 1.05,
+          "qhat_unclamped_rad": 0.2625,
+          "predicted_steady_state_rad": 0.2625,
+          "clamp_bound": false
+        }
+      ]
+    }
+  },
+  "wall_clock_s": 0.00028014183044433594
+}

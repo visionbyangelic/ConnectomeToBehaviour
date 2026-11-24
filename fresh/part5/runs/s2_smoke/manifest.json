@@ -1,0 +1,176 @@
+{
+  "part": "5",
+  "run_kind": "smoke",
+  "purpose": "SMOKE, not science: the sugar drive is declared (SS2.2) but never applied; the record must show no contact, no taste event, E at rest, and a silent MN9.",
+  "scenario": {
+    "name": "S2_smoke_no_drive_control",
+    "n_chunks": 30,
+    "seed": 5102,
+    "drives": [
+      {
+        "name": "sugar",
+        "populations": [
+          "sugar_grn_right"
+        ],
+        "rate_hz": 200.0,
+        "mode": "off",
+        "window": [],
+        "envelope": "validated envelope (sugarR: sugar_grn_right at 200 Hz, Part 3)"
+      }
+    ],
+    "readouts": [
+      "total",
+      "mn9_left",
+      "mn9_right",
+      "sugar_grn_right",
+      "sugar_grn_left",
+      "bitter_grn",
+      "water_grn",
+      "adn1",
+      "adn2_left",
+      "abn1"
+    ]
+  },
+  "ctb_freeze": {
+    "expected_commit": "e1f40462a68cfd2f87325ec0fc4e519bf667db09",
+    "expected_tag": "part3-prereg-v2"
+  },
+  "git": {
+    "head": "e1f40462a68cfd2f87325ec0fc4e519bf667db09",
+    "tags_at_head": [
+      "part3-prereg-v2"
+    ],
+    "status_porcelain": "M fresh/PART3-PREREG.md\n M fresh/track.md\n?? fresh/part2b/\n?? fresh/part5/\n?? fresh/qualgate/",
+    "ctb_status_porcelain": "",
+    "working_tree_dirty": true
+  },
+  "configuration": {
+    "chunk_ms": 100,
+    "r_lo_hz": 5.0,
+    "r_lo_status": "FIXED (SS4.3)",
+    "r_hi_hz": 155.0,
+    "r_hi_provenance": "PROVISIONAL (SS7.6 Q6 value: Part 3's measured pooled MN9 response, 92.57 + 62.40 Hz; replaced by the calibrated r_hi at the Part 5 freeze)",
+    "signs": {
+      "c_head-c_rostrum-pitch": -1,
+      "c_rostrum-c_haustellum-pitch": -1
+    },
+    "theta_off_rad": 0.01036,
+    "E_max_reference_rad": 2.1746,
+    "arena": "SS4.6 as revised: pedestal r 0.5 mm x h 0.28 mm + food disc r 0.5 mm x h 0.05 mm, top at ground + 0.33 mm; centre 0.6 mm in front of the labrum tip's settled ground projection; proboscis contact pairs included (gate Q5 fix)",
+    "body_seed": null,
+    "body_seed_note": "MuJoCo stepping is deterministic; the body has no stochastic element and no seed. The brain seed is the scenario's.",
+    "interpreters": {
+      "driver": "/home/hatch/workspace/connectome-work/envs/body/bin/python",
+      "brain_worker": "/home/hatch/workspace/connectome-work/envs/brain/bin/python"
+    }
+  },
+  "declared_drives_SS2.2": [
+    {
+      "name": "sugar",
+      "populations": [
+        "sugar_grn_right"
+      ],
+      "rate_hz": 200.0,
+      "mode": "off",
+      "window": [],
+      "envelope": "validated envelope (sugarR: sugar_grn_right at 200 Hz, Part 3)"
+    }
+  ],
+  "envelope_labels": {
+    "sugar": "validated envelope (sugarR: sugar_grn_right at 200 Hz, Part 3)"
+  },
+  "logs": {
+    "brain": "brain_log.jsonl",
+    "body": "body_log.jsonl"
+  },
+  "pilot": {
+    "tip_settled_xyz_mm": [
+      0.41641040870416923,
+      0.00374372682362337,
+      0.7141042368705487
+    ],
+    "arena_centre_xy_mm": [
+      1.0164065614349278,
+      0.005892379491766636
+    ],
+    "offset_in_front_of_tip_projection_mm": 0.6
+  },
+  "settle": {
+    "settled": true,
+    "n_chunks": 4,
+    "chunks": [
+      {
+        "chunk": 0,
+        "transitions": 490,
+        "thorax_dh_mm": 1.0584419876568207,
+        "ok": false
+      },
+      {
+        "chunk": 1,
+        "transitions": 0,
+        "thorax_dh_mm": 0.0004183165158804236,
+        "ok": true
+      },
+      {
+        "chunk": 2,
+        "transitions": 0,
+        "thorax_dh_mm": 6.273273267698443e-05,
+        "ok": true
+      },
+      {
+        "chunk": 3,
+        "transitions": 0,
+        "thorax_dh_mm": 5.793400348186317e-05,
+        "ok": true
+      }
+    ],
+    "food_contact_during_warmup": false
+  },
+  "theta_rest_rad": {
+    "c_head-c_rostrum-pitch": -0.0032835518800405287,
+    "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+    "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+    "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+    "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+  },
+  "worker_ready": {
+    "populations": {
+      "sugar_grn_right": 21,
+      "sugar_grn_left": 10,
+      "bitter_grn": 21,
+      "water_grn": 18,
+      "ir94e_grn": 18,
+      "jon_ce": 70,
+      "jon_f": 60,
+      "jon_d_m": 16,
+      "mn9": 2,
+      "adn1": 1,
+      "adn2_left": 1,
+      "abn1": 1,
+      "three_inhibitory": 3,
+      "jon_all": 146
+    },
+    "data_hashes": {
+      "2023_03_23_completeness_630_final.csv": "e6b71e17671a9bdb05f55e4bc6774640a1418cb7a05125e0fc994ad40f9bfdfb",
+      "2023_03_23_connectivity_630_final.parquet": "94db8c650533bc36ffa3223f2e62325d5648b8d6bd31c3a4e1c804628c7557b3"
+    },
+    "declared_drives": [
+      {
+        "name": "sugar",
+        "populations": [
+          "sugar_grn_right"
+        ],
+        "rate_hz": 200.0,
+        "mode": "off",
+        "window": [],
+        "envelope": "validated envelope (sugarR: sugar_grn_right at 200 Hz, Part 3)"
+      }
+    ]
+  },
+  "data_hashes": {
+    "2023_03_23_completeness_630_final.csv": "e6b71e17671a9bdb05f55e4bc6774640a1418cb7a05125e0fc994ad40f9bfdfb",
+    "2023_03_23_connectivity_630_final.parquet": "94db8c650533bc36ffa3223f2e62325d5648b8d6bd31c3a4e1c804628c7557b3"
+  },
+  "episode_validity": "VALID",
+  "wall_clock_s": 40.597893714904785
+}

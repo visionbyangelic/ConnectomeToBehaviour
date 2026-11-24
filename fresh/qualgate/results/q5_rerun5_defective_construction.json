@@ -1,0 +1,1069 @@
+{
+  "step": "Q5 (rerun5)",
+  "pilot": {
+    "tip_settled_xyz_mm": [
+      0.41641040870416923,
+      0.00374372682362337,
+      0.7141042368705487
+    ],
+    "tip_ground_projection_xy_mm": [
+      0.41641040870416923,
+      0.00374372682362337
+    ],
+    "forward_xy_unit": [
+      0.9999935878845976,
+      0.0035810877802387752
+    ]
+  },
+  "arena": "pedestal cylinder r 0.5 mm, h 0.28 mm + food cylinder r 0.5 mm, h 0.05 mm on top, disc top at ground + 0.33 mm (SS4.6 as revised by Pass 6); pedestal fixed, never adjusted",
+  "attempts": [
+    {
+      "label": "offset 0.6 mm (SS4.6 start)",
+      "arena_centre_xy_mm": [
+        1.0164065614349278,
+        0.005892379491766636
+      ],
+      "theta_ext_rad": {
+        "c_head-c_rostrum-pitch": -0.9538461538461539,
+        "c_rostrum-c_haustellum-pitch": -1.2230769230769232,
+        "c_haustellum-l_labrum-pitch": 0.2625,
+        "c_haustellum-r_labrum-pitch": 0.2625
+      },
+      "food_geom_id": 2,
+      "pedestal_geom_id": 1,
+      "settle_chunks": 4,
+      "settled": true,
+      "food_contact_during_warmup": false,
+      "pedestal_nonlabrum_during_warmup": false,
+      "theta_rest_rad": {
+        "c_head-c_rostrum-pitch": -0.0032835518800405287,
+        "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+        "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+        "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+        "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+      },
+      "tip_at_full_extension_xyz_mm": [
+        0.5626969531216139,
+        -0.003705927316757552,
+        0.3954073623617823
+      ],
+      "hold_chunks_run": 30,
+      "event_on_step": null,
+      "event_on_time_s": null,
+      "event_off_step": null,
+      "event_off_time_s": null,
+      "adhesion_engage_chunk": null,
+      "adhesion_release_chunk": null,
+      "max_labrum_food_force_N": 0.0,
+      "max_front_tarsus_food_force_N": 0.0,
+      "best_contact_persistence_with_adhesion_s": 0.0,
+      "resting_max_labrum_food_force_N": 0.0,
+      "pedestal": {
+        "nonlabrum_contact_steps": 0,
+        "first_nonlabrum_contact": null,
+        "labrum_pedestal_max_force_N": 0.0,
+        "pairs_seen": []
+      },
+      "onset_fraction_measured": null,
+      "onset_fraction_predicted": 0.884,
+      "onset_fraction_deviation": null,
+      "onset_fraction_material_deviation_flag": null,
+      "first_labrum_contact_step": null,
+      "E_at_first_labrum_contact_rad": null,
+      "E_max_reference_rad": 2.1745857359418848,
+      "chunk_log": [
+        {
+          "phase": "resting_check",
+          "chunk": 0,
+          "e": 0.0,
+          "E_rad": -3.7417376321587266e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "resting_check",
+          "chunk": 1,
+          "e": 0.0,
+          "E_rad": -7.594137885322174e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 2,
+          "e": 0.2,
+          "E_rad": 0.4384899525107941,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 3,
+          "e": 0.4,
+          "E_rad": 0.872690915557059,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 4,
+          "e": 0.6,
+          "E_rad": 1.306764323011632,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 5,
+          "e": 0.8,
+          "E_rad": 1.7407277221175996,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 6,
+          "e": 1.0,
+          "E_rad": 2.1746023608941623,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 7,
+          "e": 1.0,
+          "E_rad": 2.1746022656520183,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 8,
+          "e": 1.0,
+          "E_rad": 2.174602085813841,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 9,
+          "e": 1.0,
+          "E_rad": 2.1746019061070734,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 10,
+          "e": 1.0,
+          "E_rad": 2.174601726426112,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 11,
+          "e": 1.0,
+          "E_rad": 2.1746015467727435,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 12,
+          "e": 1.0,
+          "E_rad": 2.174601367149235,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 13,
+          "e": 1.0,
+          "E_rad": 2.1746011875577045,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 14,
+          "e": 1.0,
+          "E_rad": 2.174601008000243,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 15,
+          "e": 1.0,
+          "E_rad": 2.1746008284789324,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 16,
+          "e": 1.0,
+          "E_rad": 2.174600648995852,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 17,
+          "e": 1.0,
+          "E_rad": 2.1746004695530736,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 18,
+          "e": 1.0,
+          "E_rad": 2.1746002901526644,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 19,
+          "e": 1.0,
+          "E_rad": 2.1746001107966895,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 20,
+          "e": 1.0,
+          "E_rad": 2.1745999314872106,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 21,
+          "e": 1.0,
+          "E_rad": 2.174599752226283,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 22,
+          "e": 1.0,
+          "E_rad": 2.174599573015962,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 23,
+          "e": 1.0,
+          "E_rad": 2.174599393858297,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 24,
+          "e": 1.0,
+          "E_rad": 2.174599214755337,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 25,
+          "e": 1.0,
+          "E_rad": 2.174599035709127,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 26,
+          "e": 1.0,
+          "E_rad": 2.174598856721712,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 27,
+          "e": 1.0,
+          "E_rad": 2.174598677795131,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 28,
+          "e": 1.0,
+          "E_rad": 2.174598498931426,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 29,
+          "e": 1.0,
+          "E_rad": 2.1745983201326347,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 30,
+          "e": 1.0,
+          "E_rad": 2.1745981414007938,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 31,
+          "e": 1.0,
+          "E_rad": 2.1745979627379417,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 32,
+          "e": 1.0,
+          "E_rad": 2.174597784146111,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 33,
+          "e": 1.0,
+          "E_rad": 2.17459760562734,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 34,
+          "e": 1.0,
+          "E_rad": 2.174597427183662,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 35,
+          "e": 1.0,
+          "E_rad": 2.174597248817114,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 36,
+          "e": 1.0,
+          "E_rad": 2.17459707052973,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 37,
+          "e": 0.8,
+          "E_rad": 1.7407227705127368,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 38,
+          "e": 0.6,
+          "E_rad": 1.3067598938396587,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 39,
+          "e": 0.4,
+          "E_rad": 0.8726872846053599,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 40,
+          "e": 0.19999999999999996,
+          "E_rad": 0.43848739229801664,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 41,
+          "e": 0.0,
+          "E_rad": -1.3781106924543474e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 42,
+          "e": 0.0,
+          "E_rad": -1.50968844804273e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 43,
+          "e": 0.0,
+          "E_rad": -1.5482592985637195e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 44,
+          "e": 0.0,
+          "E_rad": -1.5868520224998975e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 45,
+          "e": 0.0,
+          "E_rad": -1.6254324487066174e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 46,
+          "e": 0.0,
+          "E_rad": -1.6639996366740566e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 47,
+          "e": 0.0,
+          "E_rad": -1.7025530451129792e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 48,
+          "e": 0.0,
+          "E_rad": -1.7410921234390676e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 49,
+          "e": 0.0,
+          "E_rad": -1.7796163173994977e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 50,
+          "e": 0.0,
+          "E_rad": -1.8181250706447065e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 51,
+          "e": 0.0,
+          "E_rad": -1.8566178251905882e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 52,
+          "e": 0.0,
+          "E_rad": -1.8950940209153154e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 53,
+          "e": 0.0,
+          "E_rad": -1.933553096040183e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 54,
+          "e": 0.0,
+          "E_rad": -1.9719944863428023e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 55,
+          "e": 0.0,
+          "E_rad": -2.0104176258605323e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 56,
+          "e": 0.0,
+          "E_rad": -2.0488219462251036e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        }
+      ],
+      "checks": {
+        "i_labrum_contact_and_event_on": false,
+        "ii_contact_persists_ge_1s_with_adhesion": false,
+        "iii_event_off_and_adhesion_released_after_retract": false,
+        "v_resting_labrum_food_force_zero": true,
+        "vii_no_nonlabrum_pedestal_contact": true
+      },
+      "verdict": "FAIL",
+      "offset_in_front_of_tip_projection_mm": 0.6
+    },
+    {
+      "label": "offset adjusted once (SS7.5(iv)), same pedestal",
+      "arena_centre_xy_mm": [
+        0.5626969531216139,
+        -0.003705927316757552
+      ],
+      "theta_ext_rad": {
+        "c_head-c_rostrum-pitch": -0.9538461538461539,
+        "c_rostrum-c_haustellum-pitch": -1.2230769230769232,
+        "c_haustellum-l_labrum-pitch": 0.2625,
+        "c_haustellum-r_labrum-pitch": 0.2625
+      },
+      "food_geom_id": 2,
+      "pedestal_geom_id": 1,
+      "settle_chunks": 4,
+      "settled": true,
+      "food_contact_during_warmup": false,
+      "pedestal_nonlabrum_during_warmup": false,
+      "theta_rest_rad": {
+        "c_head-c_rostrum-pitch": -0.0032835518800405287,
+        "c_rostrum-c_haustellum-pitch": -0.0008672434212429022,
+        "c_rostrum-c_haustellum-yaw": -3.0773278393451e-07,
+        "c_haustellum-l_labrum-pitch": -3.996757288750214e-05,
+        "c_haustellum-r_labrum-pitch": -1.07282970177259e-05
+      },
+      "tip_at_full_extension_xyz_mm": [
+        0.5626969531216139,
+        -0.003705927316757552,
+        0.3954073623617823
+      ],
+      "hold_chunks_run": 30,
+      "event_on_step": null,
+      "event_on_time_s": null,
+      "event_off_step": null,
+      "event_off_time_s": null,
+      "adhesion_engage_chunk": null,
+      "adhesion_release_chunk": null,
+      "max_labrum_food_force_N": 0.0,
+      "max_front_tarsus_food_force_N": 0.0,
+      "best_contact_persistence_with_adhesion_s": 0.0,
+      "resting_max_labrum_food_force_N": 0.0,
+      "pedestal": {
+        "nonlabrum_contact_steps": 0,
+        "first_nonlabrum_contact": null,
+        "labrum_pedestal_max_force_N": 0.0,
+        "pairs_seen": []
+      },
+      "onset_fraction_measured": null,
+      "onset_fraction_predicted": 0.884,
+      "onset_fraction_deviation": null,
+      "onset_fraction_material_deviation_flag": null,
+      "first_labrum_contact_step": null,
+      "E_at_first_labrum_contact_rad": null,
+      "E_max_reference_rad": 2.1745857359418848,
+      "chunk_log": [
+        {
+          "phase": "resting_check",
+          "chunk": 0,
+          "e": 0.0,
+          "E_rad": -3.7417376321587266e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "resting_check",
+          "chunk": 1,
+          "e": 0.0,
+          "E_rad": -7.594137885322174e-08,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 2,
+          "e": 0.2,
+          "E_rad": 0.4384899525107941,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 3,
+          "e": 0.4,
+          "E_rad": 0.872690915557059,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 4,
+          "e": 0.6,
+          "E_rad": 1.306764323011632,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 5,
+          "e": 0.8,
+          "E_rad": 1.7407277221175996,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "ramp",
+          "chunk": 6,
+          "e": 1.0,
+          "E_rad": 2.1746023608941623,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 7,
+          "e": 1.0,
+          "E_rad": 2.1746022656520183,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 8,
+          "e": 1.0,
+          "E_rad": 2.174602085813841,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 9,
+          "e": 1.0,
+          "E_rad": 2.1746019061070734,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 10,
+          "e": 1.0,
+          "E_rad": 2.174601726426112,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 11,
+          "e": 1.0,
+          "E_rad": 2.1746015467727435,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 12,
+          "e": 1.0,
+          "E_rad": 2.174601367149235,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 13,
+          "e": 1.0,
+          "E_rad": 2.1746011875577045,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 14,
+          "e": 1.0,
+          "E_rad": 2.174601008000243,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 15,
+          "e": 1.0,
+          "E_rad": 2.1746008284789324,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 16,
+          "e": 1.0,
+          "E_rad": 2.174600648995852,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 17,
+          "e": 1.0,
+          "E_rad": 2.1746004695530736,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 18,
+          "e": 1.0,
+          "E_rad": 2.1746002901526644,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 19,
+          "e": 1.0,
+          "E_rad": 2.1746001107966895,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 20,
+          "e": 1.0,
+          "E_rad": 2.1745999314872106,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 21,
+          "e": 1.0,
+          "E_rad": 2.174599752226283,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 22,
+          "e": 1.0,
+          "E_rad": 2.174599573015962,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 23,
+          "e": 1.0,
+          "E_rad": 2.174599393858297,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 24,
+          "e": 1.0,
+          "E_rad": 2.174599214755337,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 25,
+          "e": 1.0,
+          "E_rad": 2.174599035709127,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 26,
+          "e": 1.0,
+          "E_rad": 2.174598856721712,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 27,
+          "e": 1.0,
+          "E_rad": 2.174598677795131,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 28,
+          "e": 1.0,
+          "E_rad": 2.174598498931426,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 29,
+          "e": 1.0,
+          "E_rad": 2.1745983201326347,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 30,
+          "e": 1.0,
+          "E_rad": 2.1745981414007938,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 31,
+          "e": 1.0,
+          "E_rad": 2.1745979627379417,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 32,
+          "e": 1.0,
+          "E_rad": 2.174597784146111,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 33,
+          "e": 1.0,
+          "E_rad": 2.17459760562734,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 34,
+          "e": 1.0,
+          "E_rad": 2.174597427183662,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 35,
+          "e": 1.0,
+          "E_rad": 2.174597248817114,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "hold",
+          "chunk": 36,
+          "e": 1.0,
+          "E_rad": 2.17459707052973,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 37,
+          "e": 0.8,
+          "E_rad": 1.7407227705127368,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 38,
+          "e": 0.6,
+          "E_rad": 1.3067598938396587,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 39,
+          "e": 0.4,
+          "E_rad": 0.8726872846053599,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 40,
+          "e": 0.19999999999999996,
+          "E_rad": 0.43848739229801664,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "retract",
+          "chunk": 41,
+          "e": 0.0,
+          "E_rad": -1.3781106924543474e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 42,
+          "e": 0.0,
+          "E_rad": -1.50968844804273e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 43,
+          "e": 0.0,
+          "E_rad": -1.5482592985637195e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 44,
+          "e": 0.0,
+          "E_rad": -1.5868520224998975e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 45,
+          "e": 0.0,
+          "E_rad": -1.6254324487066174e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 46,
+          "e": 0.0,
+          "E_rad": -1.6639996366740566e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 47,
+          "e": 0.0,
+          "E_rad": -1.7025530451129792e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 48,
+          "e": 0.0,
+          "E_rad": -1.7410921234390676e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 49,
+          "e": 0.0,
+          "E_rad": -1.7796163173994977e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 50,
+          "e": 0.0,
+          "E_rad": -1.8181250706447065e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 51,
+          "e": 0.0,
+          "E_rad": -1.8566178251905882e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 52,
+          "e": 0.0,
+          "E_rad": -1.8950940209153154e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 53,
+          "e": 0.0,
+          "E_rad": -1.933553096040183e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 54,
+          "e": 0.0,
+          "E_rad": -1.9719944863428023e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 55,
+          "e": 0.0,
+          "E_rad": -2.0104176258605323e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        },
+        {
+          "phase": "post_retract",
+          "chunk": 56,
+          "e": 0.0,
+          "E_rad": -2.0488219462251036e-06,
+          "event_on_at_chunk_end": false,
+          "adhesion_on_during_chunk": false
+        }
+      ],
+      "checks": {
+        "i_labrum_contact_and_event_on": false,
+        "ii_contact_persists_ge_1s_with_adhesion": false,
+        "iii_event_off_and_adhesion_released_after_retract": false,
+        "v_resting_labrum_food_force_zero": true,
+        "vii_no_nonlabrum_pedestal_contact": true
+      },
+      "verdict": "FAIL",
+      "offset_in_front_of_tip_projection_mm": 0.14625892854583095
+    }
+  ],
+  "offset_adjusted_once": true,
+  "final_offset_in_front_of_tip_projection_mm": 0.14625892854583095,
+  "verdict": "FAIL",
+  "wall_clock_s": 38.09665060043335
+}

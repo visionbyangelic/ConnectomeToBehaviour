@@ -1,0 +1,31 @@
+{
+  "mode": "A",
+  "seed": 4105,
+  "builds": [
+    {
+      "build_number_in_process": 1,
+      "structure": "single",
+      "spikes": 5539,
+      "sha256": "46bf581500a386f1b7b417ddd36afbafac1ddaf980cf43c0d4f7c3ad2096397b"
+    },
+    {
+      "build_number_in_process": 2,
+      "structure": "single",
+      "spikes": 5243,
+      "sha256": "71c8f5cd98d8c59b0ff11825367eee9b352697311105919fcbfa2aa3c1747d66"
+    },
+    {
+      "build_number_in_process": 3,
+      "structure": "chunked",
+      "spikes": 5539,
+      "sha256": "46bf581500a386f1b7b417ddd36afbafac1ddaf980cf43c0d4f7c3ad2096397b"
+    },
+    {
+      "build_number_in_process": 4,
+      "structure": "chunked",
+      "spikes": 5243,
+      "sha256": "71c8f5cd98d8c59b0ff11825367eee9b352697311105919fcbfa2aa3c1747d66"
+    }
+  ],
+  "wall_clock_s": 75.6
+}

@@ -1,0 +1,43 @@
+{
+  "step": "Q1 (re-run)",
+  "part_a_replay": {
+    "verdict": "PASS",
+    "n_steps": 20000,
+    "all_states_finite": true,
+    "thorax_travel_mm": 28.85622778839985,
+    "wall_clock_s": 13.076362609863281
+  },
+  "part_b_load_and_step": {
+    "executed": true,
+    "h0_sanity": {
+      "h0_mm": 2.34,
+      "band_mm": [
+        1.17,
+        3.51
+      ],
+      "neutral_standing_thorax_height_mm": 2.34,
+      "min_geom_z_at_qpos0_mm": 0.0,
+      "sanity_check_pass": true
+    },
+    "n_steps": 20000,
+    "dt_s": 0.0001,
+    "all_states_finite": true,
+    "thorax_min_mm": 1.2811373942257602,
+    "thorax_max_mm": 2.34,
+    "thorax_final_mm": 1.2821591963796894,
+    "thorax_within_band_every_step": true,
+    "max_velocity_ratio_to_bound": 0.2426189450483015,
+    "velocity_bound_holds_every_step": true,
+    "max_limit_excursion_rad": -0.005199949169963947,
+    "worst_limit_joint": {
+      "c_haustellum-l_labrum-pitch": -0.005199949169963947
+    },
+    "rostrum_max_excursion_rad": -0.17888074568805962,
+    "per_joint_max_positive_excursion_rad": {},
+    "joint_limits_hold_within_eps": true,
+    "verdict": "PASS",
+    "wall_clock_s": 11.386921405792236
+  },
+  "verdict": "PASS",
+  "wall_clock_s": 24.463298082351685
+}

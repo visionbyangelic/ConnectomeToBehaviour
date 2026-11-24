@@ -1,0 +1,571 @@
+{
+  "part": "2b",
+  "mode": "closed",
+  "seed": 4202,
+  "config": {
+    "chunk_ms": 100,
+    "n_chunks": 20,
+    "pulse_chunks": [
+      2,
+      3
+    ],
+    "sugar_rate_hz": 200.0,
+    "jon_rate_hz": 150.0,
+    "decoder": "toy (decoder.py): pooled aDN1+aDN2-left rate, EMA tau=0.2 s, ramp 2->40 Hz",
+    "sensory": "contact transitions in body chunk k -> JON drive in brain chunk k+1 (provisional/constructed)"
+  },
+  "chunks": [
+    {
+      "chunk": 0,
+      "t_s": [
+        0.0,
+        0.1
+      ],
+      "jon_on": false,
+      "jon_source": "off",
+      "counts": {
+        "total": 1592,
+        "adn1": 0,
+        "adn2_left": 0,
+        "abn1": 0,
+        "jon_all": 0,
+        "sugar_grn_right": 437,
+        "mn9_left": 8,
+        "mn9_right": 6
+      },
+      "dn_count": 0,
+      "dn_rate_inst_hz": 0.0,
+      "dn_rate_ema_hz": 0.0,
+      "amplitude": 0.0,
+      "travel_mm": 0.02429768721565822,
+      "thorax_z_mm": 0.9998479144068453,
+      "contact_transitions": 202,
+      "finite": true
+    },
+    {
+      "chunk": 1,
+      "t_s": [
+        0.1,
+        0.2
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4441,
+        "adn1": 1,
+        "adn2_left": 1,
+        "abn1": 5,
+        "jon_all": 2042,
+        "sugar_grn_right": 415,
+        "mn9_left": 12,
+        "mn9_right": 6
+      },
+      "dn_count": 2,
+      "dn_rate_inst_hz": 20.0,
+      "dn_rate_ema_hz": 7.8693868057473315,
+      "amplitude": 0.15445754751966662,
+      "travel_mm": 0.06758683115015221,
+      "thorax_z_mm": 0.9890571682024837,
+      "contact_transitions": 104,
+      "finite": true
+    },
+    {
+      "chunk": 2,
+      "t_s": [
+        0.2,
+        0.30000000000000004
+      ],
+      "jon_on": true,
+      "jon_source": "pulse",
+      "counts": {
+        "total": 4650,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 5,
+        "jon_all": 2195,
+        "sugar_grn_right": 398,
+        "mn9_left": 12,
+        "mn9_right": 10
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 20.511797982318484,
+      "amplitude": 0.4871525784820654,
+      "travel_mm": 0.3197801433949758,
+      "thorax_z_mm": 0.926122255642749,
+      "contact_transitions": 765,
+      "finite": true
+    },
+    {
+      "chunk": 3,
+      "t_s": [
+        0.30000000000000004,
+        0.4
+      ],
+      "jon_on": true,
+      "jon_source": "pulse",
+      "counts": {
+        "total": 4642,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 5,
+        "jon_all": 2222,
+        "sugar_grn_right": 433,
+        "mn9_left": 10,
+        "mn9_right": 6
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 28.179807973602557,
+      "amplitude": 0.6889423150948041,
+      "travel_mm": 0.807816798792524,
+      "thorax_z_mm": 0.9221184378002398,
+      "contact_transitions": 912,
+      "finite": true
+    },
+    {
+      "chunk": 4,
+      "t_s": [
+        0.4,
+        0.5
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4700,
+        "adn1": 1,
+        "adn2_left": 2,
+        "abn1": 5,
+        "jon_all": 2160,
+        "sugar_grn_right": 426,
+        "mn9_left": 12,
+        "mn9_right": 6
+      },
+      "dn_count": 3,
+      "dn_rate_inst_hz": 30.0,
+      "dn_rate_ema_hz": 28.895997729425485,
+      "amplitude": 0.7077894139322496,
+      "travel_mm": 0.9467069823210699,
+      "thorax_z_mm": 1.132994158900341,
+      "contact_transitions": 668,
+      "finite": true
+    },
+    {
+      "chunk": 5,
+      "t_s": [
+        0.5,
+        0.6000000000000001
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4404,
+        "adn1": 1,
+        "adn2_left": 2,
+        "abn1": 4,
+        "jon_all": 2170,
+        "sugar_grn_right": 401,
+        "mn9_left": 8,
+        "mn9_right": 3
+      },
+      "dn_count": 3,
+      "dn_rate_inst_hz": 30.0,
+      "dn_rate_ema_hz": 29.330388774504193,
+      "amplitude": 0.7192207572237945,
+      "travel_mm": 0.9768203141359633,
+      "thorax_z_mm": 1.1064528110491916,
+      "contact_transitions": 609,
+      "finite": true
+    },
+    {
+      "chunk": 6,
+      "t_s": [
+        0.6000000000000001,
+        0.7000000000000001
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4592,
+        "adn1": 3,
+        "adn2_left": 3,
+        "abn1": 6,
+        "jon_all": 2143,
+        "sugar_grn_right": 397,
+        "mn9_left": 8,
+        "mn9_right": 7
+      },
+      "dn_count": 6,
+      "dn_rate_inst_hz": 60.0,
+      "dn_rate_ema_hz": 41.39794047027004,
+      "amplitude": 1.0,
+      "travel_mm": 1.4322829052006956,
+      "thorax_z_mm": 1.0847853606288007,
+      "contact_transitions": 517,
+      "finite": true
+    },
+    {
+      "chunk": 7,
+      "t_s": [
+        0.7000000000000001,
+        0.8
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4501,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 6,
+        "jon_all": 2100,
+        "sugar_grn_right": 404,
+        "mn9_left": 12,
+        "mn9_right": 5
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 40.847893755671876,
+      "amplitude": 1.0,
+      "travel_mm": 1.3188242838119713,
+      "thorax_z_mm": 1.1613136795346721,
+      "contact_transitions": 483,
+      "finite": true
+    },
+    {
+      "chunk": 8,
+      "t_s": [
+        0.8,
+        0.9
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4513,
+        "adn1": 1,
+        "adn2_left": 2,
+        "abn1": 5,
+        "jon_all": 2145,
+        "sugar_grn_right": 394,
+        "mn9_left": 10,
+        "mn9_right": 7
+      },
+      "dn_count": 3,
+      "dn_rate_inst_hz": 30.0,
+      "dn_rate_ema_hz": 36.57958015612022,
+      "amplitude": 0.909988951476848,
+      "travel_mm": 1.3908468432164265,
+      "thorax_z_mm": 1.1136193171122828,
+      "contact_transitions": 512,
+      "finite": true
+    },
+    {
+      "chunk": 9,
+      "t_s": [
+        0.9,
+        1.0
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4634,
+        "adn1": 2,
+        "adn2_left": 3,
+        "abn1": 5,
+        "jon_all": 2175,
+        "sugar_grn_right": 444,
+        "mn9_left": 9,
+        "mn9_right": 8
+      },
+      "dn_count": 5,
+      "dn_rate_inst_hz": 50.0,
+      "dn_rate_ema_hz": 41.86010389847108,
+      "amplitude": 1.0,
+      "travel_mm": 1.414981297148169,
+      "thorax_z_mm": 1.1655208731187834,
+      "contact_transitions": 472,
+      "finite": true
+    },
+    {
+      "chunk": 10,
+      "t_s": [
+        1.0,
+        1.1
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4678,
+        "adn1": 1,
+        "adn2_left": 0,
+        "abn1": 4,
+        "jon_all": 2205,
+        "sugar_grn_right": 429,
+        "mn9_left": 9,
+        "mn9_right": 6
+      },
+      "dn_count": 1,
+      "dn_rate_inst_hz": 10.0,
+      "dn_rate_ema_hz": 29.32412983605271,
+      "amplitude": 0.7190560483171765,
+      "travel_mm": 1.1015408959688124,
+      "thorax_z_mm": 1.1091541860760203,
+      "contact_transitions": 447,
+      "finite": true
+    },
+    {
+      "chunk": 11,
+      "t_s": [
+        1.1,
+        1.2000000000000002
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4683,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 5,
+        "jon_all": 2148,
+        "sugar_grn_right": 447,
+        "mn9_left": 9,
+        "mn9_right": 5
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 33.52475742645463,
+      "amplitude": 0.8295988796435428,
+      "travel_mm": 1.3019126611716785,
+      "thorax_z_mm": 1.0959679951564634,
+      "contact_transitions": 482,
+      "finite": true
+    },
+    {
+      "chunk": 12,
+      "t_s": [
+        1.2000000000000002,
+        1.3
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4485,
+        "adn1": 2,
+        "adn2_left": 3,
+        "abn1": 6,
+        "jon_all": 2101,
+        "sugar_grn_right": 418,
+        "mn9_left": 10,
+        "mn9_right": 4
+      },
+      "dn_count": 5,
+      "dn_rate_inst_hz": 50.0,
+      "dn_rate_ema_hz": 40.00726025294186,
+      "amplitude": 1.0,
+      "travel_mm": 1.2725295446460916,
+      "thorax_z_mm": 1.1548638909776,
+      "contact_transitions": 486,
+      "finite": true
+    },
+    {
+      "chunk": 13,
+      "t_s": [
+        1.3,
+        1.4000000000000001
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4559,
+        "adn1": 3,
+        "adn2_left": 2,
+        "abn1": 6,
+        "jon_all": 2164,
+        "sugar_grn_right": 413,
+        "mn9_left": 12,
+        "mn9_right": 6
+      },
+      "dn_count": 5,
+      "dn_rate_inst_hz": 50.0,
+      "dn_rate_ema_hz": 43.93909696888017,
+      "amplitude": 1.0,
+      "travel_mm": 1.4472914968255173,
+      "thorax_z_mm": 1.1105166614339357,
+      "contact_transitions": 567,
+      "finite": true
+    },
+    {
+      "chunk": 14,
+      "t_s": [
+        1.4000000000000001,
+        1.5
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4603,
+        "adn1": 3,
+        "adn2_left": 3,
+        "abn1": 5,
+        "jon_all": 2176,
+        "sugar_grn_right": 424,
+        "mn9_left": 10,
+        "mn9_right": 7
+      },
+      "dn_count": 6,
+      "dn_rate_inst_hz": 60.0,
+      "dn_rate_ema_hz": 50.258569888954256,
+      "amplitude": 1.0,
+      "travel_mm": 1.4393883881115683,
+      "thorax_z_mm": 1.1612969925342258,
+      "contact_transitions": 472,
+      "finite": true
+    },
+    {
+      "chunk": 15,
+      "t_s": [
+        1.5,
+        1.6
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4619,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 4,
+        "jon_all": 2081,
+        "sugar_grn_right": 455,
+        "mn9_left": 12,
+        "mn9_right": 5
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 46.22213716245558,
+      "amplitude": 1.0,
+      "travel_mm": 1.3144331921734507,
+      "thorax_z_mm": 1.0978695517784598,
+      "contact_transitions": 524,
+      "finite": true
+    },
+    {
+      "chunk": 16,
+      "t_s": [
+        1.6,
+        1.7000000000000002
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4440,
+        "adn1": 1,
+        "adn2_left": 1,
+        "abn1": 4,
+        "jon_all": 2167,
+        "sugar_grn_right": 395,
+        "mn9_left": 9,
+        "mn9_right": 5
+      },
+      "dn_count": 2,
+      "dn_rate_inst_hz": 20.0,
+      "dn_rate_ema_hz": 35.904530152219344,
+      "amplitude": 0.8922244776899827,
+      "travel_mm": 1.4923231554879732,
+      "thorax_z_mm": 1.0928731322067715,
+      "contact_transitions": 516,
+      "finite": true
+    },
+    {
+      "chunk": 17,
+      "t_s": [
+        1.7000000000000002,
+        1.8
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4430,
+        "adn1": 2,
+        "adn2_left": 2,
+        "abn1": 6,
+        "jon_all": 2124,
+        "sugar_grn_right": 413,
+        "mn9_left": 7,
+        "mn9_right": 7
+      },
+      "dn_count": 4,
+      "dn_rate_inst_hz": 40.0,
+      "dn_rate_ema_hz": 37.5159719713924,
+      "amplitude": 0.9346308413524317,
+      "travel_mm": 1.2515044322690918,
+      "thorax_z_mm": 1.1601534206866337,
+      "contact_transitions": 478,
+      "finite": true
+    },
+    {
+      "chunk": 18,
+      "t_s": [
+        1.8,
+        1.9000000000000001
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4612,
+        "adn1": 3,
+        "adn2_left": 3,
+        "abn1": 5,
+        "jon_all": 2122,
+        "sugar_grn_right": 432,
+        "mn9_left": 7,
+        "mn9_right": 7
+      },
+      "dn_count": 6,
+      "dn_rate_inst_hz": 60.0,
+      "dn_rate_ema_hz": 46.36274764681129,
+      "amplitude": 1.0,
+      "travel_mm": 1.4300249310490922,
+      "thorax_z_mm": 1.1103016474894085,
+      "contact_transitions": 553,
+      "finite": true
+    },
+    {
+      "chunk": 19,
+      "t_s": [
+        1.9000000000000001,
+        2.0
+      ],
+      "jon_on": true,
+      "jon_source": "feedback",
+      "counts": {
+        "total": 4628,
+        "adn1": 3,
+        "adn2_left": 3,
+        "abn1": 6,
+        "jon_all": 2191,
+        "sugar_grn_right": 387,
+        "mn9_left": 14,
+        "mn9_right": 6
+      },
+      "dn_count": 6,
+      "dn_rate_inst_hz": 60.0,
+      "dn_rate_ema_hz": 51.72858833355279,
+      "amplitude": 1.0,
+      "travel_mm": 1.4376647624508088,
+      "thorax_z_mm": 1.1643838750429003,
+      "contact_transitions": 489,
+      "finite": true
+    }
+  ],
+  "summary": {
+    "completed_chunks": 20,
+    "all_finite": true,
+    "thorax_z_min_mm": 0.9221184378002398,
+    "thorax_z_max_mm": 1.1655208731187834,
+    "total_travel_mm": 22.188557546541688,
+    "travel_signal_on_chunks_mm": 17.944007893562535,
+    "travel_signal_off_chunks_mm": 0.02429768721565822,
+    "jon_spikes_feedback_chunks": 36414,
+    "jon_spikes_off_chunks": 0,
+    "wall_clock_s": 95.8
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "gate": "feeding-body qualification gate, fifth execution",
+  "spec": "PART4-SENSORY-SPECS.md SS7 as amended by Passes 1-3, 5 and 6 (revised)",
+  "step_verdicts": {
+    "q0": "PASS",
+    "q1": "PASS",
+    "q2": "PASS",
+    "q3": "PASS",
+    "q4": "PASS",
+    "q5": "PASS",
+    "q6": "PASS"
+  },
+  "band_guard": {
+    "eps_res_rad": 0.003454526197746749,
+    "q2_term_rad": 0.003454526197746749,
+    "q3_term_rad": 1.4387058802878184e-06,
+    "theta_off_rad": 0.010363578593240247,
+    "guard": "theta_off < 0.10 rad",
+    "passes": true
+  },
+  "mesh_cache_no_download_during_gate": true,
+  "gate_verdict": "PASS",
+  "wall_clock_s": 0.02738642692565918,
+  "freeze_outputs": {
+    "pinned_hashes": {
+      "fruitfly.xml": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "joints.yaml": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "actuators.yaml": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "mujoco_globals.yaml": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "rigging.yaml": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737"
+    },
+    "compiled_premise_values": {
+      "c_head-c_rostrum-pitch": {
+        "joint_id": 4,
+        "actuator_id": 3,
+        "yaml_range": [
+          -1.24,
+          0.183
+        ],
+        "compiled_jnt_range": [
+          -1.24,
+          0.183
+        ],
+        "actuator_ctrlrange": [
+          -1.24,
+          0.183
+        ],
+        "ctrllimited": true,
+        "kp_gainprm0": 10.0,
+        "biasprm1": -10.0,
+        "neg_biasprm1": 10.0,
+        "jnt_stiffness": 3.0,
+        "qpos_spring": 0.0,
+        "qpos0": 0.0,
+        "jnt_solref": [
+          0.001,
+          1.0
+        ],
+        "jnt_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "ctrlrange_equals_yaml_range_exactly": true,
+        "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+        "expected_compiled_values_hold": true
+      },
+      "c_rostrum-c_haustellum-pitch": {
+        "joint_id": 6,
+        "actuator_id": 5,
+        "yaml_range": [
+          -1.59,
+          0.7
+        ],
+        "compiled_jnt_range": [
+          -1.59,
+          0.7
+        ],
+        "actuator_ctrlrange": [
+          -1.59,
+          0.7
+        ],
+        "ctrllimited": true,
+        "kp_gainprm0": 10.0,
+        "biasprm1": -10.0,
+        "neg_biasprm1": 10.0,
+        "jnt_stiffness": 3.0,
+        "qpos_spring": 0.0,
+        "qpos0": 0.0,
+        "jnt_solref": [
+          0.001,
+          1.0
+        ],
+        "jnt_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "ctrlrange_equals_yaml_range_exactly": true,
+        "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+        "expected_compiled_values_hold": true
+      },
+      "c_rostrum-c_haustellum-yaw": {
+        "joint_id": 5,
+        "actuator_id": 4,
+        "yaml_range": [
+          -0.0873,
+          0.0873
+        ],
+        "compiled_jnt_range": [
+          -0.0873,
+          0.0873
+        ],
+        "actuator_ctrlrange": [
+          -0.0873,
+          0.0873
+        ],
+        "ctrllimited": true,
+        "kp_gainprm0": 10.0,
+        "biasprm1": -10.0,
+        "neg_biasprm1": 10.0,
+        "jnt_stiffness": 3.0,
+        "qpos_spring": 0.0,
+        "qpos0": 0.0,
+        "jnt_solref": [
+          0.001,
+          1.0
+        ],
+        "jnt_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "ctrlrange_equals_yaml_range_exactly": true,
+        "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+        "expected_compiled_values_hold": true
+      },
+      "c_haustellum-l_labrum-pitch": {
+        "joint_id": 7,
+        "actuator_id": 6,
+        "yaml_range": [
+          -0.00524,
+          1.05
+        ],
+        "compiled_jnt_range": [
+          -0.00524,
+          1.05
+        ],
+        "actuator_ctrlrange": [
+          -0.00524,
+          1.05
+        ],
+        "ctrllimited": true,
+        "kp_gainprm0": 1.0,
+        "biasprm1": -1.0,
+        "neg_biasprm1": 1.0,
+        "jnt_stiffness": 3.0,
+        "qpos_spring": 0.0,
+        "qpos0": 0.0,
+        "jnt_solref": [
+          0.001,
+          1.0
+        ],
+        "jnt_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "ctrlrange_equals_yaml_range_exactly": true,
+        "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+        "expected_compiled_values_hold": true
+      },
+      "c_haustellum-r_labrum-pitch": {
+        "joint_id": 8,
+        "actuator_id": 7,
+        "yaml_range": [
+          -0.00524,
+          1.05
+        ],
+        "compiled_jnt_range": [
+          -0.00524,
+          1.05
+        ],
+        "actuator_ctrlrange": [
+          -0.00524,
+          1.05
+        ],
+        "ctrllimited": true,
+        "kp_gainprm0": 1.0,
+        "biasprm1": -1.0,
+        "neg_biasprm1": 1.0,
+        "jnt_stiffness": 3.0,
+        "qpos_spring": 0.0,
+        "qpos0": 0.0,
+        "jnt_solref": [
+          0.001,
+          1.0
+        ],
+        "jnt_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "ctrlrange_equals_yaml_range_exactly": true,
+        "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+        "expected_compiled_values_hold": true
+      }
+    },
+    "construction": {
+      "call": "fly = q1_upstream_integrity.build_flybody()  # Part 1b Demo C construction: FlyBody(name='flybody'); skeleton = FlyBodySkeleton(axis_order=YAW_ROLL_PITCH, joint_preset=ALL_BIOLOGICAL); neutral = KinematicPosePreset.FLYBODY_NEUTRAL.get_pose_by_axis_order(YAW_ROLL_PITCH); fly.add_joints(skeleton, neutral_pose=neutral); fly.add_actuators(skeleton.get_actuated_dofs_from_preset(ALL), ActuatorType.POSITION, neutral_input=neutral); fly.add_leg_adhesion() for the Q2-Q6 builds (shipped defaults: leg gain 0.985, labrum gain 1.0, add_labrum=True); world = FlatGroundWorld(); world.add_fly(fly, (0, 0, 1.0), Rotation3D('quat', (1, 0, 0, 0))); sim = Simulation(world); sim.reset()",
+      "neutral_pose_source": "KinematicPosePreset.FLYBODY_NEUTRAL.get_pose_by_axis_order(FlyBodyAxisOrder.YAW_ROLL_PITCH)",
+      "neutral_input_proboscis": {
+        "c_head-c_rostrum-pitch": 0.0,
+        "c_rostrum-c_haustellum-yaw": 0.0,
+        "c_rostrum-c_haustellum-pitch": 0.0,
+        "c_haustellum-l_labrum-pitch": 0.0,
+        "c_haustellum-r_labrum-pitch": 0.0
+      },
+      "note": "Per Amendment Pass 5 the compiled spring references follow the neutral pose the construction receives; a build with a different neutral pose changes the SS4.3 map and must re-read it under the Pass 5 rule."
+    },
+    "prediction_table_artefact": "results/q2_predictions_prereg5.json",
+    "prediction_table_computed_at_utc": "2026-11-24T03:27:29.414051+00:00",
+    "extension_signs": {
+      "c_head-c_rostrum-pitch": -1,
+      "c_rostrum-c_haustellum-pitch": -1
+    },
+    "theta_ext_rad": {
+      "c_head-c_rostrum-pitch": -0.9538461538461539,
+      "c_rostrum-c_haustellum-pitch": -1.2230769230769232,
+      "c_haustellum-l_labrum-pitch": 0.2625,
+      "c_haustellum-r_labrum-pitch": 0.2625
+    },
+    "empirical_map": {
+      "c_head-c_rostrum-pitch": [
+        {
+          "target_ctrl": -1.24,
+          "steady_state_rad": -0.9545621920719135
+        },
+        {
+          "target_ctrl": -1.062125,
+          "steady_state_rad": -0.8182054691158768
+        },
+        {
+          "target_ctrl": -0.88425,
+          "steady_state_rad": -0.681827107651262
+        },
+        {
+          "target_ctrl": -0.706375,
+          "steady_state_rad": -0.545418881152931
+        },
+        {
+          "target_ctrl": -0.5285,
+          "steady_state_rad": -0.40897307773204444
+        },
+        {
+          "target_ctrl": -0.35062499999999996,
+          "steady_state_rad": -0.2724826374368105
+        },
+        {
+          "target_ctrl": -0.17274999999999996,
+          "steady_state_rad": -0.13594128078489695
+        },
+        {
+          "target_ctrl": 0.005125000000000046,
+          "steady_state_rad": 0.0006563736196472385
+        },
+        {
+          "target_ctrl": 0.18300000000000005,
+          "steady_state_rad": 0.13731470457148406
+        }
+      ],
+      "c_rostrum-c_haustellum-pitch": [
+        {
+          "target_ctrl": -1.59,
+          "steady_state_rad": -1.2226719740972138
+        },
+        {
+          "target_ctrl": -1.30375,
+          "steady_state_rad": -1.0027236483356363
+        },
+        {
+          "target_ctrl": -1.0175,
+          "steady_state_rad": -0.7827830323549518
+        },
+        {
+          "target_ctrl": -0.7312500000000001,
+          "steady_state_rad": -0.5628380682474744
+        },
+        {
+          "target_ctrl": -0.44500000000000006,
+          "steady_state_rad": -0.3428769005043256
+        },
+        {
+          "target_ctrl": -0.15875000000000017,
+          "steady_state_rad": -0.12288842772868758
+        },
+        {
+          "target_ctrl": 0.12749999999999995,
+          "steady_state_rad": 0.09713717645948423
+        },
+        {
+          "target_ctrl": 0.41375000000000006,
+          "steady_state_rad": 0.31720799552205925
+        },
+        {
+          "target_ctrl": 0.7,
+          "steady_state_rad": 0.5373299759364728
+        }
+      ],
+      "c_rostrum-c_haustellum-yaw": [
+        {
+          "target_ctrl": -0.0873,
+          "steady_state_rad": -0.06711556629674473
+        },
+        {
+          "target_ctrl": -0.065475,
+          "steady_state_rad": -0.05033701895018929
+        },
+        {
+          "target_ctrl": -0.04365,
+          "steady_state_rad": -0.033558471730568924
+        },
+        {
+          "target_ctrl": -0.021824999999999997,
+          "steady_state_rad": -0.016779921704358984
+        },
+        {
+          "target_ctrl": 0.0,
+          "steady_state_rad": -1.3661255568404124e-06
+        },
+        {
+          "target_ctrl": 0.021824999999999997,
+          "steady_state_rad": 0.01677719774479465
+        },
+        {
+          "target_ctrl": 0.04365000000000001,
+          "steady_state_rad": 0.033555772691966815
+        },
+        {
+          "target_ctrl": 0.06547499999999999,
+          "steady_state_rad": 0.05033435705061122
+        },
+        {
+          "target_ctrl": 0.0873,
+          "steady_state_rad": 0.0671129587482088
+        }
+      ],
+      "c_haustellum-l_labrum-pitch": [
+        {
+          "target_ctrl": -0.00524,
+          "steady_state_rad": -0.0013502365707778407
+        },
+        {
+          "target_ctrl": 0.126665,
+          "steady_state_rad": 0.03161187899847326
+        },
+        {
+          "target_ctrl": 0.25856999999999997,
+          "steady_state_rad": 0.06457405760288566
+        },
+        {
+          "target_ctrl": 0.39047499999999996,
+          "steady_state_rad": 0.09753631403958801
+        },
+        {
+          "target_ctrl": 0.52238,
+          "steady_state_rad": 0.13049866346411362
+        },
+        {
+          "target_ctrl": 0.6542849999999999,
+          "steady_state_rad": 0.16346112092255077
+        },
+        {
+          "target_ctrl": 0.7861899999999999,
+          "steady_state_rad": 0.19642370133510423
+        },
+        {
+          "target_ctrl": 0.918095,
+          "steady_state_rad": 0.22938641948339678
+        },
+        {
+          "target_ctrl": 1.05,
+          "steady_state_rad": 0.26234928999881674
+        }
+      ],
+      "c_haustellum-r_labrum-pitch": [
+        {
+          "target_ctrl": -0.00524,
+          "steady_state_rad": -0.0013192296894245312
+        },
+        {
+          "target_ctrl": 0.126665,
+          "steady_state_rad": 0.031643209461700995
+        },
+        {
+          "target_ctrl": 0.25856999999999997,
+          "steady_state_rad": 0.06460567693006501
+        },
+        {
+          "target_ctrl": 0.39047499999999996,
+          "steady_state_rad": 0.09756818659566786
+        },
+        {
+          "target_ctrl": 0.52238,
+          "steady_state_rad": 0.13053075326220714
+        },
+        {
+          "target_ctrl": 0.6542849999999999,
+          "steady_state_rad": 0.16349339131507656
+        },
+        {
+          "target_ctrl": 0.7861899999999999,
+          "steady_state_rad": 0.1964561172068835
+        },
+        {
+          "target_ctrl": 0.918095,
+          "steady_state_rad": 0.22941894552843894
+        },
+        {
+          "target_ctrl": 1.05,
+          "steady_state_rad": 0.26238188983690647
+        }
+      ]
+    },
+    "eps_res_rad": 0.003454526197746749,
+    "theta_off_rad": 0.010363578593240247,
+    "band_guard_passes": true,
+    "E_max_rad": 2.1745857359418848,
+    "E_raw_extremes_rad": 2.8258492046987165,
+    "E_max_fraction_of_raw_extremes": 0.7695335378568909,
+    "final_arena_offset_mm": 0.6,
+    "arena_offset_adjusted_once": false,
+    "q5_measured_onset_fraction": 0.8370970470740771,
+    "q6_calibration_curve": "results/q6_rerun5.json + results/q6_calibration_curve_rerun5.csv",
+    "q6_r_hi_status": "155 Hz PROVISIONAL (SS7.6)"
+  }
+}

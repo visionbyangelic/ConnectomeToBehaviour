@@ -1,0 +1,329 @@
+{
+  "step": "Q0 (rerun5)",
+  "environment_label": "Support for the FlyBody body model is experimental.",
+  "mesh_cache_before": {
+    "cache_root": "/home/hatch/.cache/flygym_assets",
+    "n_files": 87,
+    "files": [
+      "flybody_fullsize_meshes_20260623a/README",
+      "flybody_fullsize_meshes_20260623a/c_abdomen1_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen1_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen2_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen2_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen3_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen3_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen4_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen4_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen5_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen5_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen6_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen6_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen7_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen7_lower.obj",
+      "flybody_fullsize_meshes_20260623a/c_abdomen8_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_haustellum_black.obj",
+      "flybody_fullsize_meshes_20260623a/c_haustellum_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_head_black.obj",
+      "flybody_fullsize_meshes_20260623a/c_head_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_head_ocelli.obj",
+      "flybody_fullsize_meshes_20260623a/c_head_red.obj",
+      "flybody_fullsize_meshes_20260623a/c_rostrum_body.obj",
+      "flybody_fullsize_meshes_20260623a/c_rostrum_bristle-brown.obj",
+      "flybody_fullsize_meshes_20260623a/c_thorax_black.obj",
+      "flybody_fullsize_meshes_20260623a/c_thorax_body.obj",
+      "flybody_fullsize_meshes_20260623a/l_antenna_black.obj",
+      "flybody_fullsize_meshes_20260623a/l_antenna_body.obj",
+      "flybody_fullsize_meshes_20260623a/l_haltere_body.obj",
+      "flybody_fullsize_meshes_20260623a/l_labrum_lower.obj",
+      "flybody_fullsize_meshes_20260623a/l_wing_brown.obj",
+      "flybody_fullsize_meshes_20260623a/l_wing_membrane.obj",
+      "flybody_fullsize_meshes_20260623a/lf_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/lf_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/lf_trochanterfemur_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/lh_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/lh_trochanterfemur_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/lm_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/lm_trochanterfemur_body.obj",
+      "flybody_fullsize_meshes_20260623a/metadata.yaml",
+      "flybody_fullsize_meshes_20260623a/r_antenna_black.obj",
+      "flybody_fullsize_meshes_20260623a/r_antenna_body.obj",
+      "flybody_fullsize_meshes_20260623a/r_haltere_body.obj",
+      "flybody_fullsize_meshes_20260623a/r_labrum_lower.obj",
+      "flybody_fullsize_meshes_20260623a/r_wing_brown.obj",
+      "flybody_fullsize_meshes_20260623a/r_wing_membrane.obj",
+      "flybody_fullsize_meshes_20260623a/rf_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/rf_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/rf_trochanterfemur_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/rh_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/rh_trochanterfemur_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_coxa_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tarsus1_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tarsus2_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tarsus3_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tarsus4_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tarsus5_brown.obj",
+      "flybody_fullsize_meshes_20260623a/rm_tibia_body.obj",
+      "flybody_fullsize_meshes_20260623a/rm_trochanterfemur_body.obj"
+    ]
+  },
+  "hashes": {
+    "fruitfly.xml": {
+      "sha256": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "expected": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "match": true
+    },
+    "joints.yaml": {
+      "sha256": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "expected": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "match": true
+    },
+    "actuators.yaml": {
+      "sha256": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "expected": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "match": true
+    },
+    "mujoco_globals.yaml": {
+      "sha256": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "expected": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "match": true
+    },
+    "rigging.yaml": {
+      "sha256": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "expected": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "match": true
+    }
+  },
+  "hashes_all_match": true,
+  "premise_checks": {
+    "c_head-c_rostrum-pitch": {
+      "joint_id": 4,
+      "actuator_id": 3,
+      "yaml_range": [
+        -1.24,
+        0.183
+      ],
+      "compiled_jnt_range": [
+        -1.24,
+        0.183
+      ],
+      "actuator_ctrlrange": [
+        -1.24,
+        0.183
+      ],
+      "ctrllimited": true,
+      "kp_gainprm0": 10.0,
+      "biasprm1": -10.0,
+      "neg_biasprm1": 10.0,
+      "jnt_stiffness": 3.0,
+      "qpos_spring": 0.0,
+      "qpos0": 0.0,
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+      "expected_compiled_values_hold": true
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "joint_id": 6,
+      "actuator_id": 5,
+      "yaml_range": [
+        -1.59,
+        0.7
+      ],
+      "compiled_jnt_range": [
+        -1.59,
+        0.7
+      ],
+      "actuator_ctrlrange": [
+        -1.59,
+        0.7
+      ],
+      "ctrllimited": true,
+      "kp_gainprm0": 10.0,
+      "biasprm1": -10.0,
+      "neg_biasprm1": 10.0,
+      "jnt_stiffness": 3.0,
+      "qpos_spring": 0.0,
+      "qpos0": 0.0,
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+      "expected_compiled_values_hold": true
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "joint_id": 5,
+      "actuator_id": 4,
+      "yaml_range": [
+        -0.0873,
+        0.0873
+      ],
+      "compiled_jnt_range": [
+        -0.0873,
+        0.0873
+      ],
+      "actuator_ctrlrange": [
+        -0.0873,
+        0.0873
+      ],
+      "ctrllimited": true,
+      "kp_gainprm0": 10.0,
+      "biasprm1": -10.0,
+      "neg_biasprm1": 10.0,
+      "jnt_stiffness": 3.0,
+      "qpos_spring": 0.0,
+      "qpos0": 0.0,
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+      "expected_compiled_values_hold": true
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "joint_id": 7,
+      "actuator_id": 6,
+      "yaml_range": [
+        -0.00524,
+        1.05
+      ],
+      "compiled_jnt_range": [
+        -0.00524,
+        1.05
+      ],
+      "actuator_ctrlrange": [
+        -0.00524,
+        1.05
+      ],
+      "ctrllimited": true,
+      "kp_gainprm0": 1.0,
+      "biasprm1": -1.0,
+      "neg_biasprm1": 1.0,
+      "jnt_stiffness": 3.0,
+      "qpos_spring": 0.0,
+      "qpos0": 0.0,
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+      "expected_compiled_values_hold": true
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "joint_id": 8,
+      "actuator_id": 7,
+      "yaml_range": [
+        -0.00524,
+        1.05
+      ],
+      "compiled_jnt_range": [
+        -0.00524,
+        1.05
+      ],
+      "actuator_ctrlrange": [
+        -0.00524,
+        1.05
+      ],
+      "ctrllimited": true,
+      "kp_gainprm0": 1.0,
+      "biasprm1": -1.0,
+      "neg_biasprm1": 1.0,
+      "jnt_stiffness": 3.0,
+      "qpos_spring": 0.0,
+      "qpos0": 0.0,
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "pure_position_servo_gainprm0_eq_neg_biasprm1": true,
+      "expected_compiled_values_hold": true
+    }
+  },
+  "ctrlrange_premise_holds": true,
+  "pure_position_servo_holds": true,
+  "expected_compiled_values_hold": true,
+  "construction": {
+    "call": "fly = q1_upstream_integrity.build_flybody()  # Part 1b Demo C construction: FlyBody(name='flybody'); skeleton = FlyBodySkeleton(axis_order=YAW_ROLL_PITCH, joint_preset=ALL_BIOLOGICAL); neutral = KinematicPosePreset.FLYBODY_NEUTRAL.get_pose_by_axis_order(YAW_ROLL_PITCH); fly.add_joints(skeleton, neutral_pose=neutral); fly.add_actuators(skeleton.get_actuated_dofs_from_preset(ALL), ActuatorType.POSITION, neutral_input=neutral); fly.add_leg_adhesion() for the Q2-Q6 builds (shipped defaults: leg gain 0.985, labrum gain 1.0, add_labrum=True); world = FlatGroundWorld(); world.add_fly(fly, (0, 0, 1.0), Rotation3D('quat', (1, 0, 0, 0))); sim = Simulation(world); sim.reset()",
+    "neutral_pose_source": "KinematicPosePreset.FLYBODY_NEUTRAL.get_pose_by_axis_order(FlyBodyAxisOrder.YAW_ROLL_PITCH)",
+    "neutral_input_proboscis": {
+      "c_head-c_rostrum-pitch": 0.0,
+      "c_rostrum-c_haustellum-yaw": 0.0,
+      "c_rostrum-c_haustellum-pitch": 0.0,
+      "c_haustellum-l_labrum-pitch": 0.0,
+      "c_haustellum-r_labrum-pitch": 0.0
+    },
+    "note": "Per Amendment Pass 5 the compiled spring references follow the neutral pose the construction receives; a build with a different neutral pose changes the SS4.3 map and must re-read it under the Pass 5 rule."
+  },
+  "verdict": "PASS",
+  "wall_clock_s": 6.762198448181152
+}

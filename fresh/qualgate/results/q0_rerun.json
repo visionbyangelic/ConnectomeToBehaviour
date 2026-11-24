@@ -1,0 +1,172 @@
+{
+  "step": "Q0 (re-run)",
+  "environment_label": "Support for the FlyBody body model is experimental.",
+  "hashes": {
+    "fruitfly.xml": {
+      "sha256": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "expected": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "match": true
+    },
+    "joints.yaml": {
+      "sha256": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "expected": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "match": true
+    },
+    "actuators.yaml": {
+      "sha256": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "expected": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "match": true
+    },
+    "mujoco_globals.yaml": {
+      "sha256": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "expected": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "match": true
+    },
+    "rigging.yaml": {
+      "sha256": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "expected": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "match": true
+    }
+  },
+  "hashes_all_match": true,
+  "premise_checks": {
+    "c_head-c_rostrum-pitch": {
+      "actuator_ctrlrange": [
+        -1.24,
+        0.183
+      ],
+      "joints_yaml_range": [
+        -1.24,
+        0.183
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "ctrllimited": true,
+      "jnt_range_compiled": [
+        -1.24,
+        0.183
+      ],
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    },
+    "c_rostrum-c_haustellum-pitch": {
+      "actuator_ctrlrange": [
+        -1.59,
+        0.7
+      ],
+      "joints_yaml_range": [
+        -1.59,
+        0.7
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "ctrllimited": true,
+      "jnt_range_compiled": [
+        -1.59,
+        0.7
+      ],
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    },
+    "c_rostrum-c_haustellum-yaw": {
+      "actuator_ctrlrange": [
+        -0.0873,
+        0.0873
+      ],
+      "joints_yaml_range": [
+        -0.0873,
+        0.0873
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "ctrllimited": true,
+      "jnt_range_compiled": [
+        -0.0873,
+        0.0873
+      ],
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    },
+    "c_haustellum-l_labrum-pitch": {
+      "actuator_ctrlrange": [
+        -0.00524,
+        1.05
+      ],
+      "joints_yaml_range": [
+        -0.00524,
+        1.05
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "ctrllimited": true,
+      "jnt_range_compiled": [
+        -0.00524,
+        1.05
+      ],
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    },
+    "c_haustellum-r_labrum-pitch": {
+      "actuator_ctrlrange": [
+        -0.00524,
+        1.05
+      ],
+      "joints_yaml_range": [
+        -0.00524,
+        1.05
+      ],
+      "ctrlrange_equals_yaml_range_exactly": true,
+      "ctrllimited": true,
+      "jnt_range_compiled": [
+        -0.00524,
+        1.05
+      ],
+      "jnt_solref": [
+        0.001,
+        1.0
+      ],
+      "jnt_solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    }
+  },
+  "ctrlrange_premise_holds": true,
+  "verdict": "PASS",
+  "wall_clock_s": 7.239623069763184
+}

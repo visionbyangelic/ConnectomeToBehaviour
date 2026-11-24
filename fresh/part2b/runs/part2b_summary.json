@@ -1,0 +1,132 @@
+{
+  "part": "2b",
+  "criteria": {
+    "C1_completion_and_finiteness": true,
+    "C2_physical_bounds": true,
+    "C3_walking_while_active": true,
+    "C3_detail": [
+      {
+        "seed": 4200,
+        "n_on": 18,
+        "n_off": 1,
+        "mean_diff_mm": 1.2188608929232199
+      },
+      {
+        "seed": 4201,
+        "n_on": 16,
+        "n_off": 1,
+        "mean_diff_mm": 1.2022624630363907
+      },
+      {
+        "seed": 4202,
+        "n_on": 17,
+        "n_off": 1,
+        "mean_diff_mm": 1.2566960118891009
+      }
+    ],
+    "C4_sensory_reentry": true,
+    "C4_detail": [
+      {
+        "seed": 4200,
+        "n_feedback": 17,
+        "mean_jon_feedback": 2170.1176470588234,
+        "mean_jon_off": 0.0,
+        "ok": true
+      },
+      {
+        "seed": 4201,
+        "n_feedback": 17,
+        "mean_jon_feedback": 2148.8823529411766,
+        "mean_jon_off": 0.0,
+        "ok": true
+      },
+      {
+        "seed": 4202,
+        "n_feedback": 17,
+        "mean_jon_feedback": 2142.0,
+        "mean_jon_off": 0.0,
+        "ok": true
+      }
+    ],
+    "C5_closed_vs_open_exploratory": true,
+    "C5_detail": {
+      "closed_mean_late_travel_mm": 12.717756081838381,
+      "open_late_travel_mm": 0.0013475700710487925
+    },
+    "stability_verdict": "STABLE"
+  },
+  "episodes": {
+    "ep_closed_4200.json": {
+      "completed_chunks": 20,
+      "all_finite": true,
+      "thorax_z_min_mm": 0.9847437670110992,
+      "thorax_z_max_mm": 1.1670458228086817,
+      "total_travel_mm": 22.567179842607963,
+      "travel_signal_on_chunks_mm": 17.031716327293537,
+      "travel_signal_off_chunks_mm": 0.02429768721565822,
+      "jon_spikes_feedback_chunks": 36892,
+      "jon_spikes_off_chunks": 0,
+      "wall_clock_s": 101.1
+    },
+    "ep_closed_4201.json": {
+      "completed_chunks": 20,
+      "all_finite": true,
+      "thorax_z_min_mm": 0.9065497677184361,
+      "thorax_z_max_mm": 1.164011843143896,
+      "total_travel_mm": 20.66468707911438,
+      "travel_signal_on_chunks_mm": 15.524803460950857,
+      "travel_signal_off_chunks_mm": 0.02429768721565822,
+      "jon_spikes_feedback_chunks": 36531,
+      "jon_spikes_off_chunks": 0,
+      "wall_clock_s": 93.1
+    },
+    "ep_closed_4202.json": {
+      "completed_chunks": 20,
+      "all_finite": true,
+      "thorax_z_min_mm": 0.9221184378002398,
+      "thorax_z_max_mm": 1.1655208731187834,
+      "total_travel_mm": 22.188557546541688,
+      "travel_signal_on_chunks_mm": 17.944007893562535,
+      "travel_signal_off_chunks_mm": 0.02429768721565822,
+      "jon_spikes_feedback_chunks": 36414,
+      "jon_spikes_off_chunks": 0,
+      "wall_clock_s": 95.8
+    }
+  },
+  "control": {
+    "ep_open_4200.json": {
+      "completed_chunks": 20,
+      "all_finite": true,
+      "thorax_z_min_mm": 0.8580311336841391,
+      "thorax_z_max_mm": 1.0899367209035098,
+      "total_travel_mm": 2.6107601754816394,
+      "travel_signal_on_chunks_mm": 0.0,
+      "travel_signal_off_chunks_mm": 0.06092548993744468,
+      "jon_spikes_feedback_chunks": 0,
+      "jon_spikes_off_chunks": 5,
+      "wall_clock_s": 69.1
+    }
+  },
+  "sanity_phases": {
+    "A_zero": {
+      "travel_total_mm": 0.030991099116067015,
+      "amplitude_last_chunk": 0.0,
+      "travel_last_0.3s_mm": 0.0013230234893378688
+    },
+    "B_mid": {
+      "travel_total_mm": 4.903445658018336,
+      "amplitude_last_chunk": 0.47013792263206033,
+      "travel_last_0.3s_mm": 1.9672111381358415
+    },
+    "C_full": {
+      "travel_total_mm": 13.821952418769598,
+      "amplitude_last_chunk": 1.0,
+      "travel_last_0.3s_mm": 4.239133502513242
+    },
+    "D_halt": {
+      "travel_total_mm": 3.340799675798424,
+      "amplitude_last_chunk": 0.025625273430726223,
+      "travel_last_0.3s_mm": 0.47314204798842213
+    }
+  }
+}

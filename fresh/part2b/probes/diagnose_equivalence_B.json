@@ -1,0 +1,13 @@
+{
+  "mode": "B",
+  "seed": 4105,
+  "builds": [
+    {
+      "build_number_in_process": 1,
+      "structure": "chunked",
+      "spikes": 5539,
+      "sha256": "46bf581500a386f1b7b417ddd36afbafac1ddaf980cf43c0d4f7c3ad2096397b"
+    }
+  ],
+  "wall_clock_s": 4.6
+}
