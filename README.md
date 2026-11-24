@@ -1,9 +1,9 @@
 <div align="center">
 
 # ConnectomeToBehaviour
-<img width="1170" height="639" alt="Whole-brain render of the Drosophila connectome, neurons coloured by type" src="assets/whole-brain-fly-render.jpg" />
+<img width="1170" height="639" alt="Render of the fruit fly brain connectome, neurons coloured by type" src="assets/whole-brain-fly-render.jpg" />
 
-### A complete map of a fruit fly's brain, switched on inside a computer and connected to a simulated body, to test how much of the fly's behaviour comes from the wiring itself.
+### The complete wiring map of a fruit fly's central brain, switched on inside a computer and connected to a simulated body, to test how much of the fly's behaviour comes from the wiring itself.
 
 <br>
 
@@ -19,15 +19,15 @@
 
 > ### 💡 The Project in Plain English
 >
-> Scientists have mapped a fruit fly's whole brain: every neuron, and every connection between them. This project takes that map and switches it on inside a computer. The simulated brain is connected to a simulated fly body, so it can sense the world and move, and what it does changes what it senses next, in a loop. Then comes the real test. I change the wiring on purpose: I scramble it, cut out specific pathways, and replace it with simple hand-written rules, and I watch what happens to the behaviour each time. That is how I find out how much of what the fly does is really written in its wiring, and how much comes from the extra parts I had to build around it. Where it stands: the brain is rebuilt and checked against the published model it follows, the loop is running, and the behaviour tests are being measured now.
+> Scientists have mapped a fruit fly's central brain, the main part of its brain: every neuron, and every connection between them. This project takes that map and switches it on inside a computer. The simulated brain is connected to a simulated fly body, so it can sense the world and move, and what it does changes what it senses next, in a loop. Then comes the real test. I change the wiring on purpose: I scramble it, cut out specific pathways, and replace it with simple hand-written rules, and I watch what happens to the behaviour each time. That is how I find out how much of what the fly does is really written in its wiring, and how much comes from the extra parts I had to build around it. Where it stands: the brain is rebuilt and checked against the published model it follows, the loop is running, and the behaviour tests are being measured now.
 
 ---
 
 ## 1. What is This Project? (The Elevator Pitch)
 
-**ConnectomeToBehaviour** is an experimental computational neuroscience project built around one simple-sounding move: take the complete wiring map of a real brain, switch it on inside a computer, and connect it to a body.
+**ConnectomeToBehaviour** is an experimental computational neuroscience project built around one simple-sounding move: take the complete wiring map of a real fly's central brain, switch it on inside a computer, and connect it to a body.
 
-The brain is the adult fruit fly's, *Drosophila melanogaster*. Its wiring map, called a **connectome**, was published by the FlyWire Consortium: 127,400 neurons in the central brain, and every connection between them that the map records. I rebuilt that brain as a simulation in Brian2, where every neuron follows the same simple firing rule. The rule is called **leaky integrate-and-fire**: the neuron collects incoming pulses, called spikes, and fires a spike of its own when it has collected enough. The rebuild follows the published model of Shiu et al. (*Nature*, 2024).
+The brain is the adult fruit fly's, *Drosophila melanogaster*. Its wiring map, called a **connectome**, was published by the FlyWire Consortium: 127,400 neurons (the brain's signalling cells) in the central brain, and every connection between them that the map records. Each connection, the point where one neuron passes a signal to another, is called a **synapse**. I rebuilt that brain as a simulation in Brian2, where every neuron follows the same simple firing rule. The rule is called **leaky integrate-and-fire**: the neuron collects incoming pulses, called spikes, and fires a spike of its own when it has collected enough. The rebuild follows the published model of Shiu et al. (*Nature*, 2024).
 
 The body is FlyBody, a physically simulated fly running in the MuJoCo physics engine through FlyGym. Brain and body are connected in both directions, and that is what makes the loop **closed**: what the body senses is turned into activity in the brain, the brain's activity is turned into movement, and the movement changes what the body senses next.
 
@@ -45,7 +45,7 @@ A connectome has the same limit. It records, in extraordinary detail, which neur
 
 There is a second trap, and it is the one this project is built to avoid. Suppose the simulated fly behaves: it tastes sugar and extends its proboscis (its feeding tube) to feed. It is tempting to announce that the wiring produced the behaviour. But on its way out, the behaviour passed through every layer I built around the brain: the input layer, the output layer, the controllers inside the simulated body. Any of those could be doing the real work, with the famous wiring diagram acting as little more than a passenger.
 
-So the mystery is not whether a whole brain can be switched on inside a computer. It can. The mystery is how you would ever know which part of the machine deserves the credit.
+So the mystery is not whether a whole central brain can be switched on inside a computer. It can. The mystery is how you would ever know which part of the machine deserves the credit.
 
 ---
 
@@ -86,7 +86,7 @@ I ask it three ways. Each way has a name, because each one is measured and repor
 
 **E-Total: the effect of the specific wiring as a whole.** The intact wiring is compared against scrambled versions of itself. The scrambled versions keep the same connection statistics (the same overall number and strength of connections) but destroy the specific pattern of who connects to whom. If the behaviour survives scrambling, the specific pattern was not doing the work.
 
-**E-Pathway: the effect of one pathway.** The pathway a behaviour depends on is cut, and the result is compared against matched cuts of the same size made in parts of the brain the behaviour should not need. A pathway only earns its name if cutting it hurts more than cutting somewhere else.
+**E-Pathway: the effect of one pathway.** The pathway a behaviour depends on is cut (a cut made on purpose like this is called a lesion), and the result is compared against matched cuts of the same size made in parts of the brain the behaviour should not need. A pathway only earns its name if cutting it hurts more than cutting somewhere else.
 
 **E-Baseline: the effect of having the wiring at all.** The intact brain is compared against simple hand-written rules driving the same body, with no connectome involved. If a handful of rules can match the brain, then for that behaviour the wiring was not doing much.
 
@@ -115,10 +115,11 @@ Four components, and only one of them is biological.
 ┌──────────────────────────────────────────────────────────────────────────┐
 │ THE WIRING                                                               │
 │                                                                          │
-│ The FlyWire connectome, materialisation v630: the complete map of the    │
-│ adult fruit fly central brain, built from electron microscope images     │
-│ by the FlyWire Consortium. About 14.7 million connections between        │
-│ 127,400 neurons. Public data; none of it was generated by me.            │
+│ The FlyWire connectome, materialisation v630: the complete map of        │
+│ the adult fruit fly central brain, built from electron microscope        │
+│ images by the FlyWire Consortium. A materialisation is one fixed         │
+│ release of the map. About 14.7 million connections join 127,400          │
+│ neurons. Public data; none of it was generated by me.                    │
 ├──────────────────────────────────────────────────────────────────────────┤
 │ THE BRAIN                                                                │
 │                                                                          │
@@ -140,9 +141,10 @@ Four components, and only one of them is biological.
 │ FlyBody, a physically simulated fruit fly running in the MuJoCo          │
 │ physics engine through FlyGym. It has 102 actuators (the simulated       │
 │ equivalent of muscles), and its proboscis has 5 moving parts. It         │
-│ feels the world through contact, and the taste signal used in this       │
-│ project is constructed from those contact events, and is labelled        │
-│ as constructed wherever it appears.                                      │
+│ feels the world through contact, the way you feel for a light            │
+│ switch in a dark room. The taste signal in this project is built         │
+│ from those contact events, and is labelled as constructed                │
+│ wherever it appears.                                                     │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -152,9 +154,9 @@ Four components, and only one of them is biological.
 
 Feeding comes first, for one reason: its pathway can be followed through the wiring, step by step.
 
-In a living fly, taste neurons on the mouthparts and legs detect chemicals such as sugar and bitter compounds. Their signal travels into the brain, through a chain of interneurons (neurons whose job is to pass signals between other neurons), and reaches a pair of motor neurons called **MN9**. MN9 drives the **proboscis**, the fly's feeding tube: when MN9 fires, the proboscis extends and the fly feeds. Every step of that chain exists as named neurons in the wiring map, which makes feeding the cleanest behaviour in this project to test.
+In a living fly, taste neurons on the mouthparts and legs detect chemicals such as sugar and bitter compounds. Their signal travels into the brain, through a chain of interneurons (neurons whose job is to pass signals between other neurons), and reaches a pair of motor neurons called **MN9** (motor neurons are the neurons whose firing directly drives a movement). MN9 drives the **proboscis**, the fly's feeding tube: when MN9 fires, the proboscis extends and the fly feeds. Every step of that chain exists as named neurons in the wiring map, which makes feeding the cleanest behaviour in this project to test.
 
-Before the wiring experiment itself, I am measuring the baseline: how the rebuilt brain responds to four taste conditions on their own. Sugar. Bitter. Sugar and bitter together. And water. The question inside the baseline is one a living fly answers every day: **does bitter quiet the brain's answer to sugar, and by how much?** In the living animal, bitter suppresses feeding. Whether this model shows the same suppression, and how strong it is, is one of the first things the baseline will say.
+Before the wiring experiment itself, I am measuring the baseline: how the rebuilt brain responds to four taste conditions on their own. Sugar. Bitter. Sugar and bitter together. And water. The question inside the baseline is one a living fly answers every day: **does bitter quiet the brain's answer to sugar, and by how much?** (In the project's registered documents, this question is labelled RQ-C2.) In the living animal, bitter suppresses feeding. Whether this model shows the same suppression, and how strong it is, is one of the first things the baseline will say.
 
 Walk and halt behaviour comes after feeding: whether the model stops walking when it feeds, the way real flies do.
 
@@ -163,7 +165,7 @@ Walk and halt behaviour comes after feeding: whether the model stops walking whe
 ## 8. How the Claims Are Kept Honest
 
 - **Everything is decided before it is run.** For each experiment, the comparisons, the measurements and the decision rules are written down and frozen in advance, in preregistrations kept in this repository. Nothing about a test is adjusted after its results are seen.
-- **The translator cannot be tuned to the answer.** It is calibrated on separate data and frozen before testing. As a control, tests are also run with a translator refitted to each changed wiring, so a frozen translator can neither hide an effect nor invent one.
+- **The translator cannot be tuned to the answer.** It is calibrated on separate data and frozen before testing. As a control, tests are also run with a translator refitted (recalibrated from scratch) to each changed wiring, so a frozen translator can neither hide an effect nor invent one.
 - **Every behaviour gets a receipt.** For each result, I keep a record of which parts came from the wiring and which came from the layers I added, so the credit, and the blame, are assigned openly.
 - **The claims are about the model.** Every conclusion is stated as a conclusion about this simulated brain, under these documented choices. Nothing is claimed directly about a living fly.
 
@@ -206,7 +208,7 @@ Walk and halt behaviour comes after feeding: whether the model stops walking whe
 
 **Q: Is this mind uploading, or emulation?** A: No. The project tests how much of a behaviour the wiring accounts for. It says nothing about consciousness, and it does not claim to reproduce the living brain.
 
-**Q: Why a fruit fly?** A: Because it is the animal we have this for: a complete map of an adult brain, published models to build on, and behaviours whose pathways can be followed through the map. What is learned here about testing wiring claims applies wherever connectomes go next.
+**Q: Why a fruit fly?** A: Because it is the animal we have this for: a complete map of an adult central brain, published models to build on, and behaviours whose pathways can be followed through the map. What is learned here about testing wiring claims applies wherever connectomes go next.
 
 **Q: What if the wiring turns out not to matter much?** A: Then that is the result. The experiments are designed so that this answer is measurable, with bounds, and it would be reported exactly as a positive result would be. It would mean the behaviour lives in the layers around the wiring, which is itself a finding worth having.
 
@@ -216,7 +218,7 @@ Walk and halt behaviour comes after feeding: whether the model stops walking whe
 
 Fruit flies are the beginning, not the end. Connectomes are being built for larger and larger brains, and every new map will arrive with the same question attached: now that we have the wiring, what does it explain?
 
-Answering that question badly is easy: switch the map on, watch it move, and credit the wiring. This project is an attempt to answer it properly, on the one complete adult brain map available today, where the system is still small enough that every layer around the wiring can be documented and every claim can be checked. The test itself, and the habit of accounting for which layer did what, are built to travel to whatever connectome comes next.
+Answering that question badly is easy: switch the map on, watch it move, and credit the wiring. This project is an attempt to answer it properly, on the one complete adult central brain map available today, where the system is still small enough that every layer around the wiring can be documented and every claim can be checked. The test itself, and the habit of accounting for which layer did what, are built to travel to whatever connectome comes next.
 
 ---
 
