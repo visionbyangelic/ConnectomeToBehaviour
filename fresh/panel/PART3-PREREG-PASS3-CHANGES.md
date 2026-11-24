@@ -1,0 +1,24 @@
+# Part 3 Preregistration — Amendment Pass 3: changed passages (for the panel's re-check)
+
+Pass 3 only. Decision: Angelic delegated the primary-drive-rate decision ("Decision B") to the panel on 23 Nov 2026; **final tally: switch, unanimous 3–0** (Reviewers 1, 2 and 3 all voted switch; Reviewer 3's vote landed after the 2–0 majority was first recorded). Effect: **primary 200 Hz, sensitivity arm 150 Hz.** Angelic accepted the panel's decisions on 23 Nov 2026, 22:44 WAT ("Alright let's go with that") — acceptance of the decisions; her formal approval of the amended document itself is still taken at the §13 freeze step, after this re-check. Frozen implementation untouched; no trial has run. Full record: `PART3-PREREG-REVIEW.md` (consultation sections) and the Pass 3 entry in the preregistration's Amendment history.
+
+Changed passages in `PART3-PREREG.md`:
+
+1. **Status header** — Pass 3 sentence added (panel decision, delegated by Angelic; primary switches to 200 Hz; this file named for the re-check).
+2. **§3 protocol table, Drive row** — `r_poi` now **200 Hz**, with a note that the code default is 150 Hz and the choice/evidence are in A1.
+3. **§3/A1 — rewritten.** Headline: the reference file's own statistics settle the rate at 200 Hz. Full history preserved (150 Hz was the code-default reconstruction; the producing call passed no override; notebook prose said 200 Hz). Stated reason for the switch: the discrimination evidence — driven GRNs mean **196.8 Hz**, controls exactly **0.0 Hz**, driven rate reads out the generating rate by construction, paper's 455-at-200 Hz corroboration vs the file's 448 active neurons. 200 Hz labelled "protocol established by reference-only discrimination evidence, not read from the reference parquet's own parameter record". Non-rescue rule restated for the inverted assignment.
+4. **§3, Methods-read paragraph** — closing sentence added: the paper-level ambiguity stands; the file's own statistics are what discriminate.
+5. **§3, Reference-only discrimination paragraph, "Consequence"** — rewritten: Pass 2 kept 150 Hz pending this decision; the decision is now taken and Pass 3 makes 200 Hz primary / 150 Hz arm, as a formal pre-freeze amendment.
+6. **§4 design table** — stimulus `rate_hz` = **200**; primary keeps seeds **3000–3029**. **Run IDs (Reviewer 3's explicit specification):** primary run_id becomes `part3-sugarR-200Hz` (was `part3-sugarR-benchmark`); arm run_id `part3-sugarR-150Hz-arm`; extension run_id updated for coherence to `part3-sugarR-200Hz-n60` (§4.2, §8.1).
+7. **§4 seed-block allocation** — 3000–3029 primary (200 Hz); 3030–3059 the **150 Hz** arm; 3060–3089 extension; 9999 determinism check; explicit no-seed-reuse-across-arms sentence; note that the swap changed only the rates attached to the first two blocks, before any seed was used.
+8. **§4 wall-clock paragraph** — arm reference updated to the 150 Hz arm.
+9. **§4.1 — rewritten as the 150 Hz sensitivity arm.** Same rules as before (non-confirmatory; runs only after the primary verdict; §8.2 governs); run_id `part3-sugarR-150Hz-arm`; seeds 3030–3059; the inversion and its reason stated in the section.
+10. **§4.2 and §8.1(a)** — the N = 60 extension follows the primary rate: 30 additional trials at **200 Hz**, seeds 3060–3089.
+11. **§8.2 — inverted.** If the 200 Hz primary is FAIL or INCONCLUSIVE and the 150 Hz arm would have passed, the verdict stands, annotated **"protocol-ambiguous"**; a corrected (150 Hz) protocol needs its own new preregistration.
+12. **§9** — the arm paragraph updated to the 150 Hz arm; step-7 note: the drive rate remains the known candidate, to be weighed with evidence in either direction.
+13. **§11** — reporting commitment now names the 150 Hz arm.
+14. **§7 item 7 and §8 (Reviewer 3's qualification)** — the gap is now explicit and **signed**: **G = C_cross − ρ_observed** (and the Pearson analogue G_Pearson); the 95th-percentile PASS condition applies to the signed gap, not an absolute difference, so exceeding the ceiling is never penalised.
+15. **§13 (freeze tag)** — stated plainly: **no preregistration tag has ever been created** (the `part3-prereg-v1` name was a Pass 2 plan; approval never happened). The first freeze tag will be created on the approved Pass 3 document and named `part3-prereg-v2`.
+16. **Amendment history** — Pass 3 entry added (delegation, **unanimous 3–0 tally**, Reviewer 3's run_id and signed-gap specifications, Angelic's 22:44 WAT acceptance of the decisions with document approval still separate at §13, edits, freeze still gated on panel re-check + Angelic's approval + §13 checklist); footer updated.
+
+Nothing else changed. In particular: all Pass 1/Pass 2 text (ceiling, gap bootstrap, floors, MN9 tests, scope §12, freeze checklist §13) is untouched, and the Pass 1/Pass 2 amendment-history entries still describe the 150 Hz-primary state they amended — they are history, not current protocol.
