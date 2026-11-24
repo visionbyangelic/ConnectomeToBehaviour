@@ -588,3 +588,296 @@ README note: a short note was added to the top-level README, outside the preserv
 Hash-and-lock rule: recorded above in this gate record, with the rung report's hash and lock time.
 
 Reviewer 1's conditional certification of the §8.4 Part 7 prerequisite stands: certified, conditional on items 1-3 being in the report, which they now are. **The gate is still NOT CLOSED**, pending Reviewer 3's confirmation of the amended wording and the owner's sign-off.
+
+## Reviewer 1 follow-up reply: per-lesion sub-streams and 5,000-simulation re-run (24 Nov 2026, evening)
+
+Reviewer 1 replied to the draft-confirmation message. His rulings, as received: changes 1 and 2 confirmed; change 3 confirmed once the per-lesion sub-stream sentence is amended; the family-wise criterion to be restated as one-sided (a family-wise error rate is checked against an upper bound only, not a two-sided band); the synthetic null check to be re-run at 5,000 simulations per null case on the actual code to settle the pooled 116/2000 = 0.058 family-wise figure. He asked to see only the amended sub-stream sentence and the re-run script output, nothing else.
+
+NOTE ON THE VERBATIM RECORD: the full verbatim text of this reply was not in the inherited context of the agent who applied these fixes, and a search of the workspace, memory and /tmp found no copy of it. The summary above is therefore NOT a verbatim transcription. The verbatim text must be supplied by the parent agent and appended here before this entry is complete.
+
+Fixes applied to the draft (`work/part5_pvalue_amendment_draft.md`; the preregistration itself not edited):
+
+- Per-lesion sub-streams: 5701-5749 for L-MN9, 5750-5799 for L-GRN, fixed in advance, deterministic and order-independent, each lesion falling back within its own stream under the section 8.1 fallback. Applying the amendment also amends section 8.1's generation sentence to the two fixed streams in place of the shared 5701, 5702, ... sequence.
+- Seed-disjointness script re-run with the two streams as separate blocks: PASS, 39 blocks, 993 seeds, all pairwise disjoint; worst-case assertions (L-MN9 max 5749, L-GRN max 5799, both below 5800; the two streams partition 5701-5799 exactly). Script `work/part5_seed_disjointness_check.py` (SHA-256 `039bf97c48cf530fc00bcd016c87e6c39059c42f137368579994517d33184570`); output `work/part5_seed_disjointness_output.txt` (SHA-256 `f4bef7a672132eb622328733f9d9a30d391137b2b673fe35a9416fa891b103a5`).
+- Coverage additions: rung bootstrap seeds 20261128, 20261129, 20261130 added; Part 5 declares no 202611xx bootstrap seed for its own confidence intervals (verified against section 7, which resamples seed pairs under the episode seeds and names no bootstrap RNG seed), so none added; the 20261124 and 20261125 wording reconciled to their registered identities (Part 3 MN9 and gap bootstrap seeds) with the reuse recorded, and the preregistration's section 7 sentence labelling them by that reuse flagged in Insert 2 for editorial correction at the freeze; a scan of the run artefacts under repo/results (63 JSON files, 342 distinct seeds used) confirms every seed actually used falls inside a listed block and none falls inside the new permutation blocks 6000-6099.
+- Family-wise criterion restated as one-sided in the draft, in the synthetic-check record, and in the check code: a family-wise error rate is checked against an upper bound only, not a two-sided band.
+- Synthetic null check re-run at 5,000 simulations per null case on the actual code: PASS. Per-member false-positive rates under a true null: normal 0.046 to 0.055, lognormal 0.047 to 0.054, all inside the 0.05 plus or minus 0.009 band; family-wise: normal 0.052 (261/5000), lognormal 0.043 (213/5000), both below the 0.059 one-sided upper bound; pooled family-wise 0.0474 (474/10000), below 0.05 and below its one-sided upper bound of 0.0565, settling the earlier pooled 116/2000 = 0.058 figure as noise at the smaller simulation count. Known effect: per-member rejection 0.986 to 1.000, family-wise 1.000. Code `work/part5_permutation_test.py` (SHA-256 `32ab7eab49db97b2611255a1b44c6b5e2818eb0e515fc8fc97b7bc0d961eaaef`); output `work/part5_synthetic_null_check_output_5000.txt` (SHA-256 `410c210e97dcd2bd4303e426ad1d8515b648df685844863d85fe301b2756c830`); elapsed 333.5 s.
+- Confirmation message written to `work/r1_substream_confirmation_message.md` (SHA-256 `5a12e701afa3a2ca7a9610cac60930d0e814e14f03802e2d31d4e21335b3f49f`): the amended sub-stream sentence verbatim, the re-run disjointness script output verbatim, and the 5,000-simulation figures. Nothing else in the message.
+- Draft status header updated: Reviewer 1 confirmed changes 1 and 2; change 3 confirmed once the per-lesion sub-stream sentence is amended (done in this revision); Reviewers 2 and 3 re-confirmation of the statistic change still outstanding (their browser rounds are in flight).
+
+The gate is still NOT CLOSED: Reviewer 3's confirmation of the amended rung wording, Reviewer 1's confirmation of the revised paragraph and outputs (carried by the message above), Reviewers 2 and 3's re-confirmation of the statistic change, and the owner's sign-off remain outstanding.
+
+## Rung results gate: final confirmations and closure (24 Nov 2026, evening)
+
+The three replies below arrived tonight and are appended verbatim. Verbatim reviewer text keeps its own punctuation throughout.
+
+**Completion note (24 Nov 2026).** The entry above headed "Reviewer 1 follow-up reply: per-lesion sub-streams and 5,000-simulation re-run" summarised Reviewer 1's reply and carried a note that the verbatim text still had to be supplied before that entry is complete. That text is now supplied by the parent agent and appended directly below as Verbatim Reply A, which completes that entry.
+
+### Verbatim Reply A: Reviewer 1, on the Part 5 amendment's three required changes (24 Nov 2026, evening)
+
+Reviewer 1: the three required changes
+
+I checked the text and output against my ruling. I have not re-run your code or script.
+
+Change	Status
+1. Suppression-ratio statistic	Satisfied
+2. Synthetic null check	Satisfied, with a note on the family-wise criterion
+3. Seed-range claim	Satisfied on the stated defect; one issue introduced by the fix
+
+I confirm changes 1 and 2. I confirm change 3 once one sentence in the amendment is changed. After that, the amendment can go to the owner.
+
+Change 1: satisfied
+
+The revised paragraph does what I asked:
+
+s_i = (d_i − b_i)/(d_i + b_i) is odd under swapping.
+A seed with d_i = 0 gives −1 and stays in. A seed with both rates 0 gives 0 and is kept. The exclusion rule is gone.
+The sharp null is stated, and the symmetry now follows from exchangeability.
+The registered ratio, its CI and the claim rule are unchanged.
+Change 2: satisfied
+The pass criterion was stated before the run. All 18 null cells and both family-wise figures are inside 0.05 ± 0.021. The mean across the 18 cells is 0.0504.
+The power check is near 1.0, and the self-tests pass.
+The diagnostic reproduces my own simulation. The r − 1 statistic gives 0.159 / 0.365 / 0.579 (mine 0.150 / 0.361 / 0.563) and s_i stays near 0.045. That is independent agreement between two simulations on the same defect.
+One note on the family-wise figures. The two values, 0.060 and 0.056, sit slightly above the nominal 0.05 ceiling for Holm. A two-sided ±0.021 band is too lenient for a family-wise error rate, which should only be checked against an upper bound. Pooled, the two are 116/2000 = 0.058, about 1.6 standard errors above 0.05. That isn’t evidence of a problem, but a re-run at 5,000 simulations (the whole check took 117 s) would settle it cheaply. State the family-wise criterion as one-sided in the record. This is not blocking.
+Change 3: the stated defect is fixed, but the fix creates a starvation risk
+
+I confirmed the arithmetic. The block sizes sum to 990, which matches the script’s total, and the union is 990 distinct seeds. The worst-case assertion (the sub-seed stream ends at 5799, below arm (e) at 5800) is right.
+
+The problem: the sub-seed stream is now a single shared stream “drawn in order … across both lesions”. If the first lesion needs many candidates before it finds five sets that pass the screen, it can use most of the 99 sub-seeds and leave the second lesion with few or none. The fallback then means “all drawn sets are used and the shortfall reported”. That would leave one lesion with fewer controls than the design needs, and the outcome would depend on processing order.
+
+Required change: give each lesion its own fixed sub-stream, for example 5701–5749 for L-MN9 and 5750–5799 for L-GRN. Say that the ranges are fixed in advance and that each lesion falls back within its own stream. This is deterministic, order-independent, and keeps the stream below 5800. Rerun the disjointness script with the two ranges listed as separate blocks.
+
+Coverage items for the disjointness script (non-blocking, but cheap)
+Bootstrap seeds. The script lists analysis seeds 20261123–20261127 but not the rung’s 20261128, 20261129 and 20261130. Add them, along with any bootstrap seeds Part 5 declares for its own CIs.
+Labels. Insert 2’s disjointness paragraph describes 20261124 and 20261125 as “gate and slice synthetic seeds”, while the script and the rung preregistration label them the Part 3 MN9 and gap bootstrap seeds. Reconcile the wording so the record agrees with itself.
+Seeds actually used. The script checks documented ranges. Add a scan of the run manifests in the repository to confirm that every seed actually used (including any from the Part 4 gate and slice) falls inside a listed block and that none falls inside the new ones.
+
+Send the amended sub-stream sentence and the re-run script output. I need to see nothing else.
+
+### Verbatim Reply B: Reviewer 2, re-confirmation of the Part 5 amendment (24 Nov 2026, evening)
+
+Part 5 Preregistration (PART5-PREREG.md §7) Permutation Amendment (Revised) — Reviewer 2 Re-Confirmation (CONFIRM)
+
+Reviewer: Reviewer 2 (Gemini)
+
+Subject: Re-confirmation of revised PART5-PREREG.md §7 permutation-test amendment (replacing r_i - 1 with s_i = (d_i - b_i) / (d_i + b_i) for the suppression-ratio test statistic, explicit sharp-null exchangeability statement, bounded control sub-seed stream 5701–5799, and verified synthetic null / seed-disjointness artefacts)
+
+Verdict: CONFIRM — No further changes required. Logged as delegated under Angelic Charles's authority/delegation (subject to ratification).
+
+1) Why s_i = (d_i - b_i) / (d_i + b_i) Replaces r_i - 1 Cleanly
+
+Exact Oddness Under Within-Seed Swap (s_i vs. r_i - 1):
+
+Under swapping (d_i, b_i) ↔ (b_i, d_i) within seed i, r_i - 1 maps to (1/r_i) − 1, which is not antisymmetric around zero and inflates false positives severely under skewed/lognormal rates (0.159, 0.365, and 0.579 on the actual code at σ ∈ {0.5, 1.0, 1.5}, closely reproducing Reviewer 1's 0.150, 0.361, 0.563 and reaching up to 56% in lognormal null checks).
+
+By contrast, the normalized difference
+
+s_i = (d_i − b_i) / (d_i + b_i)
+
+satisfies s_i(b_i, d_i) = −s_i(d_i, b_i) identically. Under the sharp null that (d_i, b_i) are exchangeable within each seed, sign-flipping s_i produces an exact null distribution without distorting ratio asymmetry.
+
+Boundary Behavior & Removal of Zero-Denominator Guard:
+
+When d_i = 0 and b_i > 0, s_i = −1 (preserving full-suppression sensitivity).
+
+When d_i = b_i = 0 (both zero), defining s_i = 0 keeps the seed cleanly in the test without division by zero or ad-hoc exclusion rules, making the old zero-denominator exclusion guard unnecessary.
+
+Preserved Scope: Only the test statistic feeding the p-value for the suppression-ratio family member changes; the registered suppression ratio endpoint, its bootstrap CI, TOST equivalence rules, and the claim rule remain unchanged.
+
+Sharp-Null Exchangeability Wording:
+
+Stating the sharp null (within-seed exchangeability of the paired values) explicitly and noting that symmetry around zero follows from that exchangeability—rather than treating sign-symmetry as an ungrounded extra assumption—is statistically clean and transparent.
+
+2) Verification of Synthetic Null Check & Seed Disjointness
+
+Synthetic Null & Power Check (work/part5_permutation_test.py, SHA-256 825e5157f102d248b2cefd24fbbf083a506ea3b29e41c7113ea8fd6e64a006da; output work/part5_synthetic_null_check_output.txt, SHA-256 df214b60c4138657c958900523f39c9c25c35087a104c182d91529086501b505):
+
+At α = 0.05 (B = 10,000 permutations, PCG64 seed 987654321, 1,000 simulations per null case), both the normal-rate null (per-member 0.041–0.061, family-wise 0.060) and the skewed/zero-containing lognormal null (per-member 0.040–0.065, family-wise 0.056) fall well within the pre-registered 0.05 ± 0.021 pass band, while the 500-trial known-effect check achieves 0.982–1.000 per-member and 1.000 family-wise power.
+
+The diagnostic comparison confirms mean(s_i) holds nominal type-I error (0.044, 0.045, 0.048) where mean(r_i - 1) inflates (0.159, 0.365, 0.579).
+
+Seed Disjointness (work/part5_seed_disjointness_check.py, SHA-256 61dc7c461b52471b40ddaf2cfcd474eff113a91b6f9f80bc6f20c14af14df5f8; output work/part5_seed_disjointness_output.txt, SHA-256 95b11e84dda7b3118b50cdfb67470ecf94f0789873be3a24042c31b2a8d802c0):
+
+Restricting the control-selection sub-seed stream to 5701–5799 (with fallback to §8.1 if exhausted) keeps it cleanly below arm (e) starting at 5800, and PASS across 35 blocks (990 seeds, all pairwise disjoint) is verified.
+
+3) Remaining Elements Confirmed
+
+Seed-stratified label permutation (1 targeted vs. 5 controls within each of the 20 shared seeds 5200–5219), plus-one permutation p-value formula (1 + count) / (B + 1), edge-case handling, per-test exchangeability statements, descriptive treatment of the frozen-vs.-refit gap (with bootstrap CIs and TOST as a separate inferential route under registered rules), Holm family (m = 9, seeds 6000–6008), and the implementation specification all stand confirmed.
+
+My CONFIRM applies to the amendment as now drafted for application to PART5-PREREG.md. (As always, I cannot modify files directly in this chat, so please paste this confirmation into your panel/ gate log.)
+
+### Verbatim Reply C, first reply: Reviewer 3, final confirmation on the rung results gate (24 Nov 2026, evening)
+
+Reviewer 3 — final confirmation: Part 3 Rung 2 Results HARD gate
+PASS
+
+I confirm that the amended wording lifts my REQUIRE CHANGES objection. Reviewer 3's vote is now PASS for the four-conditions rung results gate.
+
+The decisive improvement is that the report no longer misrepresents the registered bootstrap quantity as a conventional null-distribution p-value. It preserves the analysis actually preregistered and executed, while making its statistical meaning and limitations explicit.
+
+Assessment of the amendments
+
+1. Registered bootstrap procedure — accepted with the qualification. The table now identifies bootstrap tail fractions, not p-values. It also distinguishes the nominal Holm adjustment from guaranteed family-wise error control. This resolves my central objection: readers are no longer invited to interpret an uncentred bootstrap tail calculation as a calibrated null test.
+
+2. The revised numerical bounds — accepted as reporting conventions. The 2/(B+1) and 12/(B+1) figures are explicitly identified as add-one reporting conventions for this bootstrap calculation, not as evidence that the underlying null p-value has been bounded. That distinction must remain visible wherever these numbers are repeated.
+
+3. Methodological disclosure — accepted. The report accurately records that the frozen procedure was executed as written, and that the limitation concerns the interpretation of its output, not an undocumented departure from the preregistration.
+
+4. Supplementary permutation check — accepted as post-hoc corroboration. The plus-one Monte Carlo calculation, separate seed, script and artefact are disclosed. Its results agree with the registered claims. It does not replace or retroactively modify the registered analysis, which is the correct treatment.
+
+5. Exact-permutation note — accepted with its stated scope. Given the reported complete separation of the 30 observations in each group, the exact two-sided permutation probability 2/C(60,30) is consistent with the stated exchangeability-based comparison. This is useful supplementary evidence, not a conversion of the original bootstrap tail fractions into null p-values.
+
+One boundary I want preserved
+
+The report must not later shorten its conclusion to “six Holm-significant differences” or “Holm-controlled significance.” Its accurate conclusion is:
+
+Six differences satisfy the registered claim rule.
+
+The reported bootstrap tail fractions and their nominal Holm adjustment are not calibrated null-distribution p-values or guaranteed family-wise error control.
+
+The separate post-hoc permutation analysis provides additional corroboration, but remains post-hoc and non-governing.
+
+The confidence intervals and the supplementary permutation results support the substantive direction of the observed model differences. None of this establishes biological validity, causal connectome contribution, or validation of the sensory encoder.
+
+Final disposition
+
+Gate component — Reviewer 3
+Freeze and execution provenance — Accepted on supplied documentary evidence
+Anchor — PASS
+MN9 endpoints and suppression classification — Accepted within registered scope
+Six registered comparisons — Accepted under the explicitly qualified registered rule
+Sensitivity and bilateral conditions — Accepted as non-confirmatory/descriptive
+Statistical qualification and disclosures — Accepted
+Part 3 Rung 2 Results HARD gate — PASS
+
+I withdraw the outstanding REQUIRE CHANGES and cast PASS.
+
+This closes Reviewer 3's objection and supports certification of the Part 7 prerequisite on this rung's side, consistent with Reviewer 1's ruling. It does not substitute for the owner's sign-off or the remaining panel process.
+
+The human expert check remains owed at the Part 8 final gate.
+
+### Verbatim Reply C, second reply: Reviewer 3, re-confirmation of the Part 5 permutation amendment (24 Nov 2026, evening)
+
+Reviewer 3 — re-confirmation of the Part 5 permutation amendment
+ACCEPT — UPDATED DRAFT
+
+I re-confirm my approval of the amendment as now described. The replacement suppression statistic resolves the substantive objection I raised to the earlier draft. I have no further methodological change to require before the amendment is submitted for panel and owner approval.
+
+The change is substantive, and I have assessed it as such rather than treating it as a minor implementation correction.
+
+1. Replacement suppression statistic
+
+I accept:
+
+s_i = (d_i - b_i)/(d_i + b_i), T = (1/20) sum_{i=1}^{20} s_i.
+
+The key property is the one the previous statistic lacked. Swapping the two arms within a seed gives:
+
+s_i(b_i, d_i) = -s_i(d_i, b_i).
+
+Under the stated sharp null of within-seed exchangeability, the sign-flip transformation is therefore justified, subject to the independence of the paired seed units and the permitted within-pair swaps.
+
+This is materially better than r_i - 1, whose sign and magnitude do not transform symmetrically under arm exchange.
+
+The zero-rate handling is also correct:
+
+d_i = 0, b_i > 0 gives s_i = -1.
+
+d_i = b_i = 0 gives s_i = 0.
+
+Both cases remain in the analysis.
+
+Removing the zero-denominator exclusion guard is therefore appropriate for this statistic. It avoids dropping observations that may carry important suppression information.
+
+The registered suppression ratio, its confidence interval and its decision rule remain unchanged. The amendment changes the test statistic for the permutation member, not the estimand or the substantive suppression endpoint. That distinction should remain explicit in the frozen document.
+
+2. Synthetic null validation
+Reported criteria pass
+
+The diagnostic is particularly useful because it tests the actual analysis code under the stated design rather than validating an abstract description of the method.
+
+The results support the change:
+
+Diagnostic — Earlier r_i - 1 — Replacement s_i
+Lognormal null, sigma = 0.5 — 0.159 — 0.044
+Lognormal null, sigma = 1.0 — 0.365 — 0.045
+Lognormal null, sigma = 1.5 — 0.579 — 0.048
+
+The replacement's per-member false-positive rates and reported family-wise rates also fall within the stated tolerance under both normal and lognormal null cases. The known-effect rejection rates are encouraging.
+
+I accept this as a successful implementation diagnostic against the preregistered simulation criterion. It does not prove exact calibration for every possible data-generating process, but it supplies relevant empirical evidence for the intended design.
+
+One qualification should remain in the report: the synthetic validation supports the stated null scenarios and design; it does not establish universal robustness to arbitrary dependence or departures from within-seed exchangeability.
+
+3. Seed-stratified label permutation
+
+My earlier ruling required restricted permutation within the 20 shared-seed strata. The updated draft retains that design.
+
+I confirm that the pooled-control comparison should preserve each six-observation seed stratum and reassign one targeted label within that stratum. This respects the matched structure rather than treating all 120 observations as freely exchangeable.
+
+No further change is required on this point, provided the frozen implementation actually enforces the restriction for every permutation.
+
+4. Control-selection seed stream
+
+The revised allocation also resolves my earlier concern:
+
+The shared control-selection sub-seed stream is restricted to 5701–5799.
+
+It is consumed in a specified order across both lesions.
+
+It ends before arm (e)'s block begins at 5800.
+
+The registered fallback applies if the stream is exhausted.
+
+The reported disjointness check covers 35 blocks and 990 seeds, with all pairwise comparisons passing. This is an acceptable allocation rule.
+
+5. Remaining design elements
+
+I retain my earlier approval of the following:
+
+Plus-one Monte Carlo permutation p-values.
+
+The stated exchangeability rationale for each test family member.
+
+Conventional Holm step-down with fixed family size m = 9, fixed order and permutation seeds 6000–6008.
+
+The seed-restricted label permutation.
+
+Descriptive-only treatment of the frozen-versus-refit gap where no registered difference test applies.
+
+TOST only as its own separately specified inferential equivalence procedure, not as a substitute for an absent difference test.
+
+Bootstrap intervals retained for estimation, distinct from the permutation tests used for hypothesis testing.
+
+The family membership, endpoints, thresholds and experimental seed allocations remain unchanged as described.
+
+Final ruling
+
+Amendment element — Reviewer 3
+Replace r_i - 1 with s_i — Accept
+Sign-flip justification under sharp null — Accept
+Zero-rate handling — Accept
+Synthetic null diagnostic — Pass on reported criteria
+Seed-stratified label permutation — Accept
+Control-selection seed stream — Accept
+Holm family and reserved permutation seeds — Accept
+Frozen-versus-refit treatment — Accept with stated inferential boundary
+
+Reviewer 3 verdict: ACCEPT — UPDATED DRAFT.
+
+The earlier approval is superseded by this ruling. I approve the revised statistical construction for submission to the full panel and owner, before it is applied to the preregistration.
+
+This is approval of the amendment's methodological design, not permission to execute it before the required approval and freeze. It is also not a Part 5 execution-gate PASS. I have assessed the supplied description and reported diagnostics; I have not independently executed the scripts or verified the supplied file hashes.
+
+### Record note on the amendment's seed-stream versions (24 Nov 2026)
+
+For the record, stated plainly: Reviewer 2's CONFIRM (Verbatim Reply B) and Reviewer 3's ACCEPT (Verbatim Reply C, second reply) were given on the amendment as then drafted, whose control-selection sub-seed stream was the shared stream restricted to 5701-5799, drawn in order across both lesions. The per-lesion refinement (5701-5749 for L-MN9, 5750-5799 for L-GRN, each lesion falling back within its own stream) was applied afterwards, at Reviewer 1's requirement in Verbatim Reply A, and is recorded in the entry above on the per-lesion fix and the re-run checks. Reviewer 1's confirmation of that per-lesion sentence was sent to him tonight (the message at `work/r1_substream_confirmation_message.md`, carrying the amended sentence and the re-run disjointness output, nothing else) and is pending. The amendment itself has not been applied to `docs/closed_loop_preregistration.md`; it goes to the owner for approval first.
+
+### GATE CLOSED: four-conditions rung results gate (24 Nov 2026)
+
+- **Panel: 3 of 3 PASS.** Reviewer 1 PASS stands (his three required items are in the report). Reviewer 2 PASS stands (his ruling on the panel question is recorded above; his re-confirmation of the Part 5 amendment is Verbatim Reply B). Reviewer 3 withdrew his REQUIRE CHANGES and cast PASS tonight (Verbatim Reply C, first reply).
+- **Owner sign-off: Angelic Charles, 24 Nov 2026, 22:11 WAT** ("Yes, sign off and close the rung gate").
+- **GATE CLOSED.** The "gate pending" label in `docs/taste_conditions_results.md` is replaced by a dated closure note (§13 item 17 of the report, with the status line updated); no results text was altered. The report's post-closure SHA-256 is `d121fcf855f1a8e8ac6c5221507a4fe8f4f93d11b3f1a5e21c27ad9df597362b` (the pre-closure locked hash was `54c8dccda026afb259fa64b0b44e7ec052859b892e8bbfa429881b6ef689cd2f`).
+- **The Part 7 prerequisite (§8.4) is discharged.** Reviewer 1 certified it conditional on his items being in the report, which they are; Reviewer 2 certified it in his ruling; Reviewer 3's PASS supports certification on this rung's side, consistent with Reviewer 1's ruling.
+- **Reviewer 3's boundary, recorded with the closure:** the report's conclusion must never be shortened to "six Holm-significant differences" or "Holm-controlled significance". The accurate conclusion is "six differences satisfy the registered claim rule". The reported bootstrap tail fractions and their nominal Holm adjustment are not calibrated null-distribution p-values or guaranteed family-wise error control. The separate post-hoc permutation analysis provides additional corroboration, but remains post-hoc and non-governing.
+- The human expert check remains owed at the Part 8 final gate.
