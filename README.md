@@ -3,7 +3,7 @@
 # ConnectomeToBehaviour
 <img width="1170" height="639" alt="Whole-brain render of the Drosophila connectome, neurons coloured by type" src="assets/whole-brain-fly-render.jpg" />
 
-### Does the wiring matter? A closed-loop simulation of the fruit fly's whole central brain — the FlyWire connectome driving a simulated body — testing with pre-registered controls how much of its behaviour is written in the wiring itself.
+### Does the wiring matter? A closed-loop simulation of the fruit fly's whole central brain, the FlyWire connectome driving a simulated body, testing with pre-registered controls how much of its behaviour is written in the wiring itself.
 
 <br>
 
@@ -19,141 +19,102 @@
 
 ---
 
-## What this project is
+## Overview
 
-I am rebuilding, from public data and free tools only, a fruit fly that runs on its real brain wiring —
-and then testing, honestly and with controls, whether the wiring itself is doing the work.
+ConnectomeToBehaviour is a closed-loop simulation of the adult *Drosophila melanogaster* central brain,
+built from the FlyWire connectome (materialisation v630: 127,400 neurons and about 14.7 million
+connections). Every neuron is a leaky integrate-and-fire unit simulated in Brian2, following the model of
+Shiu et al. (*Nature*, 2024), and the brain is connected to a physically simulated fly body in MuJoCo,
+through FlyGym and the FlyBody model.
 
-The system takes the synapse-resolution wiring diagram of the adult *Drosophila melanogaster* central
-brain (the **FlyWire connectome, materialisation v630**), gives every neuron the same simple, standard
-firing rules (a leaky integrate-and-fire model, as in Shiu et al., *Nature* 2024), connects the brain's
-output to a physically simulated fly body (MuJoCo, via NeuroMechFly v2 / FlyGym), and closes the loop:
-what the body senses drives the brain, what the brain does moves the body, and the movement changes
-what the body senses next.
+The loop runs in both directions. What the body senses drives the brain; what the brain does moves the
+body; and the movement changes what the body senses next. The connectome is the only biological wiring in
+the system. Everything else, the sensory encoder on the way in and the motor decoder and body controllers
+on the way out, is an engineered layer that I document and account for.
 
-The defining discipline of this project is **provenance**. For every behaviour it produces, I account
-for which parts came from the connectome and which came from the layers I had to add — the *encoder*
-on the way in, the *decoder* and the body's own *controllers* on the way out. That accounting is the
-difference between a research result and a demo video. Every claim here is also **model-conditional**:
-the experiments measure how *this model's* behaviour depends on *this model's* wiring, under documented
-encoder, decoder and body choices. They do not, by themselves, measure a living fly.
+## Why it matters
 
-## The question
+Connectomics now delivers complete wiring diagrams of real brains. A wiring diagram on its own, however,
+does not say how much of an animal's behaviour it explains. Whole-brain simulations usually demonstrate
+that a model *can* produce activity or movement. The harder question is whether the specific wiring is
+doing the work, or whether the layers wrapped around it are: the encoder that turns stimuli into neural
+drive, the decoder that turns neural activity into movement, and the controllers built into the body.
+
+This project is built to answer that question with controlled interventions instead of demonstrations,
+and to account for every behaviour it produces: which part came from the connectome, and which parts came
+from the added layers. As more connectomes are published, that accounting is the difference between a
+research result and a demo.
+
+## Research questions
+
+The main question:
 
 > With neuron rules, body physics, encoder and decoder held fixed and documented, how do the target
-> behaviours change — and within what bounds — when the biological connectome's topology is intervened
-> on: intact versus graded shuffled versions of itself, targeted lesions versus matched control
-> lesions, and intact versus connectome-free baselines and controllers run through the identical body?
+> behaviours change, and within what bounds, when the connectome's topology is intervened on?
 
-In plain words: does the real wiring actually matter, or would any wiring — or even a few simple
-if-then rules — produce the same behaviour through the same body? I ask it three precise ways, and I
-never claim a tidy percentage split ("the connectome contributes X%"), because this design cannot
-honestly give one.
+I ask it in three precise forms:
 
-This is the project's centrepiece — a **controlled comparative intervention experiment**, run
-identically for each behaviour, with the comparisons, metrics and pass criteria written down *before*
-the results exist.
+- **E-Total.** How does behaviour change when the intact connectome is replaced by graded shuffled
+  versions of itself, which preserve connection statistics while destroying the specific topology?
+- **E-Pathway.** How does behaviour change when a behaviour's own pathway is lesioned, compared with
+  matched control lesions of the same size elsewhere in the network?
+- **E-Baseline.** How does the intact system compare with connectome-free, rule-based controllers
+  driving the identical body?
 
-## What is being built
+Two supporting measurements run alongside. The first is the model's gustatory baseline: how it responds
+to sugar, to bitter, to both together, and to water, including whether bitter suppresses the feeding
+response to sugar (research question RQ-C2). The second is provenance accounting: for each behaviour,
+how much of the outcome is attributable to the encoder and decoder layers rather than to the wiring.
+Feeding is the first behaviour under test; walk and halt behaviour follows.
 
-**Core-A — the complete, publishable unit.** Rebuild the published brain model to a stated standard;
-audit what the simulated body can actually do; build a population-based decoder for feeding and freeze
-it before evaluation; then run the intervention experiment for feeding (intact vs lesioned vs shuffled
-vs rule-based), with sensitivity checks (parameter changes, sign-uncertainty, closed-loop vs open-loop
-replay) and a compute benchmark reported as a result. If the project stopped at Core-A it would still
-be a finished piece of work — a positive separation *or* a demonstrated equivalence are both results.
+## Approach
 
-**Core-B — the full core.** The same treatment for **walk/halt** (does the model stop walking to feed,
-the way real flies do?). Grooming was in the original design and was dropped by the body audit
-(Part 1b): the shipped body cannot honestly express it, so it is out rather than faked.
+The pipeline is a single loop: connectome, spiking brain, decoder, body, and constructed sensory
+feedback, coupled every 100 ms. The intervention design is comparative throughout. Every comparison
+runs through the identical body, decoder and conditions; only the wiring changes. A shuffled network,
+a lesioned network and the intact network therefore face exactly the same test, and any difference in
+behaviour is attributable to the wiring itself.
 
-**Stretch — separately gated, never allowed to sink the core.** A bounded circuit from BANC (the 2026
-brain-and-nerve-cord connectome) for one behaviour's pathway; a GPU backend held to a parity check
-against the CPU reference; a cross-body check in flybody; vision, neural-first; replication on an
-independent connectome; and a sensitivity run on FlyWire v783.
+The working discipline is fixed in advance. The comparisons, metrics and decision criteria for each
+experiment are written down and frozen before the runs they govern. The decoder is calibrated on
+separate data and frozen before evaluation, with a refit control run alongside. Every claim the project
+makes is conditional on the model and its documented choices, and is stated that way: these experiments
+measure how *this* model's behaviour depends on *this* model's wiring. They do not, by themselves,
+measure a living fly.
 
-**Explicitly out of scope:** flight as a claimed behaviour, courtship, learning/plasticity, hunger
-modelling, whole-CNS simulation, and any claim of "upload" or consciousness.
+## Current work
 
-## Status — in progress, gated, nothing hidden
+The brain model has been rebuilt from the published sources and validated against the published
+reference output, and the closed feeding loop is built and running. I am currently measuring the
+model's gustatory baseline conditions and preparing the feeding intervention experiment, the first full
+test of the research questions above.
 
-This is a fresh rebuild, built in parts. Each part has its pass criteria pre-registered before work
-starts, is independently reviewed, and is only marked passed when the evidence is in. The rebuild was
-developed off-GitHub through its early gates; on 24 Nov 2026 I decided to publish the work in
-progress as it stands, ahead of the original schedule. This page describes the project and the state
-of the evidence — it claims no results the runs have not produced. The rebuild's code,
-preregistrations and tests live under [`fresh/`](fresh/).
+## Earlier prototype
 
-| Part | What | State |
-| :--- | :--- | :--- |
-| 0 | Foundations: plan, registers, metrics, benchmark | **Passed** — closed 23 Nov 2026 |
-| 1 / 1b | Environment + v630 data · Body-capability audit | **Passed** — closed 23 Nov 2026; the audit chose FlyBody for the feeding body |
-| 2 / 2b | Brain model · Minimal end-to-end loop (built early, on purpose) | **Passed** — closed 23–24 Nov 2026; the minimal loop runs stably |
-| 3 | Brain validation against Shiu et al. | Sugar rung **passed** (closed 23 Nov 2026). The four-conditions rung is preregistered, frozen 24 Nov 2026, and its runs are in progress — no results claimed yet |
-| 4 | Sensory specifications · Feeding-body qualification | **Passed** — closed 24 Nov 2026; the feeding body qualified at its pre-registered gate |
-| 5 | Full closed loop (feeding) + preregistration freeze | Loop **built** and tested; preregistration approved — the freeze (calibration first) comes next |
-| 6 | **Comparison checkpoint vs Version 0** | Not yet run — the comparison still happens here. The v0 bundle and this publication were moved forward to 24 Nov 2026 at my decision; only the timing changed |
-| 7 / 7b | Intervention experiment — feeding · walk/halt | Not started — Part 7 waits on the four-conditions rung completing |
-| 8 | Documentation + release | In progress — this publication is an early act of it, moved forward; the full release still closes the project |
-
-Two stop rules I hold myself to: if the published brain cannot be reproduced to the pre-set standard,
-the project pivots to a reproduction-failure report rather than building on an untrusted brain; and a
-part that exceeds its budget stops and comes back to me with options — it does not silently expand.
-
-## Version 0 — my first build, preserved in full
-
-The first version of this project lives in [`v0-prototype/`](v0-prototype/) — bundled, labelled, and
-kept in this repository on purpose, because it is a research output that may help somebody else, and
-because this project's paper trail should show the first attempt, not just the polished one.
-
-What v0 did: it validated the whole-brain model against Shiu et al.'s published output (Pearson
-**0.9936**; sugar drove the feeding motor neuron MN9 to **83.5 ± 6.5 Hz** left / **58.7 ± 5.2 Hz**
-right, bitter alone gave **0 Hz**, and bitter suppressed the sugar response by **89.1% / 75.8%**),
-verified the body stack, and then stopped — its brain-to-body bridge was never built. Its full
-results, its open questions (including an MN9 left/right asymmetry I had not resolved), and its
-complete build log are in the folder, unchanged, and its exact pre-archive state is frozen at the
-tag `v0-prototype-final`.
-
-## How to reproduce
-
-*(Commands are finalised at the release gate; the shape of it is fixed now.)*
-
-- **CPU is the reference platform** for every confirmatory result. GPU runs are exploration-only,
-  and only count after passing a parity check against the CPU on identical input.
-- The environment is pinned and built from scratch (lockfiles in the repo); the brain and body stacks
-  are isolated environments, as they were in v0.
-- Data is public and fetched by a documented procedure: FlyWire v630 from the Shiu et al. release,
-  with file hashes recorded. The datasets themselves are not stored on GitHub.
-- Every run records its code version, data hashes, seeds and configuration in a run manifest, so any
-  number on this page can be traced to the exact run that produced it.
-
-## Where this goes
-
-Preprint first, as soon as Core-A is complete — whatever its outcome. Core-A then goes to a NeuroAI
-workshop or a reproduction venue; Core-A + Core-B is the journal version. The demo video comes after
-the science, as the advert for it — never as the evidence.
+A first build of this project is preserved in [`v0-prototype/`](v0-prototype/) (tag
+`v0-prototype-final`) for the record. It validated the brain model and verified the body stack; its
+brain-to-body bridge was never built.
 
 ## Key references
 
-- Shiu, P.K. et al. (2024). A *Drosophila* computational brain model reveals sensorimotor processing. *Nature* 634, 210–219. https://doi.org/10.1038/s41586-024-07763-9
-- Dorkenwald, S. et al. (2024). Neuronal wiring diagram of an adult brain. *Nature* 634, 124–138. https://doi.org/10.1038/s41586-024-07558-y
-- Wang-Chen, S. et al. (2024). NeuroMechFly v2: simulating embodied sensorimotor control in adult *Drosophila*. *Nature Methods* 21, 2353–2362. https://doi.org/10.1038/s41592-024-02497-y
-- Bates, A.S., Phelps, J.S., Kim, M. et al. (2026). Distributed control circuits across a brain-and-cord connectome. *Nature* 656, 957–970. https://doi.org/10.1038/s41586-026-10735-w
-- Sapkal, N. et al. (2024). Neural circuit mechanisms of behavioural choice in *Drosophila*. *Nature* 634, 191–200.
+- Shiu, P.K. et al. (2024). A *Drosophila* computational brain model reveals sensorimotor processing. *Nature* 634, 210 to 219. https://doi.org/10.1038/s41586-024-07763-9
+- Dorkenwald, S. et al. (2024). Neuronal wiring diagram of an adult brain. *Nature* 634, 124 to 138. https://doi.org/10.1038/s41586-024-07558-y
+- Wang-Chen, S. et al. (2024). NeuroMechFly v2: simulating embodied sensorimotor control in adult *Drosophila*. *Nature Methods* 21, 2353 to 2362. https://doi.org/10.1038/s41592-024-02497-y
+- Sapkal, N. et al. (2024). Neural circuit mechanisms of behavioural choice in *Drosophila*. *Nature* 634, 191 to 200.
+- Bates, A.S., Phelps, J.S., Kim, M. et al. (2026). Distributed control circuits across a brain-and-cord connectome. *Nature* 656, 957 to 970. https://doi.org/10.1038/s41586-026-10735-w
 
 This project builds entirely on public data and open-source tools from the FlyWire Consortium, the
 FlyEM Project Team at HHMI Janelia, the BANC-FlyWire Consortium, and the NeuroMechFly team at EPFL.
-None of the underlying connectome or body-simulation data was generated by me — my contribution is
-the closed-loop integration, the controlled intervention design, the empirical validation, and the
-documentation.
+None of the underlying connectome or body-simulation data was generated by me; my contribution is the
+closed-loop integration, the controlled intervention design, and the validation.
 
 ## How to cite
 
-> Charles, A. (2026). *ConnectomeToBehaviour: Does the wiring matter? A controlled test of connectome
-> contributions to Drosophila behaviour* [Software/research project]. GitHub:
-> https://github.com/visionbyangelic/ConnectomeToBehaviour — Version 0 (archived prototype) under
-> `v0-prototype/`, tag `v0-prototype-final`.
+> Charles, A. (2026). *ConnectomeToBehaviour: Does the wiring matter? A closed-loop simulation of the
+> fruit fly's whole central brain, testing how much of its behaviour is written in the wiring itself*
+> [Software/research project]. GitHub: https://github.com/visionbyangelic/ConnectomeToBehaviour.
+> Version 0 (archived prototype) is preserved under `v0-prototype/`, tag `v0-prototype-final`.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
