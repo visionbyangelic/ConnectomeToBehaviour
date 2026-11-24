@@ -1,0 +1,18 @@
+{
+  "completed_chunks": 100,
+  "all_finite": true,
+  "peak_E_rad": 2.0589064143231948,
+  "final_E_rad": -6.494375035652391e-06,
+  "onset_chunk_SS4.4": 0,
+  "offset_chunk_SS4.4": 69,
+  "first_contact_event_chunk": 4,
+  "event_on_chunks": 58,
+  "max_labrum_food_force_N": 6.737263508460804,
+  "max_front_tarsus_food_force_N": 0.0,
+  "total_mn9_spikes": 959,
+  "drive_applied_chunks": {
+    "sugar": 60
+  },
+  "smoke_checks": {},
+  "wall_clock_s": 110.06934070587158
+}

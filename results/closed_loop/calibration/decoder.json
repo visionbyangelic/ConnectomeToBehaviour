@@ -1,0 +1,24 @@
+{
+  "decoder": {
+    "r_lo_hz": 5.0,
+    "r_hi_hz": 172.64875034982174,
+    "chain_py_sha256": "f2d6c13ffbf091ca3703d4e7e54e0b3297626268ba5b8b2bb30c4228b53b1823",
+    "e_table_rad": {
+      "0": 0.0,
+      "25": 0.2594233473810456,
+      "50": 0.5837025316073525,
+      "75": 0.9079817158336596,
+      "100": 1.2322609000599667,
+      "125": 1.5565400842862738,
+      "155": 1.945675105357842
+    },
+    "e_max_rad": 2.1746,
+    "theta_off_rad": 0.01036,
+    "signs": {
+      "c_head-c_rostrum-pitch": -1,
+      "c_rostrum-c_haustellum-pitch": -1
+    }
+  },
+  "decoder_sha256": "19c5a7f704231686e1cdc3577d20568783519505c2b066c902ca379d2b5505b0",
+  "note": "SHA-256 over the canonical JSON (sorted keys, compact separators) of the frozen decoder: r_lo, calibrated r_hi, chain.py hash, the completed E(r) table at rates 0/25/50/75/100/125/155 Hz, E_max, theta_off and the two extension signs. theta_ext is build-derived per episode (theta_ext_from_params on the compiled parameters) and is recorded per run in the run manifests; it is not a decoder constant."
+}

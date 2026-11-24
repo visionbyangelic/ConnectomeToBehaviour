@@ -1,0 +1,3638 @@
+{
+  "what": "Part 5 matched-control sets artefact (preregistration 8.1), generated at the Part 5 freeze, before any Part 7 episode",
+  "selection_seed": 5700,
+  "pool_size": 127158,
+  "features": [
+    "in_degree",
+    "out_degree",
+    "in_synapses",
+    "out_synapses",
+    "sign",
+    "baseline_rate_hz"
+  ],
+  "families": {
+    "L-MN9": {
+      "family": "L-MN9",
+      "selection_seed": 5700,
+      "stream": [
+        5701,
+        5749
+      ],
+      "target": {
+        "size": 2,
+        "mean_in_degree": 235.5,
+        "mean_out_degree": 79.0,
+        "excitatory_fraction": 1.0,
+        "mean_baseline_rate_hz": 77.48333333333333
+      },
+      "target_flywire_ids": [
+        720575940660219265,
+        720575940645521262
+      ],
+      "n_draws": 49,
+      "draws": [
+        {
+          "sub_seed": 5701,
+          "member_flywire_ids": [
+            720575940612692633,
+            720575940623352063
+          ],
+          "mean_pair_distance": 2.1267716085024873,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 278.0,
+            "mean_out_degree": 141.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 77.38333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5702,
+          "member_flywire_ids": [
+            720575940615671106,
+            720575940632252743
+          ],
+          "mean_pair_distance": 2.8147150159186727,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 286.5,
+            "mean_out_degree": 154.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 80.78333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5703,
+          "member_flywire_ids": [
+            720575940631959097,
+            720575940619877396
+          ],
+          "mean_pair_distance": 3.069997513265152,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 301.0,
+            "mean_out_degree": 159.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 71.88333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5704,
+          "member_flywire_ids": [
+            720575940633185567,
+            720575940632047890
+          ],
+          "mean_pair_distance": 3.281179374019401,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 270.5,
+            "mean_out_degree": 111.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 81.1
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5705,
+          "member_flywire_ids": [
+            720575940630996055,
+            720575940625045180
+          ],
+          "mean_pair_distance": 3.81126117451617,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 187.5,
+            "mean_out_degree": 70.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 77.80000000000001
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": true
+        },
+        {
+          "sub_seed": 5706,
+          "member_flywire_ids": [
+            720575940620274085,
+            720575940624484796
+          ],
+          "mean_pair_distance": 4.187085120962661,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 199.0,
+            "mean_out_degree": 104.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 77.53333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5707,
+          "member_flywire_ids": [
+            720575940614763666,
+            720575940628755815
+          ],
+          "mean_pair_distance": 4.488158197596476,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 299.0,
+            "mean_out_degree": 219.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 79.93333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5708,
+          "member_flywire_ids": [
+            720575940616018956,
+            720575940625102692
+          ],
+          "mean_pair_distance": 4.696732441243501,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 360.0,
+            "mean_out_degree": 215.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 75.88333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5709,
+          "member_flywire_ids": [
+            720575940628598121,
+            720575940618472261
+          ],
+          "mean_pair_distance": 4.749053750543521,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 213.0,
+            "mean_out_degree": 152.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 75.71666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5710,
+          "member_flywire_ids": [
+            720575940630579574,
+            720575940612906518
+          ],
+          "mean_pair_distance": 4.947009872294988,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 275.0,
+            "mean_out_degree": 223.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 77.83333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5711,
+          "member_flywire_ids": [
+            720575940630683385,
+            720575940655014049
+          ],
+          "mean_pair_distance": 5.083486423438831,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 168.0,
+            "mean_out_degree": 130.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 80.31666666666666
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5712,
+          "member_flywire_ids": [
+            720575940621586854,
+            720575940639285949
+          ],
+          "mean_pair_distance": 5.193510529404431,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 235.5,
+            "mean_out_degree": 118.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 80.33333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5713,
+          "member_flywire_ids": [
+            720575940632118156,
+            720575940649829241
+          ],
+          "mean_pair_distance": 5.317790326597931,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 225.5,
+            "mean_out_degree": 144.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 71.75
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5714,
+          "member_flywire_ids": [
+            720575940616103218,
+            720575940660223873
+          ],
+          "mean_pair_distance": 5.3505390208140575,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 181.0,
+            "mean_out_degree": 185.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 77.95
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5715,
+          "member_flywire_ids": [
+            720575940655013025,
+            720575940606866377
+          ],
+          "mean_pair_distance": 5.4050976829145325,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 273.0,
+            "mean_out_degree": 176.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 72.58333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5716,
+          "member_flywire_ids": [
+            720575940612611301,
+            720575940629810748
+          ],
+          "mean_pair_distance": 5.45289883935761,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 157.5,
+            "mean_out_degree": 90.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 74.76666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5717,
+          "member_flywire_ids": [
+            720575940633277209,
+            720575940632602532
+          ],
+          "mean_pair_distance": 5.490914960551114,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 287.5,
+            "mean_out_degree": 257.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 78.15
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5718,
+          "member_flywire_ids": [
+            720575940610677828,
+            720575940631918649
+          ],
+          "mean_pair_distance": 5.699686944007374,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 241.0,
+            "mean_out_degree": 178.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 69.93333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5719,
+          "member_flywire_ids": [
+            720575940610054980,
+            720575940631997032
+          ],
+          "mean_pair_distance": 5.778601659953617,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 275.5,
+            "mean_out_degree": 181.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 67.6
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5720,
+          "member_flywire_ids": [
+            720575940620031366,
+            720575940619048827
+          ],
+          "mean_pair_distance": 6.128690710199352,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 219.0,
+            "mean_out_degree": 168.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 67.01666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5721,
+          "member_flywire_ids": [
+            720575940625874992,
+            720575940607272649
+          ],
+          "mean_pair_distance": 6.325345923359692,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 218.0,
+            "mean_out_degree": 193.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 72.71666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5722,
+          "member_flywire_ids": [
+            720575940625047484,
+            720575940634645600
+          ],
+          "mean_pair_distance": 6.378179364509267,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 225.0,
+            "mean_out_degree": 132.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 68.78333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5723,
+          "member_flywire_ids": [
+            720575940623211725,
+            720575940632722771
+          ],
+          "mean_pair_distance": 6.509853399746657,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 252.5,
+            "mean_out_degree": 149.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 64.55
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5724,
+          "member_flywire_ids": [
+            720575940612064113,
+            720575940617629841
+          ],
+          "mean_pair_distance": 6.5758095481636625,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 244.0,
+            "mean_out_degree": 247.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 68.6
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5725,
+          "member_flywire_ids": [
+            720575940635179871,
+            720575940642428045
+          ],
+          "mean_pair_distance": 6.67289111369975,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 354.0,
+            "mean_out_degree": 196.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 74.43333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5726,
+          "member_flywire_ids": [
+            720575940623210445,
+            720575940625175054
+          ],
+          "mean_pair_distance": 6.705150317079046,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 275.0,
+            "mean_out_degree": 171.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 74.31666666666666
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5727,
+          "member_flywire_ids": [
+            720575940628114684,
+            720575940625875504
+          ],
+          "mean_pair_distance": 6.879659228374976,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 157.5,
+            "mean_out_degree": 199.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 72.43333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5728,
+          "member_flywire_ids": [
+            720575940638181092,
+            720575940623578375
+          ],
+          "mean_pair_distance": 7.108039349365162,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 225.0,
+            "mean_out_degree": 73.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 62.31666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": true
+        },
+        {
+          "sub_seed": 5729,
+          "member_flywire_ids": [
+            720575940636053678,
+            720575940616466260
+          ],
+          "mean_pair_distance": 7.148855776310355,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 113.0,
+            "mean_out_degree": 74.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 67.51666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5730,
+          "member_flywire_ids": [
+            720575940622235425,
+            720575940612423922
+          ],
+          "mean_pair_distance": 7.190007629867976,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 242.5,
+            "mean_out_degree": 173.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 70.43333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5731,
+          "member_flywire_ids": [
+            720575940641366517,
+            720575940628648809
+          ],
+          "mean_pair_distance": 7.359463689426768,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 168.5,
+            "mean_out_degree": 188.5,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 66.81666666666666
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5732,
+          "member_flywire_ids": [
+            720575940616864217,
+            720575940631349335
+          ],
+          "mean_pair_distance": 7.391219073053229,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 390.0,
+            "mean_out_degree": 457.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 64.98333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5733,
+          "member_flywire_ids": [
+            720575940630865724,
+            720575940632648612
+          ],
+          "mean_pair_distance": 7.4277061532410205,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 202.5,
+            "mean_out_degree": 139.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 91.18333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5734,
+          "member_flywire_ids": [
+            720575940631703608,
+            720575940617593233
+          ],
+          "mean_pair_distance": 7.4415243959812525,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 199.5,
+            "mean_out_degree": 148.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 61.900000000000006
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5735,
+          "member_flywire_ids": [
+            720575940625705930,
+            720575940620335269
+          ],
+          "mean_pair_distance": 7.539328073539912,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 218.0,
+            "mean_out_degree": 146.5,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 72.78333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5736,
+          "member_flywire_ids": [
+            720575940652580086,
+            720575940622810153
+          ],
+          "mean_pair_distance": 7.66791350243289,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 211.5,
+            "mean_out_degree": 115.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 81.76666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5737,
+          "member_flywire_ids": [
+            720575940633674135,
+            720575940638103349
+          ],
+          "mean_pair_distance": 8.05379936451913,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 214.5,
+            "mean_out_degree": 143.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 85.46666666666667
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5738,
+          "member_flywire_ids": [
+            720575940625867056,
+            720575940628972048
+          ],
+          "mean_pair_distance": 8.152082638912823,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 380.5,
+            "mean_out_degree": 448.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 63.233333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5739,
+          "member_flywire_ids": [
+            720575940620874757,
+            720575940621399899
+          ],
+          "mean_pair_distance": 8.267515179100604,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 213.0,
+            "mean_out_degree": 176.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 85.68333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5740,
+          "member_flywire_ids": [
+            720575940627847752,
+            720575940626191306
+          ],
+          "mean_pair_distance": 8.315776064345,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 278.0,
+            "mean_out_degree": 229.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 82.39999999999999
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5741,
+          "member_flywire_ids": [
+            720575940629778554,
+            720575940616857174
+          ],
+          "mean_pair_distance": 8.383546815521271,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 286.5,
+            "mean_out_degree": 324.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 84.73333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5742,
+          "member_flywire_ids": [
+            720575940609407939,
+            720575940630868793
+          ],
+          "mean_pair_distance": 9.106206232623405,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 223.0,
+            "mean_out_degree": 138.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 84.88333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5743,
+          "member_flywire_ids": [
+            720575940611548878,
+            720575940618165019
+          ],
+          "mean_pair_distance": 9.845545262168192,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 162.0,
+            "mean_out_degree": 73.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 87.75
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5744,
+          "member_flywire_ids": [
+            720575940643867296,
+            720575940620673985
+          ],
+          "mean_pair_distance": 10.120641738888738,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 262.0,
+            "mean_out_degree": 266.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 59.083333333333336
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5745,
+          "member_flywire_ids": [
+            720575940611015122,
+            720575940615041430
+          ],
+          "mean_pair_distance": 10.479765103445196,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 251.5,
+            "mean_out_degree": 241.5,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 87.5
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5746,
+          "member_flywire_ids": [
+            720575940660229505,
+            720575940619973712
+          ],
+          "mean_pair_distance": 10.74738303224643,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 244.0,
+            "mean_out_degree": 104.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 86.25
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5747,
+          "member_flywire_ids": [
+            720575940625580988,
+            720575940644653348
+          ],
+          "mean_pair_distance": 12.886816784132844,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 243.0,
+            "mean_out_degree": 205.0,
+            "excitatory_fraction": 0.5,
+            "mean_baseline_rate_hz": 47.58333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5748,
+          "member_flywire_ids": [
+            720575940630820919,
+            720575940626279742
+          ],
+          "mean_pair_distance": 13.115587601628928,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 207.0,
+            "mean_out_degree": 130.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 47.88333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5749,
+          "member_flywire_ids": [
+            720575940619588568,
+            720575940647033396
+          ],
+          "mean_pair_distance": 13.24857052722276,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 200.0,
+            "mean_out_degree": 165.0,
+            "excitatory_fraction": 0.0,
+            "mean_baseline_rate_hz": 47.583333333333336
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        }
+      ],
+      "accepted_via_fallback": true,
+      "shortfall_fewer_than_five_drawn": false,
+      "control_sets": [
+        {
+          "sub_seed": 5701,
+          "member_flywire_ids": [
+            720575940612692633,
+            720575940623352063
+          ],
+          "mean_pair_distance": 2.1267716085024873,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 278.0,
+            "mean_out_degree": 141.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 77.38333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5702,
+          "member_flywire_ids": [
+            720575940615671106,
+            720575940632252743
+          ],
+          "mean_pair_distance": 2.8147150159186727,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 286.5,
+            "mean_out_degree": 154.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 80.78333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5703,
+          "member_flywire_ids": [
+            720575940631959097,
+            720575940619877396
+          ],
+          "mean_pair_distance": 3.069997513265152,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 301.0,
+            "mean_out_degree": 159.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 71.88333333333334
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5704,
+          "member_flywire_ids": [
+            720575940633185567,
+            720575940632047890
+          ],
+          "mean_pair_distance": 3.281179374019401,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 270.5,
+            "mean_out_degree": 111.5,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 81.1
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5705,
+          "member_flywire_ids": [
+            720575940630996055,
+            720575940625045180
+          ],
+          "mean_pair_distance": 3.81126117451617,
+          "summary": {
+            "size": 2,
+            "mean_in_degree": 187.5,
+            "mean_out_degree": 70.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 77.80000000000001
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": true
+          },
+          "passed": true
+        }
+      ]
+    },
+    "L-GRN": {
+      "family": "L-GRN",
+      "selection_seed": 5700,
+      "stream": [
+        5750,
+        5799
+      ],
+      "target": {
+        "size": 21,
+        "mean_in_degree": 33.19047619047619,
+        "mean_out_degree": 73.66666666666667,
+        "excitatory_fraction": 1.0,
+        "mean_baseline_rate_hz": 196.17619047619047
+      },
+      "target_flywire_ids": [
+        720575940624963786,
+        720575940630233916,
+        720575940637568838,
+        720575940638202345,
+        720575940617000768,
+        720575940630797113,
+        720575940632889389,
+        720575940621754367,
+        720575940621502051,
+        720575940640649691,
+        720575940639332736,
+        720575940616885538,
+        720575940639198653,
+        720575940620900446,
+        720575940617937543,
+        720575940632425919,
+        720575940633143833,
+        720575940612670570,
+        720575940628853239,
+        720575940629176663,
+        720575940611875570
+      ],
+      "n_draws": 50,
+      "draws": [
+        {
+          "sub_seed": 5750,
+          "member_flywire_ids": [
+            720575940622695448,
+            720575940629888530,
+            720575940627383685,
+            720575940619973712,
+            720575940615041430,
+            720575940618165019,
+            720575940630868793,
+            720575940626191306,
+            720575940620874757,
+            720575940638103349,
+            720575940629778554,
+            720575940652580086,
+            720575940632648612,
+            720575940655014049,
+            720575940633277209,
+            720575940614763666,
+            720575940620274085,
+            720575940616103218,
+            720575940615671106,
+            720575940623352063,
+            720575940625045180
+          ],
+          "mean_pair_distance": 33.716787207886625,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 234.9047619047619,
+            "mean_out_degree": 165.28571428571428,
+            "excitatory_fraction": 0.47619047619047616,
+            "mean_baseline_rate_hz": 113.33333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5751,
+          "member_flywire_ids": [
+            720575940632047890,
+            720575940628598121,
+            720575940612906518,
+            720575940619877396,
+            720575940616018956,
+            720575940639285949,
+            720575940606866377,
+            720575940632118156,
+            720575940612611301,
+            720575940610054980,
+            720575940631918649,
+            720575940612064113,
+            720575940634645600,
+            720575940628114684,
+            720575940619048827,
+            720575940635179871,
+            720575940623210445,
+            720575940623211725,
+            720575940625874992,
+            720575940641366517,
+            720575940631349335
+          ],
+          "mean_pair_distance": 46.212065274169554,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 272.3333333333333,
+            "mean_out_degree": 193.04761904761904,
+            "excitatory_fraction": 0.5238095238095238,
+            "mean_baseline_rate_hz": 82.07777777777777
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5752,
+          "member_flywire_ids": [
+            720575940636053678,
+            720575940625705930,
+            720575940621586854,
+            720575940638181092,
+            720575940617593233,
+            720575940612423922,
+            720575940630865724,
+            720575940625867056,
+            720575940633185567,
+            720575940625175054,
+            720575940620335269,
+            720575940642428045,
+            720575940632252743,
+            720575940607272649,
+            720575940630579574,
+            720575940622235425,
+            720575940625875504,
+            720575940629810748,
+            720575940625102692,
+            720575940628755815,
+            720575940630996055
+          ],
+          "mean_pair_distance": 50.98110000152056,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 245.52380952380952,
+            "mean_out_degree": 168.38095238095238,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 70.21428571428571
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5753,
+          "member_flywire_ids": [
+            720575940612692633,
+            720575940618472261,
+            720575940660223873,
+            720575940643867296,
+            720575940624484796,
+            720575940630683385,
+            720575940616466260,
+            720575940655013025,
+            720575940649829241,
+            720575940625047484,
+            720575940628648809,
+            720575940610677828,
+            720575940632602532,
+            720575940617629841,
+            720575940621399899,
+            720575940620031366,
+            720575940633674135,
+            720575940631959097,
+            720575940616857174,
+            720575940628972048,
+            720575940616864217
+          ],
+          "mean_pair_distance": 55.726109913869465,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 224.0952380952381,
+            "mean_out_degree": 206.47619047619048,
+            "excitatory_fraction": 0.42857142857142855,
+            "mean_baseline_rate_hz": 58.412698412698404
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5754,
+          "member_flywire_ids": [
+            720575940620673985,
+            720575940631997032,
+            720575940632722771,
+            720575940611548878,
+            720575940623578375,
+            720575940622810153,
+            720575940611015122,
+            720575940631703608,
+            720575940627847752,
+            720575940619588568,
+            720575940609407939,
+            720575940630820919,
+            720575940625580988,
+            720575940617552057,
+            720575940633612698,
+            720575940625861660,
+            720575940626279742,
+            720575940660229505,
+            720575940630667372,
+            720575940647518340,
+            720575940635055039
+          ],
+          "mean_pair_distance": 59.39847381037322,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 195.23809523809524,
+            "mean_out_degree": 139.04761904761904,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 49.16507936507936
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5755,
+          "member_flywire_ids": [
+            720575940644653348,
+            720575940613687789,
+            720575940635578303,
+            720575940647033396,
+            720575940618696989,
+            720575940625737776,
+            720575940610916465,
+            720575940607193986,
+            720575940632365905,
+            720575940631406411,
+            720575940626495746,
+            720575940609915204,
+            720575940612888178,
+            720575940626972056,
+            720575940631999080,
+            720575940624966840,
+            720575940617588258,
+            720575940621261296,
+            720575940610803554,
+            720575940628826128,
+            720575940621538142
+          ],
+          "mean_pair_distance": 61.916400732795,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 206.33333333333334,
+            "mean_out_degree": 165.8095238095238,
+            "excitatory_fraction": 0.2857142857142857,
+            "mean_baseline_rate_hz": 42.974603174603175
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5756,
+          "member_flywire_ids": [
+            720575940624623287,
+            720575940622612749,
+            720575940607451081,
+            720575940613929391,
+            720575940635239672,
+            720575940610258552,
+            720575940620170887,
+            720575940623209165,
+            720575940639786915,
+            720575940624906483,
+            720575940616864086,
+            720575940619473624,
+            720575940619853515,
+            720575940627819151,
+            720575940611160930,
+            720575940639425112,
+            720575940630771449,
+            720575940624897516,
+            720575940618574749,
+            720575940630664556,
+            720575940620025620
+          ],
+          "mean_pair_distance": 64.07853385773193,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 328.85714285714283,
+            "mean_out_degree": 191.52380952380952,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 37.83492063492063
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5757,
+          "member_flywire_ids": [
+            720575940612036837,
+            720575940612558061,
+            720575940609405635,
+            720575940607386290,
+            720575940630806267,
+            720575940613347299,
+            720575940620780272,
+            720575940626308697,
+            720575940619114048,
+            720575940624023188,
+            720575940608498780,
+            720575940615296818,
+            720575940626626597,
+            720575940636165624,
+            720575940611436408,
+            720575940627410451,
+            720575940625178768,
+            720575940634301852,
+            720575940636895406,
+            720575940623192781,
+            720575940629207963
+          ],
+          "mean_pair_distance": 66.13817145839981,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 249.95238095238096,
+            "mean_out_degree": 198.76190476190476,
+            "excitatory_fraction": 0.5714285714285714,
+            "mean_baseline_rate_hz": 32.55873015873017
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5758,
+          "member_flywire_ids": [
+            720575940623453959,
+            720575940614660519,
+            720575940628676457,
+            720575940632304711,
+            720575940616644411,
+            720575940608735241,
+            720575940612648106,
+            720575940627779983,
+            720575940614128691,
+            720575940611549902,
+            720575940627083294,
+            720575940609133269,
+            720575940613670893,
+            720575940620374693,
+            720575940630674038,
+            720575940610000964,
+            720575940621573030,
+            720575940613943215,
+            720575940629561347,
+            720575940613004402,
+            720575940620473547
+          ],
+          "mean_pair_distance": 67.94392104283986,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 261.6190476190476,
+            "mean_out_degree": 196.04761904761904,
+            "excitatory_fraction": 0.47619047619047616,
+            "mean_baseline_rate_hz": 27.98253968253968
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5759,
+          "member_flywire_ids": [
+            720575940622348156,
+            720575940636809646,
+            720575940627086594,
+            720575940605658033,
+            720575940626993694,
+            720575940628998659,
+            720575940609993284,
+            720575940609939780,
+            720575940620254087,
+            720575940629000783,
+            720575940633293025,
+            720575940618859480,
+            720575940639198397,
+            720575940621422518,
+            720575940633316563,
+            720575940618726171,
+            720575940630034231,
+            720575940631283267,
+            720575940619173534,
+            720575940612952557,
+            720575940628630171
+          ],
+          "mean_pair_distance": 69.85989329923277,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 229.76190476190476,
+            "mean_out_degree": 129.23809523809524,
+            "excitatory_fraction": 0.5714285714285714,
+            "mean_baseline_rate_hz": 23.20634920634921
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5760,
+          "member_flywire_ids": [
+            720575940630488540,
+            720575940627107271,
+            720575940639972816,
+            720575940615052812,
+            720575940640839120,
+            720575940609935172,
+            720575940631340815,
+            720575940606607234,
+            720575940647029044,
+            720575940621057702,
+            720575940605682790,
+            720575940611164770,
+            720575940626289021,
+            720575940627812168,
+            720575940617494877,
+            720575940631714119,
+            720575940628997123,
+            720575940623478115,
+            720575940632159519,
+            720575940626256765,
+            720575940647030324
+          ],
+          "mean_pair_distance": 71.6932569840507,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 303.4761904761905,
+            "mean_out_degree": 198.9047619047619,
+            "excitatory_fraction": 0.38095238095238093,
+            "mean_baseline_rate_hz": 18.826984126984133
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5761,
+          "member_flywire_ids": [
+            720575940631994728,
+            720575940612479205,
+            720575940629239934,
+            720575940612289010,
+            720575940627828296,
+            720575940610232274,
+            720575940631168057,
+            720575940642335373,
+            720575940635451546,
+            720575940630094652,
+            720575940631662648,
+            720575940626999464,
+            720575940655011489,
+            720575940626278974,
+            720575940621577036,
+            720575940610611246,
+            720575940607689394,
+            720575940633373651,
+            720575940617488477,
+            720575940620805046,
+            720575940611151406
+          ],
+          "mean_pair_distance": 73.02143095194685,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 263.5238095238095,
+            "mean_out_degree": 207.47619047619048,
+            "excitatory_fraction": 0.42857142857142855,
+            "mean_baseline_rate_hz": 15.458730158730159
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5762,
+          "member_flywire_ids": [
+            720575940630931999,
+            720575940630980559,
+            720575940629664768,
+            720575940635211115,
+            720575940624310857,
+            720575940611366058,
+            720575940612208858,
+            720575940620474278,
+            720575940612357618,
+            720575940610001220,
+            720575940632134227,
+            720575940629812346,
+            720575940637656286,
+            720575940615811670,
+            720575940634825623,
+            720575940630044278,
+            720575940648864633,
+            720575940614730914,
+            720575940637790527,
+            720575940624600840,
+            720575940645045527
+          ],
+          "mean_pair_distance": 74.5359207775238,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 289.0,
+            "mean_out_degree": 188.57142857142858,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 11.750793650793652
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5763,
+          "member_flywire_ids": [
+            720575940621771041,
+            720575940637144944,
+            720575940620292116,
+            720575940617373268,
+            720575940627446661,
+            720575940611988197,
+            720575940629623351,
+            720575940627704392,
+            720575940641480949,
+            720575940645047831,
+            720575940621345012,
+            720575940621468404,
+            720575940612766515,
+            720575940618995393,
+            720575940620873793,
+            720575940615623867,
+            720575940638088262,
+            720575940615582111,
+            720575940609016843,
+            720575940633116256,
+            720575940633308371
+          ],
+          "mean_pair_distance": 76.0071679784521,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 285.3809523809524,
+            "mean_out_degree": 191.66666666666666,
+            "excitatory_fraction": 0.42857142857142855,
+            "mean_baseline_rate_hz": 8.115873015873015
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5764,
+          "member_flywire_ids": [
+            720575940620282900,
+            720575940620062288,
+            720575940637360730,
+            720575940634428058,
+            720575940627814728,
+            720575940605513649,
+            720575940622624214,
+            720575940615564959,
+            720575940635611316,
+            720575940618864725,
+            720575940612537061,
+            720575940660220289,
+            720575940615153494,
+            720575940632659404,
+            720575940636346487,
+            720575940629421415,
+            720575940626968216,
+            720575940612865814,
+            720575940623072013,
+            720575940621329328,
+            720575940629508599
+          ],
+          "mean_pair_distance": 76.97355552817265,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 298.95238095238096,
+            "mean_out_degree": 262.57142857142856,
+            "excitatory_fraction": 0.38095238095238093,
+            "mean_baseline_rate_hz": 5.766666666666666
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5765,
+          "member_flywire_ids": [
+            720575940608349379,
+            720575940620714150,
+            720575940624084372,
+            720575940619455879,
+            720575940630781433,
+            720575940631108303,
+            720575940616860758,
+            720575940630403031,
+            720575940625164558,
+            720575940613743569,
+            720575940622734106,
+            720575940626468178,
+            720575940634756203,
+            720575940660224641,
+            720575940626038714,
+            720575940622474899,
+            720575940639170723,
+            720575940625641402,
+            720575940634210155,
+            720575940635839077,
+            720575940622027222
+          ],
+          "mean_pair_distance": 78.04878331059895,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 295.2857142857143,
+            "mean_out_degree": 219.0952380952381,
+            "excitatory_fraction": 0.5238095238095238,
+            "mean_baseline_rate_hz": 3.087301587301587
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5766,
+          "member_flywire_ids": [
+            720575940610621026,
+            720575940628995331,
+            720575940606852018,
+            720575940623224555,
+            720575940621902085,
+            720575940615715003,
+            720575940631989352,
+            720575940644758308,
+            720575940624366845,
+            720575940630689644,
+            720575940630903291,
+            720575940630291767,
+            720575940647081860,
+            720575940636828334,
+            720575940632307025,
+            720575940606391218,
+            720575940617672920,
+            720575940635771316,
+            720575940645352814,
+            720575940626159306,
+            720575940629804158
+          ],
+          "mean_pair_distance": 78.57343581485888,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 275.04761904761904,
+            "mean_out_degree": 170.66666666666666,
+            "excitatory_fraction": 0.19047619047619047,
+            "mean_baseline_rate_hz": 1.6619047619047618
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5767,
+          "member_flywire_ids": [
+            720575940627949626,
+            720575940632722515,
+            720575940620271636,
+            720575940644666148,
+            720575940619176094,
+            720575940631629160,
+            720575940631575327,
+            720575940631267409,
+            720575940625612474,
+            720575940643543496,
+            720575940623862015,
+            720575940625779075,
+            720575940629667639,
+            720575940639785379,
+            720575940612154339,
+            720575940623886008,
+            720575940644968215,
+            720575940629377132,
+            720575940626478082,
+            720575940643551392,
+            720575940633434208
+          ],
+          "mean_pair_distance": 78.83753724913838,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 202.52380952380952,
+            "mean_out_degree": 170.52380952380952,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 0.9650793650793652
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5768,
+          "member_flywire_ids": [
+            720575940629393207,
+            720575940622147873,
+            720575940621573542,
+            720575940614386070,
+            720575940635166571,
+            720575940614909506,
+            720575940630695798,
+            720575940632354641,
+            720575940630839371,
+            720575940641585627,
+            720575940610058052,
+            720575940605420902,
+            720575940607387314,
+            720575940618800064,
+            720575940622552675,
+            720575940626456081,
+            720575940623614442,
+            720575940623718380,
+            720575940627113544,
+            720575940630674688,
+            720575940638183652
+          ],
+          "mean_pair_distance": 79.05361326418972,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 232.85714285714286,
+            "mean_out_degree": 159.0,
+            "excitatory_fraction": 0.47619047619047616,
+            "mean_baseline_rate_hz": 0.4095238095238094
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5769,
+          "member_flywire_ids": [
+            720575940624928236,
+            720575940617810004,
+            720575940611680718,
+            720575940621401782,
+            720575940621169613,
+            720575940631304185,
+            720575940607385283,
+            720575940623966090,
+            720575940624264009,
+            720575940609919897,
+            720575940610676906,
+            720575940634740335,
+            720575940622405708,
+            720575940605910886,
+            720575940645057060,
+            720575940620698136,
+            720575940632466503,
+            720575940618130334,
+            720575940607280514,
+            720575940622305553,
+            720575940628309736
+          ],
+          "mean_pair_distance": 79.15711002216183,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.333333333333336,
+            "mean_out_degree": 73.57142857142857,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5770,
+          "member_flywire_ids": [
+            720575940630908012,
+            720575940622612950,
+            720575940611665358,
+            720575940613142191,
+            720575940617076293,
+            720575940628306784,
+            720575940636773495,
+            720575940632791071,
+            720575940612658602,
+            720575940629749114,
+            720575940628165864,
+            720575940632454703,
+            720575940629632759,
+            720575940625729342,
+            720575940622199593,
+            720575940613428945,
+            720575940625120812,
+            720575940622019866,
+            720575940623670212,
+            720575940628809515,
+            720575940641058523
+          ],
+          "mean_pair_distance": 79.1571123469638,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 32.04761904761905,
+            "mean_out_degree": 73.04761904761905,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5771,
+          "member_flywire_ids": [
+            720575940618250821,
+            720575940617542374,
+            720575940614423603,
+            720575940605783584,
+            720575940631468303,
+            720575940630743972,
+            720575940608687113,
+            720575940604964576,
+            720575940623144447,
+            720575940638280270,
+            720575940629425602,
+            720575940630499833,
+            720575940635144867,
+            720575940626670082,
+            720575940614060046,
+            720575940621661936,
+            720575940631367520,
+            720575940638857542,
+            720575940628265575,
+            720575940628721307,
+            720575940640224397
+          ],
+          "mean_pair_distance": 79.1571139872671,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.57142857142857,
+            "mean_out_degree": 74.42857142857143,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5772,
+          "member_flywire_ids": [
+            720575940622187132,
+            720575940617910929,
+            720575940607765259,
+            720575940630203136,
+            720575940622773281,
+            720575940620280411,
+            720575940633844962,
+            720575940634090210,
+            720575940620954533,
+            720575940613688557,
+            720575940630328064,
+            720575940630918620,
+            720575940622129927,
+            720575940622346180,
+            720575940620945134,
+            720575940641489397,
+            720575940623503594,
+            720575940618944069,
+            720575940622211241,
+            720575940620223070,
+            720575940620644446
+          ],
+          "mean_pair_distance": 79.15711546136683,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.523809523809526,
+            "mean_out_degree": 73.9047619047619,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5773,
+          "member_flywire_ids": [
+            720575940623927822,
+            720575940623053277,
+            720575940624658411,
+            720575940631741771,
+            720575940617759266,
+            720575940614952594,
+            720575940632381009,
+            720575940632014284,
+            720575940634215393,
+            720575940632138553,
+            720575940616867894,
+            720575940633901025,
+            720575940636938586,
+            720575940612630550,
+            720575940615944770,
+            720575940643823520,
+            720575940627490663,
+            720575940632700836,
+            720575940621891964,
+            720575940622444577,
+            720575940627687939
+          ],
+          "mean_pair_distance": 79.15711757385836,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.142857142857146,
+            "mean_out_degree": 73.66666666666667,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5774,
+          "member_flywire_ids": [
+            720575940625148174,
+            720575940622211916,
+            720575940623395622,
+            720575940611351193,
+            720575940604931249,
+            720575940599729862,
+            720575940627010334,
+            720575940633561811,
+            720575940612923955,
+            720575940618347810,
+            720575940626999554,
+            720575940624606140,
+            720575940644322760,
+            720575940612112819,
+            720575940624345341,
+            720575940622340137,
+            720575940615407263,
+            720575940623931115,
+            720575940605456574,
+            720575940628030724,
+            720575940628627206
+          ],
+          "mean_pair_distance": 79.15711879549909,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.095238095238095,
+            "mean_out_degree": 74.71428571428571,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5775,
+          "member_flywire_ids": [
+            720575940620653446,
+            720575940630154041,
+            720575940620516544,
+            720575940617430356,
+            720575940627910419,
+            720575940644228040,
+            720575940629636802,
+            720575940641274357,
+            720575940620088941,
+            720575940633180973,
+            720575940620655275,
+            720575940613432035,
+            720575940631368544,
+            720575940646420259,
+            720575940645139991,
+            720575940617343062,
+            720575940622587212,
+            720575940617304788,
+            720575940622365985,
+            720575940641424091,
+            720575940620305867
+          ],
+          "mean_pair_distance": 79.1571198994845,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.523809523809526,
+            "mean_out_degree": 74.14285714285714,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5776,
+          "member_flywire_ids": [
+            720575940635690351,
+            720575940633772001,
+            720575940630576860,
+            720575940636937705,
+            720575940620603072,
+            720575940645309988,
+            720575940617143389,
+            720575940622372223,
+            720575940620050961,
+            720575940622383692,
+            720575940633173933,
+            720575940626428615,
+            720575940631679530,
+            720575940628876618,
+            720575940640250496,
+            720575940620123984,
+            720575940627898389,
+            720575940627554323,
+            720575940616809401,
+            720575940623781193,
+            720575940617324317
+          ],
+          "mean_pair_distance": 79.15712062241994,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.95238095238095,
+            "mean_out_degree": 73.80952380952381,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5777,
+          "member_flywire_ids": [
+            720575940618291739,
+            720575940625241731,
+            720575940618664571,
+            720575940628160617,
+            720575940626747932,
+            720575940612370069,
+            720575940626740376,
+            720575940620679814,
+            720575940640262272,
+            720575940624650995,
+            720575940611342712,
+            720575940629691386,
+            720575940633767906,
+            720575940628095484,
+            720575940623637995,
+            720575940623534079,
+            720575940636614757,
+            720575940625666488,
+            720575940631030469,
+            720575940614435070,
+            720575940633149357
+          ],
+          "mean_pair_distance": 79.1571211694485,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 32.666666666666664,
+            "mean_out_degree": 74.0952380952381,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5778,
+          "member_flywire_ids": [
+            720575940631825489,
+            720575940650011513,
+            720575940622786437,
+            720575940624931315,
+            720575940622564621,
+            720575940609263662,
+            720575940607453936,
+            720575940638259290,
+            720575940632421739,
+            720575940625092028,
+            720575940615207180,
+            720575940639295347,
+            720575940614052077,
+            720575940629827483,
+            720575940633486955,
+            720575940645439086,
+            720575940605644390,
+            720575940617945246,
+            720575940626723091,
+            720575940621683638,
+            720575940623877512
+          ],
+          "mean_pair_distance": 79.15712189957347,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 32.80952380952381,
+            "mean_out_degree": 74.9047619047619,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5779,
+          "member_flywire_ids": [
+            720575940629510338,
+            720575940629670394,
+            720575940616797813,
+            720575940623023143,
+            720575940642945844,
+            720575940627546962,
+            720575940628951287,
+            720575940623757582,
+            720575940626924184,
+            720575940618074041,
+            720575940607681202,
+            720575940621443137,
+            720575940643315104,
+            720575940625428825,
+            720575940621354734,
+            720575940610015171,
+            720575940635176366,
+            720575940624984368,
+            720575940644342688,
+            720575940620421153,
+            720575940630893817
+          ],
+          "mean_pair_distance": 79.15712286642595,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.04761904761905,
+            "mean_out_degree": 73.57142857142857,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5780,
+          "member_flywire_ids": [
+            720575940624279479,
+            720575940645504878,
+            720575940611174008,
+            720575940622787683,
+            720575940630992557,
+            720575940626295696,
+            720575940620176293,
+            720575940629866434,
+            720575940629457707,
+            720575940635990896,
+            720575940646961284,
+            720575940636733797,
+            720575940645228567,
+            720575940629654071,
+            720575940627537930,
+            720575940631964985,
+            720575940607666610,
+            720575940622129832,
+            720575940613612781,
+            720575940631412576,
+            720575940621062465
+          ],
+          "mean_pair_distance": 79.15712353721449,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.04761904761905,
+            "mean_out_degree": 72.57142857142857,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5781,
+          "member_flywire_ids": [
+            720575940617347414,
+            720575940620531461,
+            720575940630102778,
+            720575940613942301,
+            720575940607327106,
+            720575940623330857,
+            720575940636498907,
+            720575940612506354,
+            720575940636569719,
+            720575940620832603,
+            720575940637038766,
+            720575940618705974,
+            720575940620580613,
+            720575940621207517,
+            720575940610246513,
+            720575940644089032,
+            720575940636160367,
+            720575940619363700,
+            720575940612698853,
+            720575940623978503,
+            720575940624229629
+          ],
+          "mean_pair_distance": 79.15712440345217,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.95238095238095,
+            "mean_out_degree": 73.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5782,
+          "member_flywire_ids": [
+            720575940634966170,
+            720575940636870798,
+            720575940618076902,
+            720575940627248521,
+            720575940618106525,
+            720575940617711505,
+            720575940626651850,
+            720575940605829478,
+            720575940632565075,
+            720575940615958971,
+            720575940616301497,
+            720575940623206024,
+            720575940605688241,
+            720575940620148059,
+            720575940621865343,
+            720575940626299082,
+            720575940625101360,
+            720575940622265932,
+            720575940632735710,
+            720575940613747562,
+            720575940628349178
+          ],
+          "mean_pair_distance": 79.1571251208465,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.61904761904762,
+            "mean_out_degree": 73.95238095238095,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5783,
+          "member_flywire_ids": [
+            720575940622653879,
+            720575940623394328,
+            720575940620968539,
+            720575940628761031,
+            720575940610303857,
+            720575940652682230,
+            720575940625135804,
+            720575940629787330,
+            720575940610103906,
+            720575940639983192,
+            720575940622825736,
+            720575940625539082,
+            720575940634230179,
+            720575940643907744,
+            720575940627504698,
+            720575940618689349,
+            720575940617895707,
+            720575940645714030,
+            720575940620392374,
+            720575940628210272,
+            720575940618950221
+          ],
+          "mean_pair_distance": 79.15712541896794,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.142857142857146,
+            "mean_out_degree": 74.42857142857143,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5784,
+          "member_flywire_ids": [
+            720575940612844806,
+            720575940612744618,
+            720575940614803266,
+            720575940624804670,
+            720575940604607678,
+            720575940617882342,
+            720575940614898037,
+            720575940622234492,
+            720575940625028536,
+            720575940631531562,
+            720575940632789933,
+            720575940610724910,
+            720575940639564147,
+            720575940623794922,
+            720575940618100308,
+            720575940637084762,
+            720575940620821413,
+            720575940625281267,
+            720575940619511243,
+            720575940604599654,
+            720575940620799067
+          ],
+          "mean_pair_distance": 79.15712578404015,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.714285714285715,
+            "mean_out_degree": 74.80952380952381,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5785,
+          "member_flywire_ids": [
+            720575940618268061,
+            720575940620407943,
+            720575940635175322,
+            720575940614793214,
+            720575940606989001,
+            720575940615097450,
+            720575940622147268,
+            720575940632390591,
+            720575940628843526,
+            720575940647995012,
+            720575940635177891,
+            720575940642057435,
+            720575940617928404,
+            720575940608309771,
+            720575940634538175,
+            720575940630723685,
+            720575940619885958,
+            720575940651079158,
+            720575940652738806,
+            720575940621127851,
+            720575940632887891
+          ],
+          "mean_pair_distance": 79.15712634304383,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.57142857142857,
+            "mean_out_degree": 74.04761904761905,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5786,
+          "member_flywire_ids": [
+            720575940608295433,
+            720575940635370420,
+            720575940628781979,
+            720575940621087821,
+            720575940617795451,
+            720575940627558533,
+            720575940641287413,
+            720575940629481516,
+            720575940659963009,
+            720575940616017676,
+            720575940632091951,
+            720575940623983504,
+            720575940623422344,
+            720575940626528072,
+            720575940619212198,
+            720575940632367427,
+            720575940637529229,
+            720575940640259035,
+            720575940615525307,
+            720575940638490714,
+            720575940615074922
+          ],
+          "mean_pair_distance": 79.15712689532454,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.904761904761905,
+            "mean_out_degree": 74.33333333333333,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5787,
+          "member_flywire_ids": [
+            720575940629531095,
+            720575940611651170,
+            720575940617015365,
+            720575940628205050,
+            720575940627444746,
+            720575940616176852,
+            720575940625246183,
+            720575940644122990,
+            720575940604518432,
+            720575940633583129,
+            720575940655324577,
+            720575940610773090,
+            720575940628569538,
+            720575940621078182,
+            720575940627658066,
+            720575940633073052,
+            720575940613315606,
+            720575940603266592,
+            720575940638302436,
+            720575940611353554,
+            720575940630843959
+          ],
+          "mean_pair_distance": 79.1571273383732,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.38095238095238,
+            "mean_out_degree": 75.76190476190476,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5788,
+          "member_flywire_ids": [
+            720575940637489990,
+            720575940611205074,
+            720575940619749067,
+            720575940627833256,
+            720575940652336118,
+            720575940617128593,
+            720575940639080526,
+            720575940650009977,
+            720575940626368656,
+            720575940632271268,
+            720575940645113879,
+            720575940624206315,
+            720575940617622996,
+            720575940634198553,
+            720575940626097189,
+            720575940630280748,
+            720575940611214290,
+            720575940629800347,
+            720575940635212963,
+            720575940613587935,
+            720575940618393413
+          ],
+          "mean_pair_distance": 79.15712802798578,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.0,
+            "mean_out_degree": 72.71428571428571,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5789,
+          "member_flywire_ids": [
+            720575940630451141,
+            720575940608865033,
+            720575940624382187,
+            720575940633357537,
+            720575940627888296,
+            720575940628534827,
+            720575940613641915,
+            720575940604179372,
+            720575940650085753,
+            720575940618518557,
+            720575940630544967,
+            720575940623619366,
+            720575940628791095,
+            720575940623075071,
+            720575940636662244,
+            720575940615760569,
+            720575940623045133,
+            720575940614696927,
+            720575940621245910,
+            720575940626611202,
+            720575940620045703
+          ],
+          "mean_pair_distance": 79.15712886911851,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.142857142857146,
+            "mean_out_degree": 74.85714285714286,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5790,
+          "member_flywire_ids": [
+            720575940626808591,
+            720575940620031341,
+            720575940616923195,
+            720575940631165541,
+            720575940627012881,
+            720575940632290724,
+            720575940622639715,
+            720575940629884119,
+            720575940626534858,
+            720575940622010700,
+            720575940645118999,
+            720575940620386725,
+            720575940627725072,
+            720575940620647339,
+            720575940660329089,
+            720575940630450167,
+            720575940607202178,
+            720575940628423623,
+            720575940630573359,
+            720575940637785822,
+            720575940620770475
+          ],
+          "mean_pair_distance": 79.15712937764258,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 33.38095238095238,
+            "mean_out_degree": 73.85714285714286,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5791,
+          "member_flywire_ids": [
+            720575940622999245,
+            720575940639606606,
+            720575940625249831,
+            720575940640679040,
+            720575940614164655,
+            720575940626769304,
+            720575940627629114,
+            720575940617410777,
+            720575940643757216,
+            720575940621909086,
+            720575940624739728,
+            720575940644249248,
+            720575940634143257,
+            720575940622271684,
+            720575940605183660,
+            720575940637028238,
+            720575940628560636,
+            720575940612430771,
+            720575940614742214,
+            720575940614482216,
+            720575940621826369
+          ],
+          "mean_pair_distance": 79.15712980303688,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.666666666666664,
+            "mean_out_degree": 74.14285714285714,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5792,
+          "member_flywire_ids": [
+            720575940629395578,
+            720575940618056349,
+            720575940619724248,
+            720575940612509866,
+            720575940620332404,
+            720575940636992686,
+            720575940626913798,
+            720575940613680194,
+            720575940628953595,
+            720575940620664768,
+            720575940619167542,
+            720575940628000010,
+            720575940618932939,
+            720575940623284493,
+            720575940621881840,
+            720575940618907958,
+            720575940638726717,
+            720575940616775797,
+            720575940627026954,
+            720575940633584339,
+            720575940627418133
+          ],
+          "mean_pair_distance": 79.15713036598537,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.333333333333336,
+            "mean_out_degree": 74.0,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5793,
+          "member_flywire_ids": [
+            720575940631780419,
+            720575940627104774,
+            720575940624963260,
+            720575940611830370,
+            720575940637404784,
+            720575940637043118,
+            720575940637539806,
+            720575940611118030,
+            720575940617161243,
+            720575940620727489,
+            720575940630275543,
+            720575940629426475,
+            720575940640217728,
+            720575940632855715,
+            720575940623302035,
+            720575940614144262,
+            720575940627356072,
+            720575940611943154,
+            720575940623259928,
+            720575940621767629,
+            720575940628837419
+          ],
+          "mean_pair_distance": 79.15713088639157,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.19047619047619,
+            "mean_out_degree": 74.61904761904762,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5794,
+          "member_flywire_ids": [
+            720575940621218729,
+            720575940629928058,
+            720575940628755817,
+            720575940654915489,
+            720575940628429056,
+            720575940626397948,
+            720575940658990721,
+            720575940628179196,
+            720575940634222873,
+            720575940620551776,
+            720575940612267762,
+            720575940628209640,
+            720575940626252746,
+            720575940623122175,
+            720575940625549901,
+            720575940616361740,
+            720575940624306663,
+            720575940626761603,
+            720575940627424273,
+            720575940622624332,
+            720575940623622024
+          ],
+          "mean_pair_distance": 79.15713124300302,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.95238095238095,
+            "mean_out_degree": 74.04761904761905,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5795,
+          "member_flywire_ids": [
+            720575940612846489,
+            720575940620472956,
+            720575940622675753,
+            720575940630769879,
+            720575940622990118,
+            720575940607060425,
+            720575940631717906,
+            720575940624812780,
+            720575940614103347,
+            720575940624599532,
+            720575940620063604,
+            720575940619884784,
+            720575940620949925,
+            720575940629730298,
+            720575940613465750,
+            720575940618808491,
+            720575940623346214,
+            720575940628134526,
+            720575940610427050,
+            720575940618549061,
+            720575940611344226
+          ],
+          "mean_pair_distance": 79.15713163443779,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 36.57142857142857,
+            "mean_out_degree": 72.28571428571429,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5796,
+          "member_flywire_ids": [
+            720575940617577797,
+            720575940616543291,
+            720575940616225209,
+            720575940626275786,
+            720575940617675705,
+            720575940629537640,
+            720575940620590672,
+            720575940649827193,
+            720575940621414832,
+            720575940618007074,
+            720575940622825427,
+            720575940620293766,
+            720575940620905711,
+            720575940630710231,
+            720575940609364693,
+            720575940611010658,
+            720575940635873904,
+            720575940624486909,
+            720575940630099959,
+            720575940635453535,
+            720575940627269257
+          ],
+          "mean_pair_distance": 79.15713214054914,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 34.904761904761905,
+            "mean_out_degree": 72.23809523809524,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5797,
+          "member_flywire_ids": [
+            720575940626008010,
+            720575940617148509,
+            720575940630486103,
+            720575940615761803,
+            720575940630935547,
+            720575940627316026,
+            720575940624683152,
+            720575940631367776,
+            720575940631368652,
+            720575940636937902,
+            720575940617869017,
+            720575940618186836,
+            720575940635239075,
+            720575940638994485,
+            720575940626545410,
+            720575940620937897,
+            720575940625974572,
+            720575940629011279,
+            720575940627556178,
+            720575940621541808,
+            720575940623881924
+          ],
+          "mean_pair_distance": 79.15713270564072,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 36.19047619047619,
+            "mean_out_degree": 73.04761904761905,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5798,
+          "member_flywire_ids": [
+            720575940627074078,
+            720575940615756683,
+            720575940639958589,
+            720575940630998359,
+            720575940623948983,
+            720575940615729932,
+            720575940622410484,
+            720575940614862226,
+            720575940612883710,
+            720575940617849890,
+            720575940619308653,
+            720575940628996867,
+            720575940614557708,
+            720575940627406930,
+            720575940604592160,
+            720575940630373484,
+            720575940612920818,
+            720575940643646664,
+            720575940622956509,
+            720575940616464434,
+            720575940635114347
+          ],
+          "mean_pair_distance": 79.15713327376726,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 35.523809523809526,
+            "mean_out_degree": 73.66666666666667,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5799,
+          "member_flywire_ids": [
+            720575940623166669,
+            720575940632981293,
+            720575940621022034,
+            720575940624103914,
+            720575940622175245,
+            720575940627688088,
+            720575940624882471,
+            720575940616562150,
+            720575940622604109,
+            720575940629518330,
+            720575940621959152,
+            720575940638905158,
+            720575940611045781,
+            720575940643414688,
+            720575940618173787,
+            720575940624248613,
+            720575940632707027,
+            720575940638211930,
+            720575940636664175,
+            720575940615723350,
+            720575940615624415
+          ],
+          "mean_pair_distance": 79.1571338962503,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 36.61904761904762,
+            "mean_out_degree": 72.85714285714286,
+            "excitatory_fraction": 1.0,
+            "mean_baseline_rate_hz": 0.0
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": true,
+            "mean_out_degree_pm25pct": true,
+            "excitatory_fraction_pm0.10": true,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        }
+      ],
+      "accepted_via_fallback": true,
+      "shortfall_fewer_than_five_drawn": false,
+      "control_sets": [
+        {
+          "sub_seed": 5750,
+          "member_flywire_ids": [
+            720575940622695448,
+            720575940629888530,
+            720575940627383685,
+            720575940619973712,
+            720575940615041430,
+            720575940618165019,
+            720575940630868793,
+            720575940626191306,
+            720575940620874757,
+            720575940638103349,
+            720575940629778554,
+            720575940652580086,
+            720575940632648612,
+            720575940655014049,
+            720575940633277209,
+            720575940614763666,
+            720575940620274085,
+            720575940616103218,
+            720575940615671106,
+            720575940623352063,
+            720575940625045180
+          ],
+          "mean_pair_distance": 33.716787207886625,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 234.9047619047619,
+            "mean_out_degree": 165.28571428571428,
+            "excitatory_fraction": 0.47619047619047616,
+            "mean_baseline_rate_hz": 113.33333333333333
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5751,
+          "member_flywire_ids": [
+            720575940632047890,
+            720575940628598121,
+            720575940612906518,
+            720575940619877396,
+            720575940616018956,
+            720575940639285949,
+            720575940606866377,
+            720575940632118156,
+            720575940612611301,
+            720575940610054980,
+            720575940631918649,
+            720575940612064113,
+            720575940634645600,
+            720575940628114684,
+            720575940619048827,
+            720575940635179871,
+            720575940623210445,
+            720575940623211725,
+            720575940625874992,
+            720575940641366517,
+            720575940631349335
+          ],
+          "mean_pair_distance": 46.212065274169554,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 272.3333333333333,
+            "mean_out_degree": 193.04761904761904,
+            "excitatory_fraction": 0.5238095238095238,
+            "mean_baseline_rate_hz": 82.07777777777777
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5752,
+          "member_flywire_ids": [
+            720575940636053678,
+            720575940625705930,
+            720575940621586854,
+            720575940638181092,
+            720575940617593233,
+            720575940612423922,
+            720575940630865724,
+            720575940625867056,
+            720575940633185567,
+            720575940625175054,
+            720575940620335269,
+            720575940642428045,
+            720575940632252743,
+            720575940607272649,
+            720575940630579574,
+            720575940622235425,
+            720575940625875504,
+            720575940629810748,
+            720575940625102692,
+            720575940628755815,
+            720575940630996055
+          ],
+          "mean_pair_distance": 50.98110000152056,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 245.52380952380952,
+            "mean_out_degree": 168.38095238095238,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 70.21428571428571
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5753,
+          "member_flywire_ids": [
+            720575940612692633,
+            720575940618472261,
+            720575940660223873,
+            720575940643867296,
+            720575940624484796,
+            720575940630683385,
+            720575940616466260,
+            720575940655013025,
+            720575940649829241,
+            720575940625047484,
+            720575940628648809,
+            720575940610677828,
+            720575940632602532,
+            720575940617629841,
+            720575940621399899,
+            720575940620031366,
+            720575940633674135,
+            720575940631959097,
+            720575940616857174,
+            720575940628972048,
+            720575940616864217
+          ],
+          "mean_pair_distance": 55.726109913869465,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 224.0952380952381,
+            "mean_out_degree": 206.47619047619048,
+            "excitatory_fraction": 0.42857142857142855,
+            "mean_baseline_rate_hz": 58.412698412698404
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        },
+        {
+          "sub_seed": 5754,
+          "member_flywire_ids": [
+            720575940620673985,
+            720575940631997032,
+            720575940632722771,
+            720575940611548878,
+            720575940623578375,
+            720575940622810153,
+            720575940611015122,
+            720575940631703608,
+            720575940627847752,
+            720575940619588568,
+            720575940609407939,
+            720575940630820919,
+            720575940625580988,
+            720575940617552057,
+            720575940633612698,
+            720575940625861660,
+            720575940626279742,
+            720575940660229505,
+            720575940630667372,
+            720575940647518340,
+            720575940635055039
+          ],
+          "mean_pair_distance": 59.39847381037322,
+          "summary": {
+            "size": 21,
+            "mean_in_degree": 195.23809523809524,
+            "mean_out_degree": 139.04761904761904,
+            "excitatory_fraction": 0.6190476190476191,
+            "mean_baseline_rate_hz": 49.16507936507936
+          },
+          "checks": {
+            "size_exact": true,
+            "mean_in_degree_pm25pct": false,
+            "mean_out_degree_pm25pct": false,
+            "excitatory_fraction_pm0.10": false,
+            "mean_baseline_rate_band": false
+          },
+          "passed": false
+        }
+      ]
+    }
+  }
+}

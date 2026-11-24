@@ -1,0 +1,18 @@
+{
+  "what": "Part 5 freeze premise check P6 (preregistration section 3): determinism of the closed loop",
+  "episode": "30-chunk arm (a) configuration (sugar right GRNs at 200 Hz, event_or_window, scripted window chunks 0-19), seed 5699, provisional r_hi 155 labelled PROVISIONAL",
+  "run1_dir": "results/closed_loop/freeze_premise/p6_run1",
+  "run2_dir": "results/closed_loop/freeze_premise/p6_run2",
+  "brain_log_sha256_both_runs": "62ee23c8961124199ec60780e3c823609ba8674b9b6830f74162fa961a385c85",
+  "body_log_sha256_both_runs": "1ef9ad50283c8d330171a1b071458c8feb51da06748652ae985183112665eba2",
+  "logs_bit_identical": true,
+  "per_chunk_E_identical_to_all_recorded_digits": true,
+  "spike_table_replay": {
+    "method": "src/closed_loop/replay_spike_table.py rebuilds the worker's exact construction in a fresh process, applies run 1's recorded per-chunk applied flags, and canonicalises the full spike table as the toggle-equivalence probe does ((root ID, time) sorted by (time, root ID); SHA-256 over int64 ID bytes + float64 time bytes)",
+    "replay1_sha256": "230ffa6105732d9ac87f4fb4e5957156b61c4d82f418758c3221fbe4c07a1e93",
+    "replay2_sha256": "230ffa6105732d9ac87f4fb4e5957156b61c4d82f418758c3221fbe4c07a1e93",
+    "n_spikes": 51023,
+    "per_chunk_counts_match_recorded_run": true
+  },
+  "verdict": "PASS"
+}

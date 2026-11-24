@@ -881,3 +881,51 @@ For the record, stated plainly: Reviewer 2's CONFIRM (Verbatim Reply B) and Revi
 - **The Part 7 prerequisite (§8.4) is discharged.** Reviewer 1 certified it conditional on his items being in the report, which they are; Reviewer 2 certified it in his ruling; Reviewer 3's PASS supports certification on this rung's side, consistent with Reviewer 1's ruling.
 - **Reviewer 3's boundary, recorded with the closure:** the report's conclusion must never be shortened to "six Holm-significant differences" or "Holm-controlled significance". The accurate conclusion is "six differences satisfy the registered claim rule". The reported bootstrap tail fractions and their nominal Holm adjustment are not calibrated null-distribution p-values or guaranteed family-wise error control. The separate post-hoc permutation analysis provides additional corroboration, but remains post-hoc and non-governing.
 - The human expert check remains owed at the Part 8 final gate.
+
+
+### Part 5 p-value amendment: Reviewer 1's final confirmation (24 Nov 2026, night)
+
+Reviewer 1's reply to the sub-stream confirmation message (the amended per-lesion sentence, the re-run disjointness output and the 5,000-simulation figures), verbatim:
+
+---
+
+Reviewer 1: change 3 and the re-run
+
+Change 3 is satisfied, and so are all three required changes. The amendment can go to the owner. I checked the text and the new output against my ruling. I haven’t re-run the code or the script.
+
+Change 3: confirmed
+
+- Per-lesion streams. 5701–5749 for L-MN9 and 5750–5799 for L-GRN are fixed in advance, order-independent, and each ends below arm (e)’s block at 5800. The fallback works within each lesion’s own stream, so one lesion can no longer starve the other. §8.1’s generation sentence is amended to match.
+- Arithmetic. 49 + 50 = 99 seeds, the same as the earlier shared stream. 990 + 3 new bootstrap-seed blocks = 993 total seeds. 35 − 1 + 2 + 3 = 39 blocks. The union equals the total (993), so all blocks are disjoint.
+- Coverage. The rung’s bootstrap seeds 20261128, 20261129 and 20261130 are now listed. The manifest scan found 342 distinct seeds across 63 JSON files, all inside listed blocks and none in the permutation block. That closes my coverage items.
+
+Change 2, re-run: confirmed
+
+- Per-member criterion. At n = 5,000 the standard error is 0.0031, so ±0.009 is about three standard errors, and I confirm that arithmetic. All 18 null cells fall within [0.041, 0.059]. The extremes are 0.046 and 0.055 (normal) and 0.047 and 0.054 (lognormal).
+- Family-wise. 261/5000 and 213/5000 sum to 474/10000 = 0.0474. That is under the one-sided bound of 0.059, and consistent with Holm being conservative. The earlier family-wise figures (0.060 and 0.056) were sampling noise, as I suspected.
+- Power and self-tests. Power is 0.986 to 1.000 on all members, and the self-tests pass.
+
+What the record must say
+
+1. The code hash changed. The code’s SHA-256 is now 32ab7eab…. The earlier run cited 825e5157…. Say so, say what changed (the one-sided family-wise criterion, the larger simulation count, the pooled figure), and keep the first run as superseded, not deleted. Note that the criterion was revised after seeing the first run, at my suggestion.
+2. Fresh hashes. The amendment must cite the new output file’s SHA-256 and the new disjointness script and output hashes. You’ve given the code hash only for the synthetic check, and the seed script has changed too.
+3. The diagnostic table. In this run the mean of s_i gives 0.058 / 0.063 / 0.050 at 1,000 simulations each, a little above the earlier 0.044 / 0.045 / 0.048. That is compatible with sampling noise (one standard error is about 0.007) and sits outside the pass criterion. The registered member itself ran at n = 5,000 with 0.055 and 0.050. Don’t interpret the diagnostic row beyond showing that r − 1 fails and s_i doesn’t.
+4. Stream sizes. The two streams have 49 and 50 sub-seeds. Say so in the text, and that exhaustion is the binding limit.
+5. The amendment-history entry. It still says the two pairing questions were “flagged to the panel rather than settled”. Both are now resolved, so update it.
+
+Sequence from here
+
+1. The owner approves the amendment.
+2. Apply it to docs/closed_loop_preregistration.md and re-hash.
+3. Re-run the disjointness script and the synthetic check against the applied text.
+4. Tag only after that. Do not create part5-prereg-v1 before the owner’s approval is recorded.
+
+I don’t need to see anything else from this thread. If any text changes in the application step beyond what’s listed, send me only the changed passages.
+
+---
+
+With this reply the amendment is panel-complete: Reviewer 1 CONFIRM (all three required changes satisfied, including the per-lesion sub-stream sentence), Reviewer 2 CONFIRM and re-CONFIRM on the statistic change, Reviewer 3 ACCEPT and re-ACCEPT on the statistic change. Reviewer 2's and Reviewer 3's confirmations were given on the shared-stream seed version; the per-lesion refinement followed at Reviewer 1's requirement and is confirmed by him above.
+
+### Owner approval of the Part 5 p-value amendment (24 Nov 2026, 22:24 WAT)
+
+Angelic Charles approved the amendment tonight ("Yes, approve the Part 5 amendment", 22:24 WAT). Reviewer 1's prescribed sequence governs from here: (1) this approval recorded; (2) the amendment applied to `docs/closed_loop_preregistration.md` as a formal pre-freeze amendment pass and the document re-hashed; (3) the seed-disjointness script and the synthetic null check re-run against the applied text; (4) the freeze executed under section 14 and the tag `part5-prereg-v1` created only after all of that. No tag existed before this approval was recorded.

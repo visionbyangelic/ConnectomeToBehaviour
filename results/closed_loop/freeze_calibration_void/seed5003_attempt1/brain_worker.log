@@ -1,0 +1,2 @@
+INFO       Cache size for target 'cython': 2163 MB.
+You can call clear_cache('cython') to delete all files from the cache or manually delete files in the '/home/hatch/.cython/brian_extensions' directory. [brian2]

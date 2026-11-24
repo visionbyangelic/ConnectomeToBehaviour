@@ -1,0 +1,8 @@
+{
+  "seed": 5699,
+  "n_chunks": 30,
+  "spike_table_sha256": "230ffa6105732d9ac87f4fb4e5957156b61c4d82f418758c3221fbe4c07a1e93",
+  "n_spikes": 51023,
+  "count_mismatches": [],
+  "counts_match_recorded": true
+}
