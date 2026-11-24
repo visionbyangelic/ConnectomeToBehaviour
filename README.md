@@ -1,262 +1,153 @@
 <div align="center">
 
 # ConnectomeToBehaviour
-<img width="1170" height="639" alt="image" src="https://github.com/user-attachments/assets/26a3a5d9-72a2-4b67-8f28-717c036f7d76" />
 
-### Connectome-to-Behaviour: Closed-Loop Whole-Brain Emulation of *Drosophila melanogaster*
+### Does the wiring matter? A controlled test of how much of a fruit fly's behaviour is written in its connectome
 
-<br>
-
-[![Status](https://img.shields.io/badge/●_Ongoing-1a1a1a?style=for-the-badge&labelColor=1a1a1a&color=f0c14b)](https://github.com/)
 [![License](https://img.shields.io/badge/License-MIT-1a1a1a?style=for-the-badge&labelColor=1a1a1a&color=6ee7b7)](LICENSE)
-[![Started](https://img.shields.io/badge/Started-6_Sep_2026-1a1a1a?style=for-the-badge&labelColor=1a1a1a&color=93c5fd)](https://github.com/)
 
-
-**Author:** [Angelic Charles](https://visionbyangelic.github.io)  
+**Author:** [Angelic Charles](https://visionbyangelic.github.io)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--7279--9663-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-7279-9663)
 
 </div>
 
 ---
 
-
-## Simple Summary
-
-Scientists have mapped the complete wiring diagram of a fruit fly’s brain and nervous system. This map shows every neuron and every connection between them. It is publicly available.
-
-This project asks a clear question:
-
-**If we take that real wiring diagram, give each neuron simple standard rules for when it should fire, and connect the whole system to a physically realistic virtual fly body, will the fly start to behave like a real fly?**
-
-Will it walk, clean itself, and reach for food — without us programming those actions by hand?
-
-Early public demonstrations (e.g., Eon Systems' *Virtual Embodied Fly*, March 2026; Shiu et al., *Nature* 2024) suggest the answer can be yes. This project is my independent attempt to build a clean, fully documented version of that system from public data and free tools. The goal is to understand the process deeply and create a transparent, reproducible resource.
-
------
-
-## What This Project Is
-
-This is a research project that connects three things:
-
-1. A real biological wiring diagram of the fruit fly nervous system (the connectome)
-1. A computer model of how neurons send signals
-1. A physical simulation of a fruit fly body
-
-The result is a virtual fly whose movements are driven by the activity of a real biological network, not by hand-written behavioral rules.
-
-The project focuses on producing several natural behaviors:
-
-- Walking and exploring
-- Cleaning the antennae
-- Extending the feeding tube when food is detected
-
------
-
-## Why This Project Exists
-
-Most brain maps today are static. They show what is connected to what, but they do not show what the network actually *does* when placed in a body and an environment.
-
-This project tests a basic idea in brain research:
-
-> **How much of an animal’s behavior is already written in the pattern of its connections?**
-
-If a simple model of the neurons, plus the real wiring, plus a realistic body, can produce recognizable behavior, it supports the idea that structure carries a large amount of function. It also creates a useful test system: neurons can be turned on or off in the model and the effect on behavior seen immediately — something slow and difficult to do in living animals.
-
-The work is also practical. Building the full pipeline requires real skill in computational neuroscience, biomechanics simulation, and careful systems integration. Documenting the process openly turns the project into both a research contribution and a clear, verifiable record of ability.
-
------
-
-## How the Project Works
-
-The system has four main parts that run together in a loop:
-
-1. **The environment** — a simple virtual world that can contain food, surfaces, and other stimuli.
-1. **Sensory input** — events in the virtual world (touching sugar, dust on the antennae, etc.) are turned into activity in the corresponding sensory neurons of the connectome model.
-1. **The brain model** — a network of simplified neurons built directly from the real connectome. When sensory neurons become active, signals spread through the network according to the biological connections.
-1. **The body** — a detailed physical model of a fruit fly. Activity in certain output neurons of the brain model is used to control the fly’s legs, head, and feeding structures.
-
-The loop then repeats: the body moves, the environment changes, new sensory signals are generated, and the cycle continues.
-
-No high-level behavioral programs are written. The behaviors are expected to emerge from the interaction of the biological network and the physics of the body.
-
------
-
-## Current Status: Phase 1 Validated — Canonical Reference Reproduction (1.0 s, N=10 Trials) ✅
-
-The whole-brain connectome-constrained Leaky Integrate-and-Fire (LIF) model has been built, tested, and benchmarked against the published reference simulation output from Shiu et al. (*Nature*, 2024) using their exact full-duration experimental protocol (**1.0 second biological time per trial across N=10 independent stochastic Poisson trials**).
-
-> **Scientific Distinction:** `sugarR.parquet` is Shiu et al.'s archived *computational model simulation output*, not in vivo patch-clamp recordings from living flies. The benchmarks below establish **reproduction fidelity** — proving that our implementation faithfully reproduces their published connectome model dynamics. Matching a living fly's brain activity is a separate biological question that requires independent empirical ground truth.
-
-### Canonical Multi-Trial Empirical Results Summary (N=10 Trials, 1.0 s Biological Time)
-
-| Experimental Condition | Stimulus | Total Spikes / Trial (Mean ± SD) | Active Neurons / Trial (Mean ± SD) | MN9 Left Rate (Mean ± SD, [95% CI]) | MN9 Right Rate (Mean ± SD, [95% CI]) | Circuit Phenotype |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **1. Sugar Alone** | 21 Right Sugar GRNs (150 Hz) | 13,858 ± 204 | 380.9 ± 7.8 | **83.5 ± 6.5 Hz** *[78.8, 88.2]* | **58.7 ± 5.2 Hz** *[55.0, 62.4]* | **Proboscis Extension Motor Activation** |
-| **2. Bitter Alone** | 21 Bitter GRNs (150 Hz) | 4,213 ± 89 | 76.2 ± 2.6 | **0.0 ± 0.0 Hz** *[0.0, 0.0]* | **0.0 ± 0.0 Hz** *[0.0, 0.0]* | **Aversive Baseline (Zero Feeding)** |
-| **3. Sugar + Bitter** | Co-activation (150 Hz each) | 12,987 ± 341 | 344.0 ± 11.9 | **9.1 ± 3.6 Hz** *(↓ 89.1%)* *[6.5, 11.7]* | **14.2 ± 1.6 Hz** *(↓ 75.8%)* *[13.0, 15.4]* | **Lateral Circuit Inhibition (p < 10⁻¹⁰)** |
-| **4. Water Alone** | 18 Water GRNs (150 Hz) | 5,142 ± 112 | 148.7 ± 37.9 | **6.0 ± 3.4 Hz** *[3.5, 8.5]* | **1.6 ± 2.1 Hz** *[0.1, 3.1]* | Distinct SEZ Sensory Circuit |
-
-*Note on MN9 Left vs. Right Asymmetry:* The contralateral bias (MN9 Left 83.5 Hz vs. Right 58.7 Hz) is the natural biological consequence of unilateral sensory stimulation (21 right-hemisphere labellar GRNs). In empirical bilateral tests (`experiments/test_mn9_symmetry.py`), stimulating both left and right GRNs yields exact bilateral motor symmetry ($60.0\text{ Hz}$ vs. $60.0\text{ Hz}$, $\Delta = 0.0\text{ Hz}$).
-
-<div align="center">
-
-![Phase 1 Canonical 1.0s Validation](results/validation/mn9_response_1s_n10.png)
-
-</div>
-
-### Statistical Verification of Cross-Modal Lateral Inhibition
-
-Under simultaneous sugar and bitter stimulation, inhibitory interneuron cascades in the connectome suppress proboscis extension motor neuron activity:
-* **MN9 Left:** Firing rate drops from **83.5 Hz → 9.1 Hz** (**89.1% suppression**).  
-  *Welch's two-sample unequal variance $t$-test: $t = 31.648$, $p = 2.13 \times 10^{-14}$ (statistically significant, $p < 0.001$).*
-* **MN9 Right:** Firing rate drops from **58.7 Hz → 14.2 Hz** (**75.8% suppression**).  
-  *Welch's $t = 25.899$, $p = 5.03 \times 10^{-11}$ (statistically significant, $p < 0.001$).*
-* *Finding:* Lateral inhibition emerges directly from connectome synaptic weights and neurotransmitter classifications without hand-written behavioral rules.
-
-### Canonical Reference Model Benchmark (vs. Shiu et al. Nature 2024 `sugarR.parquet`)
-
-Protocol-matched comparison: 10 trials of 1.0 s simulation vs. 30 trials of 1.0 s published reference model data:
-
-| Metric | Score | Detail |
-| :--- | :---: | :--- |
-| **Pearson Correlation (Firing Rate)** | **0.9936** | Near-perfect linear correlation of active neuron firing dynamics |
-| **Jaccard Overlap** | **0.9113** | 411 shared active neurons out of 451 combined |
-| **Precision** | **0.9928** | 99.3% of active neurons in our simulation are confirmed in the reference |
-| **Recall** | **0.9174** | Captures 411 of the 448 reference active neurons |
-| **Shared Active Neurons** | **411** | 414 simulated active vs. 448 reference active |
-
-**Next Milestone:** Phase 4 Anatomical Descending Neuron Bridge (`src/bridge/`) & Closed-Loop Integration.
-
------
-
-## Goals
-
-### Core Goals
-
-- Create a working closed loop in which neural activity from a connectome-based model drives body movement
-- Produce at least three distinct, recognizable behaviors
-- Make brain activity visible alongside the behavior
-- Keep the entire project fully reproducible from a fresh download
-- Document design choices, limitations, and open questions clearly
-
-### Longer-Term Goals
-
-- Support more than one public connectome dataset
-- Add the ability to turn specific neurons on or off and measure the behavioral effect
-- Improve the match between simulated behavior and real fly behavior
-- Make the system easier for others to extend
-
------
-
-## Tools and Resources
-
-Everything used in this project is free and publicly available. No paid software, subscriptions, or cloud services are required to run the core project. A standard laptop is enough for development; free-tier cloud compute (e.g. Google Colab, Kaggle) is enough for the largest simulations if needed.
-
-|Component           |Tool / Resource               |Purpose                             |
-|--------------------|------------------------------|------------------------------------|
-|Brain model         |Brian2                        |Simulates neuron activity           |
-|Connectome data     |FlyWire, BANC, Male CNS       |Real biological wiring diagrams     |
-|Body and physics    |MuJoCo + flygym (NeuroMechFly)|Physical simulation of the fly      |
-|Programming language|Python                        |All code                            |
-|Data handling       |NumPy, Pandas                 |Working with large connection tables|
-|Visualization       |Matplotlib, imageio           |Figures and videos                  |
-
------
-
-## Key References
-
-**Brain model**
-Shiu, P.K., Sterne, G.R., Spiller, N. et al. (2024). A *Drosophila* computational brain model reveals sensorimotor processing. *Nature*, 634, 210–219.
-<https://doi.org/10.1038/s41586-024-07763-9>
-
-**Female brain connectome**
-Dorkenwald, S., Matsliah, A., Sterling, A.R. et al. (2024). Neuronal wiring diagram of an adult brain. *Nature*, 634, 124–138.
-<https://doi.org/10.1038/s41586-024-07558-y>
-
-**Brain + nerve cord connectome (BANC)**
-Bates, A.S., Phelps, J.S., Kim, M. et al. (2026). Distributed control circuits across a brain-and-cord connectome. *Nature*.
-<https://doi.org/10.1038/s41586-026-10735-w>
-
-**Body simulation platform**
-Wang-Chen, S., Stimpfling, V.A., Lam, T.K.C. et al. (2024). NeuroMechFly v2: simulating embodied sensorimotor control in adult *Drosophila*. *Nature Methods*, 21, 2353–2362.
-<https://doi.org/10.1038/s41592-024-02497-y>
-
-**Male central nervous system connectome**
-Berg, S., Beckett, I.R., Costa, M. et al. (2026). Sexual dimorphism in the complete *Drosophila* male central nervous system connectome. *Cell*.
-<https://doi.org/10.1016/j.cell.2026.08.015>
-
------
-
-## Acknowledgments & Upstream Attribution
-
-This project builds entirely on public data and open-source tools produced by large scientific consortia: the FlyWire Consortium, the FlyEM Project Team at HHMI Janelia, the BANC-FlyWire Consortium, and the NeuroMechFly team at EPFL’s Neuroengineering Laboratory.
-
-* **Brain Model Reference:** The Leaky Integrate-and-Fire connectome simulation in `src/brain/fly_brain.py` is adapted from the open-source implementation by Philip Shiu, Gabriella Sterne, Nathan Spiller et al. (*Nature* 2024; [GitHub](https://github.com/philshiu/Drosophila_brain_model)).
-* **Body Simulation Platform:** NeuroMechFly v2 is developed by S. Wang-Chen, V.A. Stimpfling, T.K.C. Lam et al. (*Nature Methods* 2024; [flygym](https://github.com/NeLy-EPFL/flygym)).
-* None of the underlying connectome or body-simulation meshes were generated by this project — the contribution here is the closed-loop integration, empirical validation, perturbation architecture, and reproducible documentation built on top of them.
-
------
-
-## AI Assistance & Development Transparency
-
-Generative AI coding assistants (including Anthropic Claude and Google DeepMind Gemini) were used during the development of this repository as interactive pair-programmers, code reviewers, and technical interlocutors. All experimental designs, architectural decisions, code verification steps, and empirical results were independently reviewed, executed, and validated by the author.
-
------
-
-## How to Cite This Work
-
-If referencing this project, please cite it as:
-
-> Charles, A. (2026). *ConnectomeToBehaviour: Closed-Loop Whole-Brain Emulation of Drosophila melanogaster* [Software/Research project]. Available at: [GitHub](https://github.com/visionbyangelic/ConnectomeToBehaviour)
-
------
-
-## Project Structure
-
-```text
-ConnectomeToBehaviour/
-├── LICENSE                             # MIT Open Source License
-├── README.md                           # Project overview, status, and empirical findings
-├── TECHNICAL_PROOF_PLAN.md             # Citation-backed phase-by-phase build plan
-├── overview.md                         # Architecture overview & system dataflow
-├── track.md                            # Comprehensive chronological activity & audit log
-├── requirements.txt                    # Pip dependencies for core emulation stack
-├── environment.yml                     # Conda environment recipe (ctb-brain: Brian2, FlyBody)
-├── environment-flygym.yml              # Isolated Conda recipe (ctb-flygym: NeuroMechFly v2)
-├── scripts/
-│   └── download_data.py                # Automated connectome dataset fetcher & verifier
-├── src/
-│   ├── brain/                          # Whole-brain LIF connectome simulation API
-│   │   ├── __init__.py
-│   │   ├── fly_brain.py                # FlyBrain high-level simulation class (LIF + lesions)
-│   │   ├── constants.py                # Electrophysiological constants & cell IDs
-│   │   └── evaluation.py               # Statistical validation & reference metrics
-│   ├── body/                           # Physics simulation interfaces (MuJoCo / FlyGym)
-│   │   ├── __init__.py
-│   │   └── fly_body.py                 # FlyBody minimal wrapper around NeuroMechFly v2
-│   └── bridge/                         # Descending neuron to motor actuator decoders
-│       └── __init__.py
-├── experiments/
-│   ├── benchmark_brain_runtime.py      # Runtime breakdown: build vs compile vs run
-│   ├── check_neuron_metadata.py        # Connectome cell typing & SEZ cluster inspector
-│   ├── inspect_flygym_api.py           # Inspection script for NeuroMechFly v2 units (mm)
-│   ├── plot_spikes.py                  # Spike raster and population rate visualizer
-│   ├── quick_test_sim.py               # Fast 1-trial whole-brain connectivity test
-│   ├── reproduce_shiu_validation.py    # Multi-trial biological validation suite
-│   ├── run_1s_n10_validation.py        # Canonical 1.0s x 10 trials validation suite
-│   ├── test_body_environments.py       # Physics diagnostic for MuJoCo, FlyGym & FlyBody
-│   ├── test_fly_body_api.py            # Unit test for FlyBody wrapper (timing, joints, forces)
-│   ├── test_fly_brain_api.py           # Unit test for FlyBrain API
-│   ├── test_mn9_symmetry.py            # MN9 bilateral vs unilateral lateralization experiment
-│   └── test_unified_closed_loop_env.py # Single-process Brian2 + FlyGym co-execution test
-└── results/
-    └── validation/                     # Multi-trial validation summary & figures
-        ├── validation_summary.json
-        └── mn9_response_comparison.png
-```
-
------
+## What this project is
+
+I am rebuilding, from public data and free tools only, a fruit fly that runs on its real brain wiring —
+and then testing, honestly and with controls, whether the wiring itself is doing the work.
+
+The system takes the synapse-resolution wiring diagram of the adult *Drosophila melanogaster* central
+brain (the **FlyWire connectome, materialisation v630**), gives every neuron the same simple, standard
+firing rules (a leaky integrate-and-fire model, as in Shiu et al., *Nature* 2024), connects the brain's
+output to a physically simulated fly body (MuJoCo, via NeuroMechFly v2 / FlyGym), and closes the loop:
+what the body senses drives the brain, what the brain does moves the body, and the movement changes
+what the body senses next.
+
+The defining discipline of this project is **provenance**. For every behaviour it produces, I account
+for which parts came from the connectome and which came from the layers I had to add — the *encoder*
+on the way in, the *decoder* and the body's own *controllers* on the way out. That accounting is the
+difference between a research result and a demo video. Every claim here is also **model-conditional**:
+the experiments measure how *this model's* behaviour depends on *this model's* wiring, under documented
+encoder, decoder and body choices. They do not, by themselves, measure a living fly.
+
+## The question
+
+> With neuron rules, body physics, encoder and decoder held fixed and documented, how do the target
+> behaviours change — and within what bounds — when the biological connectome's topology is intervened
+> on: intact versus graded shuffled versions of itself, targeted lesions versus matched control
+> lesions, and intact versus connectome-free baselines and controllers run through the identical body?
+
+In plain words: does the real wiring actually matter, or would any wiring — or even a few simple
+if-then rules — produce the same behaviour through the same body? I ask it three precise ways, and I
+never claim a tidy percentage split ("the connectome contributes X%"), because this design cannot
+honestly give one.
+
+This is the project's centrepiece — a **controlled comparative intervention experiment**, run
+identically for each behaviour, with the comparisons, metrics and pass criteria written down *before*
+the results exist.
+
+## What is being built
+
+**Core-A — the complete, publishable unit.** Rebuild the published brain model to a stated standard;
+audit what the simulated body can actually do; build a population-based decoder for feeding and freeze
+it before evaluation; then run the intervention experiment for feeding (intact vs lesioned vs shuffled
+vs rule-based), with sensitivity checks (parameter changes, sign-uncertainty, closed-loop vs open-loop
+replay) and a compute benchmark reported as a result. If the project stopped at Core-A it would still
+be a finished piece of work — a positive separation *or* a demonstrated equivalence are both results.
+
+**Core-B — the full core.** The same treatment for **walk/halt** (does the model stop walking to feed,
+the way real flies do?). Grooming was in the original design and was dropped by the body audit
+(Part 1b): the shipped body cannot honestly express it, so it is out rather than faked.
+
+**Stretch — separately gated, never allowed to sink the core.** A bounded circuit from BANC (the 2026
+brain-and-nerve-cord connectome) for one behaviour's pathway; a GPU backend held to a parity check
+against the CPU reference; a cross-body check in flybody; vision, neural-first; replication on an
+independent connectome; and a sensitivity run on FlyWire v783.
+
+**Explicitly out of scope:** flight as a claimed behaviour, courtship, learning/plasticity, hunger
+modelling, whole-CNS simulation, and any claim of "upload" or consciousness.
+
+## Status — in progress, gated, nothing hidden
+
+This is a fresh rebuild, built in parts. Each part has its pass criteria pre-registered before work
+starts, is independently reviewed, and is only marked passed when the evidence is in. The rebuild was
+developed off-GitHub through its early gates; on 24 Nov 2026 I decided to publish the work in
+progress as it stands, ahead of the original schedule. This page describes the project and the state
+of the evidence — it claims no results the runs have not produced. The rebuild's code,
+preregistrations and tests live under [`fresh/`](fresh/).
+
+| Part | What | State |
+| :--- | :--- | :--- |
+| 0 | Foundations: plan, registers, metrics, benchmark | **Passed** — closed 23 Nov 2026 |
+| 1 / 1b | Environment + v630 data · Body-capability audit | **Passed** — closed 23 Nov 2026; the audit chose FlyBody for the feeding body |
+| 2 / 2b | Brain model · Minimal end-to-end loop (built early, on purpose) | **Passed** — closed 23–24 Nov 2026; the minimal loop runs stably |
+| 3 | Brain validation against Shiu et al. | Sugar rung **passed** (closed 23 Nov 2026). The four-conditions rung is preregistered, frozen 24 Nov 2026, and its runs are in progress — no results claimed yet |
+| 4 | Sensory specifications · Feeding-body qualification | **Passed** — closed 24 Nov 2026; the feeding body qualified at its pre-registered gate |
+| 5 | Full closed loop (feeding) + preregistration freeze | Loop **built** and tested; preregistration approved — the freeze (calibration first) comes next |
+| 6 | **Comparison checkpoint vs Version 0** | Not yet run — the comparison still happens here. The v0 bundle and this publication were moved forward to 24 Nov 2026 at my decision; only the timing changed |
+| 7 / 7b | Intervention experiment — feeding · walk/halt | Not started — Part 7 waits on the four-conditions rung completing |
+| 8 | Documentation + release | In progress — this publication is an early act of it, moved forward; the full release still closes the project |
+
+Two stop rules I hold myself to: if the published brain cannot be reproduced to the pre-set standard,
+the project pivots to a reproduction-failure report rather than building on an untrusted brain; and a
+part that exceeds its budget stops and comes back to me with options — it does not silently expand.
+
+## Version 0 — my first build, preserved in full
+
+The first version of this project lives in [`v0-prototype/`](v0-prototype/) — bundled, labelled, and
+kept in this repository on purpose, because it is a research output that may help somebody else, and
+because this project's paper trail should show the first attempt, not just the polished one.
+
+What v0 did: it validated the whole-brain model against Shiu et al.'s published output (Pearson
+**0.9936**; sugar drove the feeding motor neuron MN9 to **83.5 ± 6.5 Hz** left / **58.7 ± 5.2 Hz**
+right, bitter alone gave **0 Hz**, and bitter suppressed the sugar response by **89.1% / 75.8%**),
+verified the body stack, and then stopped — its brain-to-body bridge was never built. Its full
+results, its open questions (including an MN9 left/right asymmetry I had not resolved), and its
+complete build log are in the folder, unchanged, and its exact pre-archive state is frozen at the
+tag `v0-prototype-final`.
+
+## How to reproduce
+
+*(Commands are finalised at the release gate; the shape of it is fixed now.)*
+
+- **CPU is the reference platform** for every confirmatory result. GPU runs are exploration-only,
+  and only count after passing a parity check against the CPU on identical input.
+- The environment is pinned and built from scratch (lockfiles in the repo); the brain and body stacks
+  are isolated environments, as they were in v0.
+- Data is public and fetched by a documented procedure: FlyWire v630 from the Shiu et al. release,
+  with file hashes recorded. The datasets themselves are not stored on GitHub.
+- Every run records its code version, data hashes, seeds and configuration in a run manifest, so any
+  number on this page can be traced to the exact run that produced it.
+
+## Where this goes
+
+Preprint first, as soon as Core-A is complete — whatever its outcome. Core-A then goes to a NeuroAI
+workshop or a reproduction venue; Core-A + Core-B is the journal version. The demo video comes after
+the science, as the advert for it — never as the evidence.
+
+## Key references
+
+- Shiu, P.K. et al. (2024). A *Drosophila* computational brain model reveals sensorimotor processing. *Nature* 634, 210–219. https://doi.org/10.1038/s41586-024-07763-9
+- Dorkenwald, S. et al. (2024). Neuronal wiring diagram of an adult brain. *Nature* 634, 124–138. https://doi.org/10.1038/s41586-024-07558-y
+- Wang-Chen, S. et al. (2024). NeuroMechFly v2: simulating embodied sensorimotor control in adult *Drosophila*. *Nature Methods* 21, 2353–2362. https://doi.org/10.1038/s41592-024-02497-y
+- Bates, A.S., Phelps, J.S., Kim, M. et al. (2026). Distributed control circuits across a brain-and-cord connectome. *Nature* 656, 957–970. https://doi.org/10.1038/s41586-026-10735-w
+- Sapkal, N. et al. (2024). Neural circuit mechanisms of behavioural choice in *Drosophila*. *Nature* 634, 191–200.
+
+This project builds entirely on public data and open-source tools from the FlyWire Consortium, the
+FlyEM Project Team at HHMI Janelia, the BANC-FlyWire Consortium, and the NeuroMechFly team at EPFL.
+None of the underlying connectome or body-simulation data was generated by me — my contribution is
+the closed-loop integration, the controlled intervention design, the empirical validation, and the
+documentation.
+
+## How to cite
+
+> Charles, A. (2026). *ConnectomeToBehaviour: Does the wiring matter? A controlled test of connectome
+> contributions to Drosophila behaviour* [Software/research project]. GitHub:
+> https://github.com/visionbyangelic/ConnectomeToBehaviour — Version 0 (archived prototype) under
+> `v0-prototype/`, tag `v0-prototype-final`.
 
 ## License
 
-MIT License — free for anyone to use, modify, and build upon. See [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE).
