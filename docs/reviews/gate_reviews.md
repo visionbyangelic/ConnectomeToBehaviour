@@ -967,3 +967,28 @@ Each item in Reviewer 1's reply above was checked against `docs/closed_loop_free
 5. **Waiver and expert check: SHOWN.** Item 6 of the freeze record carries the waiver text as signed and states that the human expert check remains owed at the Part 8 final gate.
 
 No item was missing, so no addendum to the freeze record was needed. Reviewer 1's standing conditions, and his recommendation to seek the human check before Part 7's first confirmatory evaluation, stand as recorded in his reply above.
+
+### Reviewer 1: acceptance of the Part 5 freeze record (24 Nov 2026, night; verbatim)
+
+Reviewer 1: freeze record
+
+I accept the freeze record as shown.
+
+Items 1 to 5 are present as described. I’m relying on your report of the record, since I haven’t seen the file.
+
+- Sequence. Approval at 22:24 WAT and the tag at 23:07:51 WAT are 43 minutes 51 seconds apart, which matches the “about 44 minutes” in your note. Approval came first, as agreed.
+- Hash check. Re-hashing the document at the tag and getting exactly the recorded SHA-256 is the check I wanted.
+- Applied-text checks. The seed script parses the seed table out of the applied document and fails if its canonical list differs. The sub-seed blocks match the §7 text (5701–5749 and 5750–5799), so the check does not depend on my reading of the draft. 39 blocks and 993 seeds match what I confirmed earlier, and the pooled family-wise figure of 0.0474 matches.
+- Superseded run and history entry. The earlier synthetic run stays on record with code hash 825e5157, and the amendment history records the per-lesion streams, the s_i statistic and the resolved questions.
+- Waiver. The waiver text is in the record, and the human check is stated as owed at Part 8.
+
+The script’s header comment
+
+I agree with leaving the script untouched so its recorded hash stands. The comment says 49 sub-seeds per stream where the L-GRN stream holds 50, which affects nothing the script checks. Put the same note in the freeze record, next to the script’s hash, and not only in the gate log. A future reader who opens the script will see the discrepancy before the log.
+
+Standing items
+
+- The human check before Part 7. My earlier recommendation stands: seek it before the first confirmatory evaluation episode, when outcomes first become visible. The waiver covers the freeze, not a later decision to skip it.
+- No edits to the frozen document without a formal amendment, as before.
+
+I have nothing further on this gate. For future rounds, send results with their hashes and I’ll check them against the registered rules.
