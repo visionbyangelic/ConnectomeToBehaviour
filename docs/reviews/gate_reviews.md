@@ -929,3 +929,41 @@ With this reply the amendment is panel-complete: Reviewer 1 CONFIRM (all three r
 ### Owner approval of the Part 5 p-value amendment (24 Nov 2026, 22:24 WAT)
 
 Angelic Charles approved the amendment tonight ("Yes, approve the Part 5 amendment", 22:24 WAT). Reviewer 1's prescribed sequence governs from here: (1) this approval recorded; (2) the amendment applied to `docs/closed_loop_preregistration.md` as a formal pre-freeze amendment pass and the document re-hashed; (3) the seed-disjointness script and the synthetic null check re-run against the applied text; (4) the freeze executed under section 14 and the tag `part5-prereg-v1` created only after all of that. No tag existed before this approval was recorded.
+
+### Reviewer 1 on the Part 5 freeze record (24 Nov 2026, night; verbatim)
+
+Reviewer 1: the application-step change
+
+I have no objection to the change.
+
+Replacing “flagged here for editorial correction at the freeze” with “corrected in this same amendment pass” is a faithful description of what happened, and it closes the §7 sentence cleanly. The same pass applied both the amendment and the editorial correction, so there is no longer a deferred fix hanging over the frozen text.
+
+I haven’t seen the tag or the applied document, so everything below is a request for the freeze record, not a confirmation of it.
+
+What the freeze record should hold
+
+1. The tag and its content. The commit hash that part5-prereg-v1 points to, and the SHA-256 of docs/closed_loop_preregistration.md at that commit.
+2. Owner approval before the tag. The amendment’s approval by Angelic, with its timestamp, recorded as earlier than the tag. The sequence we agreed was approval, application, re-run of the two checks, then tag.
+3. Both checks re-run against the applied text. The synthetic-null check and the seed-disjointness script, each with its output file and SHA-256. The applied document’s streams and blocks are what the script’s lists should be compared against, so check that the script’s lists match the document as it now reads, not only the draft.
+4. The amendment-history entry updated to say the two pairing questions were resolved, with the per-lesion sub-streams, the s_i statistic and the synthetic check recorded. Keep the superseded first synthetic run on record, with its code hash.
+5. Waiver and expert check. The waiver text as signed, and the statement that the human check is owed at Part 8. I’d still recommend asking for it before the first confirmatory evaluation in Part 7.
+
+Standing conditions for what follows
+
+• No further edits to the frozen document without a formal amendment. That includes the editorial change just described, now that the tag exists: record it in the history as an editorial correction applied before the tag.
+• Calibration seeds and evaluation seeds stay separate, as registered, and no evaluation data are inspected before the analysis code is frozen and hashed.
+• Report all registered outcomes, including nulls and arms that disagree with the primary, in the registered wording.
+
+If any of items 1–4 cannot be shown, tell me which. Otherwise I have nothing further on this thread.
+
+### Verification of the freeze record against Reviewer 1's requests (24 Nov 2026, night)
+
+Each item in Reviewer 1's reply above was checked against `docs/closed_loop_freeze.md`, the frozen preregistration as it stands at the tag, the decisions log and the check artefacts on disk. Outcome per item:
+
+1. **Tag and content: SHOWN.** The freeze record's dated note records the freeze commit `b88520be5a7a652a7c96e4203347c5d4411ed38b`, and the tag `part5-prereg-v1` points at that commit (verified). Item 1 of the freeze record states the preregistration's SHA-256 as `81191895af32ce3dfbf17e556579c4de5cfdb8a4236447aa1d0088895b237a00`; hashing the file as it stands at the tag gives exactly that value.
+2. **Owner approval before the tag: SHOWN.** The freeze record (item 1) and `decisions_log.md` both record the approval of the amendment by Angelic Charles on 24 Nov 2026 at 22:24 WAT. The tag's tagger timestamp is 24 Nov 2026, 22:07:51 UTC, which is 23:07:51 WAT, so the approval precedes the tag, in the agreed sequence of approval, application, re-run of the two checks, then tag.
+3. **Both checks re-run against the applied text: SHOWN, no mismatch.** The freeze record cites the disjointness script (SHA-256 `d84798f2c586738df5f5478810fdc92c0e3ccda51beaff697f65deb09b1793f2`), its applied-text output (`d19241b15e7a23dc7bfcb1b7694dbc7ba0d452b7d52457caef647b5d0ab366bc`), the synthetic check code (`32ab7eab49db97b2611255a1b44c6b5e2818eb0e515fc8fc97b7bc0d961eaaef`) and its applied-text output (`761b1234d0b326a48bc4a24f7e4addfce4d56b1abbd65e94c62ce8375bd3bc2b`); all four hashes were verified against the files on disk, and both outputs record PASS (disjointness: 39 blocks, 993 seeds, all pairwise disjoint, manifest scan clean; synthetic: per-member 0.046 to 0.055 and 0.047 to 0.054, pooled family-wise 0.0474). The script parses the Part 5 seed table out of the document itself and fails loudly if the parsed blocks differ from its canonical list; the document it parses is byte-identical to the document at the tag (same SHA-256 as item 1 above), and its parsed blocks match the applied table exactly: 5000-5009; 5100-5119 excluding 5103, plus 5120; 5800-5819; 5103; 5200-5219; 5300-5319; 5400-5519; 5699; 5700; 6000-6099, with the permutation block now taken from the document's own table, as the freeze record describes. The script's two sub-seed stream blocks (5701-5749 for L-MN9, 5750-5799 for L-GRN) match the applied document's section 7 text. One wording slip in the script's own header comment, recorded for accuracy: it says each stream holds 49 sub-seeds, where the L-GRN stream holds 50; the block lists the script actually checks are correct, and the preregistration states 49 and 50 correctly.
+4. **Amendment-history entry: SHOWN.** The entry records the two pairing questions as resolved, not merely flagged; the per-lesion sub-streams with their sizes (49 and 50); the s_i statistic and why it replaced the draft's first statistic; and the validation record keeps the superseded first synthetic run on record with its code hash (`825e5157f102d248b2cefd24fbbf083a506ea3b29e41c7113ea8fd6e64a006da`), marked superseded, not deleted, with the reason for the change (the one-sided family-wise criterion, the larger simulation count, the pooled figure) stated.
+5. **Waiver and expert check: SHOWN.** Item 6 of the freeze record carries the waiver text as signed and states that the human expert check remains owed at the Part 8 final gate.
+
+No item was missing, so no addendum to the freeze record was needed. Reviewer 1's standing conditions, and his recommendation to seek the human check before Part 7's first confirmatory evaluation, stand as recorded in his reply above.
