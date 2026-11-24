@@ -266,6 +266,8 @@ Answering that question badly is easy: switch the map on, watch it move, and cre
 └── LICENSE                 # MIT
 ```
 
+Note: the first build preserved in `v0-prototype/` is superseded. Its known issues are documented in the Part 6 comparison.
+
 The preregistration documents live in `docs/`, each named for the experiment it governs: each experiment is written down there in full before it runs. Until 24 Nov 2026 the whole rebuild lived under one folder called `fresh/`, with stage-numbered names; the rearrangement to the layout above is recorded in `docs/name_changes.md`, and the frozen tags still point at the layout as it was when they were cut.
 
 ---

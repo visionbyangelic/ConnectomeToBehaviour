@@ -345,3 +345,246 @@ Reviewer 3 has ruled on the same draft amendment Reviewer 2 confirmed above (`wo
 ## Note — repository restructure (24 Nov 2026)
 
 At the owner's direction the repository was rearranged on 24 Nov 2026 to follow the arrangement of her fatigue-detection project: documents in `docs/` under descriptive names, code in `src/`, recorded outputs in `results/`, nothing named after her. This log is now `docs/reviews/gate_reviews.md`. The Part 5 preregistration is now `docs/closed_loop_preregistration.md`; its path references were updated by a dated editorial amendment in its amendment history, with no registered content changed. The Part 5 p-value amendment draft stands unaffected in substance: the document it will amend, if approved, is the same document at its new path. The frozen tags were not moved. Full old-to-new mapping: `docs/name_changes.md`.
+
+---
+
+## RUNG 2 HARD GATE: Reviewer 1's follow-up session (24 Nov 2026, evening)
+
+Session in Reviewer 1's chat (https://claude.ai/chat/e3e2b04f-0f06-4905-bb69-f068f549879b), after the free-message limit reset at 20:50 WAT. Five replies, messages 58, 60, 62, 64 and 66, all recorded verbatim below. Replies 62 and 64 arrived while the messages were still being sent (the dispute message first, then the materials, then the draft), so they rule on (a) and (b) and give requirements for (c); reply 66, given after all three messages had landed, is the ruling on (c) and supersedes the (c) requirement lists. Times are as reported, approximate.
+
+### Reply 1 — item 3 and the planned fixes (message 58, ~20:58 WAT)
+
+Reviewer 1: item 3 and the planned fixes
+
+Item 3: resolved. The old build is preserved on the named tag v0-prototype-final at ab30ab4. It is also kept inside the repo as v0-prototype/ with its original README byte-identical, and that satisfies D7. The push to main was owner-ordered and recorded at the time as a timing-only change, so recording it as an owner-ordered deviation, with her order as the ratification, is the right treatment. I agree it does not affect the rung result.
+
+Two notes for the record, neither blocking:
+
+1. The public README still carries the known flaws. A byte-identical v0 README keeps the early "electrophysiology ground truth" wording and the old numbers. That is correct for preservation. I'd add a short note outside the preserved file, for example in the top-level README, saying the v0 build is superseded and that its known issues are documented in the Part 6 comparison. That is the "what I got wrong and fixed" framing the hiring lens favoured.
+
+2. Say what "blind" now means. The old numbers are public, so the Part 6 comparison's blindness depends on process, not on access. In the gate record, state the rule: the fresh outputs (the rung and every Part 5 and Part 7 result) are hashed and locked before anyone opens v0 numbers for comparison. The report should give the hash of each locked output and the time it was locked.
+
+Items 1 and 2 and the record items
+
+The planned changes are what I required:
+
+- p-values reported as bounds with the resample count stated;
+- every quoted ratio carrying "bitter at 200 Hz, sugar right-only";
+- direction-only language across the rates, with the dose-response arms described as non-confirmatory;
+- no reproduction or old-build comparison claims;
+- the void log with causes, the analysis-copy hash and diff reference, the bitter-alone arms' values, the degenerate [0, 0] interval, and descriptive laterality.
+
+When you send the text for my check
+
+Please include these verbatim:
+
+- §8.2's table, with the Holm-adjusted bounds;
+- §8.3's verdict wording;
+- the void-attempt log;
+- the nine-condition summary table (so I can confirm every condition is reported, including bitter alone at 100 and 150 Hz);
+- the sentence that scopes the headline claim.
+
+My verdict stands as given: PASS, provided those fixes land as described.
+
+### Reply 2 — rung results text check (message 60, ~21:05 WAT)
+
+Reviewer 1: rung results text check
+
+Verdict: PASS stands. The numbers hang together and the claim language is correctly scoped. One required fix is to the p-value bound, which is a reporting correction with no effect on any verdict. A few smaller wording items follow.
+
+Arithmetic and consistency, checked against the text
+
+- Pooled rates: 93.63 + 61.47 = 155.10; 9.97 + 9.57 = 19.54 (reported 19.53, rounding); 30.23 + 11.87 = 42.10; 55.00 + 33.83 = 88.83; 29.30 + 21.93 = 51.23; 93.17 + 64.87 = 158.04 (reported 158.03, rounding). All are fine.
+- Ratios: 19.53/155.10 = 0.126, 9.97/93.63 = 0.106, 9.57/61.47 = 0.156, 88.83/155.10 = 0.573 and 51.23/155.10 = 0.330. All match.
+- Differences against sugar: −93.63 and −61.47 for bitter, −83.67 and −51.90 for sugar+bitter, and −63.40 and −49.60 for water. All match. The CIs equal the sugar CI negated for bitter, and the combined widths are consistent for the others.
+- Nesting: each 90% CI sits inside its 95% CI.
+- "About an eighth": 0.126 ≈ 1/8, which is correct.
+- Void log: four attempts, two SIGKILL and two machine restarts, matches the earlier summary. All nine conditions are reported, including bitter alone at both arm rates, with the degenerate [0, 0] stated.
+
+Required fix: the p-value bound
+
+The note defines each p-value as twice the smaller tail fraction, but gives the bound as 1/(B+1). That bound applies to a one-sided tail fraction. For the two-sided definition stated, with zero resamples at or beyond zero, the add-one convention gives 2/(B+1) ≈ 0.0002.
+
+- On the Holm point you flagged: you are right that Holm-adjusted values cannot be reported at the unadjusted bound (the extract's "< 0.0001" is wrong). But the report's "< 0.0006" is 6/(B+1), which also uses the one-sided bound.
+- Corrected under the two-sided definition: unadjusted p < 0.0002, and Holm-adjusted p < 12/(B+1) ≈ 0.0012.
+- Either way is acceptable as long as the definition and bound match: restate the bounds as 0.0002 and 0.0012, or redefine p as the one-sided tail fraction and say so. The extract's sentence "The Holm-adjusted values are reported at the same bound" must go in either case. All six comparisons remain claimed.
+
+Smaller wording items
+
+1. Void log. Only the bilateral re-run's new run_id is named. List the new run_ids for the sugar+bitter and sugar+bitter 100 Hz re-runs too, and state that no output from any voided attempt was inspected.
+2. Scope sentence. Add "brain-only, 1.0 s trials, N = 30" and name the bitter set as the upstream neu_bitter list (21 neurons, laterality not recorded). Say that "suppression" refers to the MN9 feeding readout in this model.
+3. "Bitter drive … does not recruit the feeding readout." Add "in this model, brain-only".
+4. No old-build comparison: it is absent here, as it should be. Keep it so.
+
+Forward note for Part 5 (not a change to the frozen design)
+
+The sugar+bitter residual of 19.5 Hz pooled is above r_lo = 5 Hz, so the decoder will command a small extension in arm (d). If r_hi comes out near 184 Hz, e ≈ 0.08 and E ≈ 0.18 rad. That exceeds the registered 0.10 rad onset threshold but sits far below the contact threshold (~0.84–0.88 of E/E_max), so arm (d) would show an extension onset with no food contact.
+
+Record that as a pre-evaluation expectation in the Part 5 record now, and confirm that graded endpoints, not the thresholded onset, carry the sugar+bitter comparison. It must not read as a surprise, or as a decoder failure, when the data come in.
+
+Send the corrected §7 paragraph and the amended void log when ready. I don't need to see the rest again.
+
+### Reply 3 — rulings on (a), (b), (c) (message 62, ~21:12 WAT; sent before the materials and the draft had arrived)
+
+Reviewer 1: rulings on (a), (b), (c)
+
+The message says the frozen §8.2 text and the Part 5 draft amendment "follow below", but neither arrived. I can rule on (a) and (b) from the described procedure. For (c) I can only give requirements until I see the text.
+
+(a) Does the registered procedure stand? It stands as executed, and Reviewer 3's objection is right about what the quantity is. These two positions are compatible, and both reviewers are right about part of it.
+
+• Reviewer 2 is right on the contract. The executed code matches the frozen formula. Redefining the test after seeing results would breach the preregistration. Claims shouldn't be voided or recomputed to a different construction on that ground.
+• Reviewer 3 is right on the construction. Twice the smaller tail fraction of a bootstrap distribution centred on the observed difference is a confidence-interval-inversion quantity, not a null-distribution p-value. It isn't calibrated, and Holm applied to it gives nominal values, not guaranteed family-wise control. My earlier instruction to report these as bounds left that unaddressed. That was my miss.
+• The claims are not at risk. From the reported CI half-widths, the six differences sit between about 46 and 105 standard errors from zero. Any valid test gives p far below any threshold.
+
+Resolution I require (three items, all in the report):
+1. A dated methodological disclosure. State exactly what the quantity is: the bootstrap tail fraction, which is not a null-distribution p-value, and Holm over it is nominal. State that the registered procedure was executed as frozen.
+2. Rename the columns. "p (unadj.)" and "p (Holm)" become "bootstrap tail fraction (two-sided)" and "Holm over tail fractions (nominal)". The "Claimed" column stays, labelled "claimed under the registered rule".
+3. A supplementary calibrated check, labelled post-hoc and non-governing. For each of the six comparisons, run a Monte Carlo permutation test: pool the 60 trials of the two conditions, permute labels, use the absolute difference in means, report p = (1 + k)/(B + 1), with B and the seed declared, and apply Holm across the six.
+• With B = 10,000 and zero exceedances, each p is 1/(B+1), and Holm gives < 6/(B+1) ≈ 0.0006.
+• If the supplementary result ever disagreed with the registered one, that goes to the panel as a discrepancy. The registered rule governs the registered claim.
+• The permutation null is the sharp one (the condition has no effect on the trial distribution). That null is appropriate here, including for bitter versus sugar, where the bitter group has zero variance.
+
+On the Part 7 prerequisite. §8.4 completion (determinism check, four primaries, anchor) is untouched by this dispute. I certify it, conditional on items 1–3 being in the report. That makes two of three. I'd prefer Reviewer 3 to confirm the amended wording instead of being overruled.
+
+(b) The 1/(B+1) versus 2/(B+1) bound
+
+For the two-sided quantity as the report defines it (twice the smaller tail), the add-one convention gives 2/(B+1) ≈ 0.0002 , not 1/(B+1). The report's table should therefore say unadjusted < 0.0002, and Holm over the tail fractions < 12/(B+1) ≈ 0.0012. The report's current Holm bound of < 0.0006 is correct for the permutation quantity in item 3 (6/(B+1)), but not for the registered tail fraction. Use each number only with its own quantity. Also state the plain fact, which needs no convention: "0 of 10,000 resamples crossed zero in any of the six tests." Note that add-one is a reporting convention for permutation p-values. For a bootstrap tail fraction it is only conventional, and the table should say so.
+
+(c) The Part 5 draft amendment
+
+I haven't received the text, so I can't rule on it as written. Please resend it. In the meantime, these are my requirements. The "seed-stratified" construction Reviewers 2 and 3 adopted is consistent with them if stratification follows how seeds and scenarios are actually shared across arms.
+1. Exchangeability. State the permutation unit (episode, seed or scenario block) and why units are exchangeable under the null. If arms share seeds or scenarios, permute within strata (paired by seed).
+2. Statistic and tail fixed in advance. Define the statistic, and use the absolute difference for two-sided tests.
+3. B large enough for the family. The minimum attainable p is 1/(B+1), and for Holm across m tests it must sit below α/m. Declare B and the seed, and report p as (1 + k)/(B + 1), never 0.
+4. Equivalence (TOST) construction. Part 5 has TOST criteria, so state how equivalence intervals are built (for example, a percentile bootstrap CI at the 90% level, with declared seeds). Permutation does not give that directly.
+5. Zero-variance and tied cases. State how a condition with identical values (for example, all MN9 zero) is handled.
+6. Family and Holm order. State the family and its members.
+7. A synthetic null check before the freeze. Part 5 has no data yet, so use synthetic data with the same n and structure and the actual test code. Confirm the false-positive rate is near its nominal level at α = 0.05, record the output, and hash it with the code.
+8. No evaluation seed enters the test construction, and the amendment is time-stamped before the Part 5 freeze.
+
+If the draft meets these, I'll confirm it. Send the text and I'll check it against them.
+
+### Reply 4 — the materials (message 64, ~21:13 WAT; after the materials arrived, before the draft)
+
+Reviewer 1: the materials
+
+The rung materials arrived. The Part 5 draft amendment did not, so my ruling on (c) is still the requirement list, not a check of the text. My rulings on (a) and (b) are unchanged. I checked the materials against them.
+
+What the materials settle
+• Registered formula vs executed code. diff_pvalue is 2 × min(P(d ≤ 0), P(d ≥ 0)) capped at 1, matching §8.2 word for word. Reviewer 2 is right about the facts, and Reviewer 3 has not alleged a departure.
+• holm. Zero-based rank with (m − rank) gives multipliers 6, 5, …, 1 in ascending order, with the running maximum. That is the correct step-down procedure, and the indexing concern is answered. (Holm also stays valid when the six bootstrap distributions share index draws, which they do here because of the shared seed and sample sizes.)
+• Anchor deltas. +1.0667 rounds to +1.07, and I confirm 62.4 − 0.9333 = 61.4667. The Δ interval of [−1.23, +3.40] is wider than the rung's own sugar CI would give, which is correct, since both sides of the difference carry uncertainty.
+• One immaterial inconsistency. The ±23.1425 Hz band equals 0.25 × 92.57, the rounded primary, while Δ uses the unrounded 92.5667 (0.25 × that = 23.1417). The difference is under 0.001 Hz and changes nothing. State in the report which constant the band uses.
+
+Ruling (a): unchanged
+I accept Reviewer 3's point on what the quantity is, and I accept Reviewer 2's point on the contract. I also own my part. I approved the rung preregistration, and the p-value construction was in the frozen text. I did not flag that it is a bootstrap tail fraction and not a null-calibrated p-value, and I then advised reporting it as a bound. That advice papered over the problem. To let Reviewer 3 lift his block without breaching the preregistration:
+1. The dated methodological disclosure, with the columns renamed as I specified ("bootstrap tail fraction (two-sided)" and "Holm over tail fractions (nominal)"), and "claimed under the registered rule".
+2. The supplementary Monte Carlo permutation check, labelled post-hoc and non-governing: pooled labels, absolute difference in means, p = (1 + k)/(B + 1), Holm across the six.
+3. A discrepancy between the two goes to the panel. The registered rule governs the registered claim.
+
+An exact calculation worth adding. With 30 trials per group, if every one of the six comparisons is perfectly separated (every value in one condition beyond every value in the other, which the Δ-to-CI ratios suggest and the trial data can confirm), the exact two-sided permutation p-value is 2/C(60,30) ≈ 1.7 × 10⁻¹⁷. No test at this sample size can be more significant. State that, and the conclusions no longer depend on the choice of construction. Check the separation from the stored trial rates, which I can't see.
+
+Ruling (b): unchanged
+For the registered two-sided quantity under an add-one convention, the bound is 2/(B+1) ≈ 0.0002, and the Holm bound is 12/(B+1) ≈ 0.0012. The 1/(B+1) and 6/(B+1) figures (0.0001 and 0.0006) belong to the one-sided and permutation quantities. Each bound must be paired with its own definition. The simplest and most honest statement is "0 of 10,000 resamples crossed zero in each of the six tests".
+
+Still needed
+• The Part 5 draft amendment text. Please resend it. I'll check it against my eight requirements (exchangeability unit and strata, fixed statistic and tail, B large enough for Holm, an equivalence construction, zero-variance handling, the family and Holm order, a synthetic null check before the freeze, and no evaluation seeds in the construction).
+• Prerequisite certification. I certify the §8.4 Part 7 prerequisite conditional on items 1–3 above being in the report, and I'd like Reviewer 3 to confirm those items.
+
+### Reply 5 — ruling on the Part 5 p-value amendment (message 66, ~21:15 WAT)
+
+Reviewer 1: ruling on the Part 5 p-value amendment
+
+Verdict: CONFIRM, with three required changes. The construction is right in principle. Seed-stratified label permutation, the plus-one formula, the edge cases, the per-test exchangeability statements and the family and Holm order are all as I required. I agree with both flagged rulings: the frozen-vs-refit gap stays descriptive with TOST as a separate inferential route, and the label permutation is stratified by seed. I ran one check on the draft, and it found a defect.
+
+Required change 1: the suppression-ratio member uses an invalid statistic
+
+The draft sign-flips r_i − 1. A sign-flip is valid only for a statistic that is odd under swapping the two arms' values within a seed. Swapping d and b turns r into 1/r. If r = 2, then r − 1 = +1, but after the swap r = 0.5 and r − 1 = −0.5, not −1. So the signs of r_i − 1 are not exchangeable, even under the strict null that the two arms are interchangeable at each seed.
+
+I simulated this. Arms were exchangeable, so the null was true, with lognormal rates, n = 20 pairs and 10,000-style sign-flip draws. The observed false-positive rates at α = 0.05:
+
+| Per-seed spread (σ) | mean(r − 1) | (d − b)/(d + b) | mean log r |
+|---|---|---|---|
+| 0.5 | 0.150 | 0.045 | 0.045 |
+| 1.0 | 0.361 | 0.049 | 0.049 |
+| 1.5 | 0.563 | 0.043 | 0.041 |
+
+The draft's statistic rejects a true null 15–56% of the time in this toy. It's an exact failure of the property this amendment was written to establish.
+
+Fix. Replace the tested quantity with s_i = (d_i − b_i)/(d_i + b_i), where d_i and b_i are that seed's arm (d) and arm (b) rates. The statistic is the mean of s_i, with sign-flip as drafted.
+
+- s_i is exactly odd under swapping, so it is valid under the stated null.
+- It handles zero rates. A seed with d_i = 0 gives s_i = −1 (the strongest suppression stays in), and a seed with both rates 0 is set to s_i = 0 and kept.
+- The zero-denominator exclusion rule is then no longer needed.
+- The registered suppression ratio, its CI and the claim rule are unchanged. Only the quantity feeding the p-value changes, and the amendment should say that.
+- State the null in the text: within each seed, the two arms' values are exchangeable. Say that it is the sharp null, and that the symmetry of paired differences follows from it. This also corrects the wording "each paired difference is assumed symmetric", which is a consequence of exchangeability, not a separate assumption.
+
+Required change 2: the synthetic null check, which I asked for and is missing
+
+The draft says the code is frozen before outcome data are inspected. It doesn't say the code is validated. Before the freeze, run the actual analysis code on synthetic data with the real design (20 paired seeds for the sign-flip members, 20 strata of six for the label-permutation members, and the ratio member). Record:
+
+- the false-positive rate at α = 0.05 under a true null, with the number of simulations (at least 1,000);
+- the rejection rate under a known effect, as a sanity check on power and sign;
+- the output file and its hash, together with the code hash.
+
+A check like this would have caught change 1. Include a skewed case, such as lognormal rates, in the null simulation.
+
+Required change 3: the seed-range claim does not hold at the cap
+
+The amendment says sub-seeds start at 5701 and cannot pass 5900 at the cap of 100 draws per lesion. Arm (e) uses 5800–5819, which falls inside 5701–5900. At the cap, lesion 1 would draw 5701–5800 and lesion 2 would draw 5801–5900, both overlapping arm (e).
+
+- In practice the draws needed may be far fewer than the cap, so no collision may occur.
+- The Part 5 text claims disjointness without caveat. Either restrict the sub-seed range to one that ends before 5800 (for example 5701–5799 shared between both lesions, with a stated rule if the cap would be exceeded), or move arm (e) again.
+- Check this by script, not by eye. The script should enumerate the worst-case ranges of every block and assert they are pairwise disjoint, with its output recorded in the document's record. This is the same recommendation I made earlier for seed collisions.
+
+Smaller items
+
+- Wording consistency. "The four arm comparisons" are sign-flip members, the suppression-ratio member is a fifth, and "the two lesion comparisons" are four members (peak and mean for each lesion). Total 4 + 1 + 4 = 9, matching m = 9 and seeds 6000–6008.
+- Sharp null. In the rationale and every claim, say these tests assess the sharp null that arms or labels are exchangeable. They don't test a difference in means alone, and the CIs carry the effect size.
+- RNG. Pin the generator and library version (for example NumPy default_rng, PCG64) and record them in the audit artefact.
+- Smallest attainable values. State that the smallest unadjusted p is 1/(B + 1) ≈ 0.0001 and the smallest Holm-adjusted p is 9/(B + 1) ≈ 0.0009, so a reader isn't surprised by a floor.
+
+Not changed
+
+- The seed block 6000–6099 is disjoint from every block the draft lists, and I found nothing wrong with its assignment, apart from the 5701–5900 issue above.
+- The frozen-vs-refit handling (descriptive with bootstrap CIs, a TOST claim as a separate inferential route, outside Holm) is accepted as drafted.
+- The edge-case treatment of an all-zero comparison (p = 1.0) is correct.
+
+With changes 1–3 made, I'll confirm. I need to see only the revised suppression-ratio paragraph, the synthetic-check output with its hashes, and the seed-disjointness script output.
+
+### Panel state after this session (24 Nov 2026, ~21:15 WAT)
+
+- **Reviewer 1, rung gate: PASS stands**, conditional on (i) the text-check fixes (bound restated as unadjusted < 0.0002 and Holm < 0.0012 with definition matched, or a one-sided redefinition; the "same bound" sentence removed; void log naming all re-run run_ids and stating no voided output was inspected; scope sentence carrying "brain-only, 1.0 s trials, N = 30", the neu_bitter list of 21 neurons, and suppression as the MN9 feeding readout in this model; "in this model, brain-only" on the bitter-recruitment sentence) and (ii) the (a) resolution items 1–3 in the report (dated methodological disclosure, renamed columns, supplementary post-hoc permutation check). He **certifies the §8.4 Part 7 prerequisite** conditional on items 1–3 being in the report, and prefers Reviewer 3 confirm the amended wording rather than be overruled.
+- **Reviewer 1, Part 5 draft amendment: CONFIRM, with three required changes** (suppression-ratio statistic replaced by s_i = (d − b)/(d + b); synthetic null check run and recorded with hashes; seed-range claim fixed with a script-checked disjointness assertion). He will confirm once he has seen the revised suppression-ratio paragraph, the synthetic-check output with its hashes, and the seed-disjointness script output. The draft is not yet confirmed as final text, and `PART5-PREREG.md` (`docs/closed_loop_preregistration.md`) is unchanged.
+- **Follow-ups Reviewer 1 asked for, not part of this session's messages:** (i) the corrected §7 paragraph and amended void log for the rung report; (ii) the Part 5 pre-evaluation expectation recorded in the Part 5 record (arm (d) extension onset with no food contact; graded endpoints, not the thresholded onset, carry the sugar+bitter comparison). Also outstanding from reply 1, non-blocking: a note outside the preserved v0 file (e.g. top-level README) saying v0 is superseded with known issues documented in the Part 6 comparison, and the gate record stating the hash-and-lock rule for "blind" (fresh outputs hashed and locked before anyone opens v0 numbers, with hash and lock time in the report).
+- **Gate status: NOT CLOSED.** Reviewer 3's REQUIRE CHANGES still stands until he confirms the (a) resolution wording; Reviewer 2 PASS STANDS with the disclosure; Reviewer 1 PASS stands as above; the owner's sign-off remains outstanding.
+
+*Transcription note: Claude's collapsed activity labels above each reply ("Checking the old build was preserved correctly", "Checking how the extension threshold treats residual firing", "Weighing the p-value convention against the two-sided statistic", "Checking exact permutation p-values for separated groups", "Ran a command") are tool-use labels, not reply text, and are excluded. In message 62 the bound sentence is reproduced exactly as shown, including the space before the comma in "0.0002 , not 1/(B+1)".*
+
+---
+
+## Hash-and-lock rule for the Part 6 comparison (24 Nov 2026)
+
+"Blind" for the Part 6 comparison means process, not access, since the old numbers are public. Fresh outputs (the rung and every Part 5 and Part 7 result) are hashed and locked before anyone opens v0 numbers for comparison, with the hash and lock time stated in the report.
+
+Lock record for the rung: `docs/taste_conditions_results.md`, SHA-256 `54c8dccda026afb259fa64b0b44e7ec052859b892e8bbfa429881b6ef689cd2f`, locked 24 Nov 2026, evening, after Reviewer 1's fixes.
+
+## Rung gate follow-up: fixes and checks recorded (24 Nov 2026, evening)
+
+Reviewer 1's follow-up items are now in the record.
+
+Rung report fixes, in `docs/taste_conditions_results.md` (SHA-256 `54c8dccda026afb259fa64b0b44e7ec052859b892e8bbfa429881b6ef689cd2f`, repo copy and local mirror byte-identical): bounds restated (unadjusted < 0.0002, Holm < 0.0012), columns renamed, disclosure added, void log completed, scope and band-constant notes added, exact-permutation note added (separation confirmed in all six comparisons).
+
+Supplementary post-hoc permutation check: seed 20261124, B = 10,000, all six k = 0, p = 0.0001, Holm = 0.0006, no disagreement with the frozen analysis. Script `work/rung2_supplementary_permutation.py` (SHA-256 `8e1b8dfd627244db51860d20a333878ea915240bf7c22e89f0a66494199057d1`); artefact `work/rung2_supplementary_permutation.json` (SHA-256 `315a10ea44df4090508a143946c37d1160e5a58f5b00afb84418ff82fc093d6c`).
+
+Part 5 draft changes, in `work/part5_pvalue_amendment_draft.md` (draft only; `docs/closed_loop_preregistration.md` unchanged apart from the expectation note below): statistic replaced by s_i = (d_i - b_i)/(d_i + b_i). Synthetic null check executed and passing with the actual test code (true null normal: per-member false-positive rate 0.041 to 0.061, family-wise 0.060; lognormal: 0.040 to 0.065, family-wise 0.056; known effect: rejection 0.982 to 1.000). Code `work/part5_permutation_test.py` (SHA-256 `825e5157f102d248b2cefd24fbbf083a506ea3b29e41c7113ea8fd6e64a006da`); output `work/part5_synthetic_null_check_output.txt` (SHA-256 `df214b60c4138657c958900523f39c9c25c35087a104c182d91529086501b505`).
+
+Seed-disjointness check PASS: 35 blocks, 990 seeds, all pairwise disjoint; sub-seed range restricted to 5701-5799 shared stream. Script `work/part5_seed_disjointness_check.py` (SHA-256 `61dc7c461b52471b40ddaf2cfcd474eff113a91b6f9f80bc6f20c14af14df5f8`); output `work/part5_seed_disjointness_output.txt` (SHA-256 `95b11e84dda7b3118b50cdfb67470ecf94f0789873be3a24042c31b2a8d802c0`).
+
+Expectation note: a dated pre-evaluation expectation note was added to §10 of `docs/closed_loop_preregistration.md` (sugar+bitter residual 19.5 Hz pooled above r_lo = 5 Hz, so arm (d) is expected to show an extension onset with no food contact; graded endpoints, not the thresholded onset, carry the sugar+bitter comparison). It is labelled as expectation, not result, and no registered content was changed.
+
+README note: a short note was added to the top-level README, outside the preserved v0 file, saying the v0 build is superseded and its known issues are documented in the Part 6 comparison.
+
+Hash-and-lock rule: recorded above in this gate record, with the rung report's hash and lock time.
+
+Reviewer 1's conditional certification of the §8.4 Part 7 prerequisite stands: certified, conditional on items 1-3 being in the report, which they now are. **The gate is still NOT CLOSED**, pending Reviewer 3's confirmation of the amended wording and the owner's sign-off.
