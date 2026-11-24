@@ -230,34 +230,43 @@ Answering that question badly is easy: switch the map on, watch it move, and cre
 
 **Platform:** CPU is the reference platform for every confirmatory result. Anything run on a GPU is exploration only, and counts only after it matches the CPU result on identical input.
 
-**Reproducibility:** every run records its code version, the hashes of its data files, its random seeds and its full settings in a manifest stored with its outputs, so any number this project reports can be traced back to the exact run that produced it. The brain and body environments are pinned and kept separate, with their specifications inside `fresh/`.
+**Reproducibility:** every run records its code version, the hashes of its data files, its random seeds and its full settings in a manifest stored with its outputs, so any number this project reports can be traced back to the exact run that produced it. The brain and body environments are pinned and kept separate, with their specifications in `docs/environments.md`.
 
 ---
 
 ## Repository File Map
 
 ```
-├── fresh/                  # The current version of the project: the rebuild this page describes
-│   ├── ctb/                # The brain model code. ctb is short for ConnectomeToBehaviour:
-│   │                       # it loads the wiring data, builds the spiking brain, and runs it
-│   ├── part2/              # Stage 2: the neuron lists the experiments drive and read out
-│   ├── part2b/             # Stage 2b: the first small loop from the brain to the body and back
-│   ├── part3/              # Stage 3: the code that scored the brain validation
-│   ├── part5/              # Stage 5: the full closed loop, brain and body talking both ways
-│   ├── qualgate/           # The tests that qualified the body for the feeding experiments
-│   ├── runs/               # One folder per run, each with its own record of what ran
-│   ├── tests/              # The test suites for the brain model code
-│   └── track.md            # The full build log, in my own words
+├── PLAN.md                 # The full project plan: the questions, the stages, and the rules
+├── track.md                # The full build log, in my own words
+├── docs/                   # Every project document, each named for what it is
+│   ├── final_plan.pdf      # The plan as a printable document
+│   ├── name_changes.md     # The record of the 24 Nov 2026 rearrangement: every old name
+│   │                       # in this list and the new name it was given
+│   └── reviews/            # The review and gate records for each stage
+├── src/                    # The code, in packages named for what they do
+│   ├── brain_model/        # The brain model: loads the wiring data, builds the
+│   │                       # spiking brain, and runs it
+│   ├── neuron_sets/        # The extraction of the neuron lists the experiments
+│   │                       # drive and read out
+│   ├── validation/         # The code that scored the brain validation
+│   ├── first_loop/         # The first small loop from the brain to the body and back
+│   ├── closed_loop/        # The full closed loop, brain and body talking both ways
+│   └── body_qualification/ # The scripts that qualified the body for the feeding experiments
+├── tests/                  # The test suites for the brain model code
+├── results/                # The recorded outputs of the stages: body qualification,
+│                           # first loop, closed loop, and validation
 ├── v0-prototype/           # The first version of the project, preserved in full for the record
 │                           # (marked with the git tag v0-prototype-final)
 ├── assets/                 # The picture at the top of this page
 ├── data/                   # The working data files (the datasets are public; their hashes
-│                           # are recorded in the project documents under fresh/)
+│                           # are recorded in the project documents under docs/)
+│   └── neuron_sets/        # The neuron lists the experiments drive and read out
 ├── README.md               # This file
 └── LICENSE                 # MIT
 ```
 
-The preregistration documents live at the top of `fresh/`, next to the code they govern: each experiment is written down there in full before it runs.
+The preregistration documents live in `docs/`, each named for the experiment it governs: each experiment is written down there in full before it runs. Until 24 Nov 2026 the whole rebuild lived under one folder called `fresh/`, with stage-numbered names; the rearrangement to the layout above is recorded in `docs/name_changes.md`, and the frozen tags still point at the layout as it was when they were cut.
 
 ---
 
