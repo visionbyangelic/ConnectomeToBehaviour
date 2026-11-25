@@ -1399,3 +1399,56 @@ As before, this is my Reviewer 3 vote, not a claim about panel majority or owner
 ### Panel complete: characterisation results gate (25 Nov 2026)
 
 With the two re-reviews above, the panel for the Part 5 characterisation results gate is complete at 3 of 3 PASS: Reviewer 2 PASS with no required changes; Reviewer 1 PASS, his conditions discharged at his re-review, with his hand recomputation from the per-seed differences matching (his bootstrap intervals differ from the report's in the third decimal, 2.755 against 2.750 on the 95% interval, from a different bootstrap seed, which he accepted); Reviewer 3 PASS on re-review, his REQUIRE CHANGES discharged. Reviewer 1's two remaining wording items and his independence item are completed in section 9.10 of the results report: the seed 5111 descriptive note with the 19 of 20 against 20 of 20 distinction stated beside the persistence claim, the authorship statement for the two section 6 scripts (same working process, shared author, so their agreement is not an independent check), and the event series artefact prepared for his own independent re-derivation from the raw logs (`results/closed_loop/characterisation_event_series_ab.json`, SHA-256 `3e8ad949db9411d36edf896e27c4eb6a6970def5f26b16b2251d1fde21da3981`), which has not yet been performed and is not claimed. Updated report SHA-256: `f318d9e20690c02a42d96b5076e4a85ac45b0f789faaf5edcc07b044431ff510` (the report's section 9.10 records the audit artefact's updated hash, `cda5ed6d437b742adfa023b5027d1f563f2114b9487eae6185b7298b5e3e406e`). The gate is panel complete and awaits my sign-off; it is not closed by this entry.
+
+### Reviewer 1: independent count of the event series (25 Nov 2026; verbatim)
+
+Reviewer 1: independent count of the event series
+
+All 20 paired differences match. I counted the 1s in all 40 strings with a script, and every string has length 100. I took the counts from the strings only and compared them to your list afterwards.
+
+Seed	Arm (a) 1s	Arm (b) 1s	Seed	Arm (a) 1s	Arm (b) 1s
+5100	91	51	5111	28	55
+5101	92	53	5112	95	56
+5102	93	54	5113	94	55
+5104	95	56	5114	94	55
+5105	93	53	5115	95	57
+5106	96	58	5116	95	56
+5107	93	54	5117	94	55
+5108	95	56	5118	94	55
+5109	95	56	5119	97	58
+5110	78	55	5120	92	53
+
+Differences: ×0.1 s, these give +4.0, +3.9, +3.9, +3.9, +4.0, +3.8, +3.9, +3.9, +3.9, +2.3, −2.7, +3.9, +3.9, +3.9, +3.8, +3.9, +3.9, +3.9, +3.9, +3.9. That is your list, entry for entry.
+Means: 8.995 s for (a) and 5.505 s for (b), with a paired mean of 3.490 s, as reported.
+Frozen-code endpoint (chunks 0–59): counting only that window, the strings give 19 zeros and one −2.6 (seed 5111: 28 against 54 ones), also matching.
+What this covers
+
+It covers my count and the statistics downstream of it. I took the strings as supplied and did not check that they were extracted correctly from the raw body logs, which stays with your two scripts. I also can’t verify the artefact hash. If the artefact’s strings differ from these, that is a discrepancy to log.
+
+Two findings in the strings
+
+1. Seed 5110 is also an early release in arm (a), and the report says only 5111.
+
+Arm (a), seed 5110: event ON for chunks 6–83, then OFF for chunks 84–99. Contact ended at 8.4 s. That is why its difference is +2.3 s and not about +3.9.
+Every other arm (a) episode except 5111 stays ON to chunk 99. So contact persisted to the end of the episode in 18 of 20 episodes, not 19.
+The code’s ignition field (ON at or after chunk 40) passes 5110, which is why the report’s 19/20 versus 20/20 split names only 5111.
+The persistence claim should say that explicitly: ignition 20/20 (§6), the code’s stricter rule 19/20, and contact persisting to episode end in 18/20 closed-loop episodes (5110 ends at chunk 84, 5111 at chunk 31). Describe 5110’s time series as you did for 5111.
+
+2. The 5111 gap shows a vulnerability of the closed loop that open loop masks.
+
+In arm (a), seed 5111 has contact on chunks 3–30, then off for good.
+In arm (b), the same seed has an identical prefix, then a three-chunk gap (chunks 31–33), then contact again from chunk 34 to 60.
+So the same seed-specific physical event interrupts contact in both arms at chunk 31. Open loop rides through it because the scripted drive is on. Closed loop shuts the drive off one chunk later and never recovers.
+This is a real property of the loop: a brief contact interruption (about 0.3 s here) can switch the loop off permanently. It is worth stating in the interpretation. It does not change any registered result.
+Consequence for Part 7
+The closed-loop dropout rate with an intact brain is 2/20 for persistence to episode end (95% CI roughly 1–32% by an exact interval).
+Any Part 7 comparison that uses persistence or duration as its outcome starts from a baseline that already drops out at that rate, so a lesion effect has to be judged against it. Say so in the report so that Part 7’s power and interpretation account for it.
+Status
+
+With the 5110 addition and the contact-interruption sentence in the report, the independent re-derivation is complete and my PASS stands, with these conditions discharged. Nothing in the counts changes the contact-duration result: a paired difference of +3.490 s, 95% CI [2.75, 3.91], claimed under the registered rule.
+
+### Independent count: comparison outcome (25 Nov 2026)
+
+Reviewer 1 counted the 1s in all 40 event series strings himself, blind to the counts in the artefact: he took his counts from the strings only and compared them to the artefact's list afterwards. The comparison, checked entry by entry in this pass: all 40 of his counts match the artefact's `event_on_chunks` values for arms (a) and (b) at the 20 paired seeds exactly, and all 20 paired differences match (his list: +4.0, +3.9, +3.9, +3.9, +4.0, +3.8, +3.9, +3.9, +3.9, +2.3, -2.7, +3.9, +3.9, +3.9, +3.8, +3.9, +3.9, +3.9, +3.9, +3.9, in seed order; means 8.995 s for arm (a) and 5.505 s for arm (b), paired mean +3.490 s). His frozen-code window counts also match: over chunks 0 to 59 the paired differences are 19 zeros and one of -2.6 (seed 5111: 28 against 54). His PASS stands, with the re-derivation conditions discharged, subject to the two report additions his reply requires (the seed 5110 description and the contact interruption statement), which are recorded as section 9.11 of the results report.
+
+His scope note, recorded as he stated it: he counted from the supplied strings; he did not check that the strings were extracted correctly from the raw body logs, which rests on the two project scripts (the extraction script `work/run_characterisation_event_series.py` and the analysis chain behind the per-seed artefact); and he could not verify the artefact hash (SHA-256 `3e8ad949db9411d36edf896e27c4eb6a6970def5f26b16b2251d1fde21da3981`, as recorded in section 9.10 of the report). In this pass, as a consistency check by the same author and not as an independent check, the artefact's 40 strings were compared against the raw body logs' `taste_event_at_chunk_end` fields for all 40 episodes of arms (a) and (b), and every string matched its log exactly.
