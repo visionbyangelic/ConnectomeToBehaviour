@@ -992,3 +992,269 @@ Standing items
 - No edits to the frozen document without a formal amendment, as before.
 
 I have nothing further on this gate. For future rounds, send results with their hashes and I’ll check them against the registered rules.
+
+## Part 5 characterisation results gate (25 Nov 2026)
+
+The characterisation results (report `docs/closed_loop_characterisation_results.md`, original SHA-256 `285488efcd685a59dfdd6c08dd368ca0063433214d53146a81e6ab0ce625dce2`; audit artefact `results/closed_loop/characterisation_analysis_audit.json`, original SHA-256 `ec28f5871bfbcc981d1e8706828b60a01c31a59df2dd3e39913921e69332ba4c`; commit 4dea348; freeze tag part5-prereg-v1) went to the full panel as a HARD gate. Reviewer 2 returned PASS with no required changes. Reviewer 1 returned PASS conditional on report items, including one recomputation. Reviewer 3 returned REQUIRE CHANGES on one material point: endpoint reconciliation. The three replies follow verbatim. The reconciliation they required is recorded as section 9 of the results report and in the audit artefact's `reconciliation_2026_11_25` entry (updated audit SHA-256 `4115c963b46823bece0ca898cea1d16a1a7afab18617878fa66e71ebfe662222`; updated report SHA-256 `c671f8130e823b5caf91e865ca3f8aa362638c679aa69c22ea6cff261d22dca7`). The gate stays open pending Reviewer 3's re-review of the reconciliation and Reviewer 1's recomputation from the per-seed artefact.
+
+### Reviewer 2: characterisation results gate (25 Nov 2026; verbatim)
+
+Part 5 Characterisation Results Gate (docs/closed_loop_characterisation_results.md) — Reviewer 2 Verdict Recorded (PASS)
+
+Reviewer: Reviewer 2 (Gemini)
+
+Subject: HARD-gate review of Part 5 closed-loop characterisation results (docs/closed_loop_characterisation_results.md, SHA-256 285488efcd685a59dfdd6c08dd368ca0063433214d53146a81e6ab0ce625dce2; audit artefact results/closed_loop/characterisation_analysis_audit.json, SHA-256 ec28f5871bfbcc981d1e8706828b60a01c31a59df2dd3e39913921e69332ba4c; commit 4dea348, freeze tag part5-prereg-v1)
+
+Verdict: PASS — No required changes, no blockers, no re-run required. Logged as delegated under Angelic Charles's authority/delegation (subject to ratification).
+
+1) Verification of Ledger, Provenance & Headline Findings
+
+Provenance & Ledger Hygiene:
+
+All 100 characterisation episodes (5 arms × 20 episodes) verified against the ledger before computation, using registered disjoint seed blocks (5100–5119 \ {5103} ∪ {5120} across arms (a)–(d); 5800–5819 for arm (e)), matching frozen analysis hash, passing synthetic self-test, recording r_hi = 172.64875034982174 Hz (≤ 184.2 Hz threshold clearance bound, > 15 Hz rejection bound) and r_lo = 5 Hz in every manifest, logging the single environmental two-attempt episode (arm (c), seed 5107, service restart, same seed), and recording 0/100 settle-invalid episodes (M7 satisfied).
+
+Core Closed-Loop Demonstration ((a) vs. (b) vs. (c)):
+
+Arm (a) (Closed-Loop Sugar): Peak E = 2.043 rad [2.032, 2.051], mean E = 1.793 rad [1.706, 1.844], MN9 L 92.60 Hz / R 60.97 Hz (inside M4), 20/20 contact, 20/20 ignition (§6 item 8), and sustained closed-loop contact after the scripted ignition window closed (chunks 20–59).
+
+Arm (b) (Open-Loop Sugar): Peak E = 2.030 rad [2.016, 2.043], MN9 L 94.88 Hz / R 62.39 Hz, 20/20 contact during the 0–59 stimulus window followed by complete extension offset across all 20/20 episodes once the scripted window closed—reproducing the Part 2b causal contrast cleanly in the feeding loop.
+
+Arm (c) (No-Drive Control): Identically 0 on every measure across all 20 episodes (0 false positives).
+
+Arm (d) (Sugar + Bitter, OUTSIDE THE VALIDATED ENVELOPE): Pooled suppression ratio 0.121 [0.116, 0.127] (L 0.097 [0.091, 0.103], R 0.158 [0.151, 0.166]), peak E = 0.344 rad, 20/20 extension onset, 0/20 food contact—matching the §10 advance prediction cleanly (r_filt suppressed below the ~0.837 contact-reach threshold).
+
+Arm (e) (OUTSIDE THE VALIDATED ENVELOPE, Descriptive): Bilateral sugar (L 10 + R 21 @ 200 Hz) yields peak E = 2.056 rad, MN9 L 93.29 Hz / R 66.38 Hz, 20/20 contact, reported strictly descriptively without pooling or RQ-C5 asymmetry claims.
+
+Permutation & TOST Inference: (a) vs. (c) on peak E and mean E, and (d) vs. (b) suppression on s_i (mean s_i = −0.784), sit at the exact Monte Carlo floor p = 1/10,001 ≈ 9.999 × 10^-5. (a) vs. (b) peak E (Δ = +0.013 rad [−0.003, 0.028], p = 0.1454) and contact duration (Δ = −0.130 s [−0.390, 0.000], p = 1.0) satisfy TOST equivalence within the pre-registered bounds using only permitted equivalence wording.
+
+2) Rulings on Items 1 to 3
+
+Item 1 — Deferred Holm Adjustment Across the Full Family of Nine (m = 9)
+
+Ruling: APPROVED AS RECORDED — Yes, reporting null for Holm-adjusted p-values in this interim characterisation report with the explicit reason in the audit artefact is the exact right treatment, and this results gate CAN close with the full 9-member Holm adjustment deferred until Part 7 completes.
+
+Rationale:
+
+The preregistered amendment fixes Holm step-down across the single confirmatory family of m = 9 in fixed order (members 1–5 from Part 5 characterisation, seeds 6000–6004; members 6–9 from Part 7 lesions, seeds 6005–6008). Because Holm step-down sorting depends on all 9 raw p-values simultaneously, computing an interim 5-member Holm adjustment would violate the pre-registered m = 9 family correction.
+
+Recording raw permutation p-values and extreme counts now, setting adjusted p-values to null with explicit audit provenance, and deferring any confirmatory Holm-adjusted claim language for members 1–5 until all 9 p-values are combined in the final freeze synthesis (§11) preserves strict family-wise error control without blocking the Part 5 characterisation gate. (Note: even under the worst-case multiplier m = 9, the three floor results at 1/10,001 ≈ 1.0 × 10^-4 will yield p_Holm ≤ 9/10,001 ≈ 9.0 × 10^-4 ≪ 0.05, while (a) vs. (b) peak E and contact duration are non-significant on raw p and evaluated via TOST equivalence.)
+
+Item 2 — Materiality Band M3 Discrepancy (2.030 rad vs. [2.0746, 2.2746] rad)
+
+Ruling: ACCEPTED AS A RECORDED DISCREPANCY (DIAGNOSED, NOT A GATE BLOCKER OR RETUNING TRIGGER).
+
+Physical Reading of the Discrepancy:
+
+Why Arm (b) Sits Below E_max = 2.1746 rad (Δ = -0.1446 rad): E_max = 2.1746 rad was measured in Q3 under saturating command (e = 1.0, requiring r_filt ≥ r_hi = 172.65 Hz). In arm (b), the intact brain's steady pooled MN9 firing rate under 200 Hz right-sugar drive is 94.88 + 62.39 = 157.27 Hz (matching Part 3's 154.97 Hz within M4). Because r_hi was calibrated as the 95th percentile of per-chunk filtered rates (172.65 Hz), the mean steady rate (157.27 Hz) sits below r_hi by design (§4 threshold arithmetic), producing a steady-state normalized drive of:
+
+e_steady ≈ (157.27 − 5.0) / (172.65 − 5.0) = 152.27 / 167.65 ≈ 0.908
+
+Exact Quantitative Reconciliation: At e ≈ 0.908, the rostrum and haustellum pitch joints are already saturated (e ≥ 0.80–0.825 from the Pass 6 reach curve), leaving only the labrum pitch joint (0.2625 rad full-scale contribution) scaling linearly with e: the unsaturated labrum shortfall (1 − 0.908) × 0.2625 ≈ 0.024 rad plus the ~0.08–0.10 rad dynamic tracking lag (M2 mean -0.091 rad, with 8/20 episodes slightly below -0.10 rad from Poisson spike variability) accounts for the ~0.145 rad gap between 2.1746 rad and 2.030 rad.
+
+Scientific Consequence: Crucially, e_steady ≈ 0.908 still clears the contact-onset fraction (0.8371 ± 0.05) comfortably, which is why 20/20 episodes achieved contact in both (a) and (b). Recording M3 openly as a discrepancy without adjusting any band, constant, or seed follows the §13 / M1–M7 preamble rule to the letter.
+
+Item 3 — Code-vs.-§6 Field Divergences (contact_onset_fraction and ignition)
+
+Ruling: ACCEPTABLE AS HANDLED — Recording both the frozen-code fields and the §6 definitions transparently without silently altering frozen code or data is the right resolution.
+
+Rationale:
+
+contact_onset_fraction (M1): Computing the §6 item 6 definition directly from the raw episode logs for M1 while keeping the frozen code's contact_onset_fraction field (stimulus-event fraction) intact and documented avoids post-hoc modification of frozen code while ensuring M1 is evaluated on the exact quantity it was preregistered to check.
+
+ignition (19/20 vs. 20/20, differing only on seed 5111): Reporting both the stricter frozen-code ignition field (19/20) and the §6 item 8 definition (20/20), and naming seed 5111 explicitly as the sole difference, prevents any selective reporting.
+
+contact duration: Using the frozen code's endpoint for the primary (a) vs. (b) family comparison while reporting §6's full-episode duration alongside ensures the confirmatory statistic comes strictly from the frozen pipeline while giving readers complete visibility into the full-episode metric.
+
+Gate Closure Summary
+
+Verdict: PASS on docs/closed_loop_characterisation_results.md (commit 4dea348).
+
+Next Step: Part 5 characterisation is closed; Part 7 lesion runs may proceed under part5-prereg-v1 (with the Part 3 four-conditions rung prerequisite already closed and certified), and the full 9-member Holm adjustment will be evaluated once Part 7 members 6005–6008 complete.
+
+(Note: I do not have write access to your local filesystem in this chat, so please paste this PASS verdict and rulings 1–3 into your panel/ gate log alongside Reviewers 1 and 3.)
+
+### Reviewer 1: characterisation results gate (25 Nov 2026; verbatim)
+
+Reviewer 1: Part 5 characterisation results gate
+
+Verdict: PASS, conditional on the report-text items below. None needs an episode re-run. I’m judging your summary, not docs/closed_loop_characterisation_results.md. One finding (the contact-duration p-value, in my extra points) needs a recomputation before I can close, and I’d treat that as a real condition.
+
+Consistency checks on the summary
+Suppression: s_i = (r − 1)/(r + 1). At r = 0.121 that gives −0.784, matching the reported mean s_i. The closed-loop ratio of 0.121 [0.116, 0.127] is close to the rung’s brain-only 0.126.
+(a) vs (b): 2.043 − 2.030 = 0.013 ✓. 1453 extreme permutations give (1 + 1453)/10001 = 0.1454 ✓.
+Contact thresholds: the registered r_hi of 172.65 Hz exceeds r_lo + 10 = 15 Hz. The measured pooled rates (about 153.6 Hz in (a), 157.3 Hz in (b)) clear the contact threshold of about 145 Hz, so contact in (a) and (b) fits. (d)’s peak E of 0.344 with pooled rate about 19.5 Hz sits far below it, so contact 0/20 fits.
+(c): exactly zero everywhere matches the silent baseline from Part 3.
+M3 band: 2.1746 ± 0.10 = [2.0746, 2.2746] ✓. The observed 2.030 is 0.045 below the lower edge and 0.145 below E_max.
+Ruling 1: Holm
+
+Not reporting Holm-adjusted values now is correct. Holm over only the five available members would use multipliers of 5 down to 1 instead of the registered 9 down to 1. That would be anti-conservative and unregistered.
+
+A valid bound is available today. For any member, the registered Holm-adjusted p is at most min(1, 9·p). Each term of the running maximum is at most 9 times a p-value that is at most this member’s own. So:
+
+the three members at the floor (p = 1/10001) have adjusted p ≤ 0.0009, far below 0.05, so they are claimed under the registered rule whatever the four lesion members turn out to be;
+(a) vs (b) peak E (p = 0.1454) and contact duration (p = 1.0) are not claimed under any adjustment.
+
+State this in the report as an upper bound labelled “Bonferroni-9 bound, not the registered adjusted value”. It settles the claim status of all five members. The gate can close with the exact adjusted values pending, on three conditions:
+
+they are computed by the frozen code over all nine members at Part 7, with no change to the family or order;
+they can only be at or below these bounds;
+the audit artefact’s nulls carry the reason.
+
+Also say that (a) vs (c) is a sanity check, not evidence. With no drive, every measure is exactly zero by construction, so its significance shows the loop is silent without drive and carries no other weight.
+
+Ruling 2: the M3 discrepancy
+
+My reading: M3’s expected value was mis-specified, and the result is explained by quantities already registered. It is not a body or brain failure.
+
+E reaches E_max only when the filtered pooled rate reaches r_hi = 172.65 Hz. Under sugar the pooled steady rate is about 157 Hz in arm (b).
+With the registered linear map, e_steady = (157.27 − 5)/167.65 ≈ 0.908, so E ≈ 1.975. A peak of 2.030 implies e_peak ≈ 0.934, a filtered rate of about 161 Hz, which is about 4 Hz above steady. That is ordinary fluctuation.
+“Sustained full drive” in M3 should have meant “pooled rate at or above r_hi”, not “sugar present”. Sugar-only drive never gets there.
+
+What the panel should do:
+
+Record M3 as OUTSIDE with this explanation and adjust nothing, exactly as registered.
+Verify the explanation from the logged e and rate series: confirm e_peak ≈ 0.93 and that E tracks e·E_max within M2’s band. If it holds, the discrepancy lies upstream of the body.
+A related question for the calibration. r_hi is the 95th percentile of the filtered rate over calibration sugar-only episodes. In characterisation, the episode peaks of that same rate sit about 10 Hz below it. Compare the upper tail of the filtered-rate distribution in arm (a) with the calibration distribution. If the calibration set had a heavier tail (for example from onset transients or a different window length), say why. Nothing is adjusted, but Part 7 should know that intact arms saturate near e ≈ 0.93, not at 1.
+M2: a mean of −0.091 with 8 of 20 episodes below −0.10 is a systematic negative offset, slightly beyond Q6’s recorded 0.08. Record it as a known dynamic offset (the table over-predicts achieved E by about 4%). In Part 7, treat E as a measured quantity, not as table-predicted.
+Ruling 3: the code-versus-§6 divergences
+
+The handling is acceptable in principle, with three conditions. Reporting both values and not resolving silently was right.
+
+The registered text governs. Where the frozen code’s field disagrees with §6, the §6 definition defines the endpoint and the code’s field is reported as a sensitivity. For ignition: 20/20 under §6 item 8, and 19/20 under the code’s stricter rule (seed 5111). The contact-onset quantity M1 judges is the §6 one, which you computed from raw logs. That is correct.
+The §6 quantity needs its own provenance. Computing it from raw logs is itself analysis code written after the freeze. Say so, hash the script, and show it implements §6 item 6 as written. Have a second person (or a second reviewer) check it independently.
+Run the family contact-duration member on the §6 endpoint too. The frozen permutation code can take the raw-log-derived values as input, with no change to the code. Report both results. If they agree, there is nothing to resolve. If they disagree, the §6 endpoint governs and the discrepancy goes to the panel.
+
+Also record the code-versus-text mismatch as a deviation, and fix the code fields by a hashed amendment before Part 7’s analysis freezes. Do not alter the characterisation code retroactively.
+
+Extra points
+
+1. A p-value that doesn’t look right (my condition). For contact duration, 10,000 of 10,000 permutations were extreme, giving p = 1.0, with an observed difference of −0.130 s and CI [−0.390, 0.000].
+
+If the non-zero per-seed differences all had the same sign, the observed |sum| would be the largest possible and p would be tiny, not 1.
+p = 1.0 is possible only with large differences of mixed sign that nearly cancel. The CI’s upper end of exactly 0.000 suggests many zero differences.
+Please send the 20 per-seed differences (on both the frozen-code endpoint and the §6 one). I will recompute exactly by hand. If the two don’t reproduce, the gate does not close.
+
+2. The closed-versus-open contrast has no family member. The substantive contrast between (a) and (b) is persistence: (a)’s gate is sustained after the window and (b)’s extension offsets in all 20. The family tests peak E, mean E and contact duration, none of which captures this. State it as the registered binary result (20/20 against 0/20) with the claim rule the preregistration gives for RQ-P3. If the registered rule doesn’t cover it, don’t upgrade it. Say plainly that the equivalence on peak E and contact duration means feedback does not change those endpoints.
+
+3. TOST wording. Give the numerical bounds. ±25% of (a)’s peak E is about ±0.51 rad, which is generous, so the result should read “equivalent within ±25%”, not “no difference”.
+
+4. Bilateral and sugar+bitter. They are outside the validated envelope and descriptive. Keep that label in the report’s wording.
+
+To close
+
+Send the 20 per-seed contact-duration differences for my recomputation, and the revised paragraphs for rulings 1–3 once written. Everything else I accept as described.
+
+### Reviewer 3: characterisation results gate (25 Nov 2026; verbatim)
+
+Reviewer 3 — Part 5 characterisation results HARD gate
+REQUIRE CHANGES
+
+The 100-episode execution and the transparency of the report are encouraging. I do not see a reason to reject the episode set or rerun the characterisation. However, I cannot close the results gate yet. The unresolved distinction between the frozen analysis fields and the preregistered endpoint definitions is material to what the reported results actually test.
+
+My rulings follow.
+
+1. Holm adjustment across the nine-member family
+
+Ruling: ACCEPT the current treatment. The adjusted values should remain null.
+
+The preregistration fixed a family of nine members, with the four lesion members unavailable until Part 7. Reporting adjusted values for only the five currently available members would either change the family or imply an adjustment that has not yet been performed over the registered family.
+
+The report is right to:
+
+Preserve the nine-member family and its fixed order.
+
+Report the five available members' unadjusted permutation results.
+
+Record adjusted values as null, with the reason.
+
+Avoid describing any of those results as having passed the registered Holm-adjusted decision rule.
+
+There is an important distinction between closing the Part 5 characterisation execution and closing the full nine-member inferential family. The former need not wait for Part 7; the latter does. Part 5 may report its results provisionally with adjustment pending, but no final confirmatory claim requiring the registered Holm decision may be made until all nine members exist and the full adjustment is calculated.
+
+I would not treat the missing four members as failed tests, nor would I approve a partial-family Holm adjustment as a substitute.
+
+2. M3 outside its materiality band
+
+Ruling: ACCEPT the discrepancy as reported. It is not grounds for an automatic execution failure, but it must remain an explicit unresolved discrepancy.
+
+Arm (b)'s mean peak E is 2.030 rad, below the registered band of [2.0746, 2.2746]. That is an actual miss against M3. It should not be described as approximately inside, explained away by the confidence interval, or corrected by changing the band.
+
+The correct interpretation is:
+
+M3 is outside.
+
+The result is a discrepancy between the observed open-loop characterisation and the registered expectation.
+
+No adjustment or post-hoc recalibration is warranted.
+
+Any downstream interpretation that depends on the expected open-loop magnitude must account for this miss.
+
+M2 is a different case. If its registered criterion is evaluated on the mean, then a mean deviation of −0.091 rad is inside the ±0.10 band. The fact that 8 of 20 episodes individually exceed −0.10 is useful distributional information, but it does not change the registered mean-based verdict. Report both facts; do not silently convert a mean-based materiality criterion into an episode-wise one.
+
+M1, M4, M5 on the mean, and M7 being inside does not cancel M3. M6 being inapplicable is also not a pass or a failure.
+
+I would carry M3 forward as a named limitation for interpretation, not demand a new run or an unregistered correction.
+
+3. Divergence between frozen-code fields and Section 6 definitions
+
+Ruling: REQUIRE CHANGES to the endpoint reconciliation before the results gate can pass.
+
+I accept the decision to disclose the two divergences rather than silently resolve them. But disclosure alone does not establish that the registered endpoint was analysed.
+
+There are two separate cases.
+
+Contact onset fraction
+
+The code's contact_onset_fraction field represents the stimulus-event fraction, whereas Section 6 item 6 defines a different quantity. Recomputing the Section 6 quantity from raw logs is the correct response.
+
+The report must keep the two quantities separately named and state unambiguously which one is used for M1. Since you say the Section 6 quantity is what M1 judges, that is acceptable. The frozen-code field must not be presented as though it were the Section 6 endpoint.
+
+Ignition
+
+The frozen code's ignition field is stricter than Section 6 item 8, producing 19/20 rather than 20/20 for arm (a), with seed 5111 responsible for the difference.
+
+Both values should remain visible. But the registered Section 6 definition must govern the registered ignition claim. The stricter code field can be retained as a separate implementation diagnostic; it cannot silently replace the preregistered definition.
+
+Contact duration — the material issue
+
+Here the report says the permutation-family member uses the frozen code's endpoint, while Section 6's full episode duration is reported alongside it.
+
+That is not sufficient if the frozen-code endpoint and the Section 6 endpoint are different quantities. The fact that the analysis code is frozen does not give its field semantics priority over the preregistered endpoint definition. A frozen implementation can contain an endpoint-definition discrepancy; the freeze does not turn that discrepancy into a protocol amendment.
+
+I therefore require:
+
+An explicit mapping between the code's contact-duration field and the Section 6 definition, including whether they are genuinely the same endpoint or different estimands.
+
+If they are different, the registered contact-duration permutation member must use the Section 6 endpoint, computed from the raw logs using the already frozen permutation procedure, family position, and reserved permutation seed.
+
+The frozen-code endpoint may remain as a separately labelled diagnostic, but must not substitute for the registered endpoint.
+
+The audit artefact and report must identify which endpoint supports each claim and which endpoint enters the nine-member family.
+
+This does not authorise changing the endpoint definition, permutation method, or family. It requires the analysis to implement the endpoint already registered.
+
+Final verdict
+
+Item
+
+Reviewer 3 ruling
+
+1. Holm pending Part 7
+
+Accept. Keep adjusted values null; no final family-level confirmatory decision until all nine members are available.
+
+2. M3 outside
+
+Accept as an explicit discrepancy; no adjustment or rerun.
+
+3. Code/Section 6 divergences
+
+Require endpoint reconciliation, particularly for the contact-duration permutation member.
+
+Reviewer 3 verdict: REQUIRE CHANGES.
+
+The outstanding work is an analysis/report reconciliation, not a request to repeat the 100 characterisation episodes. Preserve the existing frozen outputs, raw logs, report history and audit trail. Do not overwrite the original results or retroactively alter the freeze.
+
+Once the registered contact-duration endpoint has been established and analysed correctly, and the ignition and onset fields are unambiguously labelled against their registered definitions, I am prepared to re-review the results gate. The Holm adjustment can remain pending Part 7 under the conditions above.
+
+This is my Reviewer 3 vote, not a statement of panel majority or owner sign-off. I have reviewed the results and methodological details supplied in your message; I have not independently inspected the report, audit JSON, repository, or hashed files.

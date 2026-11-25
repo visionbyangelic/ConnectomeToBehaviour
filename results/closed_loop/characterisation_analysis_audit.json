@@ -3114,5 +3114,140 @@
    "target": 0.30639238187159024,
    "met": true
   }
+ },
+ "reconciliation_2026_11_25": {
+  "date": "25 Nov 2026",
+  "reason": "Characterisation results gate: Reviewer 3 REQUIRE CHANGES on endpoint reconciliation; Reviewer 1 PASS conditional (ruling 3 and extra point 1). No episode re-runs, no freeze changes; original entries in this artefact are preserved unchanged and the reconciled member is added here.",
+  "endpoint_mapping": {
+   "section_6_item_7": "Contact duration: taste-event ON time within the episode (total ON chunks over chunks 0-99), and the longest continuous ON stretch.",
+   "frozen_code_field": "analysis.py contact_duration_s: taste-event ON chunks over chunks 0-59 (the stimulus period) x 0.1 s.",
+   "conclusion": "Different estimands. The two quantities differ in the window they total over: the whole 100-chunk episode (section 6) against the 60-chunk stimulus period (frozen code). The frozen-code value is retained as an implementation diagnostic and does not carry the family member.",
+   "family_member_entry_diagnostic": "family.ab_contact holds the frozen-code endpoint result (p = 1.0, difference -0.130 s); it is an implementation diagnostic, not the registered family member.",
+   "contact_onset_fraction_labelling": "per_episode contact_onset_fraction_s6 is the registered section 6 item 6 endpoint (achieved E/E_max at the first chunk whose end-state has the taste event ON) and is the quantity M1 judges; the per_episode field contact_onset_fraction without the _s6 suffix is the frozen code's field and holds the stimulus-period event fraction (implementation diagnostic).",
+   "ignition_labelling": "per_episode ignition_s6_arm_a is the registered section 6 item 8 definition and governs the ignition claim (20/20); the field ignition_arm_a is the frozen code's stricter field (19/20, seed 5111) and is an implementation diagnostic."
+  },
+  "family_member_4_reconciled": {
+   "comparison": "(a) vs (b)",
+   "endpoint": "contact duration, section 6 item 7 (whole-episode taste-event ON time, s)",
+   "endpoint_definition_used": "section 6 item 7 contact duration: taste-event ON time within the episode (total ON chunks, chunks 0-99) x 0.1 s",
+   "family_position": 4,
+   "permutation_seed": 6003,
+   "permutations_drawn": 10000,
+   "extreme_count": 0,
+   "p_unrounded": 9.999000099990002e-05,
+   "observed_mean_difference_s": 3.4900000000000007,
+   "bootstrap_ci95_s": [
+    2.75,
+    3.91
+   ],
+   "bootstrap_ci90_s": [
+    2.84,
+    3.9000000000000012
+   ],
+   "arm_a_mean_s": 8.995,
+   "arm_b_mean_s": 5.505,
+   "holm_adjusted_p": null,
+   "holm_status": "pending: Holm runs over the full family of nine; the four lesion members (seeds 6005 to 6008) do not exist until Part 7 runs",
+   "bonferroni_9_bound": "min(1, 9 x p_unrounded) = 0.0008999190089991001; the reconciled member sits at the construction floor, so its registered Holm adjusted value is at most 0.0009 and it is claimed under the registered rule whatever the Part 7 lesion members give. Label: Bonferroni-9 bound, not the registered adjusted value."
+  },
+  "tost_reconciled": {
+   "bound_s": 2.24875,
+   "bound_basis": "25 percent of arm (a) mean contact duration on the section 6 endpoint",
+   "ci90_s": [
+    2.84,
+    3.9000000000000012
+   ],
+   "equivalent": false,
+   "statement": "Equivalence on contact duration is NOT demonstrated on the registered section 6 endpoint: the 90 percent interval [2.84, 3.90] s lies outside plus/minus 2.24875 s. The tost.ab_contact entry (equivalent, bound 1.31875 s) was computed on the frozen-code diagnostic endpoint and is superseded for the registered endpoint by this entry."
+  },
+  "per_seed_artefact": {
+   "path": "results/closed_loop/characterisation_contact_duration_per_seed.json",
+   "sha256": "738f7762cd6c3abf089b46353565f60efb2a74f0c2c5d4ab5a61915fbd973edf",
+   "contents": "Per-seed arm (a) and arm (b) contact durations on both endpoints, both differences, and longest stretches, for Reviewer 1's hand recomputation."
+  },
+  "scripts": {
+   "section_6_quantities_script": {
+    "path": "~/workspace/connectome-work/work/run_characterisation_analysis.py",
+    "sha256": "bafc1136a36ed07823baafa64f2aaf9efaafa7a2e9cbe4d3b22a4090e37d4ae6",
+    "note": "Analysis code written after the freeze (the original characterisation analysis pass). It computed the section 6 quantities from the raw logs alongside the frozen code's fields."
+   },
+   "reconciliation_script": {
+    "path": "~/workspace/connectome-work/work/run_characterisation_reconciliation.py",
+    "sha256": "da994ce68e1928422f63038f51d6fe1e9b7267cb3fe5587c9e330555358e8d14",
+    "note": "Analysis code written after the freeze for this reconciliation (25 Nov 2026). It imports the frozen analysis.py for every inferential step and cross-checks every recomputed per-episode value against this artefact's original per_episode entries; all cross-checks passed."
+   }
+  },
+  "m3_log_verification": {
+   "e_peak_mean": 0.9872413228000274,
+   "e_peak_range": [
+    0.9579033643957217,
+    1.0
+   ],
+   "implied_r_filt_at_e_peak_mean_hz": 170.50977406112958,
+   "r_filt_logged_at_e_peak_chunk_mean_hz": 170.79964135801342,
+   "steady_r_filt_chunks20_59_mean_hz": 157.33889208512056,
+   "abs_E_minus_e_times_Emax_chunks20_59": {
+    "mean_rad": 0.09155192415125017,
+    "p95_rad": 0.1179713173944527,
+    "max_rad": 0.11941377062322411
+   },
+   "peak_E_minus_e_peak_times_Emax_mean_rad": -0.11688371053004713
+  },
+  "rfilt_tail_chunks20_59": {
+   "calibration": {
+    "n_chunks": 400,
+    "mean_hz": 158.21042744315025,
+    "p90_hz": 170.18993912606697,
+    "p95_hz": 172.64875034982174,
+    "p99_hz": 176.76781856555883,
+    "max_hz": 178.10545273601485,
+    "frac_chunks_ge_160": 0.3975,
+    "frac_chunks_ge_170": 0.1075,
+    "episode_peak_mean_hz": 171.8670648505019,
+    "episode_peak_range_hz": [
+     164.93886129000188,
+     178.10545273601485
+    ]
+   },
+   "arm_a": {
+    "n_chunks": 800,
+    "mean_hz": 152.44917460210291,
+    "p90_hz": 168.35342676389976,
+    "p95_hz": 171.46615227148598,
+    "p99_hz": 179.04915496984134,
+    "max_hz": 190.29581161010523,
+    "frac_chunks_ge_160": 0.36375,
+    "frac_chunks_ge_170": 0.07625,
+    "episode_peak_mean_hz": 170.82919597467904,
+    "episode_peak_range_hz": [
+     160.20297990834484,
+     190.29581161010523
+    ]
+   },
+   "arm_b": {
+    "n_chunks": 800,
+    "mean_hz": 157.33889208512056,
+    "p90_hz": 168.5524593710045,
+    "p95_hz": 171.6052733319664,
+    "p99_hz": 179.04915496984134,
+    "max_hz": 190.29581161010523,
+    "frac_chunks_ge_160": 0.37875,
+    "frac_chunks_ge_170": 0.08,
+    "episode_peak_mean_hz": 171.58782316655066,
+    "episode_peak_range_hz": [
+     165.44501589577618,
+     190.29581161010523
+    ]
+   }
+  },
+  "persistence": {
+   "arm_a_ignition_s6_count": 20,
+   "arm_b_offset_count": 20,
+   "arm_a_offset_count": 2
+  },
+  "onset_fraction_s6_cross_check": {
+   "episodes_checked": 100,
+   "result": "every section 6 item 6 onset fraction in this artefact reproduces from the raw body logs (recomputed in the reconciliation pass)"
+  }
  }
 }
