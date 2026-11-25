@@ -1606,3 +1606,237 @@ Item 4, RQ-C5 handling: the owner accepted Reviewer 1's suggested handling. The 
 Reviewer 1's formal verdict is still pending (his re-review resumed at 5:15 PM, section 15 posted, reply cut off by the free-plan limit; limit resets 10:20 PM, resume set 10:25 PM). His verdict is now a check on the report, not a gate input: the gate is closed on the owner's decision, made on Reviewer 2 PASS and Reviewer 3 PASS. Anything he still says that requires a correction will be addressed by a further amendment.
 
 Status: Part 6 gate CLOSED, 25 Nov 2026. Decision (c) hybrid, itemised; items 2, 3 and 4 decided. Part 7 preparation is next.
+
+### Discriminating-tests preregistration: panel review round 1 (25 Nov 2026)
+
+The draft preregistration (commit 16c50ec) went to Reviewer 2 and Reviewer 3. Both returned REQUIRE CHANGES. Reviewer 1's review follows after his limit resets at 10:20 PM. Both verdicts are recorded here in full.
+
+**Reviewer 3, REQUIRE CHANGES (25 Nov 2026, 5:38 PM WAT):**
+
+"Reviewer 3 — three discriminating tests preregistration HARD review
+REQUIRE CHANGES
+
+I reviewed the draft at commit 16c50ec03e29142ae632a8c8d9326b9030def245 against the Part 6 comparison at 527179dbb9aecbe8557b192fb2f783a158751025, including D2, D3, D4 and D7.
+
+The overall design is sensible and the proposed runs address the right unresolved questions. The numerical references are substantially correct. However, two decision rules do not currently support the conclusions they purport to distinguish, and there is a seed-allocation/documentation inconsistency to correct. I would not freeze or run this draft yet.
+
+1. Test 1: the D4 suppression-ratio comparison uses the wrong denominator
+Required change
+
+This is the most important problem.
+
+The old ratio of 0.164 is:
+
+old sugar+bitter pooled MN9 rate at 150/150 / old sugar pooled MN9 rate at 150 = 23.3 / 142.2
+
+But the proposed test's headline ratio is:
+
+fresh sugar+bitter pooled MN9 rate at 150/150 / fresh sugar pooled MN9 rate at 200
+
+The draft correctly acknowledges that these ratios have different denominators and are not directly comparable. Nevertheless, Section 8.2 then uses whether 0.164 falls inside the second ratio's CI to decide whether rate explains D4. Those two statements are inconsistent.
+
+This means the D4 decision rule is not valid as written.
+
+Required correction: provide a ratio for the D4 comparison using a 150 Hz sugar denominator. The existing fresh Part 3 150 Hz sugar arm is a possible comparator, provided its frozen provenance, trial-level data and independent resampling are explicitly specified. Alternatively, add a fresh 150 Hz sugar control to this gate.
+
+You can retain the 200 Hz anchor ratio as a separate descriptive quantity. But the ratio used to decide whether the fresh 150/150 condition reproduces the old 0.164 must use a protocol-matched 150 Hz sugar denominator.
+
+Then specify:
+
+The exact denominator dataset and its run provenance.
+
+Ratio of run means, as currently intended.
+
+Independent bootstrap resampling of numerator and denominator trials.
+
+A separate fixed bootstrap seed for that comparison.
+
+The 0.164 comparison rule applied to this protocol-matched ratio.
+
+The old ratio is a point estimate, not an old confidence interval, so retain the existing explicit point-in-fresh-CI comparison rule.
+
+The old MN9 reference values and CIs themselves are correctly transcribed: L 9.1 [6.54, 11.66] Hz and R 14.2 [13.04, 15.36] Hz. The fresh comparison values are also correctly transcribed: L 9.97 and R 9.57 Hz at 200/200.
+
+2. Test 3: a CI containing zero does not establish a set-size artefact
+Required change
+
+Section 8.4 currently says that RQ-C5 is resolved as a set-size artefact if both the bilateral matched-count and unilateral-pair 95% CIs include zero.
+
+That is not a valid equivalence inference.
+
+A 95% CI containing zero establishes only that the data do not exclude zero at the corresponding two-sided significance level. It does not establish that the true difference is sufficiently close to zero to count as symmetry. A wide CI can include zero while remaining compatible with a substantial asymmetry.
+
+This matters because the registered question is whether the asymmetry is a set-size artefact or persists at matched counts. A non-significant difference is not evidence that the set-size explanation is correct.
+
+Required correction: either:
+
+Define and justify a scientifically meaningful equivalence margin for MN9 L–R differences, and use a registered equivalence procedure for both the bilateral and unilateral comparisons; or
+
+Remove the claim that inclusion of zero resolves the question as a set-size artefact. In that case, describe the result as no statistically detectable asymmetry, and leave RQ-C5 unresolved unless the positive-asymmetry criterion is met.
+
+Do not borrow the Part 0 MN9 rate-agreement margins or the suppression-ratio ±0.15 bound without a rationale. They concern different quantities.
+
+There is also a scope qualification for the positive result. A random 10-neuron right subset is a reasonable way to construct the matched-count comparison, but one realised subset cannot establish a universal property of the entire right GRN population. If both matched-count comparisons show an L-over-R difference, the conclusion should be limited to the tested matched-count configurations: asymmetry persists under those configurations. Calling it a general circuit property would go beyond what these runs establish.
+
+The bilateral and unilateral measurements should remain separate, as the draft correctly requires. The unilateral comparison uses independent runs and must not be described as a genuinely paired trial design. Its independent bootstrap treatment is appropriate.
+
+3. Seed registry and determinism exception
+Required clarification
+
+The proposed run blocks are acceptable in principle:
+
+Run / Seeds / Ruling: Sugar anchor 7000–7029 Accept; Sugar+bitter 150/150 7030–7059 Accept; Water 150 7060–7089 Accept; Bilateral matched 7090–7119 Accept; Left-only matched 7120–7149 Accept; Right-only matched 7150–7179 Accept; Determinism check 7180 Accept with clarification.
+
+These blocks are disjoint from the prior blocks listed in the draft. Reusing seed 7180 for the two independent determinism runs is intentional and correct for a bit-identity check. But Section 4 also says that no seed is used by more than one run. That statement needs an explicit exception for the two determinism-check executions.
+
+The bootstrap and subset seeds need a small registry correction:
+
+Seed / Actual purpose / Ruling: 20261131 MN9 CIs and anchor/test 1/test 2 differences Accept; 20261132 Suppression-ratio bootstrap Accept, but add the corrected D4 ratio's seed or specify its reuse; 20261133 Matched-count difference CIs Accept; 20261134 Random right-subset selection Accept as a subset-selection seed, not a bootstrap seed.
+
+The draft's amendment history currently calls 20261131–20261134 bootstrap seeds, but 20261134 is used for the subset draw, not a bootstrap. Correct that description. Also, use a separate seed for the newly required D4-comparable ratio unless a clear rationale is given for reusing an existing bootstrap stream.
+
+4. Ruling on the other proposed items
+
+Right-subset method: ACCEPT WITH CONDITIONS.
+
+A random subsample is preferable to selecting the lowest ten IDs when the latter might introduce an unexamined ordering correlate. Use numpy.random.default_rng(20261134) and select ten without replacement. Record the ten IDs in the freeze record before any test 3 run. Use exactly the same subset in 3a and 3c. This is reproducible and prevents outcome-informed selection.
+
+Seed blocks 7000–7180: ACCEPT, subject to the determinism exception and registry correction above.
+
+Bootstrap seeds 20261131–20261134: ACCEPT IN PRINCIPLE, with the purposes correctly distinguished and the D4 ratio's resampling procedure and seed specified.
+
+Freeze tag part6-tests-v1: ACCEPT. It is a clear, appropriate first tag for this independent gate. It must only be created after the final amended document has full panel approval and owner approval.
+
+5. Other numerical and protocol checks
+
+The old values and fresh values used to motivate the tests are consistent with the Part 6 report:
+
+Question / Old result / Fresh comparison: D2, sugar+bitter MN9 L 9.1 Hz [6.54, 11.66] / 9.97 Hz at 200/200; D2, sugar+bitter MN9 R 14.2 Hz [13.04, 15.36] / 9.57 Hz at 200/200; D4, pooled suppression ratio 0.164 / 0.126 [0.115, 0.138]; D3, water MN9 L 6.0 Hz [3.55, 8.45] / 30.23 Hz [28.23, 32.33]; D3, water MN9 R 1.6 Hz [0.08, 3.12] / 11.87 Hz [10.70, 13.07].
+
+The three tests are correctly scoped to the unresolved questions:
+
+Test 1 matches the old 150/150 sugar-plus-bitter drive.
+
+Test 2 matches the old 150 Hz water drive.
+
+Test 3 addresses the registered matched-count RQ-C5 question, rather than repeating the unequal-count bilateral condition that failed to resolve it.
+
+The 30-trial design is reasonable and exceeds the registered N=20 floor. The 200 Hz sugar anchor is appropriate as a reproducibility stop rule against the Part 3 primary. The run order, frozen implementation identity, clean-manifest requirement and no-reroll rule are also sound.
+
+One important positive point: the draft correctly states that these are measurements of the frozen model under conventional drives, not biological validation or extension of the validated envelope. Keep that language discipline.
+
+6. Expert-check condition
+
+Section 12 item 1 correctly identifies that the 24 November waiver does not automatically cover this new freeze. The human domain-expert check or a new signed owner waiver is an outstanding freeze condition.
+
+I do not decide that item. My methodological review cannot substitute for the owner's explicit decision, and an AI panel review must not be described as a human expert check.
+
+Final verdict
+
+Area / Reviewer 3: Overall test design and scope Accept; Old and fresh numerical references Accept; Right-subset method Accept with conditions; Run seed blocks Accept with clarification; Bootstrap seed allocation Accept with clarification; Freeze tag Accept; Test 1 D4 ratio rule Require changes; Test 3 equivalence / artefact rule Require changes; Expert-check condition Owner's decision.
+
+REQUIRE CHANGES
+
+Reviewer 3 vote: REQUIRE CHANGES.
+
+Three corrections are required before I can approve this preregistration:
+
+Make the D4 suppression-ratio comparison denominator-matched to the old 150/150 ratio.
+
+Replace the Test 3 zero-in-CI equivalence claim with a justified equivalence procedure, or leave the set-size-artefact conclusion unresolved; scope any positive result to the tested matched-count configurations.
+
+Reconcile the seed registry, including the repeated 7180 determinism seed and the actual purpose of 20261134.
+
+No simulation is required to make these amendments. The expert-check decision remains with the owner. No freeze and no trial runs until the amended preregistration has completed panel review and owner approval."
+
+**Reviewer 2, REQUIRE CHANGES (25 Nov 2026, 5:41 PM WAT):**
+
+"Discriminating Tests Preregistration (docs/discriminating_tests_preregistration.md, Commit 16c50ec) — Reviewer 2 Review (REQUIRE CHANGES — DT1–DT3 + Verbatim Text Verification Note)
+
+Reviewer: Reviewer 2 (Gemini)
+
+Subject: Pre-freeze gate review of docs/discriminating_tests_preregistration.md (commit 16c50ec, SHA-256 fdc02a657837de075e5bb6ceea9c0ebf7d9b019f6d2ea6dfe2dd07b24fbb4cd0) against docs/fresh_vs_old_comparison.md (commit 527179d, §15 D2, D3, D4, D7) and Part 0 / Part 3 / Part 5 preregistration standards.
+
+Important Transparency Note on File Access: I do not have live web/GitHub fetch access in this chat environment, so I cannot independently pull commit 16c50ec or 527179d from GitHub. My review below verifies everything supplied in your prompt plus all previously verified numbers from our gate log (fresh_vs_old_comparison.md and PART3-RUNG2-PREREG.md). Where a specific clause depends on the exact wording in docs/discriminating_tests_preregistration.md (specifically §8 decision rules, ratio denominators, and §12 item 1), I state the exact requirement so you can verify or amend the text directly before tagging.
+
+Verdict: REQUIRE CHANGES (DT1–DT3 below — textual/specification precision checks before cutting tag part6-tests-v1).
+
+1) Rulings on the PROPOSED Items
+
+10-Neuron Right-Subset Method (numpy default_rng, seed 20261134, recorded at freeze) — APPROVED (With Recording Condition):
+
+Drawing a random 10-neuron subset of sugar_grn_right (out of 21) via numpy.random.default_rng(20261134) (replace=False, sorted canonical neuron IDs) and freezing the exact 10 selected neuron IDs (plus SHA-256 / list in the preregistration manifest before running) cleanly removes the 21 vs. 10 sensory-count confound for RQ-C5 (D7).
+
+Condition: The exact 10 selected right-sugar neuron IDs must be written into the frozen preregistration (or pinned artefact hash) before tag part6-tests-v1 is created, and the same 10-neuron subset must be used in both the bilateral 10+10 arm (7090–7119) and the right-only 10 arm (7150–7179).
+
+Episode Seed Blocks 7000–7180 — APPROVED:
+
+All six 30-trial blocks (7000–7029 sugar 200 Hz anchor; 7030–7059 150/150 sugar+bitter; 7060–7089 150 Hz water; 7090–7119 bilateral 10+10; 7120–7149 left-only 10; 7150–7179 right-only 10) plus determinism check seed 7180 (181 seeds total) are internally disjoint and completely disjoint from all prior Part 3 (6100–6379) and Part 5 (5000–6099) seed allocations.
+
+Bootstrap / Analysis Seeds 20261131–20261134 — APPROVED:
+
+Disjoint from prior bootstrap seeds (20261126 Part 3 primary, 20261127 rung primary, 20261129–20261130 rung sensitivity arms) and clearly separated between analysis resamples (20261131–20261133) and subsampling (20261134).
+
+Freeze Tag Name part6-tests-v1 — APPROVED:
+
+Follows the established tag convention (part3-rung2-v1, part5-prereg-v1), distinguishes these discriminating tests cleanly from both the rung and Part 5, and avoids colliding with any prior tag sequence.
+
+2) Verification of Numbers & Comparison Reference Values (Against fresh_vs_old_comparison.md)
+
+I checked the reference numbers from fresh_vs_old_comparison.md that §8's discriminating rules depend on:
+
+Sugar Anchor (200 Hz, seeds 7000–7029):
+
+Must match the Part 3 primary sugarR benchmark (L = 92.57 Hz, R = 62.40 Hz) under the Part 0 agreement band (±25% or ±5 Hz whichever is wider → ±23.14 Hz on L, ±15.60 Hz on R, with L > R preserved) and carry the same hard stop rule as PART3-RUNG2-PREREG.md §8.1 before any of the remaining five arms are interpreted.
+
+D2 & D4 (150/150 Hz Sugar+Bitter Arm, seeds 7030–7059):
+
+Old build (150/150 Hz, N = 10): L = 9.1 Hz, R = 14.2 Hz (95% CI [13.04, 15.36] Hz), against old 150 Hz sugar (L = 83.5 Hz [78.84, 88.16], R = 58.7 Hz).
+
+Fresh build (200/200 Hz rung, N = 30): L 95% CI [8.87, 11.17] Hz (mean ~10.0 Hz), R = 9.57 Hz (95% CI [8.77, 10.40] Hz), pooled suppression ratio 0.126 ([0.115, 0.138]), per-side L = 0.106 ([0.094, 0.120]), R = 0.156 ([0.142, 0.170]).
+
+Fresh 150 Hz sugar-only reference (from Part 3 150 Hz arm): L = 83.10 Hz ([81.60, 84.63]), R ~58.1 Hz (consistent with old 58.7 Hz).
+
+D3 (150 Hz Water Arm, seeds 7060–7089):
+
+Old build (150 Hz water, N = 10): L = 6.0 Hz (check exact old R value in fresh_vs_old_comparison.md §7/§15 D3—ensure both L and R old values and CIs are cited accurately in §8).
+
+Fresh build (200 Hz water rung, N = 30): L = 30.23 Hz (95% CI [28.23, 32.33] Hz), R = 11.87 Hz.
+
+D7 (RQ-C5 Matched-Count Bilateral 10+10 vs. Left-Only 10 vs. Right-Only 10, seeds 7090–7179):
+
+Old build (150 Hz, 1 trial × 100 ms): unilateral right-21 (L 60.0, R 20.0), unilateral left-10 (L 10.0, R 20.0), bilateral 21+10 (L 60.0, R 60.0).
+
+Fresh build (200 Hz unmatched 21+10, N = 30): L = 93.17 Hz ([91.53, 94.80]), R = 64.87 Hz ([62.87, 66.80]), gap 28.30 Hz.
+
+3) Required Changes (DT1–DT3 — Verify/Apply Before Freeze Tag part6-tests-v1)
+
+DT1 — Explicitly Pin the Denominator for Any 150/150 Suppression Ratio (D4):
+
+In D2/D4, if §8 defines a suppression ratio for the 150/150 sugar+bitter arm alongside raw L and R firing rates, state explicitly whether the denominator is the Part 3 fresh 150 Hz sugar-only arm (L = 83.10 Hz, etc., from part3-prereg-v2) or the current freeze's 200 Hz sugar anchor (7000–7029).
+
+Why this matters: Because D2 specifically tests whether the 150 Hz vs. 200 Hz drive rate explains the right-side gap (14.2 Hz old vs. 9.57 Hz fresh), comparing 150/150 against a 200 Hz sugar denominator mixes drive rates (150 vs. 200 Hz). Using raw L/R rates against the Part 0 agreement band (old 14.2 Hz inside fresh 150/150 95% CI or vice versa) directly tests D2, and any ratio must name its exact frozen denominator (Part 3 150 Hz sugar arm vs. this freeze's 200 Hz sugar anchor) so there is zero ambiguity.
+
+DT2 — Non-Circular Drive-Rate Convention & Unilateral-Comparison Rule for the Matched-Count Design (D7 / RQ-C5):
+
+State explicitly in §8 for D7:
+
+That the 200 Hz drive rate on 10+10, 10-left, and 10-right tests circuit-intrinsic symmetry at equal sensory neuron count (10 vs. 10), and if L ≠ R under matched 10+10 bilateral drive (95% CI of MN9_L − MN9_R excludes 0, or falls outside the Part 0 agreement band), RQ-C5 is resolved as circuit asymmetry (not merely a 21-vs.-10 sensory-count artefact); conversely, if MN9_L and MN9_R agree within the Part 0 agreement band / TOST equivalence under 10+10, the unilateral bias observed in the full 21+10 runs is attributable to the unequal 21 vs. 10 sensory population counts.
+
+Clarify that the left-only 10 (7120–7149) and right-only 10 (7150–7179) arms are paired unilateral controls (testing whether equal-count unilateral drives produce mirror-symmetric contralateral/ipsilateral responses, i.e., L_left10 ≈ R_right10 and R_left10 ≈ L_right10), rather than being compared directly to the 21-neuron full right-sugar anchor without accounting for the 10 vs. 21 neuron count difference.
+
+DT3 — Ensure Three-Way Outcomes (Supports Old/Rate Hypothesis, Supports Fresh/Unresolved, Inconclusive / Intermediate) Are Exhaustive & Mutually Exclusive in §8:
+
+For each test (D2/D4, D3, D7), verify that §8's pre-written readings partition the outcome space cleanly using the Part 0 agreement rule (point estimate inside 95% CI or vice versa, and/or TOST bounds) plus an explicit intermediate / inconclusive reading when the fresh 150 Hz point estimate falls partway between the old 150 Hz value and the fresh 200 Hz value without satisfying either agreement band—preventing forced classification if a rate effect is partial (e.g., water rising from 6.0 Hz to 16 Hz instead of staying near 6.0 Hz or 30.23 Hz).
+
+4) Comment on §12 Item 1 (Expert-Check Condition — Owner's Call)
+
+You are completely right that the 24 Nov 2026 substitution waiver covered only the Part 5 freeze (part5-prereg-v1) and the four-conditions rung freeze (part3-rung2-v1), and does not automatically carry forward to part6-tests-v1.
+
+Under PART0-PACKAGE §6.3, Angelic must explicitly decide for part6-tests-v1 whether to (a) obtain an external human check first, or (b) sign a separate logged substitution waiver extending the AI-panel check (with the human domain check still owed at the Part 8 final gate). Neither tag part6-tests-v1 nor any run in 7000–7180 should execute until §12 item 1 records her explicit sign-off or waiver.
+
+(Note: I do not have write access to your local filesystem or GitHub in this chat, so please paste this review into your panel/ gate log alongside Reviewers 1 and 3.)"
+
+Note on the record: Reviewer 2 states he has no live web/GitHub fetch access in his chat, so his checks were against the numbers supplied in the review request and previously verified numbers from the gate log, with exact requirements stated for clauses depending on the draft's exact wording. His anchor band of ±23.14 Hz on L is the same bound as the draft's ±23.1 Hz at higher precision (25 percent of 92.57 is 23.1425); the draft keeps the rung's one-decimal form. His fresh 150 Hz sugar R of about 58.1 Hz is the arm's exact 58.00 Hz, verified from the arm's spike file (SHA-256 a03d7f6b…) during the amendment. His old water R check is satisfied: the draft's section 8.3 cites old L 6.0 Hz [3.55, 8.45] and R 1.6 Hz [0.08, 3.12], verified against the comparison report section 7.
+
+**Amendment Pass 1 (25 Nov 2026):** The amended preregistration (docs/discriminating_tests_preregistration.md) addresses all six items (Reviewer 3 items 1-3; Reviewer 2 DT1-DT3): a fresh 150 Hz sugar control run (S, seeds 7190-7219, bootstrap seed 20261135) supplies the protocol-matched D4 denominator, because the existing Part 3 150 Hz arm's manifest records a dirty tree and is not used as the denominator; the 200 Hz anchor ratio is descriptive only; test 3's artefact reading is decided by a registered TOST equivalence procedure (margin plus or minus 5 Hz, justified in section 7) applied to all three Δs, with the positive result scoped to the tested matched-count configurations and the contralateral mirror comparison added; the intermediate outcome is named explicitly in sections 8.2-8.4; the seed registry is corrected (seed 7180's repeated use is an explicit exception; 20261134 is a subset-selection seed, not a bootstrap seed); the subset draw is specified as choice with replace=False and the freeze record carrying the IDs is committed before the tag. Re-review requested from Reviewer 2 and Reviewer 3; Reviewer 1's review follows after his 10:20 PM limit reset.
