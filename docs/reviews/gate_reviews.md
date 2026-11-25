@@ -2060,3 +2060,13 @@ Final Reviewer 3 verdict: PASS — Amendment Pass 2."
 **Panel state after Amendment Pass 2 (25 Nov 2026):** Reviewer 2 PASS (Amendment Pass 1), Reviewer 3 PASS (Amendment Pass 2). Reviewer 1's review is the last panel review outstanding, scheduled for the 10:25 PM resume job. The owner's section 12 item 1 decision (expert check or new signed waiver) remains open and blocks the freeze.
 
 **Reviewer 1's review requested; limit hit before the verdict (25 Nov 2026, 10:46 to 10:50 PM WAT).** The review request was sent in his Claude chat as message 109 (the link, the panel state, the amendment summary, the verdict ask). He read the document from the GitHub link and replied as message 110, verbatim: "Reading the preregistration is done. I'm now checking one number it depends on, then I'll give the verdict." He was then cut off mid-generation by the free-plan message limit: "Paused: Your free usage returns Nov 26 at 3:20 AM. Continue then." No verdict was obtained. The account was not upgraded; free tier only is the standing rule. A further one-off resume run is scheduled for 03:25 WAT on 26 Nov 2026, carrying the same state forward (the request has been sent, he has read the document, and he was checking one number before the verdict). The owner's section 12 item 1 decision remains open and blocks the freeze.
+
+### Discriminating-tests freeze: owner's section 12 item 1 decision — WAIVER SIGNED (25 Nov 2026, 22:53 WAT)
+
+Angelic approved the waiver wording (tapped "Approve the waiver" on the options widget, 22:53 WAT, in the side chat). The waiver text, in full, verbatim:
+
+"Human domain-expert check: NOT obtained. I could not reach a professional working in this field, so I proceeded on the basis of my own research and the checks I could carry out myself. Waived by Angelic Charles, 25 Nov 2026. Scope: the discriminating-tests (Part 7) freeze only. The human expert check remains owed at the Part 8 final gate."
+
+Scope note: this waiver covers the discriminating-tests (Part 7) freeze only, as the 24 Nov 2026 waiver covered the Part 5 freeze and the rung freeze only. The human expert check remains owed at the Part 8 final gate. The panel is never the expert check. Reviewer 1's recommendation to seek the human check before Part 7's first confirmatory evaluation episodes was put to her plainly before the decision and is his recommendation, not her decision.
+
+Panel state: Reviewer 2 PASS (Amendment Pass 1), Reviewer 3 PASS (Amendment Pass 2), Reviewer 1's review pending (resume 03:25 WAT, 26 Nov 2026). The owner's section 12 item 1 decision is now made; once Reviewer 1's verdict is recorded, the freeze (commit + tag part6-tests-v1) can proceed on the owner's approval of the final text.
