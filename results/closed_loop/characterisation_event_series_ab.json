@@ -1,0 +1,285 @@
+{
+ "description": "Per-chunk taste event series (taste_event_at_chunk_end, chunks 0 to 99) extracted from the raw body logs for arms (a) and (b), all 20 paired seeds, Part 5 characterisation, 25 Nov 2026, by work/run_characterisation_event_series.py. Each series is a 100 character 0/1 string; the section 6 contact duration it implies is the count of 1s times 0.1 s, cross-checked exactly against characterisation_contact_duration_per_seed.json. This artefact is the material an independent checker counts from to re-derive the section 6 contact duration endpoint without using the analysis or reconciliation scripts.",
+ "episodes": [
+  {
+   "arm": "a",
+   "seed": 5100,
+   "taste_event_series_chunks_0_to_99": "0000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 91,
+   "s6_contact_duration_s": 9.1
+  },
+  {
+   "arm": "a",
+   "seed": 5101,
+   "taste_event_series_chunks_0_to_99": "0000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 92,
+   "s6_contact_duration_s": 9.200000000000001
+  },
+  {
+   "arm": "a",
+   "seed": 5102,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 93,
+   "s6_contact_duration_s": 9.3
+  },
+  {
+   "arm": "a",
+   "seed": 5104,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5105,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 93,
+   "s6_contact_duration_s": 9.3
+  },
+  {
+   "arm": "a",
+   "seed": 5106,
+   "taste_event_series_chunks_0_to_99": "0000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 96,
+   "s6_contact_duration_s": 9.600000000000001
+  },
+  {
+   "arm": "a",
+   "seed": 5107,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 93,
+   "s6_contact_duration_s": 9.3
+  },
+  {
+   "arm": "a",
+   "seed": 5108,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5109,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5110,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000",
+   "event_on_chunks": 78,
+   "s6_contact_duration_s": 7.800000000000001
+  },
+  {
+   "arm": "a",
+   "seed": 5111,
+   "taste_event_series_chunks_0_to_99": "0001111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000",
+   "event_on_chunks": 28,
+   "s6_contact_duration_s": 2.8000000000000003
+  },
+  {
+   "arm": "a",
+   "seed": 5112,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5113,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 94,
+   "s6_contact_duration_s": 9.4
+  },
+  {
+   "arm": "a",
+   "seed": 5114,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 94,
+   "s6_contact_duration_s": 9.4
+  },
+  {
+   "arm": "a",
+   "seed": 5115,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5116,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 95,
+   "s6_contact_duration_s": 9.5
+  },
+  {
+   "arm": "a",
+   "seed": 5117,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 94,
+   "s6_contact_duration_s": 9.4
+  },
+  {
+   "arm": "a",
+   "seed": 5118,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 94,
+   "s6_contact_duration_s": 9.4
+  },
+  {
+   "arm": "a",
+   "seed": 5119,
+   "taste_event_series_chunks_0_to_99": "0001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 97,
+   "s6_contact_duration_s": 9.700000000000001
+  },
+  {
+   "arm": "a",
+   "seed": 5120,
+   "taste_event_series_chunks_0_to_99": "0000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+   "event_on_chunks": 92,
+   "s6_contact_duration_s": 9.200000000000001
+  },
+  {
+   "arm": "b",
+   "seed": 5100,
+   "taste_event_series_chunks_0_to_99": "0000000001111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000",
+   "event_on_chunks": 51,
+   "s6_contact_duration_s": 5.1000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5101,
+   "taste_event_series_chunks_0_to_99": "0000000011111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 53,
+   "s6_contact_duration_s": 5.300000000000001
+  },
+  {
+   "arm": "b",
+   "seed": 5102,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 54,
+   "s6_contact_duration_s": 5.4
+  },
+  {
+   "arm": "b",
+   "seed": 5104,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 56,
+   "s6_contact_duration_s": 5.6000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5105,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000",
+   "event_on_chunks": 53,
+   "s6_contact_duration_s": 5.300000000000001
+  },
+  {
+   "arm": "b",
+   "seed": 5106,
+   "taste_event_series_chunks_0_to_99": "0000111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000",
+   "event_on_chunks": 58,
+   "s6_contact_duration_s": 5.800000000000001
+  },
+  {
+   "arm": "b",
+   "seed": 5107,
+   "taste_event_series_chunks_0_to_99": "0000000111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 54,
+   "s6_contact_duration_s": 5.4
+  },
+  {
+   "arm": "b",
+   "seed": 5108,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 56,
+   "s6_contact_duration_s": 5.6000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5109,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 56,
+   "s6_contact_duration_s": 5.6000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5110,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5111,
+   "taste_event_series_chunks_0_to_99": "0001111111111111111111111111111000111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5112,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 56,
+   "s6_contact_duration_s": 5.6000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5113,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5114,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5115,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000",
+   "event_on_chunks": 57,
+   "s6_contact_duration_s": 5.7
+  },
+  {
+   "arm": "b",
+   "seed": 5116,
+   "taste_event_series_chunks_0_to_99": "0000011111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 56,
+   "s6_contact_duration_s": 5.6000000000000005
+  },
+  {
+   "arm": "b",
+   "seed": 5117,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5118,
+   "taste_event_series_chunks_0_to_99": "0000001111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 55,
+   "s6_contact_duration_s": 5.5
+  },
+  {
+   "arm": "b",
+   "seed": 5119,
+   "taste_event_series_chunks_0_to_99": "0001111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 58,
+   "s6_contact_duration_s": 5.800000000000001
+  },
+  {
+   "arm": "b",
+   "seed": 5120,
+   "taste_event_series_chunks_0_to_99": "0000000011111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000",
+   "event_on_chunks": 53,
+   "s6_contact_duration_s": 5.300000000000001
+  }
+ ]
+}

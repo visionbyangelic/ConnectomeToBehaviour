@@ -1258,3 +1258,144 @@ The outstanding work is an analysis/report reconciliation, not a request to repe
 Once the registered contact-duration endpoint has been established and analysed correctly, and the ignition and onset fields are unambiguously labelled against their registered definitions, I am prepared to re-review the results gate. The Holm adjustment can remain pending Part 7 under the conditions above.
 
 This is my Reviewer 3 vote, not a statement of panel majority or owner sign-off. I have reviewed the results and methodological details supplied in your message; I have not independently inspected the report, audit JSON, repository, or hashed files.
+
+### Reviewer 1: characterisation reconciliation re-review (25 Nov 2026; verbatim)
+
+Reviewer 1: characterisation reconciliation
+
+Verdict: my conditions are discharged and my PASS stands for the gate. I recomputed everything that can be recomputed from the differences you sent. Two wording items remain for the report. I could not independently re-derive the differences from the raw logs.
+
+Recomputation from the per-seed differences
+Quantity	Your value	My recomputation
+Frozen-code endpoint, mean	−0.130 s	−0.130 (19 zeros, one −2.6)
+Frozen-code endpoint, exact sign-flip p	1.0	all 2²⁰ assignments extreme, so exactly 1.0
+Frozen-code endpoint, 95% CI	[−0.390, 0.000]	[−0.390, 0.000]
+§6 endpoint, mean difference	+3.490 s	+3.490 (sum 69.8)
+§6 endpoint, 95% CI	[2.750, 3.910]	[2.755, 3.910] (different bootstrap seed)
+§6 endpoint, 90% CI	[2.840, 3.900]	[2.845, 3.900]
+§6 endpoint, exact sign-flip p	at the floor (0 of 10,000)	6/2²⁰ ≈ 5.7 × 10⁻⁶, so a Monte Carlo count of 0 is what to expect
+TOST bound	±2.24875 s	25% of 8.995 = 2.24875 ✓
+Peak E bound	±0.511 rad	25% of 2.043 = 0.511 ✓
+The p = 1.0 is explained. With one non-zero difference, every sign assignment gives the same |sum|, so every permutation is extreme. That is the configuration I suspected, and the reconciliation to the §6 endpoint is right.
+TOST on the §6 endpoint: the 90% CI [2.84, 3.90] lies wholly outside ±2.249, so equivalence is not demonstrated. The sentence superseding the earlier equivalence wording is correct.
+The Bonferroni-9 bound (9/10,001 ≈ 0.0009) puts the contact-duration member with the three floor members, claimed under the registered rule. This keeps registered claims unchanged.
+M3: I was wrong, and your log reading is right
+
+I inferred e_peak ≈ 0.93 by assuming peak E tracks e·E_max. Your logs show e_peak ≈ 0.987 (the 170.8 Hz peak maps to e = 0.989 under the registered map). The rate does rise to the top of the map. 0.987 × 2.1746 − 2.030 = 0.116, matching your 0.117, so the shortfall is dynamic tracking in the body, not the rate. M3 stays OUTSIDE with nothing adjusted. M2’s mean offset of −0.091 rad (about 4%), with 8 of 20 episodes beyond −0.10, is larger than Q6’s recorded 0.08. That is the thin margin I flagged when the band was registered. Treat it as a known dynamic offset, as you’ve done, and have Part 7 measure E and not predict it.
+
+Remaining items
+
+1. Seed 5111 and the persistence wording.
+
+The single negative difference (−2.7 s on the §6 endpoint, with contact “released early”) and the code’s stricter ignition field (19/20) are the same episode.
+The report’s persistence statement (“gate-sustained ignition 20/20 in (a)”) must not be stronger than that episode supports. State the 19/20 versus 20/20 distinction beside the claim, with what the code’s rule requires that §6 item 8 doesn’t, and what happened in 5111.
+Describe the 5111 time series (gate state, drive state, e) in the report as a descriptive note. A rare dropout in an intact closed loop affects the variance baseline Part 7 will compare lesions against.
+
+2. The independence of the §6 derivation.
+
+I recomputed the statistics from the differences, not the differences from the raw logs. My re-review is therefore not the independent check of the §6 endpoint.
+What exists is the analysis script and a reconciliation script that agree on all 100 episodes. They may share an author. Say who wrote each, and have a reviewer who didn’t write either re-derive the §6 endpoints from the raw logs for at least the 20 arm (a)/(b) pairs. If you send me the raw ledger for those episodes, I’ll do it.
+This does not change my verdict, but the registered claim now rests on that derivation, so it should be checked.
+Smaller notes
+Calibration tail. Your explanation (calibration scripted on throughout the window vs arm (a) gate-sustained with momentary drive-off chunks) is sufficient. Add a line telling Part 7 to expect intact arms to peak near e ≈ 0.99 and achieved E/E_max ≈ 0.93.
+Contact-duration difference. It is almost constant across seeds (3.8–4.0 s, apart from two seeds). That is structural: the sustained loop keeps contact for the remainder of the episode, and the scripted window ends earlier in arm (b). Say so in the interpretation, so nobody reads it as a noisy effect estimate.
+Wording. The headline reads “closed-loop contact lasted longer than open-loop by 3.49 s [2.75, 3.91] on the registered endpoint”, and not “the loop improves feeding”. The §11 permitted-conclusions wording governs.
+Exact p-value. Add the exact 5.7 × 10⁻⁶ as a note beside the Monte Carlo floor. It doesn’t replace the registered value.
+
+My PASS stands. If the 5111 description and the raw-log re-derivation come back consistent, I have nothing further on this gate.
+
+### Reviewer 3: characterisation results re-review (25 Nov 2026; verbatim)
+
+Reviewer 3 — Part 5 characterisation results re-review
+PASS
+
+Yes. The reconciliation discharges my REQUIRE CHANGES. My PASS now stands for the Part 5 characterisation results gate, with the nine-member Holm adjustment pending Part 7 under the conditions previously stated.
+
+The decisive correction is that the registered contact-duration member now tests the actual Section 6 endpoint, rather than the frozen code's different, stimulus-window-only diagnostic.
+
+1. Contact-duration endpoint — accepted
+
+The distinction is now unambiguous:
+
+Registered endpoint: taste-event ON time across chunks 0–99, with the longest continuous stretch also reported.
+
+Implementation diagnostic: the same event totalled only over chunks 0–59.
+
+Those are different estimands. The report no longer conflates them or allows the implementation diagnostic to substitute for the registered endpoint.
+
+The corrected registered analysis uses the prescribed seed list, family position four, permutation seed 6003, B = 10,000, and the frozen permutation functions. The reported result is:
+
+Arm (a): 8.995 s.
+
+Arm (b): 5.505 s.
+
+Paired difference: +3.490 s.
+
+95% CI: [2.750, 3.910].
+
+Permutation extreme count: 0; reported p = 1/(B+1).
+
+The per-seed cross-check against the audit artefact is an important reconciliation control. The 19 positive differences and the one negative difference at seed 5111 are also consistent with the supplied explanation of the earlier diagnostic's result.
+
+The corrected TOST result is handled properly: equivalence is not demonstrated for contact duration under the registered bound. Superseding the earlier equivalence sentence is necessary and correct. Peak-E equivalence remains a separate result and is not affected by this correction.
+
+The old code-field result remains useful as an implementation diagnostic, but it does not enter the registered family. Accepted.
+
+2. Onset and ignition — accepted
+
+The reconciliation now explicitly distinguishes:
+
+Section 6's registered contact-onset fraction from the frozen code's stimulus-event fraction.
+
+Section 6's registered ignition definition, which gives 20/20, from the stricter code diagnostic, which gives 19/20 because of seed 5111.
+
+The registered definitions govern the registered claims. The diagnostic fields remain visible without being misrepresented as the registered endpoints.
+
+This resolves my earlier objection.
+
+3. Holm adjustment — accepted as pending
+
+Keeping the adjusted values null is still the correct treatment. The full family has nine members, and the four Part 7 members do not yet exist.
+
+The additional paragraph is acceptable because it is explicitly labelled a Bonferroni-9 bound, not the registered adjusted value. For a permutation member reported at the Monte Carlo floor, 9(1/10001) ≈ 0.0009.
+
+That supplies a conservative bound for those floor members without pretending that the registered Holm calculation has been completed.
+
+The conditions remain:
+
+Do not report partial-family Holm-adjusted values as the registered adjustment.
+
+Keep the nine-member family and its fixed order unchanged.
+
+Complete the registered Holm procedure once all four Part 7 members are available.
+
+Do not make final family-level confirmatory claims dependent on that adjustment before it is completed.
+
+This does not prevent the Part 5 characterisation results gate from passing.
+
+4. M3 and the other materiality findings
+
+My previous ruling on M3 stands. The open-loop peak-E mean remains outside its registered band and must remain a named discrepancy. The reconciliation does not erase or explain it away.
+
+Likewise, the mean-based M2 result remains inside its registered band, while the eight individual episodes outside that band remain useful distributional information. No retrospective change to the registered materiality criteria is warranted.
+
+Final verdict
+
+Registered contact-duration endpoint — Accepted
+Implementation diagnostic kept separate — Accepted
+Onset and ignition endpoint mapping — Accepted
+Contact-duration TOST correction — Accepted
+Holm adjustment pending Part 7 — Accepted with conditions
+M3 discrepancy retained — Accepted
+
+REQUIRE CHANGES DISCHARGED — PASS
+
+Reviewer 3 vote: PASS for the Part 5 characterisation results HARD gate.
+
+This closes the characterisation results gate on the supplied record. It does not close the nine-member inferential family, certify Part 7, or establish biological validity or causal connectome contribution.
+
+As before, this is my Reviewer 3 vote, not a claim about panel majority or owner sign-off. I have reviewed the reconciliation and numerical evidence supplied here; I have not independently inspected the updated report, audit artefact, per-seed JSON, repository, or file hashes.
+
+### Panel complete: characterisation results gate (25 Nov 2026)
+
+With the two re-reviews above, the panel for the Part 5 characterisation results gate is complete at 3 of 3 PASS: Reviewer 2 PASS with no required changes; Reviewer 1 PASS, his conditions discharged at his re-review, with his hand recomputation from the per-seed differences matching (his bootstrap intervals differ from the report's in the third decimal, 2.755 against 2.750 on the 95% interval, from a different bootstrap seed, which he accepted); Reviewer 3 PASS on re-review, his REQUIRE CHANGES discharged. Reviewer 1's two remaining wording items and his independence item are completed in section 9.10 of the results report: the seed 5111 descriptive note with the 19 of 20 against 20 of 20 distinction stated beside the persistence claim, the authorship statement for the two section 6 scripts (same working process, shared author, so their agreement is not an independent check), and the event series artefact prepared for his own independent re-derivation from the raw logs (`results/closed_loop/characterisation_event_series_ab.json`, SHA-256 `3e8ad949db9411d36edf896e27c4eb6a6970def5f26b16b2251d1fde21da3981`), which has not yet been performed and is not claimed. Updated report SHA-256: `f318d9e20690c02a42d96b5076e4a85ac45b0f789faaf5edcc07b044431ff510` (the report's section 9.10 records the audit artefact's updated hash, `cda5ed6d437b742adfa023b5027d1f563f2114b9487eae6185b7298b5e3e406e`). The gate is panel complete and awaits my sign-off; it is not closed by this entry.

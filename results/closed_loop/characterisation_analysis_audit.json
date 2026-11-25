@@ -3249,5 +3249,16 @@
    "episodes_checked": 100,
    "result": "every section 6 item 6 onset fraction in this artefact reproduces from the raw body logs (recomputed in the reconciliation pass)"
   }
+ },
+ "event_series_artefact_2026_11_25": {
+  "date": "25 Nov 2026",
+  "reason": "Reviewer 1's independence item at his re-review of the reconciliation: material for a genuinely independent re-derivation of the section 6 contact duration endpoint from the raw body logs, by a checker who wrote neither the analysis script nor the reconciliation script.",
+  "artefact": "results/closed_loop/characterisation_event_series_ab.json",
+  "artefact_sha256": "3e8ad949db9411d36edf896e27c4eb6a6970def5f26b16b2251d1fde21da3981",
+  "extraction_script": "work/run_characterisation_event_series.py",
+  "extraction_script_sha256": "86fd7a8e2355269d6e769e37b25b6a728f62a1b635c217c4955161aeaf4c9d50",
+  "contents": "For arms (a) and (b), all 20 paired seeds: the taste_event_at_chunk_end series for chunks 0 to 99 as a 100 character 0/1 string, the ON chunk count, and the section 6 contact duration it implies (ON chunks times 0.1 s).",
+  "cross_check": "Every implied duration matched characterisation_contact_duration_per_seed.json exactly at extraction time.",
+  "status": "Independent re-derivation not yet performed; the artefact has been prepared for Reviewer 1, who offered to do it."
  }
 }
