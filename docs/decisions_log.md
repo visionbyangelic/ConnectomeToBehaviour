@@ -155,3 +155,15 @@ I decided the Part 6 gate outcome as (c) hybrid, itemised, with the fresh build 
 On the findings: sugar and bitter, the fresh build replaces the old, because they agree and the fresh build is the better measured one. Water, the suppression ratio and the mixed side, both numbers stay in the record side by side, open. Symmetry: the fresh 30-trial number is the current best estimate, but the question stays open and the MN9 numbers stay provisional until the matched-count test runs.
 
 I decided on Reviewer 2 PASS and Reviewer 3 PASS, with Reviewer 1's formal verdict still pending, rather than wait until 5 PM for his free-plan limit to reset. I asked for deep research on what other papers did first, and the precedents pointed to the hybrid. That is a break from the full-panel rule, and it is my decision, recorded as such. Items 2, 3 and 4 of section 17 are still to be decided: when the four discriminating runs happen, whether the old README-original should be corrected, and how the gate treats the RQ-C5 conflict. The gate closes when they are decided.
+
+## I closed the Part 6 gate (25 Nov 2026)
+
+I decided the three remaining items, and the Part 6 gate is closed. Part 6 is done: 9 of 12 parts.
+
+On the tests: the three discriminating runs, the 150/150 sugar plus bitter arm, the 150 Hz water arm, and the matched-count bilateral design, run as their own preregistration gate before Part 7 leans on any MN9 numbers, not inside Part 7's design.
+
+On the old README: I added a note to the preserved README-original, dated and marked as a later addition, saying the exact-symmetry sentence and the closed-loop title do not stand. The original text below the note is untouched.
+
+On RQ-C5: I accepted Reviewer 1's suggested handling. The conflict between the plan's wording and the approved Part 3 preregistration is recorded as a logged deviation with my explicit ratification, and every public MN9 figure is labelled "RQ-C5 open" until the matched-count test runs. This entry is that logged deviation: the plan (PLAN section 8 and line 301) required the matched-count resolution before any MN9 number was published; the Part 3 preregistration section 10 kept the question open while treating MN9 measurements as reportable; MN9 numbers were published with RQ-C5 still open. I ratify that record, and the matched-count design is a gating requirement in Part 7 before any further MN9 publication.
+
+Reviewer 1's formal verdict is still pending, and the gate no longer waits on it. Anything he still says that requires a correction will be addressed by a further amendment.

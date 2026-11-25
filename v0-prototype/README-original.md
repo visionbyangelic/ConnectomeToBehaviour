@@ -1,3 +1,5 @@
+Note added 25 Nov 2026, at the Part 6 gate. Two claims in the original text below do not stand. The exact-symmetry sentence states bilateral MN9 symmetry of 60.0 against 60.0 Hz; the comparison in docs/fresh_vs_old_comparison.md finds the symmetry question (RQ-C5) unresolved in both builds. The closed-loop title promises a loop the old build never closed: it never built a decoder and never ran a closed-loop episode. The original text below is untouched; this note is the only addition. Line numbers cited in the comparison report (line 99 for the symmetry sentence, line 6 for the title) refer to the original file before this note.
+
 <div align="center">
 
 # ConnectomeToBehaviour

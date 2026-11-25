@@ -1592,3 +1592,17 @@ Basis: Reviewer 2 PASS (on the report at commit 889bd86) and Reviewer 3 PASS (on
 Section 17 items 2, 3 and 4 remain undecided (timing of the four discriminating runs; whether the old README-original's symmetry sentence and closed-loop title should be corrected in the old record; how the gate treats the RQ-C5 conflict). The gate closes when they are decided.
 
 Status: gate outcome decided (c) hybrid, itemised, 25 Nov 2026. Section 17 items 2 to 4 remain to be decided; the gate is not yet closed.
+
+### Part 6 comparison gate: CLOSED (25 Nov 2026, about 17:30 WAT)
+
+The owner decided the three remaining section 17 items, and the Part 6 gate is closed. Part 6 is CLOSED: 9 of 12 parts done.
+
+Item 2, test timing: the three discriminating tests (the 150/150 sugar plus bitter arm for D2 and D4, the 150 Hz water arm for D3, and the matched-count bilateral design for D7) run as their own preregistration gate before Part 7 leans on any MN9 numbers, not inside Part 7's design. This follows the research the owner asked for, which recommended a separately preregistered gate with a stop rule.
+
+Item 3, old README: a note was added to the preserved v0-prototype/README-original.md, dated 25 Nov 2026 and marked as a later addition, stating that the exact-symmetry sentence and the closed-loop title are not supported by this comparison. The original text below the note is untouched. The file after the note is SHA-256 8e50231c20a732971e47d1c83e56201b23232019448992900ad9ca14fbdf812e, and it differs from the README at tag v0-prototype-final by exactly the added note; the tag itself is unmoved and still holds the original. The report's section 18 citation of the file's pre-note SHA-256 ca186f1b139c3b52a575ee60623d6df300bff0198400f1e47578153a8eebf5a7 stands as the verification record for the comparison.
+
+Item 4, RQ-C5 handling: the owner accepted Reviewer 1's suggested handling. The plan-versus-preregistration conflict is recorded as a logged deviation with her explicit ratification, and every public MN9 figure is labelled "RQ-C5 open" until the matched-count test runs. The deviation is logged in docs/decisions_log.md. No frozen report was edited to add the label; the labelling rule applies to public MN9 figures from this gate forward, including Part 7.
+
+Reviewer 1's formal verdict is still pending (his re-review resumed at 5:15 PM, section 15 posted, reply cut off by the free-plan limit; limit resets 10:20 PM, resume set 10:25 PM). His verdict is now a check on the report, not a gate input: the gate is closed on the owner's decision, made on Reviewer 2 PASS and Reviewer 3 PASS. Anything he still says that requires a correction will be addressed by a further amendment.
+
+Status: Part 6 gate CLOSED, 25 Nov 2026. Decision (c) hybrid, itemised; items 2, 3 and 4 decided. Part 7 preparation is next.
