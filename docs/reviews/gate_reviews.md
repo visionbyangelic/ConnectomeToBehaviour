@@ -1985,3 +1985,32 @@ No freeze or trial execution is authorised by this review. Full panel approval a
 Note: after the completed reply, the ChatGPT page displayed a 'Context window full' notice offering a new chat or an upgrade; that notice is not part of the reviewer's reply above."
 
 **Amendment Pass 2 (25 Nov 2026):** The two items are addressed in the preregistration with no change to the margin value or the procedure: the per-trial SD argument is dropped and the ±5 Hz margin is stated explicitly as a project-convention margin inherited from Part 0, with the reasons it is suitable stated in advance (same yardstick as the anchor and rate tests; less than a fifth of the 28.30 Hz asymmetry under investigation; fixed before any outcome is seen and not tuned after the runs); section 1 question 3 is aligned with sections 8.4 and 10. Reviewer 2's PASS stands on the unchanged margin and procedure (the Part 6 precedent: a passing reviewer's verdict stands across later amendments addressing another reviewer's items). Re-review requested from Reviewer 3 only. Reviewer 1's review follows tonight in the 10:25 PM resume job.
+
+**Reviewer 3, PASS on Amendment Pass 2 (25 Nov 2026, 5:51 PM WAT):**
+
+Note on the channel: the original ChatGPT conversation (3) showed a "Context window full" notice and its Send button was disabled, so the re-review request was posted in a new chat started from it, "Review ConnectomeToBehaviour Plan (4)", at https://chatgpt.com/c/6b0711ca-6570-83ea-88d2-1a1436629d38. No plan was upgraded. That conversation (4) is now the current Reviewer 3 channel.
+
+"I have verified both amended passages in the pinned draft. The ±5 Hz margin is now explicitly described as a project-convention margin, not a biological or functional threshold; the rationale no longer relies on per-trial standard deviation. Section 1 question 3 also now limits persistence to the tested matched-count configurations and makes the set-size-artefact conclusion conditional on all three equivalence tests passing.
+
+Reviewer 3 — Amendment Pass 2
+PASS
+
+Both remaining items are discharged. I approve the amended preregistration at commit 82f5986.
+
+Item-by-item disposition
+
+1. ±5 Hz equivalence-margin justification — PASS.
+The revised rationale meets the alternative I requested. It explicitly identifies ±5 Hz as a project convention inherited from Part 0, disclaims an independently established biological or functional threshold, and explains its computational suitability: a consistent yardstick across the anchor, rate and symmetry tests, and a margin less than one-fifth of the 28.30 Hz asymmetry being investigated. It is fixed before outcomes and not tuned afterwards. The unchanged TOST procedure is now appropriately interpreted as an operational equivalence rule, not proof of biological identity.
+
+2. Section 1, question 3 — PASS.
+The wording now matches §§8.4 and 10. Persistence is limited to the tested matched-count configurations; a set-size-artefact conclusion requires all three registered equivalence tests to pass. The explicit warning against generalising from one realised right-side subset is retained.
+
+Gate status and limits
+
+No further Reviewer 3 changes are required to this draft. This is my review vote, not the owner's freeze approval or a claim that the full panel has finished: the document still records Reviewer 1's review as pending and Angelic's D6 expert-check decision as open. Before any trial runs, the full freeze checklist must be completed, including the required human expert check or a new signed waiver, the approved commit and tag, implementation identity verification, harness checks, subset recording and determinism check.
+
+This was a documentary review of the pinned GitHub draft; I have not independently verified the supplied SHA-256 against a local checkout.
+
+Final Reviewer 3 verdict: PASS — Amendment Pass 2."
+
+**Panel state after Amendment Pass 2 (25 Nov 2026):** Reviewer 2 PASS (Amendment Pass 1), Reviewer 3 PASS (Amendment Pass 2). Reviewer 1's review is the last panel review outstanding, scheduled for the 10:25 PM resume job. The owner's section 12 item 1 decision (expert check or new signed waiver) remains open and blocks the freeze.
