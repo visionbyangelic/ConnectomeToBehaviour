@@ -1581,6 +1581,50 @@ Third amendment (25 Nov 2026, this commit) addresses the verified items in this 
 
 Status: re-review 2 of 3 complete (Reviewer 2 PASS; Reviewer 3 PASS). Reviewer 1 re-review resumes after 5:10 PM WAT, when the free-plan messages reset; the remaining material (sections 15 to 18, items 2 to 7) must be re-pasted verbatim from the new commit, not from the staged composer text.
 
+### Part 6 comparison gate: Reviewer 1 formal re-review — REQUIRE CHANGES (25 Nov 2026, about 10:41 PM WAT)
+
+The re-review resumed at 10:25 PM WAT, after the free-plan limit reset (Claude showed the reset at 10:20 PM). Section 15 was already present in the chat (message 97, posted about 5:20 PM WAT), so it was not re-posted. Sections 16, 17 and 18 were posted verbatim from the report at commit 2871391 as amended by commits 3815b1f (gate decision) and 527179d (gate closure), as messages 99, 101 and 103; the items 2 to 7 answers were posted verbatim as message 105; the formal verdict question was posted as message 107. The free-plan limit was not hit; Claude replied in full to every message. His formal verdict (message 108) is recorded here in full, verbatim.
+
+Verdict: REQUIRE CHANGES. This is a check on the report for the record, not a gate input. He concurs with the owner's decisions in section 17 (hybrid, the three tests as their own preregistration gate, the dated note on README-original.md, and the RQ-C5 deviation with its labelling). His verdict is on the text.
+
+Scope. He judged the sections as pasted to him, with two early passages corrected and sections 1, 9, 4 to 7, 11, 12 and 15 to 18 seen. He has not seen the report file or any revised text, and the passages he flagged earlier appear unchanged in what was sent. Because the gate has closed, he would make the fixes as a dated errata section appended to the report, with the original text and hash preserved and an updated hash chain, not as silent edits.
+
+The report's arithmetic checked out wherever he could test it, and its candour about the old build and the plan conflict is a strength. The problems are specific wording errors, and the first six contradict other parts of the report.
+
+Must fix (errors or internal contradictions):
+
+1. Section 4 vs D1. Section 4 says the old build disagrees with the fresh primary and the paper "the same on the right". D1 correctly says the right side agrees under the "or vice versa" clause (fresh 62.40 and reference 61.80 both lie inside the old R CI [54.99, 62.41]). Restate section 4 per side, with differences and CIs.
+2. Section 9 vs D6. Section 9 says the remaining distance between the arm (0.9514) and the old build (0.9113) "is the rate part". Both are at 150 Hz. D6 attributes it correctly (trial count old to arm, rate arm to primary). Fix section 9, and quantify the trial-count share (about two-thirds).
+3. Section 12 contact duration. The sentence claiming demonstrated equivalence on contact duration and that sustainment "is carried by the secondary endpoints" contradicts the reconciled result: +3.49 s [2.75, 3.91], claimed, with equivalence not demonstrated. Equivalence holds for peak E only.
+4. Section 15 D3 and section 16 water. The statement that matched-rate sugar agreement shows the fresh build reproduces the paper "at the old build's own rate" is wrong: the fresh build reproduces the old build at 150 Hz, and reproduces the paper at 200 Hz. With identical inputs and sugar agreeing, an unexplained fivefold water gap is a reason for caution, not for dismissal. Rewrite as undetermined, with the 150 Hz water arm as the discriminating test and the sugar+bitter ladder as evidence of steep rate dependence.
+5. Section 16. The sentence on matched-rate agreement lists sugar+bitter left and bitter alone, which are not rate-matched. The list of items carried into section 17 omits D4.
+6. README provenance (sections 11, 12, 15 D7/D10, 17). The bundled v0-prototype/README.md was added at bundling on 24 Nov and refers to "the rebuild", so it is a retrospective front page, not "the old build's own wording". State author and date and change "the old build's own wording" accordingly. Its sentence "I never claimed that it did" contradicts README-original.md line 6. Fix the bundled file's wording (it is new text) to acknowledge the title overclaim.
+
+Should fix (accuracy and clarity):
+
+7. Section 6. Replace "independent" with "reproduced with different seeds, outside the validated envelope"; soften "most replicated result"; add per-side suppression percentages (fresh 89.4%/84.4%, old 89.1%/75.8%); state that the fresh ladder doesn't bear on the 150/150 point; separate the ratio rule from the Holm family. D2/D4 should say "proposed" consistently and add a code-reading check for two-population drive.
+7a. Section 7. The argument that rate is a "weak explanation" because sugar moves only 11% is wrong: sugar is near saturation. Restate, and give the 1 s R per-trial values.
+8. Sections 9 and 18. The Spearman 0.99946 and Pearson 0.99981 are cross-replicate ceilings derived by this project, not values published by Shiu et al.; say so, call the section "reference simulation output", and give both unrounded.
+9. Section 11. Say "inconsistent with", not "directly contradicts"; add the old build's own R = 20 (100 ms) against 58.7 (1 s) as evidence of single-trial noise.
+10. Section 12. The old "FlyBody" (59 actuators) is a different artefact from the fresh one (102); say "first of the two builds"; give arm (d)'s denominator as arm (b).
+11. Section 15. D7 cites "PLAN line 301"; in the two FINAL-PLAN v2 files the sentence is at line 279 or 281. Name the document and hash. D11's 2.2 MB against 948,526 bytes isn't explained by "compressed approximate". D12's "83.32 s … factor 102.5" is inconsistent.
+12. Section 16. Show both readings of "load-bearing" (the working definition and the broader one that includes registered core questions), and cite where "Part 6 runs no new episodes" comes from.
+13. Section 1. Scope "before I opened any old number" to "before this comparison opened the old result files"; show the closure diff itself; state which fresh run each benchmark comparison uses.
+
+Record and provenance:
+
+14. Hash chain with commit and change note for the characterisation report (285488ef…, c671f813…, 45d446ce…, 07adb338…) and audit artefact (ec28f587…, 4115c963…, cda5ed6d…).
+15. Full 64-character hashes for the truncated completeness and connectivity entries.
+16. Commit the recount script and the three work/*.json files, or give their hashes and locations. Register analysis seed 20261125's reuse.
+17. In section 17, record his verdict as REQUIRE CHANGES, not "pending".
+18. State that the 150 Hz arm's non-confirmatory status is unchanged, and the Jaccard definition parity (same reference, threshold and union rule as the old 0.9113).
+
+When the errata exist, send the appended section and the updated hashes and he will re-check only those passages.
+
+Notes on the session: he gave the same verdict (REQUIRE CHANGES on the report text, concurring with the section 17 gate decisions) in his intermediate replies — message 102 after section 17, message 104 after section 18, and message 106 after the items 2 to 7 answers — with the consolidated item list; message 108 above is the final formal verdict. In message 106, of the seven items from his interim feedback, items 2 (hashes/tag), 3 (closure hash), 6 (Pearson, mostly) and 7 (range wording) were treated as closed by the answers, with items 2 (authorship/date of the bundled README), 3 (full hash chain), 4 (work/*.json artefacts), 5 (arm's non-confirmatory status) and 7 (Jaccard definition parity) still open. The chat is left open for follow-up, e.g. sending the errata section for re-check.
+
+Status: Reviewer 1's formal re-review is now complete: REQUIRE CHANGES on the report text (18 items), concurring with the section 17 gate decisions. The Part 6 gate had already closed at 17:30 WAT on Reviewer 2 PASS and Reviewer 3 PASS, so this verdict is a check on the report, not a gate input. Whether the 18 items are addressed as a dated errata section appended to the frozen report, as he suggests, is the owner's decision; the report itself is frozen and was not edited. His item 17 (record his verdict as REQUIRE CHANGES in the report's section 17, not "pending") is part of that errata decision.
+
 ### Part 6 comparison gate: OWNER DECISION, (c) hybrid, itemised (25 Nov 2026, about 16:37 WAT)
 
 The owner decided the Part 6 gate outcome as (c) hybrid, itemised, with the fresh build as the build going forward. The old build stays preserved in v0-prototype/ as a provenance record and on the tag v0-prototype-final, but it stops being the record the numbers come from. The owner's reasoning, in her words: the fresh build was done differently, so the old should not stay as the record; the record should say how the old build was done and what it got, and how the fresh build was done and what it got.
