@@ -1,0 +1,4 @@
+Render of a single episode. NOT evidence: a video for the owner, drawn from the episode's recorded body trajectory.
+Episode: arm (a) closed-loop sugar, seed 5111, run_id arm_a/seed5111 (run record: results/closed_loop/characterisation/arm_a/seed5111).
+What it shows: the settled rest (first half second), then the episode's 100 chunks at 10 frames per second (each frame is one 100 ms chunk, so the video runs at simulation speed). First food contact at chunk 3; peak extension 1.969 rad.
+How it was made: the body is deterministic, so a fresh body stepped through the episode's recorded ctrls reproduces its trajectory; the largest proboscis-angle difference between the replay and the record over all 100 chunks is 0.00e+00 rad. This is a rendering replay of the recorded episode, not a new run and not new data.

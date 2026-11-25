@@ -1,0 +1,6 @@
+Renders of a single episode. NOT evidence: pictures for the owner, drawn from the episode's recorded body trajectory.
+Episode: arm (a) closed-loop sugar, seed 5111 (run record: results/closed_loop/characterisation/arm_a/seed5111).
+rest: arm_a_seed5111_rest.png -- settled rest at t = 0, end of the section 2.3 settle, before chunk 0; E = 0 by definition against this pose.
+mid_extension: arm_a_seed5111_mid_extension.png -- end of chunk 1, the first chunk reaching half the episode's peak extension (E = 1.356 rad of peak 1.969).
+contact: arm_a_seed5111_contact.png -- end of chunk 3, the first chunk whose end state has the constructed taste event ON (labrum on the food disc; E = 1.851 rad).
+Replay check: the body is deterministic, so stepping a fresh body through the episode's recorded ctrls reproduces its trajectory; the largest proboscis-angle difference between the replay and the record is 0.00e+00 rad (mid-extension) / 0.00e+00 rad (contact).
