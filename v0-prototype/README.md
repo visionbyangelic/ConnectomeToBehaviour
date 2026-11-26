@@ -23,7 +23,7 @@ It got two of those three stages done, and it stopped at the third — honestly,
 - **Phase 4 — the bridge: never built.** `src/bridge/` in this folder is empty apart from its
   `__init__.py`. The descending-neuron decoder that was supposed to turn brain activity into body
   movement was designed and debated in `track.md`, but it was never implemented — so v0 never ran a
-  true closed loop, and I never claimed that it did.
+  true closed loop. The preserved original front page's title claimed one, and that title overclaimed (Part 6 comparison, section 12).
 
 ## What v0 found (v0 results — cite them as v0)
 
