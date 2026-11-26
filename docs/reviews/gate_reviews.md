@@ -2074,3 +2074,72 @@ Panel state: Reviewer 2 PASS (Amendment Pass 1), Reviewer 3 PASS (Amendment Pass
 ### Discriminating-tests freeze: owner's conditional approval (25 Nov 2026, 23:50 WAT)
 
 Angelic pre-approved the freeze of the discriminating-tests preregistration at commit 82f5986 (SHA-256 60f82e1c1a262d35d39fd58735c72260b67dd8a838331e24dba551fad5f1230c), conditional on Reviewer 1 returning PASS at the 03:25 WAT resume on 26 Nov 2026 (tapped "Pre-approve the freeze if he passes"). If he returns REQUIRE CHANGES, there is no freeze and the draft goes to a further amendment pass with re-review. The 03:25 resume job is updated to execute the freeze overnight on a PASS (subset draw, freeze record committed before the tag, tag part6-tests-v1, determinism check) and then start the runs, so she wakes to them running. The waiver for this freeze was signed earlier the same evening (22:53 WAT); the expert check remains owed at the Part 8 final gate.
+
+### Discriminating-tests preregistration: Reviewer 1 verdict (26 Nov 2026, about 03:30 WAT)
+
+The 03:25 WAT resume ran after the free-plan limit reset (Claude showed the reset at 3:20 AM WAT, 26 Nov 2026). The continuation message was sent as message 111 in his Claude chat, and he replied in full as message 112. No limit was hit and the account was not upgraded; free tier only is the standing rule. Verdict: **REQUIRE CHANGES, seven items, none needing a new run.** The owner's conditional approval (23:50 WAT, 25 Nov 2026) does not trigger: it was conditional on PASS. There is no freeze and no runs; the draft goes to a further amendment pass with re-review. His verdict, in full, verbatim:
+
+"Reviewer 1: discriminating-tests preregistration
+
+Document basis. I read the whole file from commit 82f5986 (docs/discriminating_tests_preregistration.md, 206 lines, Amendment Pass 2 as the latest history entry). Its SHA-256 matches the one you gave, 60f82e1c…1230c.
+
+Verdict: REQUIRE CHANGES
+
+The design is sound and the language discipline is good. Seven items are needed, and none needs a new run. After they are made I’ll re-check only the changed passages, and I expect to convert to PASS.
+
+Rulings on the PROPOSED items
+
+| Item | Ruling |
+|---|---|
+| Fresh sugar 150 control (S) | Approve, with required item 4 |
+| ±5 Hz TOST margin | Approve as a registered convention, with required item 6 |
+| Seed 20261135 | Approve, with required item 7 |
+| Amended §§8.2–8.4 | Require changes (items 1–3) |
+| §1 alignment | Approve; it follows whatever 8.4 becomes after item 3 |
+
+Required changes
+
+1. §8.2: the ratio agreement is one-sided, and the old build’s CI can be computed.
+
+The rule asks whether the old 0.164 lies inside the fresh ratio’s CI, because the old ratio has “no CI”. But the old per-trial lists are on record, and every other comparison uses the Part 0 rule “or vice versa”.
+From those lists (pooled per trial, resampled independently within each condition) I get a 95% CI of about [0.144, 0.186] for the old ratio.
+Without the vice-versa clause, even if the builds were identical, I estimate roughly a one-in-four chance of a spurious “disagrees” (assuming the fresh ratio’s SE is near 0.0075, which is my guess). With it, the chance drops to roughly one in ten.
+Add the old CI (state the method and seed) and apply “inside, or vice versa”.
+
+2. §§8.2 and 8.3: “near the fresh 200/200 pattern” has no numeric definition. The “does not explain” readings depend on it. Define it, for example: test 1 R mean at or below 10.40 Hz (the upper end of the fresh 200/200 R CI [8.77, 10.40]); test 2 L and R inside or above the lower bounds of the fresh 200 Hz CIs (28.23 and 10.70). The “partial effect” zone then lies between the old CI and those bounds, and nothing is left to judgment at report time.
+
+3. §8.4: the two outcome branches overlap. “Resolved as a set-size artefact” needs all three 90% CIs inside ±5 Hz. “Asymmetry persists” needs all three 95% CIs to exclude 0. Both can hold at once. With a per-test SE near 1.3 Hz (the rung SDs give that), that happens when |Δ| is roughly 2.5 to 2.9 Hz. A small but significant asymmetry then fits both readings. Add a precedence rule. I suggest: equivalence on all three is “resolved as a set-size artefact (residual differences reported)”; “persists” applies only when all three exclude 0 in the consistent direction and not all three meet equivalence; anything else stays open.
+
+4. S versus the Part 3 150 Hz arm: make the check numeric.
+
+The text says a difference between S and the arm (pooled 141.1 Hz) “is reported as a finding”. Pre-state a trigger, for example the 95% CI of the pooled difference excluding 0 by more than 5 Hz, which goes to the panel as a discrepancy.
+Why this matters beyond this gate: the Part 6 comparison relied on that arm for every matched-rate result, and its manifest records a dirty tree. S doubles as the provenance check on that arm. Say what S agreeing or disagreeing means for the Part 6 matched-rate conclusions.
+
+5. §3: the subset draw needs a defined index domain. choice(21, size=10) returns indices into an ordering. State the order of the 21 right-hemisphere IDs it indexes (file order or sorted ascending) and hash the ordered list, so that the draw maps to IDs reproducibly. Record the numpy version used for the draw alongside the 10 IDs in the freeze record.
+
+6. §7: the margin’s justification mischaracterises Part 0, and the test’s feasibility isn’t stated.
+
+The text says ±5 Hz is “the Part 0 rate-agreement floor” and “the same yardstick” as the anchor and rate tests. Part 0’s band is ±25% or ±5 Hz, whichever is wider. At MN9 rates of 60 to 90 Hz that is 15 to 22 Hz, and the document itself uses ±23.1 and ±15.6 Hz for the anchor. So ±5 Hz is the floor only, and it is deliberately tighter here. Say that.
+Add a feasibility statement. With per-trial SDs of about 4 to 6 Hz and N = 30, each 90% CI half-width is about 2.1 Hz, so equivalence can be shown only if the true |Δ| is below about 2.9 Hz. A preregistered test should say what it can and cannot detect.
+Report each Δ as a percentage of the level of its two rates, descriptively, so a reader sees what 5 Hz means at the observed rates.
+
+7. §12 item 7: confirm the seed registry by script, not by hand. Run the disjointness script over every registry (Parts 2b, 3, 5, the rung, and Part 6’s recount seed 20261125 reused) with these new blocks (7000–7219 and the five bootstrap and subset seeds 20261131–20261135). Record the output hash in the freeze record. The document’s own disjointness statement is correct as far as I can check, but a hand check has already been wrong once in this project.
+
+Non-blocking suggestions
+Subset dependence. One right-hand subset limits what test 3 can say. A second disjoint 10-neuron subset (drawn from the 11 left over) would show subset variance for about 1.2 to 1.8 hours more. You already scope the claim honestly, so this is optional.
+Composition record. At the freeze, record (no simulation) the left set’s and the chosen right subset’s cell-type labels and outgoing synapse totals, so that a persisting asymmetry can be examined against composition.
+After “does not explain”. Name the next no-run step: compare how the two builds drive two populations and whether any neuron sits in both sets.
+Run risk. Sugar+bitter and bilateral conditions are the ones the rung lost to memory kills (about 5 GB). Run sequentially with no concurrent load and allow for void attempts in the wall-clock.
+What I checked that held
+7 × 35 min = 4.08 h ✓.
+Anchor bands 23.14 and 15.60 Hz ✓.
+The old values quoted (9.1 [6.54, 11.66], 14.2 [13.04, 15.36], water 6.0 and 1.6 with their CIs, ratio 23.3/142.2 = 0.164) all match the old per-trial lists.
+The 28.30 Hz asymmetry matches 93.17 − 64.87 ✓.
+Seed blocks are disjoint from each other and from the registries the text names.
+The sign conventions for the three Δs are consistent: the “persists” reading means MN9_L is larger in all three configurations.
+
+The expert-check condition stays the owner’s call, as you said."
+
+Note: he also created a document in the chat titled "Drafting required changes to the preregistration"; its contents are separate from the verdict text above and are not part of this record.
+
+**Panel state after Reviewer 1's verdict (26 Nov 2026, about 03:30 WAT):** Reviewer 2 PASS (Amendment Pass 1), Reviewer 3 PASS (Amendment Pass 2), Reviewer 1 REQUIRE CHANGES (seven items, Amendment Pass 2). No freeze, no tag, no runs. The draft needs Amendment Pass 3 addressing his seven items, with re-review from Reviewer 1 only — he will re-check only the changed passages and expects to convert to PASS. Reviewer 2's and Reviewer 3's passes stand on the items they ruled on; whether either needs to re-check the amended passages is the owner's call at the amendment. The waiver for this freeze (signed 22:53 WAT, 25 Nov 2026) and the owner's conditional approval (23:50 WAT, 25 Nov 2026) both stand, but the approval covers the draft at commit 82f5986 only; the amended draft will need a new approval before any freeze.
