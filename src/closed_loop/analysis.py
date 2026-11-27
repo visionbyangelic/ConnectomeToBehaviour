@@ -12,11 +12,18 @@ Endpoints (section 6), per episode:
                     (counts per 0.1 s chunk, so rate = counts / 0.1)
   onset latency     first chunk of the first two-chunk run of E >= 0.10
                     rad (the section 4.4 detector, as in run_loop5.py)
-  contact onset fraction / duty cycle
-                    fraction of chunks 0-59 with the section 4.5 event ON
-  contact duration  event-ON time over chunks 0-59 (chunks x 0.1 s)
-  ignition (arm a)  drive applied on >= 1 chunk >= 20 AND the event ON
-                    on >= 1 chunk >= 40 (section 5)
+  contact onset fraction
+                    achieved E / E_max at the first chunk whose end-state
+                    has the taste event ON (E_max = 2.1746 rad, section 3);
+                    None if no chunk has the event ON (no contact)
+  contact duration  taste-event ON time within the episode, chunks 0-99
+                    (total ON chunks x 0.1 s), and the longest continuous
+                    ON stretch in seconds (contact_longest_stretch_s)
+  duty cycle        ON chunks divided by chunks in the gate-armed period
+                    (arms (a) and (e): chunks 20-99; arms (b)/(d):
+                    chunks 0-99; other arms or no arm given: chunks 0-99)
+  ignition (arm a)  contact occurred at all AND the taste event ON in
+                    chunks 20-59 (gate-ON beyond the ignition window)
 
 Suppression ratio (per seed): total MN9 (L + R) mean rate under arm (d)
 divided by that under arm (b); the left and right ratios ride alongside.
@@ -43,6 +50,7 @@ from pathlib import Path
 import numpy as np
 
 CHUNK_S = 0.1
+E_MAX = 2.1746  # rad, preregistration section 3 (frozen E_max)
 STIM_CHUNKS = range(0, 60)
 ONSET_RAD = 0.10
 B_PERM = 10_000
@@ -75,20 +83,52 @@ def _first_run_at_least(values, threshold):
     return None
 
 
-def endpoints(ep):
+def endpoints(ep, arm=None):
+    """Per-episode endpoints (preregistration section 6).
+
+    arm: the arm whose gate-armed period sets the duty-cycle denominator
+    ("a" and "e": chunks 20-99, both share arm (a)'s gating structure;
+    "b"/"d": chunks 0-99; anything else or None: chunks 0-99). Part 7
+    configurations run in arm (a)'s closed-loop configuration (section 8),
+    so pass arm="a" for them. The remaining endpoints do not depend on arm.
+    A chunk missing from the body log counts as event OFF for the
+    whole-episode fields.
+    """
     body, brain = ep["body"], ep["brain"]
     e_all = [r["E_rad"] for r in body]
     e_stim = [r["E_rad"] for r in body if r["chunk"] in STIM_CHUNKS]
-    event_stim = [bool(r["taste_event_at_chunk_end"]) for r in body
-                  if r["chunk"] in STIM_CHUNKS]
+    e_by_chunk = {r["chunk"]: r["E_rad"] for r in body}
+    # taste event over the whole episode, chunks 0-99, by chunk number
+    event_by_chunk = {r["chunk"]: bool(r["taste_event_at_chunk_end"]) for r in body}
+    event_ep = [event_by_chunk.get(k, False) for k in range(100)]
     mn9_l = sum(r["counts"]["mn9_left"] for r in brain if r["chunk"] in STIM_CHUNKS)
     mn9_r = sum(r["counts"]["mn9_right"] for r in brain if r["chunk"] in STIM_CHUNKS)
     n_stim = len(e_stim)
-    applied_late = any(
-        any(d.get("applied") for d in r.get("applied", {}).values())
-        for r in brain if r["chunk"] >= 20)
-    event_late = any(bool(r["taste_event_at_chunk_end"]) for r in body
-                     if r["chunk"] >= 40)
+    # section 6 item 6: achieved E / E_max at the first chunk whose
+    # end-state has the taste event ON; None if no contact
+    first_contact = next((k for k in range(100) if event_ep[k]), None)
+    if first_contact is None:
+        onset_frac = None
+    else:
+        onset_frac = float(e_by_chunk[first_contact] / E_MAX)
+    # section 6 item 7: total ON chunks in the episode, and the longest
+    # continuous ON stretch
+    total_on = int(sum(event_ep))
+    longest, run = 0, 0
+    for on in event_ep:
+        run = run + 1 if on else 0
+        longest = max(longest, run)
+    # section 6 item 7: duty cycle over the gate-armed period
+    if arm in ("a", "e"):
+        gate_chunks = range(20, 100)
+    else:
+        gate_chunks = range(0, 100)
+    on_in_gate = sum(1 for k in gate_chunks if event_ep[k])
+    duty = on_in_gate / len(gate_chunks)
+    # section 6 item 8 (arm (a) only): contact at all, and gate-ON in
+    # chunks 20-59 (taste event ON in 20-59, beyond the ignition window)
+    contact_any = first_contact is not None
+    gate_on = any(event_ep[k] for k in range(20, 60))
     return {
         "seed": ep["seed"],
         "peak_e_rad": float(max(e_all)),
@@ -97,10 +137,11 @@ def endpoints(ep):
         "mn9_right_rate_hz": mn9_r / (n_stim * CHUNK_S),
         "mn9_total_rate_hz": (mn9_l + mn9_r) / (n_stim * CHUNK_S),
         "onset_latency_chunk": _first_run_at_least(e_all, ONSET_RAD),
-        "contact_onset_fraction": float(np.mean(event_stim)),
-        "duty_cycle": float(np.mean(event_stim)),
-        "contact_duration_s": float(sum(event_stim) * CHUNK_S),
-        "ignition_arm_a": bool(applied_late and event_late),
+        "contact_onset_fraction": onset_frac,
+        "duty_cycle": float(duty),
+        "contact_duration_s": float(total_on * CHUNK_S),
+        "contact_longest_stretch_s": float(longest * CHUNK_S),
+        "ignition_arm_a": bool(contact_any and gate_on),
     }
 
 
@@ -231,17 +272,49 @@ def self_test():
     assert r["mn9_left_rate_hz"] == 100.0 and r["mn9_right_rate_hz"] == 50.0
     assert r["mn9_total_rate_hz"] == 150.0
     assert r["onset_latency_chunk"] == 0
-    assert abs(r["contact_onset_fraction"] - 21 / 60) < 1e-12
+    # section 6 item 6: E at first contact chunk (chunk 10, E = 1.0) / E_max
+    assert abs(r["contact_onset_fraction"] - 1.0 / E_MAX) < 1e-12
+    # section 6 item 7: 21 ON chunks in the episode (10-29 is 20, plus 45)
     assert abs(r["contact_duration_s"] - 2.1) < 1e-12
+    # longest continuous ON stretch: chunks 10-29 is 20 chunks
+    assert abs(r["contact_longest_stretch_s"] - 2.0) < 1e-12
+    # duty cycle, default arm (None): 21 ON chunks over chunks 0-99
+    assert abs(r["duty_cycle"] - 21 / 100) < 1e-12
+    # duty cycle, arm (a): ON chunks in 20-99 are 20-29 (10) plus 45 (1)
+    ra = endpoints(ep, arm="a")
+    assert abs(ra["duty_cycle"] - 11 / 80) < 1e-12
+    # duty cycle, arms (b) and (d): 21 ON chunks over chunks 0-99
+    assert abs(endpoints(ep, arm="b")["duty_cycle"] - 21 / 100) < 1e-12
+    assert abs(endpoints(ep, arm="d")["duty_cycle"] - 21 / 100) < 1e-12
+    # duty cycle, arm (e): same gate-armed period as arm (a), 20-99
+    assert abs(endpoints(ep, arm="e")["duty_cycle"] - 11 / 80) < 1e-12
+    # section 6 item 8: contact at all, and gate-ON in 20-59 (chunks 20-29)
     assert r["ignition_arm_a"] is True
     # E below onset for the first 5 chunks, then a two-chunk run at 6-7
     e2 = [0.05] * 6 + [0.2, 0.2] + [0.05] * 92
     r2 = endpoints(_fake_episode(2, e2, 0, 0, set()))
     assert r2["onset_latency_chunk"] == 6, r2
     assert r2["ignition_arm_a"] is False
+    # no contact: onset fraction is None, durations and duty cycle are zero
+    assert r2["contact_onset_fraction"] is None
+    assert r2["contact_duration_s"] == 0.0
+    assert r2["contact_longest_stretch_s"] == 0.0
+    assert r2["duty_cycle"] == 0.0
     # a single-chunk spike does not trigger onset
     e3 = [0.05] * 100; e3[10] = 0.5
     assert endpoints(_fake_episode(3, e3, 0, 0, set()))["onset_latency_chunk"] is None
+    # event ON only in the tail (chunk 70): whole-episode window counts it,
+    # but there is no gate-ON in 20-59, so no ignition
+    r4 = endpoints(_fake_episode(4, [1.0] * 100, 0, 0, {70}))
+    assert abs(r4["contact_duration_s"] - 0.1) < 1e-12
+    assert abs(r4["contact_longest_stretch_s"] - 0.1) < 1e-12
+    assert abs(r4["contact_onset_fraction"] - 1.0 / E_MAX) < 1e-12
+    assert abs(endpoints(_fake_episode(4, [1.0] * 100, 0, 0, {70}), arm="a")["duty_cycle"] - 1 / 80) < 1e-12
+    assert r4["ignition_arm_a"] is False
+    # event ON only in the ignition window (chunks 5-9): contact, no gate-ON
+    r5 = endpoints(_fake_episode(5, [1.0] * 100, 0, 0, set(range(5, 10))))
+    assert abs(r5["contact_duration_s"] - 0.5) < 1e-12
+    assert r5["ignition_arm_a"] is False
     # suppression ratio: b total 150 Hz, d total 20 Hz -> 2/15
     ep_b = _fake_episode(4, [1.0] * 100, 10, 5, set())
     ep_d = _fake_episode(4, [1.0] * 100, 1, 1, set())
