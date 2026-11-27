@@ -98,6 +98,16 @@ class Worker:
             for d in inputs:
                 d.active = False
             self.drive_inputs[entry["name"]] = inputs
+        # Part 7 lesion (preregistration section 8): zero the outgoing
+        # synaptic weights of the declared neurons, after build and
+        # before the compile warmup, so the compiled model includes
+        # the zeroed synapses. Absent or empty means no lesion.
+        lesion_ids = scenario.get("block_output", [])
+        n_zeroed = 0
+        if lesion_ids:
+            n_zeroed = brain.block_output(lesion_ids)
+            log(f"lesion applied: block_output IDs {list(lesion_ids)}, "
+                f"{n_zeroed} outgoing synapses zeroed")
         self.brain = brain
         self.net = Network(brain.neurons, brain.synapses, brain.monitor,
                            *brain._drives)
@@ -112,12 +122,19 @@ class Worker:
                 d.active = False
         log(f"worker ready: build + compile warmup took "
             f"{time.time() - t0:.1f} s")
-        send({"type": "ready",
-              "populations": {name: int(len(idx))
-                              for name, idx in self.pops.items()},
-              "data_hashes": dict(self.data.file_hashes),
-              "declared_drives": scenario["drives"],
-              "readouts": scenario["readouts"]})
+        ready = {"type": "ready",
+                 "populations": {name: int(len(idx))
+                                 for name, idx in self.pops.items()},
+                 "data_hashes": dict(self.data.file_hashes),
+                 "declared_drives": scenario["drives"],
+                 "readouts": scenario["readouts"]}
+        if lesion_ids:
+            # Only present when a lesion was applied, so a no-lesion
+            # ready reply is exactly as before.
+            ready["lesion"] = {
+                "block_output": [int(x) for x in lesion_ids],
+                "synapses_zeroed": int(n_zeroed)}
+        send(ready)
 
     def counts_in_window(self, t0, t1):
         idx, t = self.brain.spikes()

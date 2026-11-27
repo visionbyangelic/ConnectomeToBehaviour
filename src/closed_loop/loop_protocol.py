@@ -25,6 +25,13 @@ manifest before the episode clock starts):
                                              # for the window modes
               ...],
    "readouts": [str, ...]}                   # optional; default below
+   "block_output": [int, ...]}               # optional; FlyWire IDs
+                                             # whose outgoing synaptic
+                                             # weights are zeroed before
+                                             # the episode (Part 7 lesion,
+                                             # preregistration section 8).
+                                             # Absent or empty means no
+                                             # lesion (intact).
 
 Gating (SS4.5): a drive's applied state for brain chunk k is decided
 from (a) the SS4.5 taste-event state at the end of body chunk k-1 --
@@ -208,8 +215,24 @@ def validate_scenario(scenario):
     readouts = scenario.get("readouts", list(DEFAULT_READOUTS))
     if not isinstance(readouts, list) or not readouts:
         raise ValueError("scenario 'readouts' must be a non-empty list")
-    return {"name": name, "n_chunks": n_chunks, "seed": seed,
-            "drives": drives, "readouts": list(readouts)}
+    # Optional Part 7 lesion (preregistration section 8): a list of
+    # FlyWire neuron IDs whose outgoing synaptic weights are zeroed
+    # before the episode. Absent or empty means no lesion (intact).
+    block_output = scenario.get("block_output", [])
+    if not isinstance(block_output, list):
+        raise ValueError("scenario 'block_output' must be a list of "
+                         "FlyWire neuron IDs")
+    for fid in block_output:
+        if not isinstance(fid, int) or isinstance(fid, bool):
+            raise ValueError("scenario 'block_output' entries must be "
+                             f"FlyWire neuron IDs (ints), got {fid!r}")
+    normalized = {"name": name, "n_chunks": n_chunks, "seed": seed,
+                  "drives": drives, "readouts": list(readouts)}
+    if block_output:
+        # Only present when a lesion is declared, so a no-lesion
+        # scenario normalises exactly as before.
+        normalized["block_output"] = [int(x) for x in block_output]
+    return normalized
 
 
 def make_start(scenario):
